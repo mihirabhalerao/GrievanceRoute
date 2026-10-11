@@ -1,5 +1,5 @@
 """
-Tests for Machine Learning, Regression, Clustering, and Apriori.
+Tests for Machine Learning, Regression, Spatial Clustering, and Apriori.
 """
 
 import pytest
@@ -9,9 +9,9 @@ import numpy as np
 from grievanceroute.data.generator import generate_full_dataset
 from grievanceroute.data.preprocessor import clean_and_preprocess_complaints, get_train_features_and_targets
 from grievanceroute.ml.classifier import train_and_compare_classifiers
+from grievanceroute.ml.regression import train_and_compare_regressors
 from grievanceroute.ml.clustering import run_kmeans_hotspots, run_dbscan_hotspots
 from grievanceroute.ml.association_rules import apriori_from_scratch, prepare_discretized_transactions
-from grievanceroute.ml.neural_net import run_gradient_descent_simulation
 
 
 @pytest.fixture
@@ -28,15 +28,40 @@ def test_classifier_benchmark(sample_data):
     test_texts = sample_data["complaint_text"].iloc[200:]
     test_labels = sample_data["complaint_type"].iloc[200:]
 
-    pipelines, metrics = train_and_compare_classifiers(train_texts, train_labels, test_texts, test_labels)
-    assert "Logistic Regression" in pipelines
+    pipelines, metrics, errors = train_and_compare_classifiers(train_texts, train_labels, test_texts, test_labels)
+    assert "Logistic Regression (Primary)" in pipelines
+    assert "Majority Baseline" in pipelines
     assert "Decision Tree" in pipelines
-    assert metrics["Logistic Regression"]["accuracy"] > 0.80
-    assert metrics["Logistic Regression"]["macro_f1"] > 0.80
+    assert metrics["Logistic Regression (Primary)"]["accuracy"] > 0.80
+    assert metrics["Logistic Regression (Primary)"]["macro_f1"] > 0.80
+
+
+def test_regressor_benchmark(sample_data):
+    """Verify urgency and resolution regression train with Median baseline and report all required metrics."""
+    X, y_cls, y_urg, y_res = get_train_features_and_targets(sample_data)
+    X_tr, y_tr = X.iloc[:200], y_urg.iloc[:200]
+    X_te, y_te = X.iloc[200:], y_urg.iloc[200:]
+
+    pipelines, metrics = train_and_compare_regressors(X_tr, y_tr, X_te, y_te, target_name="urgency_score")
+    assert "Median Baseline" in metrics
+    assert "Random Forest Regressor" in metrics
+    for model_name in ["Median Baseline", "Random Forest Regressor"]:
+        m = metrics[model_name]
+        assert "mae" in m and m["mae"] > 0
+        assert "rmse" in m and m["rmse"] > 0
+        assert "r2" in m
+        assert "mean_residual" in m
+        assert "std_residual" in m
+        assert np.isfinite(m["mae"]) and np.isfinite(m["rmse"])
+
+    # Test resolution time target as well
+    _, res_metrics = train_and_compare_regressors(X_tr, y_res.iloc[:200], X_te, y_res.iloc[200:], target_name="resolution_hours")
+    assert "Median Baseline" in res_metrics
+    assert res_metrics["Random Forest Regressor"]["mae"] > 0
 
 
 def test_spatial_clustering(sample_data):
-    """Verify K-Means and DBSCAN clustering on projected coordinates."""
+    """Verify K-Means and DBSCAN clustering on projected metric coordinates."""
     labels_k, summary_k = run_kmeans_hotspots(sample_data, n_clusters=4)
     assert len(labels_k) == len(sample_data)
     assert summary_k["silhouette_score"] > 0.2
@@ -57,14 +82,3 @@ def test_apriori_from_scratch(sample_data):
         assert "consequents" in first_rule
         assert first_rule["confidence"] >= 0.2
         assert first_rule["lift"] >= 0.0
-
-
-def test_gradient_descent_simulation():
-    """Verify gradient descent simulation optimizes surrogate loss."""
-    X = np.random.randn(50, 4)
-    y = X @ np.array([1.5, -2.0, 0.5, 1.0]) + np.random.randn(50) * 0.1
-    sim = run_gradient_descent_simulation(X, y, epochs=30)
-    assert "trajectories" in sim
-    adam_traj = sim["trajectories"]["Adam"]
-    # Final loss should be lower than initial loss
-    assert adam_traj[-1] < adam_traj[0]

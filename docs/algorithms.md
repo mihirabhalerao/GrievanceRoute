@@ -4,22 +4,18 @@
 
 | Syllabus Unit | Algorithm / Method | Implementation Module | Application Context |
 | :--- | :--- | :--- | :--- |
-| **Unit I: Intro to AI** | Production Rules, State Space | `grievanceroute.services.prediction_service` | Safety escalation, triage validation |
+| **Unit I: Intro to AI** | Production Rules, State Space, PEAS Agent | `grievanceroute.services.prediction_service` | Safety escalation, intake validation |
 | **Unit II: Heuristic Search** | A* Search ($f = g + h$) | `grievanceroute.ai.search` | Road network shortest paths |
-| | Greedy Best-First ($f = h$) | `grievanceroute.ai.search` | Baseline pathfinding |
-| | Hill Climbing (2-opt) | `grievanceroute.ai.local_search` | Route sequence refinement |
-| | Simulated Annealing | `grievanceroute.ai.local_search` | Tour optimization |
-| | AO* (AND-OR Search) | `grievanceroute.ai.game_and_or` | Problem decomposition |
-| | Minimax + $\alpha$-$\beta$ Pruning | `grievanceroute.ai.game_and_or` | Adversarial game trees |
-| | Water-Jug (BFS) | `grievanceroute.ai.classic` | State space problem |
-| | 8-Puzzle (Manhattan A*) | `grievanceroute.ai.classic` | Sliding tile benchmark |
-| **Unit III: Preprocessing** | TF-IDF, Standard/MinMax Scaling, Binning | `grievanceroute.data.preprocessor` | Clean complaints, leakage prevention |
-| **Unit IV: Supervised Learning** | Logistic Regression, Decision Tree, KNN, Naive Bayes | `grievanceroute.ml.classifier` | Multiclass complaint triage |
-| | Linear & Random Forest Regressors | `grievanceroute.ml.regression` | Urgency & resolution duration |
-| **Unit V: Unsupervised Learning** | K-Means (Projected Coordinates) | `grievanceroute.ml.clustering` | Spatial complaint hotspots |
-| | DBSCAN Density Clustering | `grievanceroute.ml.clustering` | Dense clusters & spatial noise |
-| | Apriori Association Rules | `grievanceroute.ml.association_rules` | Contextual co-occurrence mining |
-| **Unit VI: Optimization** | SGD, Momentum, RMSprop, Adam | `grievanceroute.ml.neural_net` | Surrogate loss optimization |
+| | Euclidean Distance Lower Bound ($h \le h^*$) | `grievanceroute.ai.search` | Admissible distance heuristic |
+| | Hill Climbing (2-opt Local Search) | `grievanceroute.ai.local_search` | Crew tour sequence refinement |
+| | Simulated Annealing (Cooling Schedule) | `grievanceroute.ai.local_search` | Stochastic multi-crew tour optimization |
+| **Unit III: Preprocessing** | TF-IDF, Deduplication, Mode Imputation, Projection | `grievanceroute.data.preprocessor` | Clean complaints, leakage prevention |
+| **Unit IV: Supervised Learning** | Logistic Regression (Primary), DT, Multinomial NB | `grievanceroute.ml.classifier` | Multiclass complaint triage vs Majority Baseline |
+| | Linear & Random Forest Regressors | `grievanceroute.ml.regression` | Urgency & resolution duration vs Median Baseline |
+| **Unit V: Unsupervised Learning** | K-Means (Projected Coordinates) | `grievanceroute.ml.clustering` | Spatial complaint hotspots (Silhouette, Inertia) |
+| | DBSCAN Density Clustering | `grievanceroute.ml.clustering` | Dense clusters & spatial noise filtering |
+| | Apriori Association Rules | `grievanceroute.ml.association_rules` | Contextual co-occurrence mining without leakage |
+| **Unit VI: Optimization** | Multi-Crew VRP Objective $J(R)$ | `grievanceroute.routing.vrp_solver` | Multi-objective dispatch under 8-hr shift limits |
 
 ---
 
@@ -56,4 +52,4 @@ $$\text{Support}(A \Rightarrow B) = P(A \cup B) = \frac{\text{Count}(A \cup B)}{
 $$\text{Confidence}(A \Rightarrow B) = P(B \mid A) = \frac{\text{Support}(A \cup B)}{\text{Support}(A)}$$
 - **Lift**:
 $$\text{Lift}(A \Rightarrow B) = \frac{\text{Confidence}(A \Rightarrow B)}{\text{Support}(B)}$$
-*Note:* Association does not imply causation. Synthetic association rules demonstrate algorithm mechanics rather than empirical causal phenomena.
+*Note:* Association rules are mined strictly on contextual operational features (`zone`, `weather`, `time_of_day`, `is_monsoon`, `is_low_lying`) without target leakage.

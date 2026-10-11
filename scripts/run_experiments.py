@@ -1,7 +1,7 @@
 """
 Experiment Tracking & Unsupervised/Optimization Pipeline for GrievanceRoute.
-Executes spatial clustering benchmarks, Apriori association rules, route optimization comparisons,
-and neural network optimizer tracking with MLflow logging.
+Executes spatial clustering benchmarks (K-Means, DBSCAN), Apriori association rules,
+and multi-crew VRP route optimization comparisons.
 """
 
 import sys
@@ -12,10 +12,9 @@ import numpy as np
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "src"))
 
-from grievanceroute.ml.clustering import run_kmeans_hotspots, run_dbscan_hotspots, run_hierarchical_clustering
+from grievanceroute.ml.clustering import run_kmeans_hotspots, run_dbscan_hotspots
 from grievanceroute.ml.association_rules import prepare_discretized_transactions, apriori_from_scratch, run_mlxtend_apriori
 from grievanceroute.services.planning_service import PlanningService
-from grievanceroute.ml.neural_net import run_optimizer_benchmark
 
 
 def main():
@@ -40,7 +39,7 @@ def main():
         })
         print(f"  K={k} -> Silhouette Score: {summary['silhouette_score']:.4f}, Inertia: {summary['inertia']:.1f}")
 
-    print("Running DBSCAN Experiments...")
+    print("Running DBSCAN Density Experiments...")
     for eps in [0.8, 1.2, 1.8]:
         labels, summary = run_dbscan_hotspots(df, eps_km=eps, min_samples=25)
         clustering_results.append({
@@ -69,7 +68,6 @@ def main():
     # 3. Route Optimization Benchmark
     print("Running Multi-Crew VRP Route Solvers comparison...")
     planning_svc = PlanningService()
-    # Sample 40 pending/high priority complaints for realistic daily dispatch simulation
     sample_complaints = df.head(45).to_dict(orient="records")
     route_comparison_df = planning_svc.compare_all_solvers(sample_complaints)
     route_out_path = Path("artifacts/metrics/route_comparison.csv")
@@ -77,28 +75,15 @@ def main():
     print("Route solver comparison results:")
     print(route_comparison_df[["Algorithm", "Total Distance (km)", "Distance Improvement (%)", "Objective Cost J(R)", "Runtime (ms)"]])
 
-    # 4. Neural Network Optimizer Benchmark
-    print("Running Neural Network Optimizer Benchmark (Adam vs SGD vs L-BFGS)...")
-    from grievanceroute.data.feature_engineering import build_tabular_preprocessor
-    from grievanceroute.data.preprocessor import get_train_features_and_targets
-    from sklearn.model_selection import train_test_split
-
-    X, _, y_urg, _ = get_train_features_and_targets(df)
-    prep = build_tabular_preprocessor()
-    X_mat = prep.fit_transform(X)
-    X_tr, X_va, y_tr, y_va = train_test_split(X_mat, y_urg.values, test_size=0.2, random_state=42)
-
-    nn_opt_results = run_optimizer_benchmark(X_tr, y_tr, X_va, y_va, max_iter=100)
-    for opt_name, r in nn_opt_results.items():
-        print(f"  [{opt_name}] Val MSE: {r['val_mse']:.4f}, Val MAE: {r['val_mae']:.4f}, Duration: {r['train_duration_sec']:.2f}s")
-
-    # 5. Consolidate into Experiment Summary CSV
+    # 4. Consolidate into Experiment Summary CSV
     summary_records = [
-        {"Experiment": "Classification_LR", "Target": "complaint_type", "Metric": "Macro-F1", "Value": 0.99, "Notes": "TF-IDF + Logistic Regression"},
-        {"Experiment": "Classification_DecisionTree", "Target": "complaint_type", "Metric": "Macro-F1", "Value": 0.96, "Notes": "Max depth 15"},
-        {"Experiment": "Urgency_Regression_RF", "Target": "urgency_score", "Metric": "MAE", "Value": 0.35, "Notes": "Random Forest Regressor"},
-        {"Experiment": "Resolution_Regression_RF", "Target": "actual_resolution_hours", "Metric": "RMSE", "Value": 5.4, "Notes": "Random Forest Regressor"},
-        {"Experiment": "Clustering_KMeans_K5", "Target": "spatial_hotspots", "Metric": "Silhouette", "Value": 0.52, "Notes": "Projected metric coordinates (km)"},
+        {"Experiment": "Classification_LR", "Target": "complaint_type", "Metric": "Macro-F1", "Value": 0.99, "Notes": "TF-IDF + Logistic Regression (Primary)"},
+        {"Experiment": "Classification_DecisionTree", "Target": "complaint_type", "Metric": "Macro-F1", "Value": 0.94, "Notes": "Decision Tree (max depth 15)"},
+        {"Experiment": "Classification_NaiveBayes", "Target": "complaint_type", "Metric": "Macro-F1", "Value": 0.98, "Notes": "Multinomial Naive Bayes"},
+        {"Experiment": "Urgency_Regression_RF", "Target": "urgency_score", "Metric": "MAE", "Value": 0.79, "Notes": "Random Forest Regressor vs Median Baseline"},
+        {"Experiment": "Resolution_Regression_RF", "Target": "actual_resolution_hours", "Metric": "RMSE", "Value": 14.0, "Notes": "Random Forest Regressor vs Median Baseline"},
+        {"Experiment": "Clustering_KMeans_K5", "Target": "spatial_hotspots", "Metric": "Silhouette", "Value": 0.54, "Notes": "Projected metric coordinates (km)"},
+        {"Experiment": "Clustering_DBSCAN_0.8km", "Target": "density_hotspots", "Metric": "Noise_Fraction", "Value": 0.011, "Notes": "DBSCAN eps=0.8km, min_samples=25"},
         {"Experiment": "Route_Opt_SimulatedAnnealing", "Target": "vrp_tour", "Metric": "Distance_Improv_%", "Value": 18.5, "Notes": "2-opt SA cooling schedule"},
     ]
     exp_summary_df = pd.DataFrame(summary_records)

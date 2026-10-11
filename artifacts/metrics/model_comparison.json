@@ -1,35 +1,37 @@
 {
   "classification": {
-    "Logistic Regression": {
-      "accuracy": 1.0,
-      "macro_f1": 1.0,
-      "macro_precision": 1.0,
-      "macro_recall": 1.0,
-      "training_time_sec": 0.2604,
+    "Majority Baseline": {
+      "accuracy": 0.265,
+      "macro_f1": 0.1047,
+      "weighted_f1": 0.111,
+      "macro_precision": 0.0663,
+      "macro_recall": 0.25,
+      "training_time_sec": 0.2587,
+      "inference_time_sec": 0.0578,
       "confusion_matrix": [
         [
-          407,
+          424,
           0,
           0,
           0
         ],
         [
+          424,
           0,
-          389,
           0,
           0
         ],
         [
+          367,
           0,
           0,
-          409,
           0
         ],
         [
+          385,
           0,
           0,
-          0,
-          395
+          0
         ]
       ],
       "classes": [
@@ -37,38 +39,66 @@
         "pothole",
         "streetlight",
         "water leak"
-      ]
+      ],
+      "per_class": {
+        "garbage": {
+          "precision": 0.265,
+          "recall": 1.0,
+          "f1": 0.419,
+          "support": 424
+        },
+        "pothole": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 424
+        },
+        "streetlight": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 367
+        },
+        "water leak": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 385
+        }
+      }
     },
-    "Decision Tree": {
+    "Logistic Regression (Primary)": {
       "accuracy": 1.0,
       "macro_f1": 1.0,
+      "weighted_f1": 1.0,
       "macro_precision": 1.0,
       "macro_recall": 1.0,
-      "training_time_sec": 0.2234,
+      "training_time_sec": 0.2766,
+      "inference_time_sec": 0.0539,
       "confusion_matrix": [
         [
-          407,
+          424,
           0,
           0,
           0
         ],
         [
           0,
-          389,
+          424,
           0,
           0
         ],
         [
           0,
           0,
-          409,
+          367,
           0
         ],
         [
           0,
           0,
           0,
-          395
+          385
         ]
       ],
       "classes": [
@@ -76,77 +106,66 @@
         "pothole",
         "streetlight",
         "water leak"
-      ]
-    },
-    "KNN": {
-      "accuracy": 1.0,
-      "macro_f1": 1.0,
-      "macro_precision": 1.0,
-      "macro_recall": 1.0,
-      "training_time_sec": 0.2154,
-      "confusion_matrix": [
-        [
-          407,
-          0,
-          0,
-          0
-        ],
-        [
-          0,
-          389,
-          0,
-          0
-        ],
-        [
-          0,
-          0,
-          409,
-          0
-        ],
-        [
-          0,
-          0,
-          0,
-          395
-        ]
       ],
-      "classes": [
-        "garbage",
-        "pothole",
-        "streetlight",
-        "water leak"
-      ]
+      "per_class": {
+        "garbage": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "support": 424
+        },
+        "pothole": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "support": 424
+        },
+        "streetlight": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "support": 367
+        },
+        "water leak": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "support": 385
+        }
+      }
     },
     "Multinomial Naive Bayes": {
       "accuracy": 1.0,
       "macro_f1": 1.0,
+      "weighted_f1": 1.0,
       "macro_precision": 1.0,
       "macro_recall": 1.0,
-      "training_time_sec": 0.2066,
+      "training_time_sec": 0.2137,
+      "inference_time_sec": 0.0635,
       "confusion_matrix": [
         [
-          407,
+          424,
           0,
           0,
           0
         ],
         [
           0,
-          389,
+          424,
           0,
           0
         ],
         [
           0,
           0,
-          409,
+          367,
           0
         ],
         [
           0,
           0,
           0,
-          395
+          385
         ]
       ],
       "classes": [
@@ -154,59 +173,159 @@
         "pothole",
         "streetlight",
         "water leak"
-      ]
+      ],
+      "per_class": {
+        "garbage": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "support": 424
+        },
+        "pothole": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "support": 424
+        },
+        "streetlight": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "support": 367
+        },
+        "water leak": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "support": 385
+        }
+      }
+    },
+    "Decision Tree": {
+      "accuracy": 0.9994,
+      "macro_f1": 0.9994,
+      "weighted_f1": 0.9994,
+      "macro_precision": 0.9994,
+      "macro_recall": 0.9994,
+      "training_time_sec": 0.345,
+      "inference_time_sec": 0.0461,
+      "confusion_matrix": [
+        [
+          424,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          423,
+          0,
+          1
+        ],
+        [
+          0,
+          0,
+          367,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          385
+        ]
+      ],
+      "classes": [
+        "garbage",
+        "pothole",
+        "streetlight",
+        "water leak"
+      ],
+      "per_class": {
+        "garbage": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "support": 424
+        },
+        "pothole": {
+          "precision": 1.0,
+          "recall": 0.9976,
+          "f1": 0.9988,
+          "support": 424
+        },
+        "streetlight": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "support": 367
+        },
+        "water leak": {
+          "precision": 0.9974,
+          "recall": 1.0,
+          "f1": 0.9987,
+          "support": 385
+        }
+      }
     }
   },
+  "sample_errors": [],
   "urgency_regression": {
+    "Median Baseline": {
+      "target": "urgency_score",
+      "mae": 0.8906,
+      "mse": 1.2206,
+      "rmse": 1.1048,
+      "r2": -0.0477,
+      "mean_residual": 0.2356,
+      "training_time_sec": 0.0378
+    },
     "Linear Regression": {
       "target": "urgency_score",
-      "mae": 0.8259,
-      "mse": 0.8828,
-      "rmse": 0.9396,
-      "r2": 0.1838,
-      "training_time_sec": 0.0494
-    },
-    "Ridge Regression": {
-      "target": "urgency_score",
-      "mae": 0.8259,
-      "mse": 0.8828,
-      "rmse": 0.9396,
-      "r2": 0.1838,
-      "training_time_sec": 0.0416
+      "mae": 0.8336,
+      "mse": 0.9503,
+      "rmse": 0.9748,
+      "r2": 0.1843,
+      "mean_residual": 0.0095,
+      "training_time_sec": 0.038
     },
     "Random Forest Regressor": {
       "target": "urgency_score",
-      "mae": 0.7908,
-      "mse": 0.8429,
-      "rmse": 0.9181,
-      "r2": 0.2206,
-      "training_time_sec": 1.3135
+      "mae": 0.8045,
+      "mse": 0.9241,
+      "rmse": 0.9613,
+      "r2": 0.2068,
+      "mean_residual": 0.0104,
+      "training_time_sec": 1.0123
     }
   },
   "resolution_regression": {
+    "Median Baseline": {
+      "target": "actual_resolution_hours",
+      "mae": 12.2994,
+      "mse": 224.4678,
+      "rmse": 14.9823,
+      "r2": -0.0001,
+      "mean_residual": -0.1643,
+      "training_time_sec": 0.0313
+    },
     "Linear Regression": {
       "target": "actual_resolution_hours",
-      "mae": 11.9858,
-      "mse": 202.682,
-      "rmse": 14.2366,
-      "r2": 0.1178,
-      "training_time_sec": 0.0276
-    },
-    "Ridge Regression": {
-      "target": "actual_resolution_hours",
-      "mae": 11.9858,
-      "mse": 202.6766,
-      "rmse": 14.2365,
-      "r2": 0.1179,
-      "training_time_sec": 0.0199
+      "mae": 11.4159,
+      "mse": 189.5064,
+      "rmse": 13.7661,
+      "r2": 0.1557,
+      "mean_residual": -0.2551,
+      "training_time_sec": 0.0423
     },
     "Random Forest Regressor": {
       "target": "actual_resolution_hours",
-      "mae": 11.6152,
-      "mse": 196.4366,
-      "rmse": 14.0156,
-      "r2": 0.145,
-      "training_time_sec": 1.1214
+      "mae": 11.0868,
+      "mse": 184.7721,
+      "rmse": 13.5931,
+      "r2": 0.1767,
+      "mean_residual": -0.1977,
+      "training_time_sec": 1.0887
     }
   }
 }

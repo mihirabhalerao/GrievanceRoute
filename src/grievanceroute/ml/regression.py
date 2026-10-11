@@ -1,6 +1,6 @@
 """
 Urgency and Resolution-Time Regression Models for GrievanceRoute.
-Implements Linear Regression and Random Forest Regressors with scikit-learn pipelines.
+Evaluates Random Forest Regressor and Linear Regression against a simple Median Baseline.
 """
 
 from __future__ import annotations
@@ -13,7 +13,8 @@ import joblib
 import numpy as np
 import pandas as pd
 from sklearn.pipeline import Pipeline
-from sklearn.linear_model import LinearRegression, Ridge
+from sklearn.dummy import DummyRegressor
+from sklearn.linear_model import LinearRegression
 from sklearn.ensemble import RandomForestRegressor
 from sklearn.metrics import mean_absolute_error, mean_squared_error, r2_score
 
@@ -27,11 +28,14 @@ def train_and_compare_regressors(
     y_test: pd.Series,
     target_name: str = "urgency_score",
 ) -> Tuple[Dict[str, Pipeline], Dict[str, Dict[str, Any]]]:
-    """Train Linear Regression and Random Forest Regressor and compute evaluation metrics."""
+    """
+    Train Linear Regression and Random Forest against a simple Median Baseline.
+    Evaluates MAE, RMSE, R^2, and residual statistics.
+    """
     models = {
+        "Median Baseline": DummyRegressor(strategy="median"),
         "Linear Regression": LinearRegression(),
-        "Ridge Regression": Ridge(alpha=1.0),
-        "Random Forest Regressor": RandomForestRegressor(n_estimators=50, max_depth=10, random_state=42),
+        "Random Forest Regressor": RandomForestRegressor(n_estimators=40, max_depth=8, random_state=42),
     }
 
     trained_pipelines: Dict[str, Pipeline] = {}
@@ -48,17 +52,18 @@ def train_and_compare_regressors(
 
         preds = pipeline.predict(X_test)
         if target_name == "urgency_score":
-            # For urgency evaluation we report continuous predictions, and clipped display
             clipped_preds = np.clip(preds, 1.0, 5.0)
             mae = mean_absolute_error(y_test, clipped_preds)
             mse = mean_squared_error(y_test, clipped_preds)
             rmse = math.sqrt(mse)
             r2 = r2_score(y_test, clipped_preds)
+            residuals = y_test.values - clipped_preds
         else:
             mae = mean_absolute_error(y_test, preds)
             mse = mean_squared_error(y_test, preds)
             rmse = math.sqrt(mse)
             r2 = r2_score(y_test, preds)
+            residuals = y_test.values - preds
 
         trained_pipelines[name] = pipeline
         comparison_metrics[name] = {
@@ -67,6 +72,8 @@ def train_and_compare_regressors(
             "mse": round(float(mse), 4),
             "rmse": round(float(rmse), 4),
             "r2": round(float(r2), 4),
+            "mean_residual": round(float(np.mean(residuals)), 4),
+            "std_residual": round(float(np.std(residuals)), 4),
             "training_time_sec": round(float(train_time), 4),
         }
 

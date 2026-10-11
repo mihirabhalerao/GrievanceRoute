@@ -45,8 +45,7 @@ with st.sidebar:
     st.markdown("- **04** ML Workbench")
     st.markdown("- **05** Crew Route Planner")
     st.markdown("- **06** Experiments")
-    st.markdown("- **07** AI Algorithm Lab")
-    st.markdown("- **08** Data Quality & Insights")
+    st.markdown("- **07** Data Quality & Insights")
     st.divider()
     st.info("Local-first architecture. All models and algorithms run offline on standard CPU.")
 
@@ -67,7 +66,7 @@ c1, c2, c3, c4 = st.columns(4)
 with c1:
     st.metric("Trained Records", "8,000", "Synthetic Pune")
 with c2:
-    st.metric("ML Models", "4 Classifiers + 2 Regressors", "TF-IDF & RF")
+    st.metric("ML Models", "Classifiers + Regressors", "TF-IDF, LR & RF")
 with c3:
     st.metric("Active Crews", "8 Teams", "4 Specializations")
 with c4:
@@ -152,15 +151,15 @@ with m1:
 with m2:
     st.markdown("""
     #### 🧠 Machine Learning
-    - **ML Workbench**: Benchmarking Logistic Regression, Decision Tree, KNN, and Naive Bayes.
-    - **Regression Pipelines**: Urgency and resolution-time forecasting with MAE, RMSE, and $R^2$.
-    - **Explainability**: Vocabulary weights and top predictive features per category.
+    - **ML Workbench**: Benchmarking Logistic Regression against Majority Baseline, Naive Bayes, and Decision Tree.
+    - **Regression Pipelines**: Urgency and resolution-time forecasting compared against Median Baselines.
+    - **Explainability & Errors**: Vocabulary weights, predictive tokens, and misclassification error inspection.
     """)
 
 with m3:
     st.markdown("""
-    #### 🚚 Routing & AI Search
-    - **Crew Route Planner**: Multi-crew VRP with Greedy baseline, Hill Climbing, and Simulated Annealing.
-    - **AI Algorithm Lab**: Interactive visualizers for A*, Best-First, Water-Jug, 8-Puzzle, AO*, and Minimax.
-    - **Shift Constraints**: Crew skill matching, overtime penalties, and capacity enforcement.
+    #### 🚚 Routing & Optimization
+    - **A* Road Pathfinding**: Optimal shortest paths over the Pune road graph.
+    - **Crew Route Planner**: Multi-crew VRP with Greedy baseline, 2-Opt Hill Climbing, and Simulated Annealing.
+    - **Shift Constraints**: Crew skill matching, overtime penalties, and 8-hour shift limits.
     """)

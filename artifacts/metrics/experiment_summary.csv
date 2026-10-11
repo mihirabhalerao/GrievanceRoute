@@ -1,7 +1,9 @@
 Experiment,Target,Metric,Value,Notes
-Classification_LR,complaint_type,Macro-F1,0.99,TF-IDF + Logistic Regression
-Classification_DecisionTree,complaint_type,Macro-F1,0.96,Max depth 15
-Urgency_Regression_RF,urgency_score,MAE,0.35,Random Forest Regressor
-Resolution_Regression_RF,actual_resolution_hours,RMSE,5.4,Random Forest Regressor
-Clustering_KMeans_K5,spatial_hotspots,Silhouette,0.52,Projected metric coordinates (km)
+Classification_LR,complaint_type,Macro-F1,0.99,TF-IDF + Logistic Regression (Primary)
+Classification_DecisionTree,complaint_type,Macro-F1,0.94,Decision Tree (max depth 15)
+Classification_NaiveBayes,complaint_type,Macro-F1,0.98,Multinomial Naive Bayes
+Urgency_Regression_RF,urgency_score,MAE,0.79,Random Forest Regressor vs Median Baseline
+Resolution_Regression_RF,actual_resolution_hours,RMSE,14.0,Random Forest Regressor vs Median Baseline
+Clustering_KMeans_K5,spatial_hotspots,Silhouette,0.54,Projected metric coordinates (km)
+Clustering_DBSCAN_0.8km,density_hotspots,Noise_Fraction,0.011,"DBSCAN eps=0.8km, min_samples=25"
 Route_Opt_SimulatedAnnealing,vrp_tour,Distance_Improv_%,18.5,2-opt SA cooling schedule

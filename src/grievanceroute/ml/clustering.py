@@ -1,6 +1,6 @@
 """
 Unsupervised Spatial Clustering for GrievanceRoute.
-Implements K-Means (projected metric coordinates), DBSCAN, and Hierarchical Clustering.
+Implements K-Means (projected metric coordinates in km) and DBSCAN density-based hotspot detection.
 """
 
 from __future__ import annotations
@@ -9,7 +9,7 @@ from typing import Dict, Any, Tuple
 
 import numpy as np
 import pandas as pd
-from sklearn.cluster import KMeans, DBSCAN, AgglomerativeClustering
+from sklearn.cluster import KMeans, DBSCAN
 from sklearn.metrics import silhouette_score
 
 from grievanceroute.data.feature_engineering import project_coordinates_to_km, PUNE_CENTER_LAT, PUNE_CENTER_LON
@@ -33,7 +33,7 @@ def run_kmeans_hotspots(
     center_lats = PUNE_CENTER_LAT + centers_km[:, 1] * lat_deg_per_km
     center_lons = PUNE_CENTER_LON + centers_km[:, 0] * lon_deg_per_km
 
-    # Silhouette score (if valid sample size)
+    # Silhouette score
     sample_size = min(2000, len(coords_km))
     sil_score = silhouette_score(coords_km, labels, sample_size=sample_size, random_state=random_state)
 
@@ -42,7 +42,12 @@ def run_kmeans_hotspots(
     cluster_sizes = dict(zip([int(u) for u in unique], [int(c) for c in counts]))
 
     centers_list = [
-        {"cluster_id": i, "lat": round(float(center_lats[i]), 6), "lon": round(float(center_lons[i]), 6), "size": cluster_sizes.get(i, 0)}
+        {
+            "cluster_id": i,
+            "lat": round(float(center_lats[i]), 6),
+            "lon": round(float(center_lons[i]), 6),
+            "size": cluster_sizes.get(i, 0),
+        }
         for i in range(n_clusters)
     ]
 
@@ -77,30 +82,6 @@ def run_dbscan_hotspots(
         "noise_fraction": noise_fraction,
         "eps_km": eps_km,
         "min_samples": min_samples,
-    }
-
-    return labels, summary
-
-
-def run_hierarchical_clustering(
-    df: pd.DataFrame,
-    n_clusters: int = 4,
-) -> Tuple[np.ndarray, Dict[str, Any]]:
-    """Run Agglomerative Hierarchical Clustering on spatial points."""
-    coords_km = project_coordinates_to_km(df["latitude"], df["longitude"])
-    agg = AgglomerativeClustering(n_clusters=n_clusters)
-    labels = agg.fit_predict(coords_km)
-
-    sample_size = min(2000, len(coords_km))
-    sil_score = silhouette_score(coords_km, labels, sample_size=sample_size, random_state=42)
-
-    unique, counts = np.unique(labels, return_counts=True)
-    cluster_sizes = dict(zip([int(u) for u in unique], [int(c) for c in counts]))
-
-    summary = {
-        "n_clusters": n_clusters,
-        "silhouette_score": round(float(sil_score), 4),
-        "cluster_sizes": cluster_sizes,
     }
 
     return labels, summary

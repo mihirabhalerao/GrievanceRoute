@@ -1,6 +1,7 @@
 """
-Synthetic Dataset Generator for GrievanceRoute.
-Generates reproducible Pune civic complaints, repair crews, and road-network graph.
+Realistic Synthetic Dataset Generator for GrievanceRoute.
+Generates reproducible Pune civic complaints with realistic linguistic variation,
+informal Hinglish phrasing, cross-domain ambiguity, and configurable data-quality defects.
 """
 
 from __future__ import annotations
@@ -30,48 +31,75 @@ CATEGORY_CREW_MAP = {
     "garbage": "Sanitation Crew",
 }
 
+# Rich varied templates with colloquial, abbreviation, and informal phrasing
 TEXT_TEMPLATES = {
     "pothole": [
-        "Deep dangerous pothole on the main road near {loc}, causing heavy bike accidents.",
-        "Sadak par bahut bada gaddha hai near {loc}, vehicles are getting damaged daily.",
-        "Road surface broken with multiple crater-like potholes near {loc} chowk.",
-        "Dangerous open trench and deep crater on the street opposite {loc} market.",
-        "Severe road damage and uneven asphalt causing water accumulation near {loc}.",
-        "Gaddhe pad gaye hain road pe at {loc}, two wheelers slipping regularly.",
-        "Large pothole in the middle of the bus lane near {loc} signal.",
-        "Big crater formed after rains near {loc}. Immediate tarring repair required.",
+        "Deep dangerous pothole on the main road near {loc}, causing bike accidents.",
+        "Sadak par bahut bada gaddha hai near {loc}, vehicles getting damaged daily.",
+        "Road surface broken with multiple crater-like pot holes near {loc} chowk.",
+        "Open trench and deep khadda on street opposite {loc} market.",
+        "Severe asphalt damage and uneven road causing water stagnation near {loc}.",
+        "Gaddhe pad gaye hain road pe at {loc}, two-wheelers slipping regularly.",
+        "Large ditch in the middle of the bus lane near {loc} signal.",
+        "Big crater formed after rains near {loc}. Immediate patch work required.",
+        "Rasta kharab zala ahe, massive crater near {loc} causing heavy traffic jam.",
+        "Broken tar surface and loose gravel creating hazard near {loc} corner.",
+        "Road contractor left deep excavation unpaved at {loc} lane.",
+        "Pothole repaired last week has sunk again near {loc} bridge.",
     ],
     "water leak": [
         "Main pipeline burst and clean drinking water is gushing onto the road at {loc}.",
-        "Paani ki pipeline leak ho gayi hai near {loc}, lakhs of liters wasted since morning.",
+        "Paani ki pipe line leak ho gayi hai near {loc}, thousands of liters wasted.",
         "Severe water logging due to underground drinking water pipe rupture near {loc} garden.",
-        "Low water pressure and dirty contaminated tap supply reported across {loc} colony.",
-        "Water pipe cracked near the storm drain at {loc}, road completely flooded.",
-        "Nal se ganda paani aa raha hai and pipeline leaking continuously at {loc}.",
-        "Major municipal valve leakage flooding residential baseline near {loc} society.",
-        "Continuous water leakage from valve box at {loc} corner.",
+        "Low water pressure and dirty tap supply reported across {loc} colony.",
+        "Supply pipe cracked near storm drain at {loc}, entire street flooded with potable water.",
+        "Nal se ganda paani aa raha hai and line leaking continuously at {loc}.",
+        "Municipal valve chamber leaking water onto baseline near {loc} society.",
+        "Continuous water leakage from main valve box at {loc} corner for 2 days.",
+        "Drinking water line broken during cable laying work near {loc}.",
+        "Water fountain sprouting from road due to high pressure pipe burst at {loc}.",
+        "Pipeline leak at {loc} chowk reducing drinking water supply to all societies.",
+        "Paani waha se beh raha hai continuously near {loc} school gate.",
     ],
     "streetlight": [
         "Dark street! All streetlights are completely off and dark near {loc} lane.",
         "Live electrical wire hanging dangerously from a bent light pole near {loc}.",
-        "Streetlight pole sparking continuously near {loc} bus stand, risk of electrocution.",
-        "Bijli ka pole band hai aur raat ko bahut andhera rehta hai near {loc}.",
+        "Streetlight pole sparking continuously near {loc} bus stand, danger of shock.",
+        "Bijli ka pole band hai aur raat ko andhera rehta hai near {loc}.",
         "Exposed underground wires near the streetlight junction box at {loc}.",
         "Streetlight flickering violently and short-circuit sparks visible at {loc}.",
-        "Complete blackout on the municipal road stretch near {loc} school.",
-        "Streetlights have not been functioning for the past 5 days at {loc} bypass.",
+        "Complete blackout on municipal road stretch near {loc} school.",
+        "Street lamps fused for past 5 days at {loc} bypass, unsafe for pedestrians.",
+        "Pole light not working since Monday near {loc} chowk, please repair lamp.",
+        "Streetlight timer broken, light remains off all night at {loc} colony.",
+        "Dangerous exposed wiring on streetlight pole base outside {loc} bank.",
+        "Rasteche dive band ahet near {loc}, area pitch dark after 7 pm.",
     ],
     "garbage": [
         "Huge pile of uncollected garbage rotting and stinking on the corner of {loc}.",
-        "Kachra petti overflow ho rahi hai and stray animals spreading it near {loc}.",
-        "Solid waste dumped on the footpath blocking pedestrians near {loc} market.",
+        "Kachra petti overflow ho rahi hai and stray cattle spreading it near {loc}.",
+        "Solid waste dumped on footpath blocking pedestrians near {loc} market.",
         "Sanitation vehicle has not visited for four days; waste piling up at {loc}.",
         "Open dumping and burning of plastic garbage creating hazardous smoke at {loc}.",
-        "Dead animal and medical waste unattended near public bin at {loc} colony.",
-        "Overflowing dustbin with foul smell attracting mosquitoes near {loc} hospital.",
-        "Garbage dumping spot created illegally near the drainage line at {loc}.",
+        "Debris and waste unattended near public bin at {loc} colony.",
+        "Overflowing dustbin with foul smell attracting flies near {loc} hospital.",
+        "Garbage dumping spot created illegally near the corner at {loc}.",
+        "Kachra gaadi nahi aayi since 3 days at {loc}, bins completely full.",
+        "Dumping yard smell unbearable near residential gate at {loc}.",
+        "Rotting organic waste spilled over road near {loc} vegetables market.",
+        "Safai karmchari missing, waste heaps lying open along {loc} road.",
     ],
 }
+
+# Ambiguous and cross-cutting realistic citizen complaints
+AMBIGUOUS_TEMPLATES = [
+    ("pothole", "Water leaking from road side has filled deep potholes near {loc}, making ditch invisible."),
+    ("water leak", "Pothole digging damaged underground drinking water line near {loc}, water gushing out."),
+    ("garbage", "People throwing domestic garbage near the non-functional streetlight pole at {loc}."),
+    ("streetlight", "Garbage collection vehicle hit the streetlight pole at {loc}, wires now exposed and dark."),
+    ("pothole", "Huge crater in road near garbage container at {loc} causing traffic congestion."),
+    ("water leak", "Road damaged where water pipeline valve was recently excavated near {loc}."),
+]
 
 LOCALITY_NAMES = [
     "JM Road", "FC Road", "Karve Road", "Paud Road", "MG Road",
@@ -85,18 +113,21 @@ def generate_complaint_record(
     index: int,
     rng: np.random.Generator,
     py_rand: random.Random,
-    add_defects: bool = False
+    add_defects: bool = True
 ) -> Dict[str, Any]:
-    """Generate a single realistic complaint record."""
-    category = py_rand.choice(list(CATEGORY_CREW_MAP.keys()))
+    """Generate a single realistic complaint record with natural variance and noise."""
+    # Natural slightly imperfect class distribution (pothole 27%, garbage 26%, water leak 24%, streetlight 23%)
+    categories = ["pothole", "garbage", "water leak", "streetlight"]
+    cat_weights = [0.27, 0.26, 0.24, 0.23]
+    category = py_rand.choices(categories, weights=cat_weights)[0]
+
     zone = py_rand.choice(list(PUNE_ZONES.keys()))
     zone_info = PUNE_ZONES[zone]
 
     # Sample coordinates around zone center
-    lat = float(rng.normal(loc=zone_info["lat"], scale=0.012))
-    lon = float(rng.normal(loc=zone_info["lon"], scale=0.012))
+    lat = float(rng.normal(loc=zone_info["lat"], scale=0.014))
+    lon = float(rng.normal(loc=zone_info["lon"], scale=0.014))
 
-    # Time within past 120 days
     days_ago = py_rand.randint(1, 120)
     hour_probs = np.array([
         0.01, 0.01, 0.01, 0.01, 0.02, 0.03,  # 00-05
@@ -123,19 +154,26 @@ def generate_complaint_record(
     repeat = bool(py_rand.random() < 0.18)
 
     # Historical resolution hours context
-    hist_base = {
-        "pothole": 36.0,
-        "water leak": 18.0,
-        "streetlight": 24.0,
-        "garbage": 12.0
-    }[category]
-    historical_resolution_hours = round(float(rng.normal(loc=hist_base, scale=4.0)), 1)
+    hist_base = {"pothole": 36.0, "water leak": 20.0, "streetlight": 24.0, "garbage": 14.0}[category]
+    historical_resolution_hours = round(float(rng.normal(loc=hist_base, scale=5.0)), 1)
     historical_resolution_hours = max(4.0, historical_resolution_hours)
 
-    # Text description
+    # Text description selection
     loc_name = py_rand.choice(LOCALITY_NAMES)
-    template = py_rand.choice(TEXT_TEMPLATES[category])
+    # 8% chance of picking a cross-domain ambiguous template
+    if py_rand.random() < 0.08:
+        matching_amb = [t for t in AMBIGUOUS_TEMPLATES if t[0] == category]
+        template = py_rand.choice(matching_amb)[1] if matching_amb else py_rand.choice(TEXT_TEMPLATES[category])
+    else:
+        template = py_rand.choice(TEXT_TEMPLATES[category])
+
     complaint_text = template.format(loc=loc_name)
+
+    # Introduce natural colloquial variations / typos (5% chance)
+    if py_rand.random() < 0.05:
+        typo_map = {"pothole": "pot hole", "pipeline": "pipe line", "light": "lite", "garbage": "garbge"}
+        for k, v in typo_map.items():
+            complaint_text = complaint_text.replace(k, v)
 
     # Calculate urgency score (1-5) based on interacting factors
     urgency_raw = 2.0
@@ -154,8 +192,8 @@ def generate_complaint_record(
         if monsoon:
             urgency_raw += 0.8
     elif category == "garbage":
-        if "hospital" in complaint_text.lower() or "dead animal" in complaint_text.lower():
-            urgency_raw += 1.8
+        if "hospital" in complaint_text.lower():
+            urgency_raw += 1.6
         if repeat:
             urgency_raw += 0.6
 
@@ -164,30 +202,22 @@ def generate_complaint_record(
     if weather == "Stormy":
         urgency_raw += 0.6
 
-    # Add noise to urgency
-    urgency_raw += float(rng.normal(0, 0.35))
+    # Real-world noise on urgency
+    urgency_raw += float(rng.normal(0, 0.45))
     urgency_score = int(np.clip(round(urgency_raw), 1, 5))
 
-    # Actual resolution hours (target for regression)
-    # Higher urgency gets faster attention, weather causes delays
-    delay_factor = 1.0
+    # Actual resolution hours (skewed distribution)
+    base_time = {1: 52.0, 2: 38.0, 3: 26.0, 4: 16.0, 5: 8.0}[urgency_score]
+    delay = 1.0
     if weather in ["Rainy", "Stormy"]:
-        delay_factor += 0.4
+        delay += 0.35
     if repeat:
-        delay_factor += 0.2
+        delay += 0.2
 
-    base_time = {
-        1: 52.0,
-        2: 38.0,
-        3: 26.0,
-        4: 16.0,
-        5: 8.0
-    }[urgency_score]
-
-    actual_hours = base_time * delay_factor + float(rng.exponential(scale=6.0))
+    # Lognormal noise with occasional backlog spike
+    actual_hours = base_time * delay + float(rng.lognormal(mean=1.8, sigma=0.6))
     actual_resolution_hours = round(float(np.clip(actual_hours, 1.5, 168.0)), 1)
 
-    # Status
     status_choices = ["Resolved", "In Progress", "Assigned", "Pending"]
     status_weights = [0.65, 0.15, 0.12, 0.08]
     status = py_rand.choices(status_choices, weights=status_weights)[0]
@@ -213,18 +243,21 @@ def generate_complaint_record(
         "crew_required": CATEGORY_CREW_MAP[category],
     }
 
-    # Introduce subtle controlled defects if requested (for preprocessing lab exercises)
+    # Configurable realistic defects for preprocessing demonstration
     if add_defects:
-        defect_prob = py_rand.random()
-        if defect_prob < 0.015:
-            # Null weather
+        prob = py_rand.random()
+        if prob < 0.02:
+            # Missing weather
             record["weather"] = None
-        elif defect_prob < 0.025:
-            # Leading/trailing whitespace
-            record["complaint_text"] = "   " + record["complaint_text"] + "  "
-        elif defect_prob < 0.035:
+        elif prob < 0.035:
+            # Extra leading / trailing whitespace
+            record["complaint_text"] = "  " + record["complaint_text"] + "   "
+        elif prob < 0.05:
             # Inconsistent casing in zone
             record["zone"] = record["zone"].lower()
+        elif prob < 0.055:
+            # Slight coordinate anomaly (outside Pune primary bounding box)
+            record["latitude"] = round(lat + 0.3, 6)
 
     return record
 
@@ -235,10 +268,10 @@ def generate_crews() -> pd.DataFrame:
         {"crew_id": "CRW-RD-01", "crew_name": "Kothrud Road Works", "depot_node": "DEPOT-KOT", "depot_lat": 18.5074, "depot_lon": 73.8077, "skill": "Road Maintenance", "capacity": 7, "shift_hours": 8.0, "speed_kmh": 25.0},
         {"crew_id": "CRW-RD-02", "crew_name": "Hadapsar Asphalt Team", "depot_node": "DEPOT-HAD", "depot_lat": 18.5089, "depot_lon": 73.9259, "skill": "Road Maintenance", "capacity": 6, "shift_hours": 8.0, "speed_kmh": 25.0},
         {"crew_id": "CRW-WS-01", "crew_name": "Shivajinagar Hydro Squad", "depot_node": "DEPOT-SHI", "depot_lat": 18.5314, "depot_lon": 73.8446, "skill": "Water Supply Crew", "capacity": 6, "shift_hours": 8.0, "speed_kmh": 22.0},
-        {"crew_id": "CRW-WS-02", "crew_name": "Swargate Pipeline Quick Response", "depot_node": "DEPOT-SWA", "depot_lat": 18.5018, "depot_lon": 73.8586, "skill": "Water Supply Crew", "capacity": 5, "shift_hours": 8.0, "speed_kmh": 22.0},
+        {"crew_id": "CRW-WS-02", "crew_name": "Swargate Pipeline Response", "depot_node": "DEPOT-SWA", "depot_lat": 18.5018, "depot_lon": 73.8586, "skill": "Water Supply Crew", "capacity": 5, "shift_hours": 8.0, "speed_kmh": 22.0},
         {"crew_id": "CRW-EL-01", "crew_name": "Baner Power & Lighting", "depot_node": "DEPOT-BAN", "depot_lat": 18.5590, "depot_lon": 73.7868, "skill": "Electrical Crew", "capacity": 8, "shift_hours": 8.0, "speed_kmh": 28.0},
         {"crew_id": "CRW-EL-02", "crew_name": "Viman Nagar Grid Technicians", "depot_node": "DEPOT-VIM", "depot_lat": 18.5679, "depot_lon": 73.9143, "skill": "Electrical Crew", "capacity": 8, "shift_hours": 8.0, "speed_kmh": 28.0},
-        {"crew_id": "CRW-SN-01", "crew_name": "Central Pune Sanitation Unit", "depot_node": "DEPOT-SHI", "depot_lat": 18.5314, "depot_lon": 73.8446, "skill": "Sanitation Crew", "capacity": 10, "shift_hours": 8.0, "speed_kmh": 20.0},
+        {"crew_id": "CRW-SN-01", "crew_name": "Central Pune Sanitation Unit", "depot_node": "DEPOT-SHI", "depot_lat": 18.5314, "depot_lon": 73.8446, "skill": "Sanitation Crew", "capacity": 9, "shift_hours": 8.0, "speed_kmh": 20.0},
         {"crew_id": "CRW-SN-02", "crew_name": "East Zone Waste Fleet", "depot_node": "DEPOT-HAD", "depot_lat": 18.5089, "depot_lon": 73.9259, "skill": "Sanitation Crew", "capacity": 9, "shift_hours": 8.0, "speed_kmh": 20.0},
     ]
     return pd.DataFrame(crews_data)
@@ -260,12 +293,11 @@ def generate_road_network() -> Dict[str, Any]:
         "INT-AUNDH": {"lat": 18.5602, "lon": 73.8070, "label": "Aundh Chowk", "zone": "Baner"},
         "INT-MAGAR": {"lat": 18.5140, "lon": 73.9280, "label": "Magarpatta City Gate", "zone": "Hadapsar"},
         "INT-PULGATE": {"lat": 18.5080, "lon": 73.8820, "label": "Pulgate Camp", "zone": "Swargate"},
-        "INT-KATRAJ": {"lat": 18.4575, "lon": 73.8677, "label": "Katraj Snake Park Jn", "zone": "Swargate"},
+        "INT-KATRAJ": {"lat": 18.4575, "lon": 73.8677, "label": "Katraj Chowk", "zone": "Swargate"},
         "INT-KALYANI": {"lat": 18.5470, "lon": 73.9020, "label": "Kalyani Nagar Bridge", "zone": "Viman Nagar"},
         "INT-YERAWADA": {"lat": 18.5530, "lon": 73.8790, "label": "Yerawada Jn", "zone": "Viman Nagar"},
     }
 
-    # Interconnected edges: (source, target, road_name, distance_km)
     edges = [
         ("DEPOT-KOT", "INT-DECCAN", "Karve Road", 4.2),
         ("DEPOT-BAN", "INT-AUNDH", "Baner-Aundh Road", 3.1),
@@ -290,20 +322,13 @@ def generate_road_network() -> Dict[str, Any]:
     edge_list = []
     for u, v, name, dist in edges:
         edge_list.append({
-            "source": u,
-            "target": v,
-            "road_name": name,
-            "distance_km": dist,
-            "speed_kmh": 30.0,
+            "source": u, "target": v, "road_name": name,
+            "distance_km": dist, "speed_kmh": 30.0,
             "travel_time_min": round((dist / 30.0) * 60, 2),
         })
-        # Undirected road graph
         edge_list.append({
-            "source": v,
-            "target": u,
-            "road_name": name,
-            "distance_km": dist,
-            "speed_kmh": 30.0,
+            "source": v, "target": u, "road_name": name,
+            "distance_km": dist, "speed_kmh": 30.0,
             "travel_time_min": round((dist / 30.0) * 60, 2),
         })
 
@@ -317,7 +342,7 @@ def generate_full_dataset(
     crews_csv_path: str | Path = "data/raw/crews.csv",
     road_json_path: str | Path = "data/raw/road_network.json",
 ) -> Tuple[pd.DataFrame, pd.DataFrame, Dict[str, Any]]:
-    """Generate and write the full reproducible synthetic dataset."""
+    """Generate and write the full reproducible synthetic dataset with realistic defects."""
     rng = np.random.default_rng(seed)
     py_rand = random.Random(seed)
 
@@ -326,7 +351,7 @@ def generate_full_dataset(
         rec = generate_complaint_record(i, rng, py_rand, add_defects=True)
         records.append(rec)
 
-    # Inject a controlled 0.5% duplicate set for preprocessing verification
+    # Controlled exact duplicates (0.5%)
     dup_count = int(target_count * 0.005)
     for k in range(dup_count):
         dup_record = records[k].copy()
@@ -346,8 +371,3 @@ def generate_full_dataset(
         json.dump(road_network, f, indent=2)
 
     return df_complaints, crews_df, road_network
-
-
-if __name__ == "__main__":
-    df, crews, road = generate_full_dataset()
-    print(f"Dataset generated successfully! Complaints shape: {df.shape}, Crews: {crews.shape}, Road nodes: {len(road['nodes'])}")

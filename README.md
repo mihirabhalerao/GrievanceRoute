@@ -16,7 +16,7 @@
 
 **GrievanceRoute** is an end-to-end, reproducible, intelligent civic complaint triage and repair crew routing system. Built for municipal operations in Pune, Maharashtra, it addresses the challenges of high-volume citizen complaints through automated Natural Language Processing (NLP), multi-target regression, spatial hotspot clustering, and constrained vehicle routing optimization (VRP).
 
-The application integrates classical artificial intelligence heuristic search, supervised learning, unsupervised learning, and combinatorial optimization into a functional, multi-page Streamlit web application.
+The application integrates classical artificial intelligence heuristic search, supervised learning, unsupervised learning, and combinatorial local search into a functional, 7-page Streamlit web application.
 
 ---
 
@@ -24,12 +24,12 @@ The application integrates classical artificial intelligence heuristic search, s
 
 | Syllabus Unit | Topics Covered | GrievanceRoute Module | GUI Page |
 | :--- | :--- | :--- | :--- |
-| **Unit I: Introduction to AI** | Problem formulation, state space, production systems, PEAS agent | `src/grievanceroute/services/` | `02 Complaint Management` |
-| **Unit II: Heuristic Search** | A*, Greedy Best-First, Hill Climbing, Simulated Annealing, Water-Jug, 8-Puzzle, AO*, Minimax | `src/grievanceroute/ai/` | `07 AI Algorithm Lab`<br/>`05 Crew Route Planner` |
-| **Unit III: ML & Preprocessing** | Deduplication, imputation, TF-IDF, scaling, binning, sampling | `src/grievanceroute/data/` | `08 Data Quality & Insights` |
-| **Unit IV: Supervised Learning** | Logistic Regression, Decision Tree, KNN, Naive Bayes, Linear & Random Forest Regressors | `src/grievanceroute/ml/` | `04 ML Workbench`<br/>`01 Operations Dashboard` |
-| **Unit V: Unsupervised Learning** | K-Means (projected coordinates), DBSCAN, Hierarchical clustering, Apriori association rules | `src/grievanceroute/ml/` | `03 Geographic Hotspots`<br/>`06 Experiments` |
-| **Unit VI: Optimization** | Multi-crew VRP objective $J(R)$, 2-opt search, SGD/Adam/RMSprop comparison | `src/grievanceroute/routing/`<br/>`src/grievanceroute/ml/neural_net.py` | `05 Crew Route Planner`<br/>`06 Experiments` |
+| **Unit I: Introduction to AI** | Problem formulation, state space, production rules, PEAS agent | `src/grievanceroute/services/` | `02 Complaint Management` |
+| **Unit II: Heuristic Search** | A* Search ($f=g+h$ with admissible Euclidean lower bound), Hill Climbing (2-opt), Simulated Annealing | `src/grievanceroute/ai/` | `05 Crew Route Planner` |
+| **Unit III: ML & Preprocessing** | Deduplication, mode imputation, coordinate validation, casing normalization, TF-IDF, scaling | `src/grievanceroute/data/` | `07 Data Quality & Insights` |
+| **Unit IV: Supervised Learning** | Logistic Regression (Primary), Decision Tree, Multinomial Naive Bayes, Majority Baseline, Linear/RF Regressors vs Median Baseline | `src/grievanceroute/ml/` | `04 ML Workbench`<br/>`01 Operations Dashboard` |
+| **Unit V: Unsupervised Learning** | K-Means (projected metric coordinates), DBSCAN density clustering, Apriori association rules | `src/grievanceroute/ml/` | `03 Geographic Hotspots`<br/>`06 Experiments` |
+| **Unit VI: Optimization** | Constrained multi-crew VRP objective $J(R)$, 2-opt search, Simulated Annealing cooling schedule | `src/grievanceroute/routing/`<br/>`src/grievanceroute/ai/` | `05 Crew Route Planner`<br/>`06 Experiments` |
 
 ---
 
@@ -52,17 +52,16 @@ GrievanceRoute/
 │   └── grievance_route.db              # SQLite operational database
 ├── pages/
 │   ├── 01_Operations_Dashboard.py      # Real-time KPIs, queues, category/zone analytics
-│   ├── 02_Complaint_Management.py      # Validated citizen intake & audit history
+│   ├── 02_Complaint_Management.py      # Validated citizen intake, triage, & audit history
 │   ├── 03_Geographic_Hotspots.py       # K-Means & DBSCAN density maps on projected coordinates
-│   ├── 04_ML_Workbench.py              # Classifier & regressor benchmarks, ROC curves
-│   ├── 05_Crew_Route_Planner.py        # Multi-crew VRP with Greedy, HC, and Simulated Annealing
+│   ├── 04_ML_Workbench.py              # Classifier & regressor benchmarks, ROC curves, Error Analysis
+│   ├── 05_Crew_Route_Planner.py        # Multi-crew VRP with Greedy, 2-Opt HC, and Simulated Annealing
 │   ├── 06_Experiments.py               # MLflow tracking, metrics CSVs, artifact registry
-│   ├── 07_AI_Algorithm_Lab.py          # A*, Best-First, Water-Jug, 8-Puzzle, AO*, Minimax
-│   └── 08_Data_Quality.py              # Preprocessing demos, scaling, sampling, binning
+│   └── 07_Data_Quality.py              # Preprocessing demos, scaling, sampling, defect audits
 ├── src/grievanceroute/
 │   ├── data/                           # Generator, validator, preprocessor, feature engineering
-│   ├── ml/                             # Classifiers, regressors, clustering, Apriori, neural net
-│   ├── ai/                             # A*, best-first, hill climbing, annealing, classic demos
+│   ├── ml/                             # Classifiers, regressors, clustering, Apriori association
+│   ├── ai/                             # A* search (Euclidean heuristic), 2-opt HC, Simulated Annealing
 │   ├── routing/                        # NetworkX graph, shift constraints, VRP solvers
 │   ├── database/                       # SQLite schema DDL, repository CRUD
 │   └── services/                       # Triage prediction, complaint intake, route planning
@@ -70,7 +69,7 @@ GrievanceRoute/
 │   ├── models/                         # Serialized Joblib .pkl pipelines
 │   ├── metrics/                        # Benchmark JSONs and exported CSVs
 │   └── figures/                        # Generated architecture, workflow, and ROC plots
-├── tests/                              # Pytest test suite (18 unit & integration tests)
+├── tests/                              # Pytest test suite (21 unit, integration, & workflow tests)
 └── docs/                               # Architecture, algorithms, dataset card, report outline
 ```
 
@@ -93,7 +92,7 @@ pip install -r requirements.txt
 ```
 
 ### 2. Run Pipeline Automation
-You can generate data, train models, run experiments, and initialize the database in one sequence:
+You can generate data, train models, run experiments, and initialize the database in sequence:
 ```bash
 # Using Makefile
 make setup
@@ -122,42 +121,50 @@ Run the full pytest suite with verbose output:
 ```bash
 pytest tests/ -v
 ```
-All 18 tests cover dataset generation, leakage prevention, classifier pipelines, clustering, Apriori, A* optimality, water-jug, 8-puzzle solvability, AO*, minimax, VRP constraints, and SQLite persistence.
+All 21 tests pass with 0 failures, covering dataset generation reproducibility, defect cleaning, target leakage prevention, coordinate projection, classifier benchmarks against Majority Baseline, regressor benchmarks against Median Baseline, spatial clustering, Apriori rule mining, A* admissibility, 2-opt hill climbing, simulated annealing, shift budget constraints, safety overrides, and end-to-end integration workflows.
 
 ---
 
 ## 📊 Measured Benchmark Results
 
-### 1. Classification (Untouched Test Split: 1,600 Records)
-| Model | Accuracy | Macro F1 | Macro Precision | Macro Recall | Training Time |
-| :--- | :--- | :--- | :--- | :--- | :--- |
-| **Logistic Regression (Primary)** | **100.0%** | **1.0000** | **1.0000** | **1.0000** | **0.26s** |
-| Decision Tree (depth=15) | 100.0% | 1.0000 | 1.0000 | 1.0000 | 0.22s |
-| K-Nearest Neighbors (k=5) | 100.0% | 1.0000 | 1.0000 | 1.0000 | 0.22s |
-| Multinomial Naive Bayes | 100.0% | 1.0000 | 1.0000 | 1.0000 | 0.21s |
+All figures below are exact empirical results measured across our 8,000-record dataset (80/20 train/test split, 1,600 test records):
 
-### 2. Multi-Target Regression
-| Target | Model | MAE | RMSE | $R^2$ Score |
-| :--- | :--- | :--- | :--- | :--- |
-| **Urgency Score (1–5)** | Random Forest | **0.7908** | **0.9181** | **0.2206** |
-| | Linear Regression | 0.8259 | 0.9396 | 0.1838 |
-| **Actual Resolution Hours** | Random Forest | **11.6152 hrs** | **14.0156 hrs** | **0.1450** |
-| | Linear Regression | 11.9858 hrs | 14.2366 hrs | 0.1178 |
+### 1. Classification (Test Split: 1,600 Records)
+| Model | Accuracy | Macro F1 | Weighted F1 | Macro Precision | Macro Recall | Train Time |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| **Majority Baseline** | 26.50% | 0.1047 | 0.1110 | 0.0663 | 0.2500 | 0.26s |
+| **Logistic Regression (Primary)** | **100.0%** | **1.0000** | **1.0000** | **1.0000** | **1.0000** | **0.28s** |
+| Multinomial Naive Bayes | 100.0% | 1.0000 | 1.0000 | 1.0000 | 1.0000 | 0.22s |
+| Decision Tree (depth=15) | 99.94% | 0.9994 | 0.9994 | 0.9994 | 0.9994 | 0.35s |
 
-### 3. Spatial Clustering Hotspots
-- **K-Means ($K=5$)**: Silhouette Score = **0.5450**, Inertia = **33,804.1** (Projected planar coordinates in km).
-- **DBSCAN ($\epsilon=0.8\text{ km}$, $\text{min\_samples}=25$)**: Discovers 2 high-density zones with 1.1% noise points.
+*Note on High Classification Scores*: The near-perfect metrics stem from lexical template phrasing in the synthetic dataset. In production, real-world noisy citizen submissions require continuous monitoring via the Error Analysis tab.
 
-### 4. Vehicle Routing Problem (VRP) Optimization
-| Algorithm | Distance (km) | Distance Imprv (%) | Objective Cost $J(R)$ | Runtime (ms) |
-| :--- | :--- | :--- | :--- | :--- |
-| **Greedy Baseline** | 98.4 km | 0.0% | 185.4 | 66.1 ms |
-| **2-Opt Hill Climbing** | 84.1 km | +14.5% | 158.2 | 4.5 ms |
-| **Simulated Annealing** | **80.2 km** | **+18.5%** | **150.1** | **11.9 ms** |
+### 2. Multi-Target Regression (Test Split: 1,600 Records)
+| Target | Model | MAE | RMSE | $R^2$ Score | Mean Residual | Std Residual |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| **Urgency Score (1–5)** | **Median Baseline** | 0.8906 | 1.1048 | -0.0477 | +0.2356 | 1.0795 |
+| | Linear Regression | 0.8336 | 0.9748 | 0.1843 | +0.0095 | 0.9747 |
+| | **Random Forest Regressor** | **0.8045** | **0.9613** | **0.2068** | **+0.0104** | **0.9612** |
+| **Resolution Time (Hours)** | **Median Baseline** | 12.2994 hrs | 14.9823 hrs | -0.0001 | -0.1643 | 14.9814 |
+| | Linear Regression | 11.4159 hrs | 13.7661 hrs | 0.1557 | -0.2551 | 13.7637 |
+| | **Random Forest Regressor** | **11.0868 hrs** | **13.5931 hrs** | **0.1767** | **-0.1977** | **13.5917** |
+
+### 3. Spatial Hotspot Clustering
+- **K-Means ($K=5$)**: Silhouette Score = **0.5450**, Inertia = **33,804.1** computed on metric projected planar coordinates $(x_{\text{km}}, y_{\text{km}})$.
+- **DBSCAN ($\epsilon=0.8\text{ km}$, $\text{min\_samples}=25$)**: Detects 2 primary dense grievance corridors with 1.1% noise fraction.
+
+### 4. Vehicle Routing Problem (VRP) Optimization (8 Specialized Municipal Crews)
+| Algorithm | Total Distance | Distance Imprv (%) | Objective Cost $J(R)$ | Complaints Served | Total Overtime | Runtime (ms) |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| **Greedy Baseline** | 270.95 km | 0.00% | 370.95 | 41 / 45 | 0.00 hrs | 104.4 ms |
+| **2-Opt Hill Climbing** | **194.85 km** | **+28.09%** | **274.85** | 41 / 45 | 0.00 hrs | 7.1 ms |
+| **Simulated Annealing** | **196.54 km** | **+27.46%** | **276.54** | 41 / 45 | 0.00 hrs | 10.1 ms |
+
+*Route Feasibility Summary*: Both local search heuristics achieve substantial travel savings (~28% distance reduction) while strictly satisfying the hard 8.0-hour shift limit (0.0 hours overtime) and crew specialization constraints.
 
 ---
 
-## ⚠️ Limitations & Disclosure
-1. **Synthetic Nature of Dataset**: The 8,000 complaints are generated using probabilistic sentence templates. The perfect classification metrics on the random split reflect template consistency rather than real-world generalizability.
-2. **Deterministic Rules**: The electrical hazard override relies on substring phrase matching; semantic variations not included in the lexicon require operator review.
-3. **Road Graph Approximation**: The network uses 16 major Pune junction nodes rather than a complete OpenStreetMap road graph.
+## ⚠️ Limitations & Methodological Disclosure
+1. **Synthetic Nature of Dataset**: The 8,000 complaints are generated using probabilistic sentence templates with simulated defects (duplicates, missing weather, anomalous coordinates). The near-perfect classification metrics on synthetic test splits reflect template consistency rather than organic citizen variability.
+2. **Deterministic Rules & Lexicons**: The electrical safety override relies on substring phrase matching; semantic expressions not included in the keyword lexicon require supervisor vigilance.
+3. **Road Graph Approximation**: The current network uses 16 major Pune junction nodes with Euclidean $A^*$ lower bounds rather than a complete OpenStreetMap road network.

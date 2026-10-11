@@ -25,8 +25,8 @@ Comprehensive review of 5 verified literature citations:
 ## Section 4: Dataset Used
 - **Dataset Description**: Synthetic Pune Civic Complaints (`data/raw/pune_civic_complaints.csv`, 8,040 rows raw, 8,000 cleaned).
 - **Features**: 18 attributes (NLP text, coordinates, weather, recurrence, urgency, resolution time).
-- **Defects Injected**: 40 duplicate records, 104 null weather values for preprocessing exercises.
-- **Companion Data**: `crews.csv` (8 crews) and `road_network.json` (16 road nodes).
+- **Defects Injected**: 40 duplicate records, 184 null weather values, 8 coordinate outliers for preprocessing exercises.
+- **Companion Data**: `crews.csv` (8 specialized crews) and `road_network.json` (16 road nodes).
 
 ## Section 5: Flow Diagram / Block Diagram
 - System architecture diagram: `artifacts/figures/architecture.png`
@@ -37,10 +37,10 @@ Comprehensive review of 5 verified literature citations:
 - **Libraries**: Scikit-Learn, Streamlit, Pandas, NumPy, NetworkX, Plotly, Folium, MLflow, Pytest, Joblib.
 
 ## Section 7: Model Development
-- Preprocessing: whitespace cleaning, mode imputation, deduplication.
+- Preprocessing: whitespace cleaning, mode imputation, deduplication, coordinate bounds filtering.
 - Feature Extraction: Word unigram/bigram TF-IDF vectorizer (sublinear TF).
-- Model Exploration: Logistic Regression, Decision Tree, KNN, Multinomial Naive Bayes.
-- Regression: Linear Regression, Ridge, Random Forest for urgency (1–5) and resolution hours.
+- Model Exploration: Logistic Regression (Primary), Decision Tree, Multinomial Naive Bayes evaluated against Majority Baseline.
+- Regression: Linear Regression, Ridge, Random Forest for urgency (1–5) and resolution hours evaluated against Median Baseline.
 
 ## Section 8: Version Control
 - Git repository structure with modular packaging, branch isolation, and GitHub Actions CI.
@@ -50,30 +50,31 @@ Comprehensive review of 5 verified literature citations:
 - Consolidated run summary: `artifacts/metrics/experiment_summary.csv`.
 
 ## Section 10: AutoML / MLOps
-- Automated hyperparameter selection via GridSearchCV.
+- Hyperparameter evaluation via Scikit-Learn grid pipelines.
 - CI automated testing pipeline: `.github/workflows/tests.yml`.
 - Pinned dependency reproduction with Docker.
 
 ## Section 11: Deployment
-- Multi-page Streamlit web application (`app.py`, `pages/01` to `pages/08`).
-- Local-first offline execution on laptop CPU.
+- 7-page Streamlit web application (`app.py`, `pages/01` to `pages/07`).
+- Local-first offline execution on laptop CPU without external API keys.
 - Parameterized SQLite persistence (`data/grievance_route.db`).
 
 ## Section 12: Results and Discussions
-- **Classification Performance**: Logistic Regression baseline achieves high macro-F1 on template test split (1,600 records).
-- **Urgency Regression**: Random Forest achieves MAE 0.79 on 1–5 urgency scale.
-- **Resolution Regression**: Random Forest achieves MAE 11.6 hours.
-- **Clustering**: K-Means ($K=5$) yields silhouette score 0.545 on projected coordinates.
-- **Route Optimization**: Simulated Annealing achieves 15–20% distance reduction over greedy baseline.
-- **Caveats**: Synthetic template-based accuracy is inflated; real-world generalizability requires testing on organic citizen submissions.
+- **Classification Performance**:
+  - Majority Baseline: 26.50% accuracy, 0.1047 Macro-F1.
+  - Logistic Regression (Primary): 100.0% accuracy, 1.0000 Macro-F1 (template data).
+  - Decision Tree: 99.94% accuracy, 0.9994 Macro-F1.
+  - Multinomial Naive Bayes: 100.0% accuracy, 1.0000 Macro-F1.
+- **Urgency Regression**:
+  - Median Baseline: MAE 0.8906, RMSE 1.1048, $R^2 = -0.0477$.
+  - Random Forest: MAE 0.8045, RMSE 0.9613, $R^2 = 0.2068$.
+- **Resolution Regression**:
+  - Median Baseline: MAE 12.2994 hrs, RMSE 14.9823 hrs, $R^2 = -0.0001$.
+  - Random Forest: MAE 11.0868 hrs, RMSE 13.5931 hrs, $R^2 = 0.1767$.
+- **Clustering**: K-Means ($K=5$) yields silhouette score 0.545 on projected coordinates; DBSCAN ($\epsilon=0.8$ km) isolates noise points.
+- **Route Optimization**: Simulated Annealing achieves 27.46% distance reduction and 2-Opt Hill Climbing achieves 28.09% reduction over greedy baseline, while maintaining 0.0 hours overtime within 8-hour shift limits.
 
 ## Section 13: Future Scope
-- Integration with live Pune Municipal Corporation (PMC) citizen portals.
-- Marathi NLP support with multilingual regional transformer models (IndicBERT).
-- Real-time GPS crew tracking and dynamic vehicle re-routing.
-
-## Section 14: Conclusion
-- Summary of end-to-end working system covering all six AIML syllabus units, persistent database, working GUI, and reproducible testing.
-
-## Section 15: References
-Complete IEEE-style references verified from publishers and indexing records.
+- Integration with live OpenStreetMap road network APIs.
+- Continuous active-learning annotation loops for organic citizen dialect variations.
+- Dynamic traffic impedance matrices for time-varying rush hour routing.
