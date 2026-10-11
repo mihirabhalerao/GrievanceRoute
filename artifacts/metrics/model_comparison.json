@@ -1,0 +1,212 @@
+{
+  "classification": {
+    "Logistic Regression": {
+      "accuracy": 1.0,
+      "macro_f1": 1.0,
+      "macro_precision": 1.0,
+      "macro_recall": 1.0,
+      "training_time_sec": 0.2604,
+      "confusion_matrix": [
+        [
+          407,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          389,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          409,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          395
+        ]
+      ],
+      "classes": [
+        "garbage",
+        "pothole",
+        "streetlight",
+        "water leak"
+      ]
+    },
+    "Decision Tree": {
+      "accuracy": 1.0,
+      "macro_f1": 1.0,
+      "macro_precision": 1.0,
+      "macro_recall": 1.0,
+      "training_time_sec": 0.2234,
+      "confusion_matrix": [
+        [
+          407,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          389,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          409,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          395
+        ]
+      ],
+      "classes": [
+        "garbage",
+        "pothole",
+        "streetlight",
+        "water leak"
+      ]
+    },
+    "KNN": {
+      "accuracy": 1.0,
+      "macro_f1": 1.0,
+      "macro_precision": 1.0,
+      "macro_recall": 1.0,
+      "training_time_sec": 0.2154,
+      "confusion_matrix": [
+        [
+          407,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          389,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          409,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          395
+        ]
+      ],
+      "classes": [
+        "garbage",
+        "pothole",
+        "streetlight",
+        "water leak"
+      ]
+    },
+    "Multinomial Naive Bayes": {
+      "accuracy": 1.0,
+      "macro_f1": 1.0,
+      "macro_precision": 1.0,
+      "macro_recall": 1.0,
+      "training_time_sec": 0.2066,
+      "confusion_matrix": [
+        [
+          407,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          389,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          409,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          395
+        ]
+      ],
+      "classes": [
+        "garbage",
+        "pothole",
+        "streetlight",
+        "water leak"
+      ]
+    }
+  },
+  "urgency_regression": {
+    "Linear Regression": {
+      "target": "urgency_score",
+      "mae": 0.8259,
+      "mse": 0.8828,
+      "rmse": 0.9396,
+      "r2": 0.1838,
+      "training_time_sec": 0.0494
+    },
+    "Ridge Regression": {
+      "target": "urgency_score",
+      "mae": 0.8259,
+      "mse": 0.8828,
+      "rmse": 0.9396,
+      "r2": 0.1838,
+      "training_time_sec": 0.0416
+    },
+    "Random Forest Regressor": {
+      "target": "urgency_score",
+      "mae": 0.7908,
+      "mse": 0.8429,
+      "rmse": 0.9181,
+      "r2": 0.2206,
+      "training_time_sec": 1.3135
+    }
+  },
+  "resolution_regression": {
+    "Linear Regression": {
+      "target": "actual_resolution_hours",
+      "mae": 11.9858,
+      "mse": 202.682,
+      "rmse": 14.2366,
+      "r2": 0.1178,
+      "training_time_sec": 0.0276
+    },
+    "Ridge Regression": {
+      "target": "actual_resolution_hours",
+      "mae": 11.9858,
+      "mse": 202.6766,
+      "rmse": 14.2365,
+      "r2": 0.1179,
+      "training_time_sec": 0.0199
+    },
+    "Random Forest Regressor": {
+      "target": "actual_resolution_hours",
+      "mae": 11.6152,
+      "mse": 196.4366,
+      "rmse": 14.0156,
+      "r2": 0.145,
+      "training_time_sec": 1.1214
+    }
+  }
+}

@@ -1,0 +1,4 @@
+Algorithm,Total Distance (km),Distance Improvement (%),Objective Cost J(R),Complaints Served,Urgency Served,Unserved Work,Total Overtime (h),Runtime (ms)
+Greedy (Nearest-High-Priority),265.29,0.0,385.29,40,147.0,5,0.0,66.11
+A* / 2-Opt Hill Climbing,201.13,24.18,361.13,40,147.0,5,0.0,4.46
+Simulated Annealing Optimizer,202.38,23.71,362.38,40,147.0,5,0.0,11.92

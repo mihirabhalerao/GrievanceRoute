@@ -1,0 +1,27 @@
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.pytest_cache/
+.coverage
+htmlcov/
+*.log
+
+# Environment
+.env
+.venv
+env/
+venv/
+ENV/
+
+# Data and large local persistence (recreated via scripts)
+data/grievance_route.db
+data/grievance_route.db-journal
+
+# MLflow tracking local files
+mlruns/
+.trash/
+
+# OS files
+.DS_Store
+Thumbs.db

@@ -1,0 +1,56 @@
+app:
+  name: "GrievanceRoute"
+  title: "GrievanceRoute — Intelligent Civic Complaint Triage & Crew Routing System"
+  city: "Pune, Maharashtra"
+  default_center_lat: 18.5204
+  default_center_lon: 73.8567
+  random_seed: 42
+
+paths:
+  raw_complaints: "data/raw/pune_civic_complaints.csv"
+  raw_crews: "data/raw/crews.csv"
+  road_network: "data/raw/road_network.json"
+  processed_complaints: "data/processed/cleaned_complaints.csv"
+  database_url: "sqlite:///data/grievance_route.db"
+  models_dir: "artifacts/models"
+  metrics_dir: "artifacts/metrics"
+  figures_dir: "artifacts/figures"
+
+dataset:
+  target_rows: 8000
+  categories:
+    - "pothole"
+    - "water leak"
+    - "streetlight"
+    - "garbage"
+  zones:
+    - "Kothrud"
+    - "Shivajinagar"
+    - "Hadapsar"
+    - "Baner"
+    - "Swargate"
+    - "Viman Nagar"
+  weathers:
+    - "Clear"
+    - "Rainy"
+    - "Cloudy"
+    - "Stormy"
+
+ml:
+  classification_models:
+    - "Logistic Regression"
+    - "KNN"
+    - "Decision Tree"
+    - "Multinomial Naive Bayes"
+  regression_models:
+    - "Linear Regression"
+    - "Random Forest Regressor"
+  test_size: 0.2
+  cv_folds: 5
+
+routing:
+  alpha_distance: 1.0
+  beta_missed_urgency: 10.0
+  gamma_overtime: 5.0
+  shift_duration_hours: 8.0
+  average_speed_kmh: 25.0

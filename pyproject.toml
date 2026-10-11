@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "grievanceroute"
+version = "2.0.0"
+description = "Intelligent Civic Complaint Triage and Crew Routing System"
+authors = [{ name = "Group 37 Batch B4" }]
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "streamlit",
+    "pandas",
+    "numpy",
+    "scikit-learn",
+    "networkx",
+    "plotly",
+    "folium",
+    "streamlit-folium",
+    "mlxtend",
+    "pyyaml",
+    "joblib",
+    "matplotlib",
+    "seaborn",
+]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]

@@ -1,0 +1,9 @@
+crew_id,crew_name,depot_node,depot_lat,depot_lon,skill,capacity,shift_hours,speed_kmh
+CRW-RD-01,Kothrud Road Works,DEPOT-KOT,18.5074,73.8077,Road Maintenance,7,8.0,25.0
+CRW-RD-02,Hadapsar Asphalt Team,DEPOT-HAD,18.5089,73.9259,Road Maintenance,6,8.0,25.0
+CRW-WS-01,Shivajinagar Hydro Squad,DEPOT-SHI,18.5314,73.8446,Water Supply Crew,6,8.0,22.0
+CRW-WS-02,Swargate Pipeline Quick Response,DEPOT-SWA,18.5018,73.8586,Water Supply Crew,5,8.0,22.0
+CRW-EL-01,Baner Power & Lighting,DEPOT-BAN,18.559,73.7868,Electrical Crew,8,8.0,28.0
+CRW-EL-02,Viman Nagar Grid Technicians,DEPOT-VIM,18.5679,73.9143,Electrical Crew,8,8.0,28.0
+CRW-SN-01,Central Pune Sanitation Unit,DEPOT-SHI,18.5314,73.8446,Sanitation Crew,10,8.0,20.0
+CRW-SN-02,East Zone Waste Fleet,DEPOT-HAD,18.5089,73.9259,Sanitation Crew,9,8.0,20.0

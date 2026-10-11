@@ -1,0 +1,78 @@
+dataset_schema:
+  identifier:
+    name: "complaint_id"
+    type: "string"
+    description: "Unique complaint tracking identifier"
+  
+  nlp_features:
+    - name: "complaint_text"
+      type: "string"
+      description: "Citizen-style free text complaint description in English/Hinglish"
+      required: true
+  
+  context_features:
+    - name: "latitude"
+      type: "float"
+      range: [18.4200, 18.6200]
+    - name: "longitude"
+      type: "float"
+      range: [73.7500, 73.9600]
+    - name: "zone"
+      type: "categorical"
+      values: ["Kothrud", "Shivajinagar", "Hadapsar", "Baner", "Swargate", "Viman Nagar"]
+    - name: "timestamp"
+      type: "datetime"
+    - name: "hour"
+      type: "integer"
+      range: [0, 23]
+    - name: "day_of_week"
+      type: "integer"
+      range: [0, 6]
+    - name: "weather"
+      type: "categorical"
+      values: ["Clear", "Rainy", "Cloudy", "Stormy"]
+    - name: "monsoon"
+      type: "boolean"
+    - name: "low_lying_area"
+      type: "boolean"
+    - name: "repeat_complaint"
+      type: "boolean"
+    - name: "historical_resolution_hours"
+      type: "float"
+      description: "Historical average resolution hours for this zone and issue type before filing"
+
+  targets:
+    classification:
+      name: "complaint_type"
+      type: "categorical"
+      values: ["pothole", "water leak", "streetlight", "garbage"]
+    urgency_regression:
+      name: "urgency_score"
+      type: "integer"
+      range: [1, 5]
+    resolution_regression:
+      name: "actual_resolution_hours"
+      type: "float"
+      range: [1.0, 168.0]
+
+  operational_metadata:
+    status:
+      name: "status"
+      type: "categorical"
+      values: ["Pending", "Assigned", "In Progress", "Resolved"]
+    crew_required:
+      name: "crew_required"
+      type: "categorical"
+      values: ["Road Maintenance", "Water Supply Crew", "Electrical Crew", "Sanitation Crew"]
+
+crew_schema:
+  fields:
+    - "crew_id"
+    - "crew_name"
+    - "depot_node"
+    - "depot_lat"
+    - "depot_lon"
+    - "skill"
+    - "capacity"
+    - "shift_hours"
+    - "speed_kmh"

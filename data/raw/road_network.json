@@ -1,0 +1,390 @@
+{
+  "nodes": {
+    "DEPOT-KOT": {
+      "lat": 18.5074,
+      "lon": 73.8077,
+      "label": "Kothrud Depot",
+      "zone": "Kothrud"
+    },
+    "DEPOT-SHI": {
+      "lat": 18.5314,
+      "lon": 73.8446,
+      "label": "Shivajinagar Depot",
+      "zone": "Shivajinagar"
+    },
+    "DEPOT-HAD": {
+      "lat": 18.5089,
+      "lon": 73.9259,
+      "label": "Hadapsar Depot",
+      "zone": "Hadapsar"
+    },
+    "DEPOT-BAN": {
+      "lat": 18.559,
+      "lon": 73.7868,
+      "label": "Baner Depot",
+      "zone": "Baner"
+    },
+    "DEPOT-SWA": {
+      "lat": 18.5018,
+      "lon": 73.8586,
+      "label": "Swargate Depot",
+      "zone": "Swargate"
+    },
+    "DEPOT-VIM": {
+      "lat": 18.5679,
+      "lon": 73.9143,
+      "label": "Viman Nagar Depot",
+      "zone": "Viman Nagar"
+    },
+    "INT-DECCAN": {
+      "lat": 18.517,
+      "lon": 73.841,
+      "label": "Deccan Gymkhana",
+      "zone": "Shivajinagar"
+    },
+    "INT-FC": {
+      "lat": 18.5236,
+      "lon": 73.8418,
+      "label": "FC Road Chowk",
+      "zone": "Shivajinagar"
+    },
+    "INT-JM": {
+      "lat": 18.528,
+      "lon": 73.851,
+      "label": "JM Road Jn",
+      "zone": "Shivajinagar"
+    },
+    "INT-UNIV": {
+      "lat": 18.5528,
+      "lon": 73.826,
+      "label": "Pune University Circle",
+      "zone": "Baner"
+    },
+    "INT-AUNDH": {
+      "lat": 18.5602,
+      "lon": 73.807,
+      "label": "Aundh Chowk",
+      "zone": "Baner"
+    },
+    "INT-MAGAR": {
+      "lat": 18.514,
+      "lon": 73.928,
+      "label": "Magarpatta City Gate",
+      "zone": "Hadapsar"
+    },
+    "INT-PULGATE": {
+      "lat": 18.508,
+      "lon": 73.882,
+      "label": "Pulgate Camp",
+      "zone": "Swargate"
+    },
+    "INT-KATRAJ": {
+      "lat": 18.4575,
+      "lon": 73.8677,
+      "label": "Katraj Snake Park Jn",
+      "zone": "Swargate"
+    },
+    "INT-KALYANI": {
+      "lat": 18.547,
+      "lon": 73.902,
+      "label": "Kalyani Nagar Bridge",
+      "zone": "Viman Nagar"
+    },
+    "INT-YERAWADA": {
+      "lat": 18.553,
+      "lon": 73.879,
+      "label": "Yerawada Jn",
+      "zone": "Viman Nagar"
+    }
+  },
+  "edges": [
+    {
+      "source": "DEPOT-KOT",
+      "target": "INT-DECCAN",
+      "road_name": "Karve Road",
+      "distance_km": 4.2,
+      "speed_kmh": 30.0,
+      "travel_time_min": 8.4
+    },
+    {
+      "source": "INT-DECCAN",
+      "target": "DEPOT-KOT",
+      "road_name": "Karve Road",
+      "distance_km": 4.2,
+      "speed_kmh": 30.0,
+      "travel_time_min": 8.4
+    },
+    {
+      "source": "DEPOT-BAN",
+      "target": "INT-AUNDH",
+      "road_name": "Baner-Aundh Road",
+      "distance_km": 3.1,
+      "speed_kmh": 30.0,
+      "travel_time_min": 6.2
+    },
+    {
+      "source": "INT-AUNDH",
+      "target": "DEPOT-BAN",
+      "road_name": "Baner-Aundh Road",
+      "distance_km": 3.1,
+      "speed_kmh": 30.0,
+      "travel_time_min": 6.2
+    },
+    {
+      "source": "INT-AUNDH",
+      "target": "INT-UNIV",
+      "road_name": "Ganeshkhind Road",
+      "distance_km": 2.8,
+      "speed_kmh": 30.0,
+      "travel_time_min": 5.6
+    },
+    {
+      "source": "INT-UNIV",
+      "target": "INT-AUNDH",
+      "road_name": "Ganeshkhind Road",
+      "distance_km": 2.8,
+      "speed_kmh": 30.0,
+      "travel_time_min": 5.6
+    },
+    {
+      "source": "INT-UNIV",
+      "target": "INT-FC",
+      "road_name": "Shivajinagar Link",
+      "distance_km": 3.5,
+      "speed_kmh": 30.0,
+      "travel_time_min": 7.0
+    },
+    {
+      "source": "INT-FC",
+      "target": "INT-UNIV",
+      "road_name": "Shivajinagar Link",
+      "distance_km": 3.5,
+      "speed_kmh": 30.0,
+      "travel_time_min": 7.0
+    },
+    {
+      "source": "INT-FC",
+      "target": "INT-JM",
+      "road_name": "Modern College Rd",
+      "distance_km": 1.2,
+      "speed_kmh": 30.0,
+      "travel_time_min": 2.4
+    },
+    {
+      "source": "INT-JM",
+      "target": "INT-FC",
+      "road_name": "Modern College Rd",
+      "distance_km": 1.2,
+      "speed_kmh": 30.0,
+      "travel_time_min": 2.4
+    },
+    {
+      "source": "INT-JM",
+      "target": "DEPOT-SHI",
+      "road_name": "JM Road North",
+      "distance_km": 0.9,
+      "speed_kmh": 30.0,
+      "travel_time_min": 1.8
+    },
+    {
+      "source": "DEPOT-SHI",
+      "target": "INT-JM",
+      "road_name": "JM Road North",
+      "distance_km": 0.9,
+      "speed_kmh": 30.0,
+      "travel_time_min": 1.8
+    },
+    {
+      "source": "INT-DECCAN",
+      "target": "INT-FC",
+      "road_name": "FC Road South",
+      "distance_km": 1.1,
+      "speed_kmh": 30.0,
+      "travel_time_min": 2.2
+    },
+    {
+      "source": "INT-FC",
+      "target": "INT-DECCAN",
+      "road_name": "FC Road South",
+      "distance_km": 1.1,
+      "speed_kmh": 30.0,
+      "travel_time_min": 2.2
+    },
+    {
+      "source": "INT-DECCAN",
+      "target": "DEPOT-SWA",
+      "road_name": "Tilak Road",
+      "distance_km": 2.7,
+      "speed_kmh": 30.0,
+      "travel_time_min": 5.4
+    },
+    {
+      "source": "DEPOT-SWA",
+      "target": "INT-DECCAN",
+      "road_name": "Tilak Road",
+      "distance_km": 2.7,
+      "speed_kmh": 30.0,
+      "travel_time_min": 5.4
+    },
+    {
+      "source": "DEPOT-SWA",
+      "target": "INT-PULGATE",
+      "road_name": "Shankarsheth Road",
+      "distance_km": 3.0,
+      "speed_kmh": 30.0,
+      "travel_time_min": 6.0
+    },
+    {
+      "source": "INT-PULGATE",
+      "target": "DEPOT-SWA",
+      "road_name": "Shankarsheth Road",
+      "distance_km": 3.0,
+      "speed_kmh": 30.0,
+      "travel_time_min": 6.0
+    },
+    {
+      "source": "DEPOT-SWA",
+      "target": "INT-KATRAJ",
+      "road_name": "Satara Road",
+      "distance_km": 5.8,
+      "speed_kmh": 30.0,
+      "travel_time_min": 11.6
+    },
+    {
+      "source": "INT-KATRAJ",
+      "target": "DEPOT-SWA",
+      "road_name": "Satara Road",
+      "distance_km": 5.8,
+      "speed_kmh": 30.0,
+      "travel_time_min": 11.6
+    },
+    {
+      "source": "INT-PULGATE",
+      "target": "DEPOT-HAD",
+      "road_name": "Solapur Road",
+      "distance_km": 5.2,
+      "speed_kmh": 30.0,
+      "travel_time_min": 10.4
+    },
+    {
+      "source": "DEPOT-HAD",
+      "target": "INT-PULGATE",
+      "road_name": "Solapur Road",
+      "distance_km": 5.2,
+      "speed_kmh": 30.0,
+      "travel_time_min": 10.4
+    },
+    {
+      "source": "DEPOT-HAD",
+      "target": "INT-MAGAR",
+      "road_name": "Magarpatta Road",
+      "distance_km": 1.5,
+      "speed_kmh": 30.0,
+      "travel_time_min": 3.0
+    },
+    {
+      "source": "INT-MAGAR",
+      "target": "DEPOT-HAD",
+      "road_name": "Magarpatta Road",
+      "distance_km": 1.5,
+      "speed_kmh": 30.0,
+      "travel_time_min": 3.0
+    },
+    {
+      "source": "DEPOT-SHI",
+      "target": "INT-YERAWADA",
+      "road_name": "Sangamwadi Bridge",
+      "distance_km": 3.8,
+      "speed_kmh": 30.0,
+      "travel_time_min": 7.6
+    },
+    {
+      "source": "INT-YERAWADA",
+      "target": "DEPOT-SHI",
+      "road_name": "Sangamwadi Bridge",
+      "distance_km": 3.8,
+      "speed_kmh": 30.0,
+      "travel_time_min": 7.6
+    },
+    {
+      "source": "INT-YERAWADA",
+      "target": "INT-KALYANI",
+      "road_name": "Nagar Road West",
+      "distance_km": 2.9,
+      "speed_kmh": 30.0,
+      "travel_time_min": 5.8
+    },
+    {
+      "source": "INT-KALYANI",
+      "target": "INT-YERAWADA",
+      "road_name": "Nagar Road West",
+      "distance_km": 2.9,
+      "speed_kmh": 30.0,
+      "travel_time_min": 5.8
+    },
+    {
+      "source": "INT-KALYANI",
+      "target": "DEPOT-VIM",
+      "road_name": "Kalyani-Viman Rd",
+      "distance_km": 2.5,
+      "speed_kmh": 30.0,
+      "travel_time_min": 5.0
+    },
+    {
+      "source": "DEPOT-VIM",
+      "target": "INT-KALYANI",
+      "road_name": "Kalyani-Viman Rd",
+      "distance_km": 2.5,
+      "speed_kmh": 30.0,
+      "travel_time_min": 5.0
+    },
+    {
+      "source": "INT-UNIV",
+      "target": "INT-YERAWADA",
+      "road_name": "Airport Bypass",
+      "distance_km": 6.2,
+      "speed_kmh": 30.0,
+      "travel_time_min": 12.4
+    },
+    {
+      "source": "INT-YERAWADA",
+      "target": "INT-UNIV",
+      "road_name": "Airport Bypass",
+      "distance_km": 6.2,
+      "speed_kmh": 30.0,
+      "travel_time_min": 12.4
+    },
+    {
+      "source": "INT-MAGAR",
+      "target": "INT-KALYANI",
+      "road_name": "Mundhwa Bridge",
+      "distance_km": 4.6,
+      "speed_kmh": 30.0,
+      "travel_time_min": 9.2
+    },
+    {
+      "source": "INT-KALYANI",
+      "target": "INT-MAGAR",
+      "road_name": "Mundhwa Bridge",
+      "distance_km": 4.6,
+      "speed_kmh": 30.0,
+      "travel_time_min": 9.2
+    },
+    {
+      "source": "DEPOT-KOT",
+      "target": "INT-UNIV",
+      "road_name": "Paud Road to Senapati Bapat",
+      "distance_km": 6.4,
+      "speed_kmh": 30.0,
+      "travel_time_min": 12.8
+    },
+    {
+      "source": "INT-UNIV",
+      "target": "DEPOT-KOT",
+      "road_name": "Paud Road to Senapati Bapat",
+      "distance_km": 6.4,
+      "speed_kmh": 30.0,
+      "travel_time_min": 12.8
+    }
+  ]
+}
