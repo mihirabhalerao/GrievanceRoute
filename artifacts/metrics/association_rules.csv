@@ -1,847 +1,835 @@
 antecedents,consequents,support,confidence,lift
-"['Urgency=Low(1-2)', 'Monsoon=True']","['Weather=Rainy', 'Type=garbage']",0.0865,0.3581780538302277,2.721200788833639
-"['Weather=Rainy', 'Type=garbage']","['Urgency=Low(1-2)', 'Monsoon=True']",0.0865,0.6571699905033238,2.721200788833639
-"['LowLying=True', 'Urgency=Low(1-2)', 'Monsoon=True']","['Weather=Rainy', 'Type=garbage']",0.0415,0.35206786850477206,2.6747796277665494
-"['Weather=Rainy', 'Type=garbage']","['LowLying=True', 'Urgency=Low(1-2)', 'Monsoon=True']",0.0415,0.315289648622982,2.6747796277665494
-"['LowLying=True', 'Weather=Rainy', 'Type=garbage']","['Urgency=Low(1-2)', 'Monsoon=True']",0.0415,0.6372360844529751,2.638658734794928
-"['Weather=Stormy', 'Type=water leak']","['Monsoon=True', 'Urgency=High(4-5)']",0.044,0.9750692520775623,2.4977758618701564
-"['Monsoon=True', 'Type=garbage']","['Urgency=Low(1-2)', 'Weather=Rainy']",0.0865,0.3692636072572038,2.3334193191608454
-"['Urgency=Low(1-2)', 'Weather=Rainy']","['Monsoon=True', 'Type=garbage']",0.0865,0.546603475513428,2.3334193191608454
-"['Weather=Stormy', 'Type=water leak']",['Urgency=High(4-5)'],0.044,0.9750692520775623,2.322976181244937
-"['Weather=Stormy', 'Monsoon=True', 'Type=water leak']",['Urgency=High(4-5)'],0.044,0.9750692520775623,2.322976181244937
-"['LowLying=True', 'Weather=Rainy', 'Urgency=Low(1-2)']","['Monsoon=True', 'Type=garbage']",0.0415,0.5407166123778502,2.3082886334166495
-"['Weather=Rainy', 'Urgency=Low(1-2)']","['LowLying=True', 'Monsoon=True', 'Type=garbage']",0.0415,0.26224328593996843,2.3029048161577905
-"['LowLying=True', 'Monsoon=True', 'Type=garbage']","['Weather=Rainy', 'Urgency=Low(1-2)']",0.0415,0.36443468715697036,2.3029048161577905
-['Urgency=Low(1-2)'],"['Weather=Rainy', 'Type=garbage']",0.087875,0.2999146757679181,2.278554041921505
-"['Weather=Rainy', 'Type=garbage']",['Urgency=Low(1-2)'],0.087875,0.6676163342830009,2.278554041921505
-['Urgency=Low(1-2)'],"['Weather=Rainy', 'Monsoon=True', 'Type=garbage']",0.0865,0.295221843003413,2.2775069855615273
-"['Weather=Rainy', 'Monsoon=True', 'Type=garbage']",['Urgency=Low(1-2)'],0.0865,0.6673095467695275,2.2775069855615273
-"['Repeat=True', 'Type=water leak']",['Urgency=High(4-5)'],0.043375,0.9532967032967032,2.2711059042208532
-"['Monsoon=True', 'Zone=Hadapsar']","['LowLying=True', 'Weather=Rainy']",0.086375,0.5758333333333333,2.2692939244663384
-"['LowLying=True', 'Weather=Rainy']","['Monsoon=True', 'Zone=Hadapsar']",0.086375,0.34039408866995075,2.2692939244663384
-"['Weather=Rainy', 'Type=garbage']","['LowLying=True', 'Urgency=Low(1-2)']",0.04225,0.3209876543209877,2.26646181338738
-"['LowLying=True', 'Urgency=Low(1-2)']","['Weather=Rainy', 'Type=garbage']",0.04225,0.29832303618711387,2.2664618133873797
-"['LowLying=True', 'Urgency=Low(1-2)']","['Weather=Rainy', 'Monsoon=True', 'Type=garbage']",0.0415,0.29302736098852605,2.260577519680047
-"['Weather=Rainy', 'Monsoon=True', 'Type=garbage']","['LowLying=True', 'Urgency=Low(1-2)']",0.0415,0.32015429122468664,2.260577519680047
-"['LowLying=True', 'Weather=Rainy']","['Zone=Swargate', 'Monsoon=True']",0.082125,0.3236453201970444,2.2320366910140996
-"['Zone=Swargate', 'Monsoon=True']","['LowLying=True', 'Weather=Rainy']",0.082125,0.5663793103448277,2.2320366910140996
-"['Weather=Rainy', 'Zone=Swargate']","['LowLying=True', 'Monsoon=True']",0.082125,0.9864864864864865,2.228718410587939
-"['Weather=Rainy', 'Zone=Hadapsar']","['LowLying=True', 'Monsoon=True']",0.086375,0.9829302987197723,2.220684097644219
-"['Weather=Rainy', 'Zone=Shivajinagar']","['LowLying=True', 'Monsoon=True']",0.081125,0.9818456883509833,2.2182336929703097
-"['LowLying=True', 'Weather=Rainy', 'Monsoon=True', 'Type=garbage']",['Urgency=Low(1-2)'],0.0415,0.6497064579256361,2.2174281840465397
-"['LowLying=True', 'Weather=Rainy', 'Type=garbage']",['Urgency=Low(1-2)'],0.04225,0.6487523992322457,2.2141720110315553
-"['Urgency=Low(1-2)', 'Monsoon=True']",['Type=garbage'],0.138625,0.5740165631469979,2.166100238290558
-['Type=garbage'],"['Urgency=Low(1-2)', 'Monsoon=True']",0.138625,0.5231132075471697,2.166100238290558
-"['Monsoon=True', 'Zone=Shivajinagar']","['LowLying=True', 'Weather=Rainy']",0.081125,0.5495342929720576,2.1656523860967787
-"['LowLying=True', 'Weather=Rainy']","['Monsoon=True', 'Zone=Shivajinagar']",0.081125,0.31970443349753697,2.1656523860967787
-"['LowLying=True', 'Type=garbage']","['Urgency=Low(1-2)', 'Monsoon=True']",0.066875,0.5199222546161323,2.1528871826754963
-"['Urgency=Low(1-2)', 'Monsoon=True']","['LowLying=True', 'Type=garbage']",0.066875,0.27691511387163564,2.152887182675496
-"['LowLying=True', 'Urgency=Low(1-2)', 'Monsoon=True']",['Type=garbage'],0.066875,0.567338282078473,2.140899177654615
-['Type=garbage'],"['LowLying=True', 'Urgency=Low(1-2)', 'Monsoon=True']",0.066875,0.25235849056603776,2.140899177654615
-"['Monsoon=True', 'Type=water leak']","['Weather=Rainy', 'Urgency=High(4-5)']",0.0915,0.4339063426200355,2.130908987698149
-"['Weather=Rainy', 'Urgency=High(4-5)']","['Monsoon=True', 'Type=water leak']",0.0915,0.4493554327808471,2.130908987698149
-"['LowLying=True', 'Monsoon=True', 'Type=water leak']","['Weather=Rainy', 'Urgency=High(4-5)']",0.045125,0.4328537170263789,2.125739555685102
-['Type=garbage'],"['Urgency=Low(1-2)', 'Monsoon=True', 'Weather=Rainy']",0.0865,0.3264150943396226,2.112719057214386
-"['Urgency=Low(1-2)', 'Monsoon=True', 'Weather=Rainy']",['Type=garbage'],0.0865,0.5598705501618123,2.112719057214386
-"['LowLying=True', 'Type=streetlight']",['Zone=Shivajinagar'],0.041875,0.3571428571428572,2.1101498206372655
-"['Zone=Hadapsar', 'Urgency=High(4-5)']","['LowLying=True', 'Monsoon=True']",0.067,0.9321739130434784,2.1060127942241818
-"['LowLying=True', 'Type=pothole']",['Zone=Hadapsar'],0.0485,0.3562901744719927,2.1035582256649015
-['Zone=Hadapsar'],"['LowLying=True', 'Type=pothole']",0.0485,0.2863468634686347,2.1035582256649015
-"['LowLying=True', 'Type=pothole']","['Monsoon=True', 'Zone=Hadapsar']",0.042875,0.31496786042240593,2.099785736149373
-"['Monsoon=True', 'Zone=Hadapsar']","['LowLying=True', 'Type=pothole']",0.042875,0.2858333333333334,2.099785736149373
-"['Urgency=Low(1-2)', 'Weather=Rainy']",['Type=garbage'],0.087875,0.5552922590837283,2.0954424871084085
-['Type=garbage'],"['Urgency=Low(1-2)', 'Weather=Rainy']",0.087875,0.3316037735849056,2.095442487108408
-"['LowLying=True', 'Weather=Rainy', 'Monsoon=True', 'Urgency=Low(1-2)']",['Type=garbage'],0.0415,0.5542570951585977,2.0915362081456514
-['Zone=Hadapsar'],"['LowLying=True', 'Urgency=Low(1-2)']",0.050125,0.29594095940959414,2.089609598655563
-"['LowLying=True', 'Urgency=Low(1-2)']",['Zone=Hadapsar'],0.050125,0.353927625772286,2.089609598655563
-"['LowLying=True', 'Type=garbage']","['Weather=Rainy', 'Monsoon=True', 'Urgency=Low(1-2)']",0.0415,0.3226433430515064,2.0883064275178405
-"['Weather=Rainy', 'Monsoon=True', 'Urgency=Low(1-2)']","['LowLying=True', 'Type=garbage']",0.0415,0.26860841423948223,2.0883064275178405
-"['LowLying=True', 'Urgency=Medium(3)']","['Monsoon=True', 'Zone=Shivajinagar']",0.04425,0.30675909878682844,2.077961719131776
-"['Monsoon=True', 'Zone=Shivajinagar']","['LowLying=True', 'Urgency=Medium(3)']",0.04425,0.29974597798475866,2.077961719131776
-"['LowLying=True', 'Urgency=Low(1-2)', 'Weather=Rainy']",['Type=garbage'],0.04225,0.5504885993485342,2.0773154692397515
-"['Urgency=Low(1-2)', 'Weather=Rainy']","['LowLying=True', 'Type=garbage']",0.04225,0.2669826224328594,2.075666646708334
-"['LowLying=True', 'Type=garbage']","['Urgency=Low(1-2)', 'Weather=Rainy']",0.04225,0.3284742468415938,2.0756666467083336
-"['LowLying=True', 'Urgency=Low(1-2)', 'Monsoon=True']",['Zone=Hadapsar'],0.041375,0.3510074231177095,2.0723685497724547
-['Zone=Hadapsar'],"['LowLying=True', 'Type=pothole', 'Monsoon=True']",0.042875,0.25313653136531367,2.0706464733358994
-"['LowLying=True', 'Type=pothole', 'Monsoon=True']",['Zone=Hadapsar'],0.042875,0.3507157464212679,2.070646473335899
-"['Urgency=High(4-5)', 'Weather=Stormy']","['Monsoon=True', 'Type=water leak']",0.044,0.4351050679851668,2.063331679834816
-"['LowLying=True', 'Urgency=High(4-5)']","['Monsoon=True', 'Zone=Shivajinagar']",0.066125,0.30437284234752593,2.0617974079425974
-"['Monsoon=True', 'Zone=Shivajinagar']","['LowLying=True', 'Urgency=High(4-5)']",0.066125,0.4479254868755292,2.061797407942597
-"['LowLying=True', 'Urgency=High(4-5)']","['Monsoon=True', 'Zone=Hadapsar']",0.067,0.3084004602991945,2.0560030686612967
-"['Monsoon=True', 'Zone=Hadapsar']","['LowLying=True', 'Urgency=High(4-5)']",0.067,0.4466666666666667,2.0560030686612967
-['Urgency=Low(1-2)'],['Type=garbage'],0.159625,0.5447952218430034,2.055831025822654
-['Type=garbage'],['Urgency=Low(1-2)'],0.159625,0.6023584905660376,2.055831025822654
-"['Type=pothole', 'Zone=Shivajinagar']","['LowLying=True', 'Monsoon=True']",0.040375,0.9098591549295776,2.0555982037381026
-"['LowLying=True', 'Type=water leak']",['Zone=Swargate'],0.040875,0.33746130030959753,2.0514364760461854
-"['LowLying=True', 'Urgency=Low(1-2)']",['Type=garbage'],0.076875,0.5428067078552515,2.0483271994537793
-['Type=garbage'],"['LowLying=True', 'Urgency=Low(1-2)']",0.076875,0.2900943396226415,2.0483271994537793
-['Zone=Hadapsar'],"['LowLying=True', 'Weather=Rainy']",0.087875,0.5188191881918819,2.044607638194609
-"['LowLying=True', 'Weather=Rainy']",['Zone=Hadapsar'],0.087875,0.34630541871921183,2.044607638194609
-"['LowLying=True', 'Weather=Rainy', 'Monsoon=True']",['Zone=Hadapsar'],0.086375,0.3460190285428142,2.042916773684512
-['Zone=Hadapsar'],"['LowLying=True', 'Weather=Rainy', 'Monsoon=True']",0.086375,0.5099630996309963,2.042916773684512
-"['LowLying=True', 'Monsoon=True', 'Urgency=Medium(3)']",['Zone=Shivajinagar'],0.04425,0.3453658536585366,2.0405663436250316
-['Zone=Shivajinagar'],"['LowLying=True', 'Monsoon=True', 'Urgency=Medium(3)']",0.04425,0.26144756277695713,2.0405663436250316
-"['LowLying=True', 'Weather=Rainy', 'Urgency=High(4-5)']","['Monsoon=True', 'Type=water leak']",0.045125,0.4302741358760429,2.0404226953220768
-"['LowLying=True', 'Type=garbage']",['Urgency=Low(1-2)'],0.076875,0.5976676384839651,2.0398212917541474
-['Urgency=Low(1-2)'],"['LowLying=True', 'Type=garbage']",0.076875,0.2623720136518771,2.039821291754147
-"['Zone=Shivajinagar', 'Urgency=Medium(3)']","['LowLying=True', 'Monsoon=True']",0.04425,0.898477157360406,2.02988343939092
-['Zone=Shivajinagar'],"['LowLying=True', 'Urgency=High(4-5)']",0.074625,0.44091580502215655,2.0295318988361637
-"['LowLying=True', 'Urgency=High(4-5)']",['Zone=Shivajinagar'],0.074625,0.3434982738780207,2.0295318988361633
-"['Zone=Swargate', 'Urgency=High(4-5)']","['LowLying=True', 'Monsoon=True']",0.0635,0.8975265017667845,2.027735671882032
-"['LowLying=True', 'Urgency=Medium(3)']","['Zone=Swargate', 'Monsoon=True']",0.04225,0.292894280762565,2.0199605569832073
-"['Zone=Swargate', 'Monsoon=True']","['LowLying=True', 'Urgency=Medium(3)']",0.04225,0.2913793103448276,2.0199605569832073
-"['Monsoon=True', 'Type=garbage']",['Urgency=Low(1-2)'],0.138625,0.5917822838847385,2.0197347572857973
-['Urgency=Low(1-2)'],"['Monsoon=True', 'Type=garbage']",0.138625,0.47312286689419797,2.019734757285797
-"['LowLying=True', 'Urgency=Medium(3)']",['Zone=Shivajinagar'],0.04925,0.34142114384748706,2.017259343264325
-['Zone=Shivajinagar'],"['LowLying=True', 'Urgency=Medium(3)']",0.04925,0.29098966026587886,2.017259343264325
-"['Zone=Swargate', 'Monsoon=True']","['LowLying=True', 'Urgency=High(4-5)']",0.0635,0.43793103448275866,2.015793024086346
-"['LowLying=True', 'Urgency=High(4-5)']","['Zone=Swargate', 'Monsoon=True']",0.0635,0.29228998849252014,2.0157930240863458
-"['Monsoon=True', 'Type=garbage']","['LowLying=True', 'Urgency=Low(1-2)']",0.066875,0.2854855923159018,2.0157852943753
-"['LowLying=True', 'Urgency=Low(1-2)']","['Monsoon=True', 'Type=garbage']",0.066875,0.47219770520741394,2.0157852943752994
-"['LowLying=True', 'Monsoon=True', 'Urgency=High(4-5)']",['Zone=Hadapsar'],0.067,0.34075015893197713,2.011809056424957
-['Zone=Hadapsar'],"['LowLying=True', 'Monsoon=True', 'Urgency=High(4-5)']",0.067,0.3955719557195572,2.011809056424957
-"['Monsoon=True', 'Zone=Shivajinagar']","['LowLying=True', 'Type=pothole']",0.040375,0.2734970364098222,2.009160965361412
-"['LowLying=True', 'Type=pothole']","['Monsoon=True', 'Zone=Shivajinagar']",0.040375,0.29660238751147844,2.0091609653614118
-['Zone=Hadapsar'],"['LowLying=True', 'Type=garbage']",0.04375,0.25830258302583026,2.008183347139594
-"['LowLying=True', 'Type=garbage']",['Zone=Hadapsar'],0.04375,0.3401360544217687,2.008183347139594
-"['LowLying=True', 'Urgency=Medium(3)']",['Zone=Swargate'],0.047625,0.330155979202773,2.0070272291961886
-['Zone=Swargate'],"['LowLying=True', 'Urgency=Medium(3)']",0.047625,0.28951367781155013,2.007027229196188
-"['LowLying=True', 'Monsoon=True', 'Urgency=Medium(3)']",['Zone=Swargate'],0.04225,0.3297560975609757,2.004596337756691
-['Zone=Swargate'],"['LowLying=True', 'Monsoon=True', 'Urgency=Medium(3)']",0.04225,0.256838905775076,2.004596337756691
-"['LowLying=True', 'Monsoon=True', 'Type=garbage']",['Urgency=Low(1-2)'],0.066875,0.5872667398463227,2.004323344185402
-"['Zone=Swargate', 'Urgency=Medium(3)']","['LowLying=True', 'Monsoon=True']",0.04225,0.8871391076115486,2.0042679641040353
-"['Zone=Shivajinagar', 'Urgency=High(4-5)']","['LowLying=True', 'Monsoon=True']",0.066125,0.8860971524288108,2.0019139281080167
-['Zone=Hadapsar'],"['LowLying=True', 'Monsoon=True']",0.15,0.8856088560885609,2.0008107451873727
-"['LowLying=True', 'Monsoon=True']",['Zone=Hadapsar'],0.15,0.33888731996611127,2.0008107451873727
-"['LowLying=True', 'Weather=Rainy', 'Monsoon=True']",['Zone=Swargate'],0.082125,0.328993490235353,1.9999604269626323
-['Zone=Swargate'],"['LowLying=True', 'Weather=Rainy', 'Monsoon=True']",0.082125,0.4992401215805471,1.999960426962632
-"['Type=pothole', 'Zone=Hadapsar']","['LowLying=True', 'Monsoon=True']",0.042875,0.8840206185567011,1.9972225214497625
-"['LowLying=True', 'Weather=Rainy']",['Zone=Swargate'],0.08325,0.3280788177339902,1.9944001078054117
-['Zone=Swargate'],"['LowLying=True', 'Weather=Rainy']",0.08325,0.5060790273556232,1.9944001078054117
-"['LowLying=True', 'Monsoon=True']",['Zone=Swargate'],0.145,0.32759107596724085,1.9914351122628622
-['Zone=Swargate'],"['LowLying=True', 'Monsoon=True']",0.145,0.8814589665653494,1.9914351122628622
-['LowLying=True'],"['Zone=Swargate', 'Monsoon=True']",0.145,0.28819875776397513,1.9875776397515528
-['LowLying=True'],['Zone=Shivajinagar'],0.16925,0.33639751552795033,1.9875776397515528
-['LowLying=True'],['Zone=Hadapsar'],0.169375,0.33664596273291925,1.9875776397515528
-"['Weather=Rainy', 'Monsoon=True', 'Zone=Shivajinagar']",['LowLying=True'],0.081125,1.0,1.9875776397515525
-"['Zone=Swargate', 'Weather=Rainy', 'Monsoon=True']",['LowLying=True'],0.082125,1.0,1.9875776397515525
-['Zone=Hadapsar'],['LowLying=True'],0.169375,1.0,1.9875776397515525
-['Zone=Shivajinagar'],['LowLying=True'],0.16925,1.0,1.9875776397515525
-['LowLying=True'],['Zone=Swargate'],0.1645,0.3269565217391304,1.9875776397515525
-['Zone=Swargate'],['LowLying=True'],0.1645,1.0,1.9875776397515525
-"['Zone=Swargate', 'Monsoon=True', 'Urgency=High(4-5)']",['LowLying=True'],0.0635,1.0,1.9875776397515525
-"['Monsoon=True', 'Zone=Hadapsar', 'Urgency=High(4-5)']",['LowLying=True'],0.067,1.0,1.9875776397515525
-"['Monsoon=True', 'Zone=Shivajinagar', 'Urgency=High(4-5)']",['LowLying=True'],0.066125,1.0,1.9875776397515525
-"['Monsoon=True', 'Zone=Shivajinagar', 'Urgency=Medium(3)']",['LowLying=True'],0.04425,1.0,1.9875776397515525
-"['Urgency=Low(1-2)', 'Monsoon=True', 'Zone=Hadapsar']",['LowLying=True'],0.041375,1.0,1.9875776397515525
-"['Monsoon=True', 'Zone=Hadapsar', 'Urgency=Medium(3)']",['LowLying=True'],0.041625,1.0,1.9875776397515525
-"['Weather=Rainy', 'Monsoon=True', 'Zone=Hadapsar']",['LowLying=True'],0.086375,1.0,1.9875776397515525
-"['Zone=Swargate', 'Monsoon=True', 'Urgency=Medium(3)']",['LowLying=True'],0.04225,1.0,1.9875776397515525
-"['Type=pothole', 'Monsoon=True', 'Zone=Shivajinagar']",['LowLying=True'],0.040375,1.0,1.9875776397515525
-"['Type=pothole', 'Monsoon=True', 'Zone=Hadapsar']",['LowLying=True'],0.042875,1.0,1.9875776397515525
-"['Weather=Rainy', 'Zone=Hadapsar']",['LowLying=True'],0.087875,1.0,1.9875776397515525
-"['Zone=Swargate', 'Urgency=Medium(3)']",['LowLying=True'],0.047625,1.0,1.9875776397515525
-"['Type=pothole', 'Zone=Swargate']",['LowLying=True'],0.04325,1.0,1.9875776397515525
-"['Weather=Rainy', 'Zone=Swargate']",['LowLying=True'],0.08325,1.0,1.9875776397515525
-"['Type=pothole', 'Zone=Hadapsar']",['LowLying=True'],0.0485,1.0,1.9875776397515525
-"['Type=pothole', 'Zone=Shivajinagar']",['LowLying=True'],0.044375,1.0,1.9875776397515525
-"['Zone=Hadapsar', 'Urgency=High(4-5)']",['LowLying=True'],0.071875,1.0,1.9875776397515525
-"['Zone=Swargate', 'Type=water leak']",['LowLying=True'],0.040875,1.0,1.9875776397515525
-"['Zone=Swargate', 'Urgency=High(4-5)']",['LowLying=True'],0.07075,1.0,1.9875776397515525
-"['Zone=Shivajinagar', 'Urgency=High(4-5)']",['LowLying=True'],0.074625,1.0,1.9875776397515525
-"['Weather=Rainy', 'Zone=Shivajinagar']",['LowLying=True'],0.082625,1.0,1.9875776397515525
-"['Zone=Shivajinagar', 'Urgency=Medium(3)']",['LowLying=True'],0.04925,1.0,1.9875776397515525
-"['Zone=Hadapsar', 'Urgency=Medium(3)']",['LowLying=True'],0.047375,1.0,1.9875776397515525
-"['Urgency=Low(1-2)', 'Zone=Swargate']",['LowLying=True'],0.046125,1.0,1.9875776397515525
-"['Urgency=Low(1-2)', 'Zone=Shivajinagar']",['LowLying=True'],0.045375,1.0,1.9875776397515525
-"['Urgency=Low(1-2)', 'Zone=Hadapsar']",['LowLying=True'],0.050125,1.0,1.9875776397515525
-"['Zone=Shivajinagar', 'Type=garbage']",['LowLying=True'],0.042875,1.0,1.9875776397515525
-['LowLying=True'],"['Monsoon=True', 'Zone=Shivajinagar']",0.147625,0.293416149068323,1.9875776397515525
-"['Monsoon=True', 'Zone=Hadapsar']",['LowLying=True'],0.15,1.0,1.9875776397515525
-"['Zone=Shivajinagar', 'Type=streetlight']",['LowLying=True'],0.041875,1.0,1.9875776397515525
-"['Zone=Shivajinagar', 'Type=water leak']",['LowLying=True'],0.040125,1.0,1.9875776397515525
-"['Zone=Hadapsar', 'Type=water leak']",['LowLying=True'],0.040125,1.0,1.9875776397515525
-"['Zone=Swargate', 'Type=garbage']",['LowLying=True'],0.042,1.0,1.9875776397515525
-"['Type=garbage', 'Zone=Hadapsar']",['LowLying=True'],0.04375,1.0,1.9875776397515525
-"['Zone=Swargate', 'Monsoon=True']",['LowLying=True'],0.145,1.0,1.9875776397515525
-"['Monsoon=True', 'Zone=Shivajinagar']",['LowLying=True'],0.147625,1.0,1.9875776397515525
-['LowLying=True'],"['Monsoon=True', 'Zone=Hadapsar']",0.15,0.29813664596273287,1.9875776397515525
-['Zone=Shivajinagar'],"['LowLying=True', 'Monsoon=True', 'Urgency=High(4-5)']",0.066125,0.3906942392909897,1.9870018527195916
-"['LowLying=True', 'Monsoon=True', 'Urgency=High(4-5)']",['Zone=Shivajinagar'],0.066125,0.33630006357279085,1.9870018527195914
-"['Zone=Hadapsar', 'Urgency=Medium(3)']","['LowLying=True', 'Monsoon=True']",0.041625,0.8786279683377309,1.9850391829149527
-"['LowLying=True', 'Type=garbage']",['Zone=Swargate'],0.042,0.326530612244898,1.984988524285094
-['Zone=Swargate'],"['LowLying=True', 'Type=garbage']",0.042,0.2553191489361702,1.984988524285094
-['Zone=Swargate'],"['LowLying=True', 'Urgency=Low(1-2)']",0.046125,0.2803951367781155,1.9798420955206744
-"['LowLying=True', 'Urgency=Low(1-2)']",['Zone=Swargate'],0.046125,0.32568402471315094,1.9798420955206744
-['Zone=Swargate'],"['LowLying=True', 'Urgency=High(4-5)']",0.07075,0.4300911854103343,1.9797062619578105
-"['LowLying=True', 'Urgency=High(4-5)']",['Zone=Swargate'],0.07075,0.3256616800920598,1.9797062619578103
-"['Weather=Rainy', 'Type=water leak']","['Monsoon=True', 'Urgency=High(4-5)']",0.0915,0.7721518987341772,1.9779747646088433
-['Urgency=High(4-5)'],"['Monsoon=True', 'Type=water leak']",0.175,0.41691483025610476,1.977070920005239
-"['Monsoon=True', 'Type=water leak']",['Urgency=High(4-5)'],0.175,0.8298755186721991,1.977070920005239
-"['LowLying=True', 'Monsoon=True']",['Zone=Shivajinagar'],0.147625,0.3335216040666479,1.970585548399692
-['Zone=Shivajinagar'],"['LowLying=True', 'Monsoon=True']",0.147625,0.8722304283604135,1.9705855483996917
-"['LowLying=True', 'Type=garbage']",['Zone=Shivajinagar'],0.042875,0.33333333333333337,1.9694731659281144
-['Zone=Shivajinagar'],"['LowLying=True', 'Type=garbage']",0.042875,0.2533234859675037,1.9694731659281144
-['Zone=Swargate'],"['LowLying=True', 'Monsoon=True', 'Urgency=High(4-5)']",0.0635,0.38601823708206684,1.963220531885909
-"['LowLying=True', 'Monsoon=True', 'Urgency=High(4-5)']",['Zone=Swargate'],0.0635,0.32294977749523207,1.963220531885909
-"['LowLying=True', 'Type=water leak']",['Zone=Shivajinagar'],0.040125,0.33126934984520123,1.9572782856437294
-"['LowLying=True', 'Type=water leak']",['Zone=Hadapsar'],0.040125,0.33126934984520123,1.9558337998240662
-['Zone=Hadapsar'],"['LowLying=True', 'Urgency=High(4-5)']",0.071875,0.4243542435424354,1.9532991647522917
-"['LowLying=True', 'Urgency=High(4-5)']",['Zone=Hadapsar'],0.071875,0.3308400460299194,1.9532991647522917
-"['LowLying=True', 'Type=pothole', 'Monsoon=True']",['Zone=Shivajinagar'],0.040375,0.33026584867075665,1.9513491797385916
-"['Monsoon=True', 'Zone=Hadapsar']","['LowLying=True', 'Urgency=Low(1-2)']",0.041375,0.2758333333333334,1.9476316563695206
-"['LowLying=True', 'Urgency=Low(1-2)']","['Monsoon=True', 'Zone=Hadapsar']",0.041375,0.2921447484554281,1.9476316563695206
-"['LowLying=True', 'Type=water leak']",['Urgency=High(4-5)'],0.09875,0.8152734778121775,1.9422834492249612
-['Zone=Hadapsar'],"['LowLying=True', 'Urgency=Medium(3)']",0.047375,0.27970479704797047,1.9390280557918231
-"['LowLying=True', 'Urgency=Medium(3)']",['Zone=Hadapsar'],0.047375,0.32842287694974004,1.9390280557918231
-"['LowLying=True', 'Monsoon=True', 'Type=water leak']",['Urgency=High(4-5)'],0.08475,0.8129496402877698,1.9367472073562115
-"['Weather=Rainy', 'Type=water leak']","['LowLying=True', 'Monsoon=True', 'Urgency=High(4-5)']",0.045125,0.3808016877637131,1.9366900839858263
-"['LowLying=True', 'Type=pothole']",['Zone=Swargate'],0.04325,0.31772268135904497,1.931444871483556
-['Zone=Swargate'],"['LowLying=True', 'Type=pothole']",0.04325,0.26291793313069906,1.931444871483556
-"['LowLying=True', 'Type=pothole']",['Zone=Shivajinagar'],0.044375,0.32598714416896235,1.9260687986349325
-['Zone=Shivajinagar'],"['LowLying=True', 'Type=pothole']",0.044375,0.26218611521418017,1.9260687986349325
-['Zone=Shivajinagar'],"['LowLying=True', 'Weather=Rainy']",0.082625,0.4881831610044313,1.9238745261258379
-"['LowLying=True', 'Weather=Rainy']",['Zone=Shivajinagar'],0.082625,0.32561576354679805,1.9238745261258376
-"['Monsoon=True', 'Zone=Hadapsar']","['LowLying=True', 'Urgency=Medium(3)']",0.041625,0.2775,1.9237435008665515
-"['LowLying=True', 'Urgency=Medium(3)']","['Monsoon=True', 'Zone=Hadapsar']",0.041625,0.28856152512998273,1.9237435008665515
-['Zone=Shivajinagar'],"['LowLying=True', 'Weather=Rainy', 'Monsoon=True']",0.081125,0.4793205317577548,1.9201623705868995
-"['LowLying=True', 'Weather=Rainy', 'Monsoon=True']",['Zone=Shivajinagar'],0.081125,0.32498748122183274,1.9201623705868993
-"['LowLying=True', 'Monsoon=True', 'Urgency=Medium(3)']",['Zone=Hadapsar'],0.041625,0.32487804878048787,1.9180991809918104
-"['LowLying=True', 'Weather=Rainy', 'Type=water leak']","['Monsoon=True', 'Urgency=High(4-5)']",0.045125,0.7474120082815735,1.9146000852553915
-['Zone=Shivajinagar'],"['LowLying=True', 'Urgency=Low(1-2)']",0.045375,0.26809453471196454,1.8929887711347892
-"['LowLying=True', 'Urgency=Low(1-2)']",['Zone=Shivajinagar'],0.045375,0.3203883495145631,1.892988771134789
-"['LowLying=True', 'Urgency=High(4-5)']",['Type=water leak'],0.09875,0.4545454545454546,1.890984730298303
-['Type=water leak'],"['LowLying=True', 'Urgency=High(4-5)']",0.09875,0.4108164326573063,1.8909847302983027
-"['Weather=Rainy', 'Urgency=High(4-5)']",['Type=water leak'],0.0925,0.45426642111724985,1.8898239048039516
-['Type=water leak'],"['Weather=Rainy', 'Urgency=High(4-5)']",0.0925,0.38481539261570463,1.8898239048039516
-['Type=water leak'],"['Weather=Rainy', 'Monsoon=True', 'Urgency=High(4-5)']",0.0915,0.38065522620904835,1.8855986437599919
-"['Weather=Rainy', 'Monsoon=True', 'Urgency=High(4-5)']",['Type=water leak'],0.0915,0.45325077399380803,1.8855986437599919
-['Urgency=High(4-5)'],['Type=water leak'],0.190125,0.4529481834425253,1.8843398167135736
-['Type=water leak'],['Urgency=High(4-5)'],0.190125,0.7909516380655226,1.8843398167135736
-"['Weather=Rainy', 'Urgency=Medium(3)']","['Type=pothole', 'Monsoon=True']",0.0625,0.4444444444444444,1.8723304663273066
-"['Type=pothole', 'Monsoon=True']","['Weather=Rainy', 'Urgency=Medium(3)']",0.0625,0.2632964718272775,1.8723304663273066
-"['Weather=Rainy', 'Monsoon=True', 'Type=water leak']",['Urgency=High(4-5)'],0.0915,0.7828877005347593,1.8651285301602365
-"['LowLying=True', 'Type=water leak']","['Weather=Rainy', 'Urgency=High(4-5)']",0.046,0.3797729618163055,1.8650605859609846
-['Type=water leak'],"['Monsoon=True', 'Urgency=High(4-5)']",0.175,0.7280291211648465,1.8649481169768722
-"['Monsoon=True', 'Urgency=High(4-5)']",['Type=water leak'],0.175,0.44828690361831564,1.864948116976872
-"['Urgency=Low(1-2)', 'Zone=Hadapsar']","['LowLying=True', 'Monsoon=True']",0.041375,0.8254364089775561,1.8648662162723664
-"['Weather=Rainy', 'Type=water leak']",['Urgency=High(4-5)'],0.0925,0.7805907172995781,1.859656265156827
-"['LowLying=True', 'Urgency=High(4-5)']","['Monsoon=True', 'Type=water leak']",0.08475,0.3901035673187572,1.849928001511593
-"['Monsoon=True', 'Type=water leak']","['LowLying=True', 'Urgency=High(4-5)']",0.08475,0.4018968583283936,1.849928001511593
-"['Type=pothole', 'Weather=Rainy']","['Monsoon=True', 'Urgency=Medium(3)']",0.0625,0.4659832246039143,1.849139780174263
-"['LowLying=True', 'Type=water leak']","['Weather=Rainy', 'Monsoon=True', 'Urgency=High(4-5)']",0.045125,0.37254901960784315,1.845444059976932
-"['LowLying=True', 'Weather=Rainy', 'Urgency=High(4-5)']",['Type=water leak'],0.046,0.43861740166865315,1.824721379796789
-"['LowLying=True', 'Weather=Rainy', 'Type=water leak']",['Urgency=High(4-5)'],0.046,0.7619047619047619,1.8151393970333813
-"['LowLying=True', 'Weather=Rainy', 'Monsoon=True', 'Type=water leak']",['Urgency=High(4-5)'],0.045125,0.76,1.810601548540798
-"['Urgency=High(4-5)', 'Monsoon=True', 'Weather=Stormy']",['Type=water leak'],0.044,0.4351050679851668,1.8101094871977816
-"['Urgency=High(4-5)', 'Weather=Stormy']",['Type=water leak'],0.044,0.4351050679851668,1.8101094871977816
-"['LowLying=True', 'Weather=Rainy', 'Monsoon=True', 'Urgency=High(4-5)']",['Type=water leak'],0.045125,0.43493975903614457,1.80942177446134
-"['LowLying=True', 'Monsoon=True', 'Urgency=High(4-5)']",['Type=water leak'],0.08475,0.4310235219326129,1.7931295764227264
-['Type=water leak'],"['LowLying=True', 'Monsoon=True', 'Urgency=High(4-5)']",0.08475,0.35257410296411856,1.7931295764227264
-"['LowLying=True', 'Type=water leak']","['Monsoon=True', 'Urgency=High(4-5)']",0.08475,0.6996904024767803,1.7923545372443939
-"['Weather=Rainy', 'Type=water leak']","['LowLying=True', 'Urgency=High(4-5)']",0.046,0.38818565400843885,1.7868154384738266
-"['Weather=Rainy', 'Monsoon=True', 'Type=water leak']","['LowLying=True', 'Urgency=High(4-5)']",0.045125,0.38609625668449193,1.7771979594222873
-"['Weather=Rainy', 'Type=streetlight']","['Urgency=Low(1-2)', 'Monsoon=True']",0.04975,0.4207188160676533,1.7421068988308628
-"['Repeat=True', 'Monsoon=True']","['Weather=Rainy', 'Urgency=High(4-5)']",0.055,0.3489294210943696,1.7135883172221957
-"['Weather=Rainy', 'Urgency=High(4-5)']","['Repeat=True', 'Monsoon=True']",0.055,0.27010435850214853,1.7135883172221955
-"['Weather=Rainy', 'Monsoon=True', 'Urgency=Medium(3)']",['Type=pothole'],0.0625,0.4520795660036166,1.7059606264287417
-"['Weather=Rainy', 'Urgency=Medium(3)']",['Type=pothole'],0.063,0.448,1.690566037735849
-"['Type=pothole', 'Monsoon=True', 'Weather=Rainy']",['Urgency=Medium(3)'],0.0625,0.47348484848484845,1.6483371574755386
-"['Repeat=True', 'Monsoon=True']","['LowLying=True', 'Urgency=High(4-5)']",0.05625,0.35685963521015074,1.6426220262837778
-"['LowLying=True', 'Urgency=High(4-5)']","['Repeat=True', 'Monsoon=True']",0.05625,0.25891829689298046,1.6426220262837778
-"['Type=pothole', 'Weather=Rainy']",['Urgency=Medium(3)'],0.063,0.4697110904007456,1.6351996184534223
-"['LowLying=True', 'Repeat=True', 'Monsoon=True']",['Urgency=High(4-5)'],0.05625,0.6797583081570997,1.6194361123456813
-"['Repeat=True', 'Monsoon=True']",['Urgency=High(4-5)'],0.1065,0.675654242664552,1.60965870795605
-['Urgency=High(4-5)'],"['Repeat=True', 'Monsoon=True']",0.1065,0.2537224538415723,1.6096587079560498
-"['Repeat=True', 'Weather=Rainy']","['Monsoon=True', 'Urgency=High(4-5)']",0.055,0.6267806267806268,1.6055859795853393
-"['LowLying=True', 'Monsoon=True', 'Urgency=Medium(3)']",['Type=pothole'],0.054125,0.42243902439024394,1.5941095260009204
-"['LowLying=True', 'Monsoon=True', 'Urgency=High(4-5)']",['Repeat=True'],0.05625,0.28607755880483154,1.5904242324104603
-['Repeat=True'],"['LowLying=True', 'Monsoon=True', 'Urgency=High(4-5)']",0.05625,0.3127171646977067,1.59042423241046
-['Repeat=True'],"['LowLying=True', 'Urgency=High(4-5)']",0.062,0.344683808200139,1.5865767926358527
-"['LowLying=True', 'Urgency=High(4-5)']",['Repeat=True'],0.062,0.285385500575374,1.5865767926358525
-"['Monsoon=True', 'Urgency=Medium(3)']",['Type=pothole'],0.10575,0.41964285714285715,1.5835579514824798
-['Type=pothole'],"['Monsoon=True', 'Urgency=Medium(3)']",0.10575,0.3990566037735849,1.5835579514824796
-"['LowLying=True', 'Urgency=Medium(3)']","['Type=pothole', 'Monsoon=True']",0.054125,0.3752166377816291,1.580691470380744
-"['LowLying=True', 'Type=pothole']","['Monsoon=True', 'Urgency=Medium(3)']",0.054125,0.39761248852157943,1.577827335403093
-"['Urgency=Low(1-2)', 'Weather=Rainy']","['Monsoon=True', 'Type=streetlight']",0.04975,0.31437598736176936,1.5611470508343606
-"['Repeat=True', 'Urgency=High(4-5)']",['Type=water leak'],0.043375,0.3751351351351351,1.5606245871456477
-"['LowLying=True', 'Urgency=Medium(3)']",['Type=pothole'],0.059375,0.41161178509532065,1.553252019227625
-"['LowLying=True', 'Repeat=True']",['Urgency=High(4-5)'],0.062,0.6517739816031537,1.552767079459568
-"['Type=pothole', 'Monsoon=True']",['Urgency=Medium(3)'],0.10575,0.44549763033175355,1.5509055886222927
-['Urgency=Medium(3)'],"['Type=pothole', 'Monsoon=True']",0.10575,0.3681462140992167,1.5509055886222927
-"['LowLying=True', 'Type=pothole', 'Monsoon=True']",['Urgency=Medium(3)'],0.054125,0.4427402862985685,1.5413064797165135
-['Repeat=True'],['Urgency=High(4-5)'],0.115625,0.6428075052119527,1.53140561098738
-['Urgency=High(4-5)'],['Repeat=True'],0.115625,0.275461584276355,1.53140561098738
-['Type=pothole'],['Urgency=Medium(3)'],0.115625,0.4363207547169811,1.518958240964251
-['Urgency=Medium(3)'],['Type=pothole'],0.115625,0.40252393385552654,1.518958240964251
-"['LowLying=True', 'Type=pothole']",['Urgency=Medium(3)'],0.059375,0.4361799816345271,1.5184681693107993
-"['Repeat=True', 'Monsoon=True', 'Weather=Rainy']",['Urgency=High(4-5)'],0.055,0.6367583212735167,1.5169942138737742
-['Repeat=True'],"['Monsoon=True', 'Urgency=High(4-5)']",0.1065,0.592077831827658,1.5166899310346666
-"['Monsoon=True', 'Urgency=High(4-5)']",['Repeat=True'],0.1065,0.2728146013448607,1.5166899310346666
-"['LowLying=True', 'Repeat=True']","['Monsoon=True', 'Urgency=High(4-5)']",0.05625,0.5913272010512484,1.5147670856259963
-"['Weather=Rainy', 'Monsoon=True', 'Urgency=High(4-5)']",['Repeat=True'],0.055,0.2724458204334365,1.514639724438841
-['Repeat=True'],"['Weather=Rainy', 'Monsoon=True', 'Urgency=High(4-5)']",0.055,0.30576789437109103,1.514639724438841
-['Repeat=True'],"['Weather=Rainy', 'Urgency=High(4-5)']",0.05525,0.3071577484364142,1.508448120006945
-"['Weather=Rainy', 'Urgency=High(4-5)']",['Repeat=True'],0.05525,0.27133210558624926,1.508448120006945
-"['Repeat=True', 'Weather=Rainy']",['Urgency=High(4-5)'],0.05525,0.6296296296296297,1.500011029492864
-"['LowLying=True', 'Weather=Stormy']","['Monsoon=True', 'Urgency=High(4-5)']",0.05125,0.5766526019690577,1.4771760537151652
-['Weather=Stormy'],"['LowLying=True', 'Monsoon=True', 'Urgency=High(4-5)']",0.05125,0.29036827195467424,1.4767617136919224
-"['LowLying=True', 'Monsoon=True', 'Urgency=High(4-5)']",['Weather=Stormy'],0.05125,0.2606484424666243,1.4767617136919222
-"['Monsoon=True', 'Urgency=High(4-5)']",['Weather=Stormy'],0.101125,0.2590457893051553,1.4676815258082454
-['Weather=Stormy'],"['Monsoon=True', 'Urgency=High(4-5)']",0.101125,0.5729461756373938,1.4676815258082454
-"['Weather=Rainy', 'Monsoon=True', 'Type=streetlight']",['Urgency=Low(1-2)'],0.04975,0.4284176533907427,1.4621762914359822
-"['Weather=Rainy', 'Type=streetlight']",['Urgency=Low(1-2)'],0.050625,0.4281183932346724,1.4611549257156056
-"['Urgency=High(4-5)', 'Monsoon=True', 'Type=water leak']",['Weather=Stormy'],0.044,0.25142857142857145,1.4245244840145692
-"['Urgency=Low(1-2)', 'Monsoon=True', 'Weather=Rainy']",['Type=streetlight'],0.04975,0.3220064724919094,1.402314523644679
-"['Urgency=Low(1-2)', 'Weather=Rainy']",['Type=streetlight'],0.050625,0.3199052132701422,1.3931636941541305
-"['LowLying=True', 'Monsoon=True', 'Weather=Stormy']",['Urgency=High(4-5)'],0.05125,0.5766526019690577,1.3738001238095476
-"['LowLying=True', 'Weather=Stormy']",['Urgency=High(4-5)'],0.05125,0.5766526019690577,1.3738001238095476
-['Weather=Stormy'],['Urgency=High(4-5)'],0.101125,0.5729461756373938,1.3649700432099912
-"['Monsoon=True', 'Weather=Stormy']",['Urgency=High(4-5)'],0.101125,0.5729461756373938,1.3649700432099912
-"['Urgency=Low(1-2)', 'Monsoon=True']",['Type=streetlight'],0.074875,0.31004140786749484,1.3502075465105927
-['Type=streetlight'],"['Urgency=Low(1-2)', 'Monsoon=True']",0.074875,0.3260751224823081,1.3502075465105925
-"['Monsoon=True', 'Weather=Stormy']","['LowLying=True', 'Urgency=High(4-5)']",0.05125,0.29036827195467424,1.3365628168224362
-['Weather=Stormy'],"['LowLying=True', 'Urgency=High(4-5)']",0.05125,0.29036827195467424,1.3365628168224362
-"['LowLying=True', 'Urgency=Low(1-2)']",['Type=streetlight'],0.043375,0.30626654898499556,1.3337683134893656
-"['Urgency=Low(1-2)', 'Monsoon=True', 'Type=streetlight']",['Weather=Rainy'],0.04975,0.664440734557596,1.3222701185225791
-['Weather=Clear'],['Urgency=Low(1-2)'],0.06325,0.38016528925619836,1.2974924547993119
-['Type=streetlight'],['Urgency=Low(1-2)'],0.08725,0.3799673380511704,1.296816853416964
-['Urgency=Low(1-2)'],['Type=streetlight'],0.08725,0.2977815699658703,1.2968168534169637
-['Weather=Rainy'],"['Urgency=Low(1-2)', 'Monsoon=True']",0.1545,0.3074626865671642,1.2731374184975743
-"['Urgency=Low(1-2)', 'Monsoon=True']",['Weather=Rainy'],0.1545,0.639751552795031,1.2731374184975743
-['Urgency=Low(1-2)'],"['Monsoon=True', 'Type=streetlight']",0.074875,0.25554607508532423,1.2690059594553655
-"['Monsoon=True', 'Type=streetlight']",['Urgency=Low(1-2)'],0.074875,0.3718187461204221,1.2690059594553655
-"['LowLying=True', 'Urgency=Low(1-2)', 'Monsoon=True']",['Weather=Rainy'],0.074875,0.6352067868504772,1.2640931081601536
-"['LowLying=True', 'Type=streetlight']",['Urgency=Low(1-2)'],0.043375,0.3699360341151386,1.2625803212120772
-"['Urgency=Low(1-2)', 'Monsoon=True', 'Type=garbage']",['Weather=Rainy'],0.0865,0.623985572587917,1.2417623335082926
-"['LowLying=True', 'Urgency=Low(1-2)', 'Monsoon=True', 'Type=garbage']",['Weather=Rainy'],0.0415,0.6205607476635514,1.2349467615195053
-"['Urgency=Low(1-2)', 'Monsoon=True']","['LowLying=True', 'Weather=Rainy']",0.074875,0.31004140786749484,1.2218380605615562
-"['LowLying=True', 'Weather=Rainy']","['Urgency=Low(1-2)', 'Monsoon=True']",0.074875,0.29507389162561576,1.221838060561556
-['Weather=Stormy'],"['Monsoon=True', 'Type=water leak']",0.045125,0.2556657223796034,1.2124041369512906
-['Weather=Stormy'],"['Monsoon=True', 'Urgency=Medium(3)']",0.053125,0.3009915014164306,1.1944107199064706
-"['Urgency=Low(1-2)', 'Monsoon=True', 'Type=garbage']","['LowLying=True', 'Weather=Rainy']",0.0415,0.2993688007213706,1.1797785250103276
-"['Type=pothole', 'Monsoon=True', 'Urgency=Medium(3)']",['Weather=Rainy'],0.0625,0.5910165484633569,1.1761523352504617
-['Weather=Stormy'],"['Monsoon=True', 'Type=garbage']",0.048625,0.2754957507082153,1.1760757767693288
-"['Repeat=True', 'Weather=Rainy']","['LowLying=True', 'Monsoon=True']",0.04525,0.5156695156695157,1.1650257343564319
-"['Monsoon=True', 'Type=streetlight']","['LowLying=True', 'Weather=Rainy']",0.05925,0.29422718808193665,1.1595160121455632
-"['Type=pothole', 'Urgency=High(4-5)']","['LowLying=True', 'Monsoon=True']",0.054375,0.5117647058823529,1.1562037975314383
-"['Urgency=Low(1-2)', 'Type=streetlight']",['Weather=Rainy'],0.050625,0.5802292263610316,1.1546850275841425
-"['LowLying=True', 'Monsoon=True', 'Type=streetlight']",['Weather=Rainy'],0.05925,0.5794621026894866,1.1531584133124113
-"['Urgency=Low(1-2)', 'Type=streetlight']","['Weather=Rainy', 'Monsoon=True']",0.04975,0.5702005730659027,1.152793678172156
-"['Weather=Rainy', 'Urgency=High(4-5)']","['LowLying=True', 'Monsoon=True']",0.10375,0.5095150399017802,1.1511212423649368
-"['Monsoon=True', 'Type=streetlight']",['Weather=Rainy'],0.116125,0.5766604593420236,1.1475830036657186
-"['Monsoon=True', 'Zone=Hadapsar']",['Weather=Rainy'],0.086375,0.5758333333333333,1.1459369817578773
-"['LowLying=True', 'Monsoon=True', 'Zone=Hadapsar']",['Weather=Rainy'],0.086375,0.5758333333333333,1.1459369817578773
-"['Zone=Kothrud', 'Monsoon=True']",['Weather=Rainy'],0.084625,0.5756802721088436,1.1456323823061567
-"['Urgency=High(4-5)', 'Weather=Stormy']","['LowLying=True', 'Monsoon=True']",0.05125,0.5067985166872682,1.1449839405529922
-"['Weather=Rainy', 'Urgency=Medium(3)']","['LowLying=True', 'Monsoon=True']",0.071,0.5048888888888888,1.1406696162414884
-['Weather=Stormy'],"['LowLying=True', 'Monsoon=True']",0.088875,0.5035410764872521,1.13762457269077
-"['LowLying=True', 'Monsoon=True', 'Type=water leak']",['Weather=Rainy'],0.059375,0.5695443645083933,1.1334216209122256
-"['Weather=Rainy', 'Type=streetlight']","['LowLying=True', 'Monsoon=True']",0.05925,0.5010570824524313,1.1320126121489553
-"['Weather=Rainy', 'Type=water leak']","['LowLying=True', 'Monsoon=True']",0.059375,0.5010548523206751,1.1320075737264619
-"['Urgency=High(4-5)', 'Weather=Stormy', 'Type=water leak']",['Monsoon=True'],0.044,1.0,1.1313816999010042
-"['Type=garbage', 'Weather=Stormy']",['Monsoon=True'],0.048625,1.0,1.1313816999010042
-"['Type=pothole', 'Weather=Stormy']",['Monsoon=True'],0.046375,1.0,1.1313816999010042
-"['Urgency=High(4-5)', 'Weather=Stormy']",['Monsoon=True'],0.101125,1.0,1.1313816999010042
-"['Type=water leak', 'Weather=Stormy']",['Monsoon=True'],0.045125,1.0,1.1313816999010042
-"['Urgency=Medium(3)', 'Weather=Stormy']",['Monsoon=True'],0.053125,1.0,1.1313816999010042
-"['LowLying=True', 'Weather=Stormy']",['Monsoon=True'],0.088875,1.0,1.1313816999010042
-['Weather=Stormy'],['Monsoon=True'],0.1765,1.0,1.1313816999010042
-"['LowLying=True', 'Urgency=High(4-5)', 'Weather=Stormy']",['Monsoon=True'],0.05125,1.0,1.1313816999010042
-"['Repeat=True', 'Monsoon=True']","['LowLying=True', 'Weather=Rainy']",0.04525,0.2870737509912768,1.131325127059219
-"['Type=pothole', 'Weather=Rainy']","['LowLying=True', 'Monsoon=True']",0.067125,0.500465983224604,1.130677171927939
-"['LowLying=True', 'Monsoon=True', 'Zone=Swargate']",['Weather=Rainy'],0.082125,0.5663793103448277,1.1271230056613488
-"['Zone=Swargate', 'Monsoon=True']",['Weather=Rainy'],0.082125,0.5663793103448277,1.1271230056613488
-"['Repeat=True', 'Weather=Rainy', 'Urgency=High(4-5)']",['Monsoon=True'],0.055,0.995475113122172,1.1262623256933073
-"['Type=pothole', 'Weather=Rainy', 'Urgency=High(4-5)']",['Monsoon=True'],0.051375,0.9951573849878934,1.125902853896641
-"['Type=pothole', 'Weather=Rainy', 'Urgency=Medium(3)']",['Monsoon=True'],0.0625,0.9920634920634921,1.1224024800605201
-['Weather=Rainy'],"['LowLying=True', 'Monsoon=True']",0.249625,0.49676616915422894,1.1223183714300569
-"['LowLying=True', 'Monsoon=True']",['Weather=Rainy'],0.249625,0.5639649816436035,1.1223183714300569
-"['Urgency=High(4-5)', 'Weather=Rainy', 'Type=streetlight']",['Monsoon=True'],0.045125,0.9917582417582418,1.1220571254512706
-"['Weather=Rainy', 'Urgency=High(4-5)']",['Monsoon=True'],0.201875,0.9914057704112953,1.121658345819596
-"['Weather=Rainy', 'Zone=Viman Nagar']",['Monsoon=True'],0.08225,0.9894736842105263,1.1194724188494145
-"['LowLying=True', 'Weather=Rainy', 'Urgency=High(4-5)']",['Monsoon=True'],0.10375,0.9892729439809297,1.119245305027215
-"['Urgency=High(4-5)', 'Weather=Rainy', 'Type=water leak']",['Monsoon=True'],0.0915,0.9891891891891892,1.119150546388561
-"['LowLying=True', 'Repeat=True', 'Weather=Rainy']",['Monsoon=True'],0.04525,0.9890710382513661,1.1190168725796816
-"['LowLying=True', 'Type=pothole', 'Weather=Rainy']",['Monsoon=True'],0.067125,0.988950276243094,1.1188802446534793
-"['LowLying=True', 'Monsoon=True', 'Type=garbage']",['Weather=Rainy'],0.063875,0.5609220636663007,1.1162628132662702
-"['Weather=Rainy', 'Zone=Swargate']",['Monsoon=True'],0.082125,0.9864864864864865,1.11609275801045
-"['LowLying=True', 'Weather=Rainy', 'Zone=Swargate']",['Monsoon=True'],0.082125,0.9864864864864865,1.11609275801045
-"['Weather=Rainy', 'Type=water leak']",['Monsoon=True'],0.116875,0.9862869198312237,1.1158669719487753
-"['Zone=Baner', 'Weather=Rainy']",['Monsoon=True'],0.078125,0.9858044164037855,1.1153210764008321
-"['Type=pothole', 'Monsoon=True']","['LowLying=True', 'Weather=Rainy']",0.067125,0.28278041074249605,1.1144055595763391
-"['LowLying=True', 'Weather=Rainy']","['Type=pothole', 'Monsoon=True']",0.067125,0.2645320197044335,1.1144055595763391
-"['Weather=Rainy', 'Type=garbage']",['Monsoon=True'],0.129625,0.9848053181386515,1.1141907149072567
-"['LowLying=True', 'Weather=Rainy', 'Urgency=Medium(3)']",['Monsoon=True'],0.071,0.9844020797227037,1.1137344983427562
-"['Urgency=Low(1-2)', 'Weather=Rainy', 'Type=garbage']",['Monsoon=True'],0.0865,0.984352773826458,1.1136787145540468
-"['Repeat=True', 'Weather=Rainy']",['Monsoon=True'],0.086375,0.9843304843304843,1.1136534966262022
-['Weather=Rainy'],['Monsoon=True'],0.494625,0.9843283582089553,1.1136510911712123
-['Monsoon=True'],['Weather=Rainy'],0.494625,0.5596096733135342,1.1136510911712123
-"['Type=pothole', 'Weather=Rainy']",['Monsoon=True'],0.132,0.984156570363467,1.1134567335465615
-"['LowLying=True', 'Weather=Rainy']",['Monsoon=True'],0.249625,0.9837438423645322,1.1129897806415299
-['Monsoon=True'],"['LowLying=True', 'Weather=Rainy']",0.249625,0.2824211568377882,1.1129897806415299
-"['LowLying=True', 'Weather=Rainy', 'Type=water leak']",['Monsoon=True'],0.059375,0.9834368530020704,1.1126424584947763
-"['Weather=Rainy', 'Urgency=Medium(3)']",['Monsoon=True'],0.13825,0.9831111111111112,1.112273920080454
-"['Weather=Rainy', 'Zone=Hadapsar']",['Monsoon=True'],0.086375,0.9829302987197723,1.1120693522497778
-"['LowLying=True', 'Weather=Rainy', 'Zone=Hadapsar']",['Monsoon=True'],0.086375,0.9829302987197723,1.1120693522497778
-"['Urgency=Low(1-2)', 'Weather=Rainy', 'Type=streetlight']",['Monsoon=True'],0.04975,0.9827160493827161,1.1118269544706165
-"['LowLying=True', 'Weather=Rainy', 'Urgency=Low(1-2)', 'Type=garbage']",['Monsoon=True'],0.0415,0.9822485207100592,1.1112980010861935
-"['Weather=Rainy', 'Type=streetlight']",['Monsoon=True'],0.116125,0.9820295983086682,1.1110503162875613
-"['LowLying=True', 'Type=pothole', 'Urgency=High(4-5)']",['Monsoon=True'],0.054375,0.9819413092550789,1.1109504276680289
-"['Weather=Rainy', 'Zone=Shivajinagar']",['Monsoon=True'],0.081125,0.9818456883509833,1.110842243927007
-"['LowLying=True', 'Weather=Rainy', 'Zone=Shivajinagar']",['Monsoon=True'],0.081125,0.9818456883509833,1.110842243927007
-"['Monsoon=True', 'Urgency=Medium(3)']","['LowLying=True', 'Weather=Rainy']",0.071,0.28174603174603174,1.1103291891469231
-"['LowLying=True', 'Weather=Rainy']","['Monsoon=True', 'Urgency=Medium(3)']",0.071,0.2798029556650246,1.1103291891469231
-"['LowLying=True', 'Weather=Rainy', 'Type=streetlight']",['Monsoon=True'],0.05925,0.9813664596273292,1.1103000533189977
-"['LowLying=True', 'Weather=Rainy', 'Type=water leak', 'Urgency=High(4-5)']",['Monsoon=True'],0.045125,0.9809782608695652,1.1098608523485394
-"['LowLying=True', 'Weather=Rainy', 'Type=garbage']",['Monsoon=True'],0.063875,0.980806142034549,1.1096661202483937
-"['Monsoon=True', 'Type=water leak']","['LowLying=True', 'Weather=Rainy']",0.059375,0.2815649081209247,1.1096154014617723
-"['Zone=Kothrud', 'Weather=Rainy']",['Monsoon=True'],0.084625,0.9797395079594792,1.108459349975369
-['Weather=Stormy'],"['Type=pothole', 'Monsoon=True']",0.046375,0.26274787535410765,1.1068894169735972
-['Weather=Rainy'],"['Type=pothole', 'Monsoon=True']",0.132,0.26268656716417915,1.1066311412919607
-"['Type=pothole', 'Monsoon=True']",['Weather=Rainy'],0.132,0.5560821484992101,1.1066311412919605
-['Zone=Kothrud'],"['Monsoon=True', 'Type=garbage']",0.043,0.2590361445783132,1.105810649213717
-"['Type=pothole', 'Urgency=High(4-5)']",['Monsoon=True'],0.10375,0.9764705882352941,1.1047609540209804
-"['Urgency=Low(1-2)', 'Weather=Rainy']",['Monsoon=True'],0.1545,0.976303317535545,1.1045717070123546
-"['Zone=Kothrud', 'Monsoon=True']",['Type=garbage'],0.043,0.2925170068027211,1.1038377615197021
-"['LowLying=True', 'Weather=Rainy', 'Urgency=Low(1-2)']",['Monsoon=True'],0.074875,0.9755700325732899,1.1037420818252468
-"['Monsoon=True', 'Type=water leak']",['Weather=Rainy'],0.116875,0.5542382928275045,1.1029617767711533
-"['LowLying=True', 'Monsoon=True', 'Urgency=Medium(3)']",['Weather=Rainy'],0.071,0.5541463414634147,1.1027787889819198
-['Zone=Kothrud'],['Type=garbage'],0.0485,0.29216867469879515,1.1025233007501702
-"['Weather=Rainy', 'Type=water leak', 'Urgency=High(4-5)']","['LowLying=True', 'Monsoon=True']",0.045125,0.48783783783783785,1.1021470496195152
-['Weather=Rainy'],"['Monsoon=True', 'Type=garbage']",0.129625,0.25796019900497513,1.1012174984203846
-"['Monsoon=True', 'Type=garbage']",['Weather=Rainy'],0.129625,0.5533617929562432,1.1012174984203846
-"['Repeat=True', 'Urgency=High(4-5)']","['LowLying=True', 'Monsoon=True']",0.05625,0.48648648648648646,1.0990940107009013
-"['Urgency=High(4-5)', 'Monsoon=True', 'Type=streetlight']",['Weather=Rainy'],0.045125,0.5511450381679389,1.0968060461053513
-"['Weather=Rainy', 'Type=garbage']","['LowLying=True', 'Monsoon=True']",0.063875,0.48528015194681867,1.0963686008400308
-"['Monsoon=True', 'Zone=Viman Nagar']",['Weather=Rainy'],0.08225,0.5506276150627615,1.095776348383605
-"['Urgency=Low(1-2)', 'Type=garbage']","['Weather=Rainy', 'Monsoon=True']",0.0865,0.5418950665622553,1.0955674835729194
-"['Urgency=Low(1-2)', 'Type=garbage']",['Weather=Rainy'],0.087875,0.5505090054815975,1.0955403094161147
-"['LowLying=True', 'Urgency=Low(1-2)', 'Type=garbage']",['Weather=Rainy'],0.04225,0.5495934959349594,1.0937183998705662
-"['LowLying=True', 'Monsoon=True', 'Zone=Shivajinagar']",['Weather=Rainy'],0.081125,0.5495342929720576,1.0936005830289703
-"['Monsoon=True', 'Zone=Shivajinagar']",['Weather=Rainy'],0.081125,0.5495342929720576,1.0936005830289703
-"['Type=pothole', 'Urgency=Medium(3)']","['Weather=Rainy', 'Monsoon=True']",0.0625,0.5405405405405405,1.0928289927531776
-"['LowLying=True', 'Type=pothole', 'Monsoon=True']",['Weather=Rainy'],0.067125,0.549079754601227,1.0926960290571683
-['Weather=Rainy'],"['Monsoon=True', 'Urgency=Medium(3)']",0.13825,0.2751243781094528,1.0917634051962413
-"['Monsoon=True', 'Urgency=Medium(3)']",['Weather=Rainy'],0.13825,0.5486111111111112,1.0917634051962413
-"['LowLying=True', 'Urgency=Low(1-2)', 'Type=garbage']","['Weather=Rainy', 'Monsoon=True']",0.0415,0.5398373983739838,1.091407426583743
-"['Repeat=True', 'Monsoon=True']",['Weather=Rainy'],0.086375,0.5479777954004759,1.0905030754238327
-['Zone=Kothrud'],['Urgency=Low(1-2)'],0.053,0.3192771084337349,1.089682963937662
-"['LowLying=True', 'Repeat=True', 'Monsoon=True']",['Weather=Rainy'],0.04525,0.5468277945619335,1.0882145165411614
-['Weather=Cloudy'],['Urgency=Low(1-2)'],0.04925,0.3185125303152789,1.0870734823047061
-"['Zone=Baner', 'Urgency=High(4-5)']",['Monsoon=True'],0.065625,0.959780621572212,1.0858782311664117
-"['Type=pothole', 'Urgency=Medium(3)']",['Weather=Rainy'],0.063,0.5448648648648649,1.0843081887858008
-"['Zone=Viman Nagar', 'Urgency=High(4-5)']",['Monsoon=True'],0.065625,0.9562841530054644,1.0819223906157143
-['Zone=Hadapsar'],['Type=pothole'],0.0485,0.2863468634686347,1.0805542017684326
-"['LowLying=True', 'Zone=Hadapsar']",['Type=pothole'],0.0485,0.2863468634686347,1.0805542017684326
-"['Zone=Kothrud', 'Urgency=High(4-5)']",['Monsoon=True'],0.0625,0.9541984732824427,1.079562690745233
-"['Zone=Baner', 'Monsoon=True']",['Urgency=High(4-5)'],0.065625,0.45297670405522,1.0791583181780107
-"['LowLying=True', 'Monsoon=True', 'Zone=Hadapsar']",['Type=pothole'],0.042875,0.2858333333333334,1.078616352201258
-"['Monsoon=True', 'Zone=Hadapsar']",['Type=pothole'],0.042875,0.2858333333333334,1.078616352201258
-"['LowLying=True', 'Urgency=Low(1-2)']",['Weather=Rainy'],0.07675,0.5419240953221536,1.078455911088863
-"['Urgency=High(4-5)', 'Type=streetlight']","['LowLying=True', 'Monsoon=True']",0.0435,0.47606019151846785,1.0755384163083148
-['Urgency=Low(1-2)'],['Weather=Rainy'],0.15825,0.5401023890784983,1.0748306250318376
-['Weather=Rainy'],['Urgency=Low(1-2)'],0.15825,0.3149253731343284,1.0748306250318376
-"['Monsoon=True', 'Type=garbage']","['LowLying=True', 'Weather=Rainy']",0.063875,0.2726787620064034,1.074596106429176
-"['LowLying=True', 'Weather=Rainy']","['Monsoon=True', 'Type=garbage']",0.063875,0.2517241379310345,1.074596106429176
-"['Zone=Baner', 'Monsoon=True']",['Weather=Rainy'],0.078125,0.5392579810181191,1.0731502109813316
-"['Weather=Rainy', 'Urgency=Low(1-2)']","['LowLying=True', 'Monsoon=True']",0.074875,0.4731437598736177,1.068949471615064
-"['LowLying=True', 'Urgency=Low(1-2)']","['Weather=Rainy', 'Monsoon=True']",0.074875,0.528684907325684,1.0688600602995886
-"['LowLying=True', 'Monsoon=True', 'Zone=Shivajinagar']",['Urgency=High(4-5)'],0.066125,0.4479254868755292,1.0671244475891106
-"['Monsoon=True', 'Zone=Shivajinagar']",['Urgency=High(4-5)'],0.066125,0.4479254868755292,1.0671244475891106
-"['Weather=Rainy', 'Urgency=Low(1-2)', 'Type=garbage']","['LowLying=True', 'Monsoon=True']",0.0415,0.47226173541963024,1.0669567589260214
-['Zone=Baner'],['Type=garbage'],0.046,0.282642089093702,1.0665739211083094
-"['LowLying=True', 'Zone=Hadapsar']","['Type=pothole', 'Monsoon=True']",0.042875,0.25313653136531367,1.066399289585313
-['Zone=Hadapsar'],"['Type=pothole', 'Monsoon=True']",0.042875,0.25313653136531367,1.066399289585313
-['Zone=Kothrud'],"['Urgency=Low(1-2)', 'Monsoon=True']",0.04275,0.2575301204819277,1.0663773104841727
-['Urgency=Low(1-2)'],"['Weather=Rainy', 'Monsoon=True']",0.1545,0.5273037542662117,1.0660677367019695
-"['Weather=Rainy', 'Monsoon=True']",['Urgency=Low(1-2)'],0.1545,0.312357846853677,1.0660677367019693
-"['Repeat=True', 'Urgency=High(4-5)']",['LowLying=True'],0.062,0.5362162162162162,1.0657713614235351
-['Weather=Cloudy'],['Type=pothole'],0.043625,0.2821341956345998,1.0646573420173577
-"['LowLying=True', 'Monsoon=True', 'Zone=Hadapsar']",['Urgency=High(4-5)'],0.067,0.4466666666666667,1.06412547151082
-"['Monsoon=True', 'Zone=Hadapsar']",['Urgency=High(4-5)'],0.067,0.4466666666666667,1.06412547151082
-['Weather=Stormy'],['Type=water leak'],0.045125,0.2556657223796034,1.0636119495771332
-"['Monsoon=True', 'Weather=Stormy']",['Type=water leak'],0.045125,0.2556657223796034,1.0636119495771332
-"['Weather=Rainy', 'Urgency=High(4-5)']","['Type=pothole', 'Monsoon=True']",0.051375,0.25230202578268873,1.062883731575308
-"['Monsoon=True', 'Zone=Viman Nagar']",['Type=pothole'],0.042,0.28117154811715483,1.061024709876056
-"['LowLying=True', 'Type=pothole', 'Monsoon=True']",['Urgency=High(4-5)'],0.054375,0.4447852760736196,1.059643302140845
-"['LowLying=True', 'Type=water leak', 'Monsoon=True', 'Urgency=High(4-5)']",['Weather=Rainy'],0.045125,0.5324483775811208,1.0595987613554645
-"['LowLying=True', 'Monsoon=True']",['Urgency=High(4-5)'],0.196625,0.4442247952555775,1.0583080291973257
-['Urgency=High(4-5)'],"['LowLying=True', 'Monsoon=True']",0.196625,0.4684335914234663,1.0583080291973257
-"['Zone=Baner', 'Monsoon=True']",['Type=garbage'],0.040625,0.2804141501294219,1.0581666042619693
-"['Type=pothole', 'Urgency=Medium(3)']","['LowLying=True', 'Monsoon=True']",0.054125,0.4681081081081081,1.0575726814077562
-"['Urgency=High(4-5)', 'Monsoon=True', 'Type=streetlight']",['LowLying=True'],0.0435,0.5312977099236641,1.0559954482954814
-['Zone=Viman Nagar'],"['Urgency=Low(1-2)', 'Monsoon=True']",0.042875,0.2550185873605948,1.0559775874144712
-"['Zone=Hadapsar', 'Urgency=High(4-5)']",['Monsoon=True'],0.067,0.9321739130434784,1.0546445063425014
-"['LowLying=True', 'Zone=Hadapsar', 'Urgency=High(4-5)']",['Monsoon=True'],0.067,0.9321739130434784,1.0546445063425014
-"['LowLying=True', 'Urgency=High(4-5)']","['Type=pothole', 'Monsoon=True']",0.054375,0.25028768699654774,1.0543978388480157
-['Repeat=True'],['Urgency=Medium(3)'],0.054375,0.30229325920778316,1.0523699189130833
-['Repeat=True'],['Type=water leak'],0.0455,0.25295343988881164,1.0523284030735793
-['Monsoon=True'],['Urgency=High(4-5)'],0.390375,0.4416631310988545,1.0522051961854784
-['Urgency=High(4-5)'],['Monsoon=True'],0.390375,0.9300178677784395,1.0522051961854781
-['Repeat=True'],['LowLying=True'],0.095125,0.5288394718554552,1.0511095092779232
-['Zone=Shivajinagar'],['Urgency=High(4-5)'],0.074625,0.44091580502215655,1.050424788617407
-"['LowLying=True', 'Zone=Shivajinagar']",['Urgency=High(4-5)'],0.074625,0.44091580502215655,1.050424788617407
-"['LowLying=True', 'Monsoon=True', 'Urgency=High(4-5)']",['Weather=Rainy'],0.10375,0.5276541640178004,1.050058037846369
-"['Repeat=True', 'Monsoon=True', 'Urgency=High(4-5)']",['LowLying=True'],0.05625,0.5281690140845071,1.0497769224039892
-['Weather=Stormy'],['Urgency=Medium(3)'],0.053125,0.3009915014164306,1.0478381250354416
-"['Monsoon=True', 'Weather=Stormy']",['Urgency=Medium(3)'],0.053125,0.3009915014164306,1.0478381250354416
-"['LowLying=True', 'Weather=Rainy']","['Monsoon=True', 'Urgency=High(4-5)']",0.10375,0.4088669950738916,1.0473698240765714
-"['Monsoon=True', 'Urgency=High(4-5)']","['LowLying=True', 'Weather=Rainy']",0.10375,0.26577009285943,1.0473698240765714
-['Weather=Cloudy'],['Urgency=Medium(3)'],0.0465,0.30072756669361356,1.046919292231901
-"['Monsoon=True', 'Zone=Viman Nagar']",['Urgency=High(4-5)'],0.065625,0.4393305439330544,1.0466481094295519
-['Zone=Viman Nagar'],['Urgency=Low(1-2)'],0.0515,0.30631970260223046,1.04545973584379
-"['Urgency=High(4-5)', 'Type=streetlight']",['LowLying=True'],0.048,0.5253077975376197,1.0440900323729085
-['Zone=Viman Nagar'],['Type=pothole'],0.0465,0.2765799256505576,1.0436978326436135
-"['LowLying=True', 'Monsoon=True', 'Urgency=High(4-5)']",['Type=pothole'],0.054375,0.2765416401780038,1.0435533591622785
-"['Monsoon=True', 'Zone=Shivajinagar']",['Urgency=Medium(3)'],0.04425,0.29974597798475866,1.0435020991636508
-"['LowLying=True', 'Monsoon=True', 'Zone=Shivajinagar']",['Urgency=Medium(3)'],0.04425,0.29974597798475866,1.0435020991636508
-"['Repeat=True', 'Monsoon=True']",['LowLying=True'],0.08275,0.5249801744647106,1.0434388560789278
-"['Zone=Swargate', 'Monsoon=True']",['Urgency=High(4-5)'],0.0635,0.43793103448275866,1.043313959458627
-"['LowLying=True', 'Monsoon=True', 'Zone=Swargate']",['Urgency=High(4-5)'],0.0635,0.43793103448275866,1.043313959458627
-"['Urgency=Low(1-2)', 'Type=garbage']","['LowLying=True', 'Weather=Rainy']",0.04225,0.264682850430697,1.0430851248500375
-['Type=pothole'],"['LowLying=True', 'Monsoon=True']",0.12225,0.4613207547169811,1.04223836140521
-"['LowLying=True', 'Monsoon=True']",['Type=pothole'],0.12225,0.2761931657723807,1.04223836140521
-"['Repeat=True', 'Urgency=High(4-5)']",['Monsoon=True'],0.1065,0.921081081081081,1.042094279260168
-"['Type=pothole', 'Monsoon=True', 'Urgency=High(4-5)']",['LowLying=True'],0.054375,0.5240963855421688,1.0416822569782236
-"['Urgency=Low(1-2)', 'Type=garbage']","['LowLying=True', 'Weather=Rainy', 'Monsoon=True']",0.0415,0.25998433829287393,1.0414996025753587
-"['Urgency=High(4-5)', 'Type=water leak']",['Monsoon=True'],0.175,0.9204470742932281,1.0413769755827782
-"['Type=pothole', 'Monsoon=True']",['Urgency=High(4-5)'],0.10375,0.43707214323328064,1.041267762318715
-"['Repeat=True', 'Monsoon=True', 'Weather=Rainy']",['LowLying=True'],0.04525,0.5238784370477569,1.041249067424113
-"['Urgency=High(4-5)', 'Monsoon=True', 'Type=water leak']",['Weather=Rainy'],0.0915,0.5228571428571429,1.0405117270788915
-"['Monsoon=True', 'Weather=Stormy']",['Type=garbage'],0.048625,0.2754957507082153,1.0396066064460954
-['Weather=Stormy'],['Type=garbage'],0.048625,0.2754957507082153,1.0396066064460954
-['Repeat=True'],"['LowLying=True', 'Monsoon=True']",0.08275,0.4600416956219597,1.0393486486799428
-"['LowLying=True', 'Zone=Shivajinagar']","['Monsoon=True', 'Urgency=Medium(3)']",0.04425,0.26144756277695713,1.0374903284799886
-['Zone=Shivajinagar'],"['Monsoon=True', 'Urgency=Medium(3)']",0.04425,0.26144756277695713,1.0374903284799886
-"['Repeat=True', 'Weather=Rainy']",['LowLying=True'],0.04575,0.5213675213675214,1.0362584275627753
-['Type=streetlight'],"['LowLying=True', 'Weather=Rainy']",0.060375,0.26292868807838865,1.036172169767049
-"['Type=pothole', 'Urgency=High(4-5)']",['LowLying=True'],0.055375,0.5211764705882354,1.0358786993058093
-['Zone=Kothrud'],['Weather=Rainy'],0.086375,0.5203313253012047,1.0354852244800095
-"['Type=pothole', 'Urgency=Medium(3)']",['Monsoon=True'],0.10575,0.9145945945945945,1.034755587152702
-['Type=streetlight'],"['LowLying=True', 'Weather=Rainy', 'Monsoon=True']",0.05925,0.2580293957539466,1.0336680851435016
-['Zone=Baner'],"['Monsoon=True', 'Urgency=High(4-5)']",0.065625,0.40322580645161293,1.032919132761096
-['Zone=Hadapsar'],['Weather=Rainy'],0.087875,0.5188191881918819,1.0324759964017551
-"['LowLying=True', 'Zone=Hadapsar']",['Weather=Rainy'],0.087875,0.5188191881918819,1.0324759964017551
-"['Urgency=High(4-5)', 'Type=water leak']",['LowLying=True'],0.09875,0.5193951347797502,1.0323381560839755
-"['LowLying=True', 'Weather=Rainy']",['Urgency=Low(1-2)'],0.07675,0.30246305418719216,1.0322971132668675
-['Urgency=Low(1-2)'],"['LowLying=True', 'Weather=Rainy']",0.07675,0.2619453924914676,1.0322971132668675
-"['Monsoon=True', 'Zone=Shivajinagar']",['Type=pothole'],0.040375,0.2734970364098222,1.0320642883389517
-"['LowLying=True', 'Monsoon=True', 'Zone=Shivajinagar']",['Type=pothole'],0.040375,0.2734970364098222,1.0320642883389517
-"['LowLying=True', 'Type=pothole', 'Urgency=Medium(3)']",['Monsoon=True'],0.054125,0.911578947368421,1.031343739067652
-['Zone=Hadapsar'],"['Weather=Rainy', 'Monsoon=True']",0.086375,0.5099630996309963,1.0310095519454057
-"['LowLying=True', 'Zone=Hadapsar']","['Weather=Rainy', 'Monsoon=True']",0.086375,0.5099630996309963,1.0310095519454057
-['Zone=Kothrud'],"['Weather=Rainy', 'Monsoon=True']",0.084625,0.509789156626506,1.0306578855223776
-"['Type=pothole', 'Zone=Shivajinagar']",['Monsoon=True'],0.040375,0.9098591549295776,1.0293979973747165
-"['LowLying=True', 'Type=pothole', 'Zone=Shivajinagar']",['Monsoon=True'],0.040375,0.9098591549295776,1.0293979973747165
-['Weather=Rainy'],"['Monsoon=True', 'Urgency=High(4-5)']",0.201875,0.40174129353233834,1.0291163459041648
-"['Monsoon=True', 'Urgency=High(4-5)']",['Weather=Rainy'],0.201875,0.5171309638168428,1.0291163459041648
-['LowLying=True'],['Urgency=High(4-5)'],0.21725,0.4318012422360248,1.0287105234926142
-['Urgency=High(4-5)'],['LowLying=True'],0.21725,0.5175699821322215,1.0287105234926142
-"['Repeat=True', 'Monsoon=True', 'Urgency=High(4-5)']",['Weather=Rainy'],0.055,0.5164319248826291,1.0277252236470233
-"['LowLying=True', 'Repeat=True', 'Urgency=High(4-5)']",['Monsoon=True'],0.05625,0.9072580645161291,1.0264551712811532
-"['LowLying=True', 'Urgency=High(4-5)', 'Type=streetlight']",['Monsoon=True'],0.0435,0.9062499999999999,1.025314665535285
-['Type=streetlight'],['Weather=Rainy'],0.11825,0.5149700598802395,1.0248160395626658
-"['LowLying=True', 'Type=streetlight']",['Weather=Rainy'],0.060375,0.5149253731343284,1.0247271107150815
-['Zone=Swargate'],['Urgency=High(4-5)'],0.07075,0.4300911854103343,1.024636534628551
-"['LowLying=True', 'Zone=Swargate']",['Urgency=High(4-5)'],0.07075,0.4300911854103343,1.024636534628551
-"['LowLying=True', 'Urgency=High(4-5)']",['Monsoon=True'],0.196625,0.9050632911392404,1.0239720448471112
-"['LowLying=True', 'Weather=Rainy', 'Monsoon=True']",['Urgency=Low(1-2)'],0.074875,0.29994992488733097,1.0237198801615393
-['Urgency=Low(1-2)'],"['LowLying=True', 'Weather=Rainy', 'Monsoon=True']",0.074875,0.25554607508532423,1.0237198801615393
-"['Weather=Rainy', 'Urgency=High(4-5)']",['LowLying=True'],0.104875,0.5150399017802333,1.0236817923582275
-"['Type=pothole', 'Monsoon=True']",['LowLying=True'],0.12225,0.5150078988941548,1.0236181841374503
-"['LowLying=True', 'Type=pothole']","['Monsoon=True', 'Urgency=High(4-5)']",0.054375,0.39944903581267216,1.0232444081016256
-['Type=streetlight'],"['Weather=Rainy', 'Monsoon=True']",0.116125,0.5057158410451824,1.0224227263991559
-"['Type=pothole', 'Zone=Viman Nagar']",['Monsoon=True'],0.042,0.903225806451613,1.0218931482976812
-"['LowLying=True', 'Type=streetlight']","['Weather=Rainy', 'Monsoon=True']",0.05925,0.5053304904051172,1.0216436500482533
-"['Weather=Rainy', 'Monsoon=True', 'Urgency=High(4-5)']",['LowLying=True'],0.10375,0.5139318885448916,1.0214795300271136
-['LowLying=True'],['Type=pothole'],0.136125,0.2705590062111801,1.0209773819289816
-['Type=pothole'],['LowLying=True'],0.136125,0.5136792452830188,1.0209773819289814
-"['Weather=Rainy', 'Monsoon=True', 'Urgency=Medium(3)']",['LowLying=True'],0.071,0.5135623869801084,1.0207451169790973
-"['Type=pothole', 'Urgency=Medium(3)']",['LowLying=True'],0.059375,0.5135135135135135,1.0206479771697161
-"['Repeat=True', 'Monsoon=True']",['Type=garbage'],0.042625,0.27042030134813644,1.020453967351458
-"['Weather=Rainy', 'Urgency=Medium(3)']",['LowLying=True'],0.072125,0.5128888888888888,1.019406487232574
-['Zone=Swargate'],"['Monsoon=True', 'Urgency=Medium(3)']",0.04225,0.256838905775076,1.0192020070439525
-"['LowLying=True', 'Zone=Swargate']","['Monsoon=True', 'Urgency=Medium(3)']",0.04225,0.256838905775076,1.0192020070439525
-"['Type=pothole', 'Monsoon=True', 'Urgency=Medium(3)']",['LowLying=True'],0.054125,0.5118203309692672,1.0172826454047545
-"['LowLying=True', 'Zone=Shivajinagar', 'Urgency=Medium(3)']",['Monsoon=True'],0.04425,0.898477157360406,1.0165206136166383
-"['Zone=Shivajinagar', 'Urgency=Medium(3)']",['Monsoon=True'],0.04425,0.898477157360406,1.0165206136166383
-"['Type=water leak', 'Monsoon=True', 'Urgency=High(4-5)']","['LowLying=True', 'Weather=Rainy']",0.045125,0.25785714285714284,1.016185784658691
-"['LowLying=True', 'Type=pothole']",['Monsoon=True'],0.12225,0.8980716253443526,1.0160618021149515
-['Zone=Baner'],['Urgency=Medium(3)'],0.0475,0.29185867895545314,1.0160441390964425
-"['Type=garbage', 'Urgency=Medium(3)']",['Monsoon=True'],0.065875,0.8977853492333903,1.0157379145618897
-"['Zone=Swargate', 'Urgency=High(4-5)']",['Monsoon=True'],0.0635,0.8975265017667845,1.0154450592751063
-"['LowLying=True', 'Zone=Swargate', 'Urgency=High(4-5)']",['Monsoon=True'],0.0635,0.8975265017667845,1.0154450592751063
-['Type=streetlight'],['LowLying=True'],0.11725,0.5106151333696244,1.0148872216042224
-['Repeat=True'],['Type=garbage'],0.048375,0.2689367616400278,1.0148557043019915
-"['Weather=Rainy', 'Type=streetlight']",['LowLying=True'],0.060375,0.5105708245243129,1.014799154334038
-['Type=pothole'],"['LowLying=True', 'Weather=Rainy', 'Monsoon=True']",0.067125,0.25330188679245286,1.0147296416322598
-"['LowLying=True', 'Weather=Rainy', 'Monsoon=True']",['Type=pothole'],0.067125,0.2689033550325488,1.0147296416322595
-"['LowLying=True', 'Monsoon=True', 'Zone=Swargate']",['Urgency=Medium(3)'],0.04225,0.2913793103448276,1.0143753188679812
-"['Zone=Swargate', 'Monsoon=True']",['Urgency=Medium(3)'],0.04225,0.2913793103448276,1.0143753188679812
-"['Weather=Rainy', 'Monsoon=True', 'Type=streetlight']",['LowLying=True'],0.05925,0.5102260495156081,1.0141138872359912
-"['Urgency=High(4-5)', 'Type=streetlight']",['Monsoon=True'],0.081875,0.8960328317373462,1.013755148338109
-"['LowLying=True', 'Monsoon=True', 'Type=streetlight']",['Urgency=High(4-5)'],0.0435,0.4254278728606357,1.013526796570901
-['Monsoon=True'],['Type=pothole'],0.237375,0.2685617310140009,1.0134404943924562
-['Type=pothole'],['Monsoon=True'],0.237375,0.8957547169811321,1.013440494392456
-['Zone=Hadapsar'],"['Monsoon=True', 'Urgency=High(4-5)']",0.067,0.3955719557195572,1.0133127267872102
-"['LowLying=True', 'Zone=Hadapsar']","['Monsoon=True', 'Urgency=High(4-5)']",0.067,0.3955719557195572,1.0133127267872102
-['Zone=Shivajinagar'],['Urgency=Medium(3)'],0.04925,0.29098966026587886,1.0130188346940951
-"['LowLying=True', 'Zone=Shivajinagar']",['Urgency=Medium(3)'],0.04925,0.29098966026587886,1.0130188346940951
-"['Zone=Kothrud', 'Monsoon=True']",['Urgency=High(4-5)'],0.0625,0.4251700680272109,1.0129126099516639
-"['Weather=Rainy', 'Type=water leak']",['LowLying=True'],0.060375,0.509493670886076,1.0126582278481013
-"['LowLying=True', 'Zone=Hadapsar']",['Urgency=High(4-5)'],0.071875,0.4243542435424354,1.010969013799727
-['Zone=Hadapsar'],['Urgency=High(4-5)'],0.071875,0.4243542435424354,1.010969013799727
-"['Type=pothole', 'Monsoon=True', 'Weather=Rainy']",['LowLying=True'],0.067125,0.5085227272727273,1.0107284020327498
-"['Monsoon=True', 'Urgency=Medium(3)']",['LowLying=True'],0.128125,0.5084325396825397,1.0105491471951098
-['LowLying=True'],"['Monsoon=True', 'Urgency=Medium(3)']",0.128125,0.2546583850931677,1.0105491471951098
-"['LowLying=True', 'Zone=Hadapsar']",['Urgency=Low(1-2)'],0.050125,0.29594095940959414,1.0100374041283078
-['Zone=Hadapsar'],['Urgency=Low(1-2)'],0.050125,0.29594095940959414,1.0100374041283078
-"['Weather=Rainy', 'Monsoon=True', 'Type=water leak']",['LowLying=True'],0.059375,0.5080213903743315,1.0097319560235158
-['Type=pothole'],"['LowLying=True', 'Weather=Rainy']",0.067875,0.25613207547169814,1.009387489543638
-"['LowLying=True', 'Weather=Rainy']",['Type=pothole'],0.067875,0.2674876847290641,1.009387489543638
-['Zone=Swargate'],"['Weather=Rainy', 'Monsoon=True']",0.082125,0.4992401215805471,1.00933054653636
-"['LowLying=True', 'Zone=Swargate']","['Weather=Rainy', 'Monsoon=True']",0.082125,0.4992401215805471,1.00933054653636
-"['Monsoon=True', 'Type=streetlight']",['LowLying=True'],0.10225,0.5077591558038486,1.0092107444548541
-"['Weather=Cloudy', 'Urgency=High(4-5)']",['Monsoon=True'],0.0525,0.89171974522293,1.008875401185609
-"['LowLying=True', 'Zone=Swargate']",['Urgency=Medium(3)'],0.047625,0.28951367781155013,1.007880514574587
-['Zone=Swargate'],['Urgency=Medium(3)'],0.047625,0.28951367781155013,1.007880514574587
-['Repeat=True'],"['LowLying=True', 'Weather=Rainy', 'Monsoon=True']",0.04525,0.25156358582348853,1.0077659922823776
-['Urgency=Medium(3)'],"['LowLying=True', 'Monsoon=True']",0.128125,0.44604003481288074,1.0077154133021875
-"['LowLying=True', 'Monsoon=True']",['Urgency=Medium(3)'],0.128125,0.28946625247105334,1.0077154133021875
-"['LowLying=True', 'Type=garbage']",['Weather=Rainy'],0.065125,0.5063168124392615,1.0075956466452967
-"['Urgency=High(4-5)', 'Weather=Stormy']",['LowLying=True'],0.05125,0.5067985166872682,1.0073013996268683
-"['Urgency=High(4-5)', 'Monsoon=True', 'Weather=Stormy']",['LowLying=True'],0.05125,0.5067985166872682,1.0073013996268683
-['Type=pothole'],['Weather=Rainy'],0.134125,0.506132075471698,1.0072280108889513
-['Weather=Rainy'],['Type=pothole'],0.134125,0.26691542288557213,1.0072280108889513
-"['LowLying=True', 'Zone=Swargate']",['Weather=Rainy'],0.08325,0.5060790273556232,1.0071224424987526
-['Zone=Swargate'],['Weather=Rainy'],0.08325,0.5060790273556232,1.0071224424987526
-['Zone=Baner'],['Monsoon=True'],0.144875,0.890168970814132,1.00712088339882
-"['Urgency=High(4-5)', 'Type=water leak']","['LowLying=True', 'Monsoon=True']",0.08475,0.44575936883629197,1.0070813190314418
-['Type=pothole'],"['Weather=Rainy', 'Monsoon=True']",0.132,0.4981132075471698,1.007052226529532
-"['Weather=Rainy', 'Monsoon=True']",['Type=pothole'],0.132,0.266868840030326,1.007052226529532
-['Type=streetlight'],"['LowLying=True', 'Monsoon=True']",0.10225,0.44529123571039736,1.00602368982863
-"['Type=pothole', 'Weather=Rainy']",['LowLying=True'],0.067875,0.506057781919851,1.0058291317661634
-['Zone=Baner'],"['Monsoon=True', 'Urgency=Medium(3)']",0.04125,0.2534562211981567,1.0057786555482409
-['Zone=Viman Nagar'],['Monsoon=True'],0.149375,0.8884758364312269,1.005205302142528
-"['LowLying=True', 'Urgency=Medium(3)']",['Monsoon=True'],0.128125,0.888214904679376,1.004910088733561
-"['LowLying=True', 'Type=garbage']","['Weather=Rainy', 'Monsoon=True']",0.063875,0.49659863945578236,1.003990173274263
-"['LowLying=True', 'Zone=Swargate', 'Urgency=Medium(3)']",['Monsoon=True'],0.04225,0.8871391076115486,1.0036929516182136
-"['Zone=Swargate', 'Urgency=Medium(3)']",['Monsoon=True'],0.04225,0.8871391076115486,1.0036929516182136
-['Weather=Rainy'],['LowLying=True'],0.25375,0.5049751243781094,1.0036772658446895
-['LowLying=True'],['Weather=Rainy'],0.25375,0.5043478260869564,1.0036772658446895
-"['Repeat=True', 'Type=pothole']",['Monsoon=True'],0.040125,0.8867403314917127,1.0032417836138738
-['LowLying=True'],"['Weather=Rainy', 'Monsoon=True']",0.249625,0.49614906832298133,1.003081260193038
-"['Weather=Rainy', 'Monsoon=True']",['LowLying=True'],0.249625,0.5046752590346222,1.003081260193038
-"['Zone=Kothrud', 'Type=garbage']",['Monsoon=True'],0.043,0.8865979381443297,1.003080682386457
-['Type=pothole'],"['Monsoon=True', 'Urgency=High(4-5)']",0.10375,0.3915094339622641,1.0029060107903018
-"['Monsoon=True', 'Urgency=High(4-5)']",['Type=pothole'],0.10375,0.26577009285943,1.0029060107903018
-"['Zone=Shivajinagar', 'Urgency=High(4-5)']",['Monsoon=True'],0.066125,0.8860971524288108,1.0025141025923472
-"['LowLying=True', 'Zone=Shivajinagar', 'Urgency=High(4-5)']",['Monsoon=True'],0.066125,0.8860971524288108,1.0025141025923472
-['Repeat=True'],"['LowLying=True', 'Weather=Rainy']",0.04575,0.2543432939541348,1.0023381042527482
-"['LowLying=True', 'Zone=Hadapsar']",['Monsoon=True'],0.15,0.8856088560885609,1.0019616530488598
-['Zone=Hadapsar'],['Monsoon=True'],0.15,0.8856088560885609,1.0019616530488598
-['Zone=Kothrud'],['Monsoon=True'],0.147,0.8855421686746987,1.0018862041292023
-"['LowLying=True', 'Type=garbage']",['Monsoon=True'],0.113875,0.8853255587949467,1.001641135675233
-['Type=water leak'],['LowLying=True'],0.121125,0.5039001560062403,1.0015406827453222
-['LowLying=True'],"['Monsoon=True', 'Urgency=High(4-5)']",0.196625,0.39080745341614903,1.0011077897307692
-"['Monsoon=True', 'Urgency=High(4-5)']",['LowLying=True'],0.196625,0.5036823567082933,1.0011077897307692
-['Zone=Baner'],['Urgency=High(4-5)'],0.068375,0.4201228878648234,1.000888357033528
-['Weather=Stormy'],['LowLying=True'],0.088875,0.5035410764872521,1.0008269843224886
-"['Monsoon=True', 'Weather=Stormy']",['LowLying=True'],0.088875,0.5035410764872521,1.0008269843224886
-['Zone=Shivajinagar'],"['Monsoon=True', 'Urgency=High(4-5)']",0.066125,0.3906942392909897,1.0008177759615489
-"['LowLying=True', 'Zone=Shivajinagar']","['Monsoon=True', 'Urgency=High(4-5)']",0.066125,0.3906942392909897,1.0008177759615489
-['Weather=Cloudy'],['Type=garbage'],0.041,0.2651576394502829,1.0005948658501242
-"['LowLying=True', 'Type=pothole', 'Zone=Hadapsar']",['Monsoon=True'],0.042875,0.8840206185567011,1.0001647501702178
-"['Type=pothole', 'Zone=Hadapsar']",['Monsoon=True'],0.042875,0.8840206185567011,1.0001647501702178
-['Type=garbage'],['Monsoon=True'],0.23425,0.8839622641509434,1.0000987290634347
-['Monsoon=True'],['Type=garbage'],0.23425,0.2650261632018102,1.0000987290634347
-['Zone=Viman Nagar'],"['Monsoon=True', 'Urgency=High(4-5)']",0.065625,0.39033457249070636,0.9998964392973585
-"['Zone=Baner', 'Type=garbage']",['Monsoon=True'],0.040625,0.8831521739130436,0.9991822077930065
-"['Urgency=High(4-5)', 'Type=streetlight']","['Weather=Rainy', 'Monsoon=True']",0.045125,0.493844049247606,0.9984211255953622
-['Urgency=Medium(3)'],['LowLying=True'],0.14425,0.5021758050478676,0.9981134013373766
-['LowLying=True'],['Urgency=Medium(3)'],0.14425,0.2867080745341614,0.9981134013373766
-['Zone=Kothrud'],"['Monsoon=True', 'Urgency=Medium(3)']",0.04175,0.25150602409638556,0.9980397781602601
-"['LowLying=True', 'Zone=Swargate']",['Monsoon=True'],0.145,0.8814589665653494,0.9972665439856874
-['Zone=Swargate'],['Monsoon=True'],0.145,0.8814589665653494,0.9972665439856874
-"['LowLying=True', 'Type=pothole']","['Weather=Rainy', 'Monsoon=True']",0.067125,0.49311294765840225,0.9969430329207021
-"['Repeat=True', 'Type=garbage']",['Monsoon=True'],0.042625,0.8811369509043928,0.9969022213597996
-['Zone=Kothrud'],['Urgency=Medium(3)'],0.0475,0.286144578313253,0.9961517086623255
-['Monsoon=True'],['LowLying=True'],0.442625,0.500777824918682,0.9953348072917901
-['LowLying=True'],['Monsoon=True'],0.442625,0.8797515527950309,0.99533480729179
-"['LowLying=True', 'Urgency=Medium(3)']","['Weather=Rainy', 'Monsoon=True']",0.071,0.49220103986135183,0.9950993982539335
-"['LowLying=True', 'Urgency=Medium(3)']",['Weather=Rainy'],0.072125,0.5,0.9950248756218907
-"['Weather=Cloudy', 'Monsoon=True']",['LowLying=True'],0.0645,0.5004849660523764,0.9947527275575181
-['Weather=Clear'],['LowLying=True'],0.08325,0.5003756574004509,0.9945354681251196
-"['Zone=Kothrud', 'Urgency=Medium(3)']",['Monsoon=True'],0.04175,0.8789473684210527,0.9944249678077248
-"['LowLying=True', 'Zone=Hadapsar', 'Urgency=Medium(3)']",['Monsoon=True'],0.041625,0.8786279683377309,0.9940636043985077
-"['Zone=Hadapsar', 'Urgency=Medium(3)']",['Monsoon=True'],0.041625,0.8786279683377309,0.9940636043985077
-['Zone=Viman Nagar'],['Urgency=Medium(3)'],0.048,0.2855018587360595,0.9939142166616518
-['Weather=Cloudy'],['LowLying=True'],0.07725,0.4995957962813257,0.9929854336026349
-"['Zone=Kothrud', 'Monsoon=True']",['Urgency=Low(1-2)'],0.04275,0.2908163265306123,0.9925471895242741
-['Urgency=Medium(3)'],['Monsoon=True'],0.252,0.877284595300261,0.9925437367277739
-['Monsoon=True'],['Urgency=Medium(3)'],0.252,0.28510818837505303,0.9925437367277739
-['Type=water leak'],['Monsoon=True'],0.210875,0.8772750910036402,0.9925329837405066
-['Weather=Clear'],['Type=garbage'],0.04375,0.2629601803155522,0.9923025672284987
-"['LowLying=True', 'Type=pothole']",['Weather=Rainy'],0.067875,0.4986225895316805,0.9922837602620508
-['Type=streetlight'],['Monsoon=True'],0.201375,0.8769733260751225,0.9921915724227096
-['Zone=Swargate'],['Type=pothole'],0.04325,0.26291793313069906,0.9921431438894304
-"['LowLying=True', 'Zone=Swargate']",['Type=pothole'],0.04325,0.26291793313069906,0.9921431438894304
-"['LowLying=True', 'Type=water leak']",['Weather=Rainy'],0.060375,0.4984520123839009,0.9919443032515443
-['Weather=Stormy'],['Type=pothole'],0.046375,0.26274787535410765,0.9915014164305949
-"['Monsoon=True', 'Weather=Stormy']",['Type=pothole'],0.046375,0.26274787535410765,0.9915014164305949
-['Repeat=True'],['Monsoon=True'],0.157625,0.8763029881862403,0.9914331644024781
-"['Zone=Baner', 'Monsoon=True']",['Urgency=Medium(3)'],0.04125,0.28472821397756687,0.9912209363883964
-"['LowLying=True', 'Type=water leak']","['Weather=Rainy', 'Monsoon=True']",0.059375,0.49019607843137253,0.9910459002908719
-"['Urgency=High(4-5)', 'Type=streetlight']",['Weather=Rainy'],0.0455,0.49794801641586867,0.9909413262007337
-"['LowLying=True', 'Weather=Rainy', 'Monsoon=True']",['Urgency=Medium(3)'],0.071,0.2844266399599399,0.9901710703566228
-"['LowLying=True', 'Weather=Rainy', 'Monsoon=True']",['Urgency=High(4-5)'],0.10375,0.41562343515272904,0.9901689938123384
-"['Urgency=Medium(3)', 'Type=streetlight']",['Monsoon=True'],0.044625,0.875,0.9899589874133786
-['Type=water leak'],"['LowLying=True', 'Weather=Rainy']",0.060375,0.25117004680187205,0.989832696756146
-['Urgency=Medium(3)'],"['LowLying=True', 'Weather=Rainy']",0.072125,0.2510879025239338,0.9895089754637787
-"['LowLying=True', 'Weather=Rainy']",['Urgency=Medium(3)'],0.072125,0.28423645320197044,0.9895089754637787
-['Zone=Shivajinagar'],['Type=pothole'],0.044375,0.26218611521418017,0.9893815668459629
-"['LowLying=True', 'Zone=Shivajinagar']",['Type=pothole'],0.044375,0.26218611521418017,0.9893815668459629
-['Zone=Viman Nagar'],"['Weather=Rainy', 'Monsoon=True']",0.08225,0.4892193308550186,0.9890711768612962
-"['Weather=Rainy', 'Monsoon=True']",['Type=garbage'],0.129625,0.2620672226434167,0.9889329156355346
-['Type=garbage'],"['Weather=Rainy', 'Monsoon=True']",0.129625,0.48915094339622633,0.9889329156355346
-['Zone=Swargate'],"['Monsoon=True', 'Urgency=High(4-5)']",0.0635,0.38601823708206684,0.9888395442384036
-"['LowLying=True', 'Zone=Swargate']","['Monsoon=True', 'Urgency=High(4-5)']",0.0635,0.38601823708206684,0.9888395442384036
-"['Zone=Kothrud', 'Monsoon=True']",['Urgency=Medium(3)'],0.04175,0.2840136054421769,0.9887331782147151
-['Weather=Rainy'],['Type=garbage'],0.131625,0.2619402985074627,0.9884539566319347
-['Type=garbage'],['Weather=Rainy'],0.131625,0.4966981132075471,0.9884539566319346
-"['Urgency=High(4-5)', 'Weather=Rainy', 'Type=water leak']",['LowLying=True'],0.046,0.49729729729729727,0.9884169884169883
-['Zone=Baner'],['Type=pothole'],0.042625,0.2619047619047619,0.9883198562443846
-"['Urgency=Low(1-2)', 'Type=streetlight']",['LowLying=True'],0.043375,0.497134670487106,0.9880937550054281
-"['LowLying=True', 'Zone=Shivajinagar']",['Monsoon=True'],0.147625,0.8722304283604135,0.9868255447437857
-['Zone=Shivajinagar'],['Monsoon=True'],0.147625,0.8722304283604135,0.9868255447437857
-"['LowLying=True', 'Type=streetlight']",['Monsoon=True'],0.10225,0.8720682302771855,0.9866420368006624
-"['Monsoon=True', 'Urgency=Medium(3)']",['Type=garbage'],0.065875,0.2614087301587302,0.9864480383348307
-"['Type=pothole', 'Monsoon=True', 'Urgency=High(4-5)']",['Weather=Rainy'],0.051375,0.4951807228915663,0.9854342744110773
-"['LowLying=True', 'Weather=Rainy']",['Urgency=High(4-5)'],0.104875,0.41330049261083746,0.984634884123496
-"['LowLying=True', 'Urgency=Low(1-2)', 'Type=garbage']",['Monsoon=True'],0.066875,0.8699186991869919,0.9842100966618492
-"['LowLying=True', 'Repeat=True']",['Monsoon=True'],0.08275,0.8699080157687253,0.98419800963793
-['Zone=Viman Nagar'],['Weather=Rainy'],0.083125,0.4944237918215614,0.9839279439235054
-['Weather=Clear'],['Urgency=Medium(3)'],0.047,0.28249436513899323,0.9834442650617693
-"['Weather=Rainy', 'Type=garbage']",['LowLying=True'],0.065125,0.4947768281101615,0.9834073602189545
-['Type=water leak'],"['Weather=Rainy', 'Monsoon=True']",0.116875,0.48621944877795115,0.9830062143602752
-['Zone=Baner'],['Urgency=Low(1-2)'],0.046875,0.2880184331797235,0.9829980654598072
-"['Monsoon=True', 'Type=water leak']",['LowLying=True'],0.10425,0.49436870183758147,0.9825961775653792
-"['Urgency=Low(1-2)', 'Type=garbage']",['Monsoon=True'],0.138625,0.8684416601409554,0.9825390017151242
-"['Zone=Baner', 'Urgency=Medium(3)']",['Monsoon=True'],0.04125,0.868421052631579,0.9825156867561352
-"['Type=pothole', 'Weather=Rainy']","['Monsoon=True', 'Urgency=High(4-5)']",0.051375,0.3830382106244175,0.9812057909046877
-['Type=water leak'],['Weather=Rainy'],0.1185,0.49297971918876754,0.981054167539836
-"['Weather=Rainy', 'Monsoon=True', 'Type=water leak', 'Urgency=High(4-5)']",['LowLying=True'],0.045125,0.4931693989071038,0.9802124698774733
-['Type=water leak'],"['LowLying=True', 'Monsoon=True']",0.10425,0.43369734789391573,0.9798302126945286
-"['Monsoon=True', 'Zone=Viman Nagar']",['Urgency=Low(1-2)'],0.042875,0.2870292887029289,0.9796221457437846
-"['Weather=Rainy', 'Monsoon=True', 'Type=garbage']",['LowLying=True'],0.063875,0.49276759884281585,0.9794138610540438
-"['Monsoon=True', 'Type=garbage']",['Urgency=Medium(3)'],0.065875,0.28121664887940234,0.9789961666819925
-"['Type=pothole', 'Urgency=High(4-5)']","['Weather=Rainy', 'Monsoon=True']",0.051375,0.4835294117647059,0.9775676760469161
-"['Weather=Rainy', 'Type=streetlight']","['Monsoon=True', 'Urgency=High(4-5)']",0.045125,0.38160676532769555,0.977538944163165
-"['LowLying=True', 'Type=streetlight']",['Urgency=High(4-5)'],0.048,0.40938166311300644,0.9752987804955484
-['Zone=Hadapsar'],['Type=garbage'],0.04375,0.25830258302583026,0.9747267283993594
-"['LowLying=True', 'Zone=Hadapsar']",['Type=garbage'],0.04375,0.25830258302583026,0.9747267283993594
-['Weather=Rainy'],['Urgency=Medium(3)'],0.140625,0.27985074626865675,0.974241066209423
-['Urgency=Medium(3)'],['Weather=Rainy'],0.140625,0.489556135770235,0.974241066209423
-"['LowLying=True', 'Type=water leak']",['Monsoon=True'],0.10425,0.8606811145510835,0.9737588624534957
-"['LowLying=True', 'Zone=Hadapsar']",['Urgency=Medium(3)'],0.047375,0.27970479704797047,0.9737329749276604
-['Zone=Hadapsar'],['Urgency=Medium(3)'],0.047375,0.27970479704797047,0.9737329749276604
-"['Weather=Rainy', 'Monsoon=True']",['Urgency=Medium(3)'],0.13825,0.27950467525903466,0.9730362933299727
-['Urgency=Medium(3)'],"['Weather=Rainy', 'Monsoon=True']",0.13825,0.4812880765883377,0.9730362933299727
-"['Urgency=High(4-5)', 'Type=water leak']","['Weather=Rainy', 'Monsoon=True']",0.0915,0.4812623274161736,0.972984235362494
-['Zone=Viman Nagar'],['Urgency=High(4-5)'],0.068625,0.40817843866171005,0.9724322541077071
-['Urgency=High(4-5)'],"['Weather=Rainy', 'Monsoon=True']",0.201875,0.4809410363311495,0.9723346703687632
-"['Weather=Rainy', 'Monsoon=True']",['Urgency=High(4-5)'],0.201875,0.4081374778872884,0.9723346703687632
-['Zone=Shivajinagar'],['Weather=Rainy'],0.082625,0.4881831610044313,0.9715087781182714
-"['LowLying=True', 'Zone=Shivajinagar']",['Weather=Rainy'],0.082625,0.4881831610044313,0.9715087781182714
-"['LowLying=True', 'Urgency=High(4-5)', 'Type=water leak']",['Monsoon=True'],0.08475,0.8582278481012658,0.970983281687191
-"['Urgency=Low(1-2)', 'Type=streetlight']",['Monsoon=True'],0.074875,0.8581661891117479,0.9709135218348159
-['Type=garbage'],"['LowLying=True', 'Monsoon=True']",0.113875,0.42971698113207546,0.9708375738651804
-"['LowLying=True', 'Monsoon=True']",['Type=garbage'],0.113875,0.2572719570742728,0.9708375738651803
-['Repeat=True'],"['Weather=Rainy', 'Monsoon=True']",0.086375,0.4801945795691452,0.9708255336247565
-['Repeat=True'],['Weather=Rainy'],0.08775,0.4878387769284225,0.9708234366734777
-"['Weather=Cloudy', 'Monsoon=True']",['Urgency=High(4-5)'],0.0525,0.4073714839961203,0.9705097891509714
-['Zone=Baner'],"['Weather=Rainy', 'Monsoon=True']",0.078125,0.48003072196620583,0.9704942571972824
-"['Urgency=Low(1-2)', 'Monsoon=True']",['LowLying=True'],0.117875,0.4880952380952381,0.9701271813073055
-"['LowLying=True', 'Type=pothole']",['Urgency=High(4-5)'],0.055375,0.4067952249770432,0.9691369266874167
-"['LowLying=True', 'Zone=Shivajinagar']","['Weather=Rainy', 'Monsoon=True']",0.081125,0.4793205317577548,0.9690584417644778
-['Zone=Shivajinagar'],"['Weather=Rainy', 'Monsoon=True']",0.081125,0.4793205317577548,0.9690584417644778
-['Zone=Baner'],['Weather=Rainy'],0.07925,0.48694316436251917,0.969041123109491
-"['Monsoon=True', 'Type=streetlight']",['Urgency=High(4-5)'],0.081875,0.4065797641216636,0.9686236191105743
-"['LowLying=True', 'Weather=Rainy']",['Type=garbage'],0.065125,0.25665024630541877,0.9684914954921463
-"['Urgency=High(4-5)', 'Type=water leak']",['Weather=Rainy'],0.0925,0.48652202498356345,0.9682030347931612
-"['Type=pothole', 'Urgency=High(4-5)']",['Weather=Rainy'],0.051625,0.48588235294117643,0.9669300556043313
-"['Monsoon=True', 'Type=garbage']",['LowLying=True'],0.113875,0.4861259338313767,0.9662130361865872
-"['Monsoon=True', 'Zone=Hadapsar']",['Urgency=Medium(3)'],0.041625,0.2775,0.9660574412532638
-"['LowLying=True', 'Monsoon=True', 'Zone=Hadapsar']",['Urgency=Medium(3)'],0.041625,0.2775,0.9660574412532638
-"['LowLying=True', 'Weather=Rainy', 'Monsoon=True']",['Type=garbage'],0.063875,0.2558838257386079,0.9655993424098411
-"['LowLying=True', 'Urgency=High(4-5)']","['Weather=Rainy', 'Monsoon=True']",0.10375,0.47756041426927504,0.965499953033662
-['Urgency=High(4-5)'],['Weather=Rainy'],0.203625,0.48511018463371053,0.9653934022561405
-['Weather=Rainy'],['Urgency=High(4-5)'],0.203625,0.405223880597015,0.9653934022561405
-['LowLying=True'],['Type=garbage'],0.128625,0.25565217391304346,0.9647251845775224
-['Type=garbage'],['LowLying=True'],0.128625,0.48537735849056596,0.9647251845775223
-['Zone=Kothrud'],"['Monsoon=True', 'Urgency=High(4-5)']",0.0625,0.3765060240963855,0.9644726842046378
-"['Urgency=Low(1-2)', 'Weather=Rainy']",['LowLying=True'],0.07675,0.4849921011058452,0.9639594556141021
-['Type=garbage'],['Urgency=Medium(3)'],0.073375,0.27688679245283015,0.9639226891308273
-['Urgency=Medium(3)'],['Type=garbage'],0.073375,0.25543951261966924,0.9639226891308272
-"['Repeat=True', 'Monsoon=True']",['Urgency=Medium(3)'],0.043625,0.2767644726407613,0.9634968586275415
-"['LowLying=True', 'Zone=Swargate']",['Type=garbage'],0.042,0.2553191489361702,0.9634684865515856
-['Zone=Swargate'],['Type=garbage'],0.042,0.2553191489361702,0.9634684865515856
-"['Zone=Viman Nagar', 'Urgency=Medium(3)']",['Monsoon=True'],0.040875,0.8515625,0.9634422288219489
-"['Weather=Rainy', 'Monsoon=True', 'Urgency=Low(1-2)']",['LowLying=True'],0.074875,0.48462783171521034,0.9632354419184305
-"['Urgency=High(4-5)', 'Monsoon=True', 'Type=water leak']",['LowLying=True'],0.08475,0.4842857142857144,0.9625554569653949
-"['LowLying=True', 'Urgency=High(4-5)']",['Type=pothole'],0.055375,0.25489067894131184,0.9618516186464597
-"['LowLying=True', 'Repeat=True']","['Weather=Rainy', 'Monsoon=True']",0.04525,0.4756898817345598,0.9617182344898859
-"['Repeat=True', 'Urgency=High(4-5)']","['Weather=Rainy', 'Monsoon=True']",0.055,0.47567567567567565,0.9616895136227964
-['Urgency=Low(1-2)'],['LowLying=True'],0.141625,0.48336177474402736,0.9607190553918555
-['LowLying=True'],['Urgency=Low(1-2)'],0.141625,0.28149068322981363,0.9607190553918554
-"['LowLying=True', 'Urgency=High(4-5)']",['Weather=Rainy'],0.104875,0.4827387802071346,0.9606741894669347
-"['Repeat=True', 'Monsoon=True']",['Type=pothole'],0.040125,0.2545598731165742,0.9606032947795252
-"['Weather=Rainy', 'Monsoon=True', 'Urgency=High(4-5)']",['Type=pothole'],0.051375,0.2544891640866873,0.9603364682516502
-"['Urgency=Low(1-2)', 'Monsoon=True', 'Type=garbage']",['LowLying=True'],0.066875,0.48241659152389543,0.958840430358053
-"['Urgency=Low(1-2)', 'Type=garbage']",['LowLying=True'],0.076875,0.48159749412685987,0.9572124106869264
-"['LowLying=True', 'Repeat=True']",['Weather=Rainy'],0.04575,0.480946123521682,0.9571067134759841
-"['LowLying=True', 'Zone=Swargate']",['Urgency=Low(1-2)'],0.046125,0.2803951367781155,0.9569799890038072
-['Zone=Swargate'],['Urgency=Low(1-2)'],0.046125,0.2803951367781155,0.9569799890038072
-"['Weather=Rainy', 'Urgency=High(4-5)']",['Type=pothole'],0.051625,0.2535297728667894,0.9567161240256203
-"['LowLying=True', 'Zone=Shivajinagar']",['Type=garbage'],0.042875,0.2533234859675037,0.9559376828962404
-['Zone=Shivajinagar'],['Type=garbage'],0.042875,0.2533234859675037,0.9559376828962404
-"['Urgency=Low(1-2)', 'Weather=Rainy', 'Type=garbage']",['LowLying=True'],0.04225,0.480796586059744,0.9556205437212303
-['Urgency=High(4-5)'],['Type=pothole'],0.10625,0.2531268612269208,0.9551957027430973
-['Type=pothole'],['Urgency=High(4-5)'],0.10625,0.40094339622641506,0.9551957027430972
-"['Weather=Rainy', 'Monsoon=True', 'Type=garbage', 'Urgency=Low(1-2)']",['LowLying=True'],0.0415,0.47976878612716767,0.9535777115571034
-"['Monsoon=True', 'Zone=Viman Nagar']",['Urgency=Medium(3)'],0.040875,0.27364016736401675,0.9526202519199887
-"['Repeat=True', 'Urgency=High(4-5)']",['Weather=Rainy'],0.05525,0.47783783783783784,0.9509210703240555
-"['LowLying=True', 'Type=streetlight']","['Monsoon=True', 'Urgency=High(4-5)']",0.0435,0.371002132196162,0.9503736975886314
-['Repeat=True'],['Type=pothole'],0.04525,0.25156358582348853,0.9492965502773152
-['Type=streetlight'],['Urgency=High(4-5)'],0.091375,0.3979314099074578,0.9480200355150871
-"['Urgency=Low(1-2)', 'Type=garbage']","['LowLying=True', 'Monsoon=True']",0.066875,0.4189506656225529,0.9465137884723025
-"['LowLying=True', 'Weather=Cloudy']",['Monsoon=True'],0.0645,0.8349514563106797,0.9446487979755958
-['Weather=Cloudy'],['Monsoon=True'],0.128875,0.8334680679062246,0.94297051948095
-['Weather=Cloudy'],"['LowLying=True', 'Monsoon=True']",0.0645,0.41713823767178654,0.9424190627998567
-"['Urgency=Low(1-2)', 'Zone=Viman Nagar']",['Monsoon=True'],0.042875,0.8325242718446603,0.9419027258884575
-"['LowLying=True', 'Urgency=Low(1-2)']",['Monsoon=True'],0.117875,0.8323036187113857,0.9416530829714448
-"['Monsoon=True', 'Zone=Hadapsar']",['Urgency=Low(1-2)'],0.041375,0.2758333333333334,0.9414106939704211
-"['LowLying=True', 'Monsoon=True', 'Zone=Hadapsar']",['Urgency=Low(1-2)'],0.041375,0.2758333333333334,0.9414106939704211
-['Zone=Kothrud'],['Urgency=High(4-5)'],0.0655,0.39457831325301207,0.9400317171006839
-"['LowLying=True', 'Urgency=Low(1-2)', 'Zone=Hadapsar']",['Monsoon=True'],0.041375,0.8254364089775561,0.9338836475492079
-"['Urgency=Low(1-2)', 'Zone=Hadapsar']",['Monsoon=True'],0.041375,0.8254364089775561,0.9338836475492079
-['Monsoon=True'],['Urgency=Low(1-2)'],0.2415,0.2732286805260925,0.9325210939457083
-['Urgency=Low(1-2)'],['Monsoon=True'],0.2415,0.8242320819112628,0.9325210939457083
-"['Type=pothole', 'Monsoon=True', 'Weather=Rainy']",['Urgency=High(4-5)'],0.051375,0.3892045454545454,0.9272294114462071
-"['LowLying=True', 'Urgency=High(4-5)', 'Type=water leak']",['Weather=Rainy'],0.046,0.46582278481012657,0.9270105170350779
-"['Weather=Rainy', 'Monsoon=True', 'Type=streetlight']",['Urgency=High(4-5)'],0.045125,0.38858988159311086,0.9257650544207525
-"['LowLying=True', 'Type=water leak', 'Urgency=High(4-5)']","['Weather=Rainy', 'Monsoon=True']",0.045125,0.45696202531645563,0.9238554972281136
-"['Type=pothole', 'Weather=Rainy']",['Urgency=High(4-5)'],0.051625,0.3849021435228332,0.9169794961830451
-"['Weather=Rainy', 'Type=streetlight']",['Urgency=High(4-5)'],0.0455,0.38477801268498946,0.9166837705419641
-"['LowLying=True', 'Zone=Shivajinagar']",['Urgency=Low(1-2)'],0.045375,0.26809453471196454,0.9149984119862271
-['Zone=Shivajinagar'],['Urgency=Low(1-2)'],0.045375,0.26809453471196454,0.9149984119862271
-['Type=streetlight'],"['Monsoon=True', 'Urgency=High(4-5)']",0.081875,0.3565596080566141,0.9133771580060558
-"['Urgency=Low(1-2)', 'Zone=Kothrud']",['Monsoon=True'],0.04275,0.8066037735849058,0.9125767485050553
-['Urgency=Low(1-2)'],"['LowLying=True', 'Monsoon=True']",0.117875,0.4023037542662116,0.9089042739705431
-"['LowLying=True', 'Monsoon=True']",['Urgency=Low(1-2)'],0.117875,0.2663089522733691,0.9089042739705431
-"['Repeat=True', 'Urgency=Medium(3)']",['Monsoon=True'],0.043625,0.8022988505747126,0.9077062373918401
-['Weather=Cloudy'],['Urgency=High(4-5)'],0.058875,0.38075990299110746,0.90711114470782
-['Weather=Cloudy'],"['Monsoon=True', 'Urgency=High(4-5)']",0.0525,0.33953112368633787,0.8697563206822615
-['Weather=Clear'],['Urgency=High(4-5)'],0.056125,0.3373403456048084,0.8036696738649396
-['Weather=Clear'],['Monsoon=True'],0.083875,0.5041322314049588,0.5703659809418287
+"['Type=garbage', 'Weather=Rainy']","['Monsoon=True', 'Urgency=Low(1-2)']",0.084875,0.661148977604674,2.730610129497879
+"['Monsoon=True', 'Urgency=Low(1-2)']","['Type=garbage', 'Weather=Rainy']",0.084875,0.35054207537429016,2.7306101294978786
+"['Type=garbage', 'LowLying=True', 'Weather=Rainy']","['Monsoon=True', 'Urgency=Low(1-2)']",0.04,0.6517311608961304,2.6917136226995573
+"['Monsoon=True', 'LowLying=True', 'Urgency=Low(1-2)']","['Type=garbage', 'Weather=Rainy']",0.04,0.3426124197002141,2.668840659787452
+"['Type=garbage', 'Weather=Rainy']","['Monsoon=True', 'LowLying=True', 'Urgency=Low(1-2)']",0.04,0.31158714703018503,2.668840659787452
+"['Weather=Stormy', 'Type=water leak']","['Monsoon=True', 'Urgency=High(4-5)']",0.0435,0.9914529914529915,2.54300222238664
+"['Monsoon=True', 'Weather=Stormy', 'Type=water leak']",['Urgency=High(4-5)'],0.0435,0.9914529914529915,2.347328775266035
+"['Weather=Stormy', 'Type=water leak']",['Urgency=High(4-5)'],0.0435,0.9914529914529915,2.347328775266035
+"['Monsoon=True', 'Repeat=True', 'Type=water leak']",['Urgency=High(4-5)'],0.041625,0.9881305637982196,2.33946271393482
+"['Weather=Rainy', 'Urgency=Low(1-2)']","['Monsoon=True', 'Type=garbage']",0.084875,0.5251353441608663,2.33913293612858
+"['Monsoon=True', 'Type=garbage']","['Weather=Rainy', 'Urgency=Low(1-2)']",0.084875,0.37806236080178174,2.33913293612858
+"['Monsoon=True', 'LowLying=True', 'Type=water leak']","['Weather=Rainy', 'Urgency=High(4-5)']",0.050125,0.46955503512880564,2.339003910977861
+"['Monsoon=True', 'LowLying=True', 'Type=garbage']","['Weather=Rainy', 'Urgency=Low(1-2)']",0.04,0.3733955659276546,2.310258721903509
+"['Monsoon=True', 'Zone=Hadapsar']","['LowLying=True', 'Weather=Rainy']",0.0845,0.5777777777777778,2.2973271482217807
+"['LowLying=True', 'Weather=Rainy']","['Monsoon=True', 'Zone=Hadapsar']",0.0845,0.3359840954274354,2.2973271482217807
+['Urgency=Low(1-2)'],"['Monsoon=True', 'Weather=Rainy', 'Type=garbage']",0.084875,0.28856778580535486,2.2856854321216225
+"['Monsoon=True', 'Weather=Rainy', 'Type=garbage']",['Urgency=Low(1-2)'],0.084875,0.6722772277227723,2.2856854321216225
+"['Repeat=True', 'Type=water leak']",['Urgency=High(4-5)'],0.046875,0.9615384615384615,2.276504200150249
+"['Type=garbage', 'Weather=Rainy']",['Urgency=Low(1-2)'],0.085875,0.6689386562804286,2.274334572989132
+['Urgency=Low(1-2)'],"['Type=garbage', 'Weather=Rainy']",0.085875,0.2919677008074798,2.274334572989132
+"['Monsoon=True', 'LowLying=True', 'Weather=Rainy', 'Type=garbage']",['Urgency=Low(1-2)'],0.04,0.6666666666666667,2.2666100014166313
+"['LowLying=True', 'Weather=Rainy']","['Monsoon=True', 'Zone=Swargate']",0.08275,0.32902584493041753,2.2574672036392287
+"['Monsoon=True', 'Zone=Swargate']","['LowLying=True', 'Weather=Rainy']",0.08275,0.5677530017152659,2.2574672036392283
+"['LowLying=True', 'Urgency=Low(1-2)']","['Monsoon=True', 'Weather=Rainy', 'Type=garbage']",0.04,0.2846975088967971,2.2550297734399773
+"['Monsoon=True', 'Weather=Rainy', 'Type=garbage']","['LowLying=True', 'Urgency=Low(1-2)']",0.04,0.31683168316831684,2.2550297734399773
+"['LowLying=True', 'Weather=Rainy', 'Urgency=Low(1-2)']","['Monsoon=True', 'Type=garbage']",0.04,0.5047318611987381,2.2482488249387
+"['Weather=Rainy', 'Zone=Swargate']","['Monsoon=True', 'LowLying=True']",0.08275,0.9851190476190476,2.2478472278814547
+"['Zone=Shivajinagar', 'Weather=Rainy']","['Monsoon=True', 'LowLying=True']",0.08,0.9831029185867896,2.243246819365179
+"['LowLying=True', 'Weather=Rainy', 'Urgency=High(4-5)']","['Monsoon=True', 'Type=water leak']",0.050125,0.48023952095808387,2.2414913463621184
+"['Weather=Rainy', 'Zone=Hadapsar']","['Monsoon=True', 'LowLying=True']",0.0845,0.9811320754716982,2.238749744373527
+"['Type=garbage', 'Weather=Rainy']","['LowLying=True', 'Urgency=Low(1-2)']",0.04025,0.3135345666991237,2.2315627523069304
+"['LowLying=True', 'Urgency=Low(1-2)']","['Type=garbage', 'Weather=Rainy']",0.04025,0.2864768683274021,2.23156275230693
+"['Type=garbage', 'LowLying=True', 'Weather=Rainy']",['Urgency=Low(1-2)'],0.04025,0.6558044806517311,2.22967949222858
+"['Weather=Rainy', 'Urgency=High(4-5)']","['Monsoon=True', 'Type=water leak']",0.0945,0.47073474470734744,2.1971283300226254
+"['Monsoon=True', 'Type=water leak']","['Weather=Rainy', 'Urgency=High(4-5)']",0.0945,0.441073512252042,2.197128330022625
+"['Repeat=True', 'Type=water leak']","['Monsoon=True', 'Urgency=High(4-5)']",0.041625,0.8538461538461538,2.1900510518657357
+['Type=garbage'],"['Monsoon=True', 'Urgency=Low(1-2)']",0.13475,0.5289499509322866,2.184615181960915
+"['Monsoon=True', 'Urgency=Low(1-2)']",['Type=garbage'],0.13475,0.5565307176045431,2.184615181960915
+"['Monsoon=True', 'Zone=Shivajinagar']","['LowLying=True', 'Weather=Rainy']",0.08,0.5470085470085471,2.1749842823401475
+"['LowLying=True', 'Weather=Rainy']","['Monsoon=True', 'Zone=Shivajinagar']",0.08,0.31809145129224653,2.1749842823401475
+"['Type=pothole', 'LowLying=True']","['Monsoon=True', 'Zone=Shivajinagar']",0.04325,0.3139745916515426,2.1468348147114025
+"['Monsoon=True', 'Zone=Shivajinagar']","['Type=pothole', 'LowLying=True']",0.04325,0.29572649572649573,2.1468348147114025
+"['Type=garbage', 'LowLying=True']","['Monsoon=True', 'Urgency=Low(1-2)']",0.063,0.5153374233128835,2.128394107642265
+"['Monsoon=True', 'Urgency=Low(1-2)']","['Type=garbage', 'LowLying=True']",0.063,0.2601961796592669,2.128394107642265
+"['LowLying=True', 'Urgency=Low(1-2)']",['Zone=Hadapsar'],0.04975,0.35409252669039143,2.125086431750286
+['Zone=Hadapsar'],"['LowLying=True', 'Urgency=Low(1-2)']",0.04975,0.29857464366091524,2.125086431750286
+"['Monsoon=True', 'LowLying=True', 'Urgency=Low(1-2)']",['Type=garbage'],0.063,0.5396145610278372,2.118212212081795
+"['Monsoon=True', 'Weather=Rainy', 'Urgency=Low(1-2)']",['Type=garbage'],0.084875,0.5371835443037976,2.1086694575222675
+['Type=garbage'],"['Monsoon=True', 'Weather=Rainy', 'Urgency=Low(1-2)']",0.084875,0.3331697742885182,2.108669457522267
+"['Monsoon=True', 'LowLying=True', 'Urgency=High(4-5)']","['Weather=Rainy', 'Type=water leak']",0.050125,0.2539582013932869,2.107536941023128
+"['Weather=Rainy', 'Type=water leak']","['Monsoon=True', 'LowLying=True', 'Urgency=High(4-5)']",0.050125,0.41597510373443985,2.107536941023128
+"['Zone=Hadapsar', 'Urgency=High(4-5)']","['Monsoon=True', 'LowLying=True']",0.06475,0.9217081850533807,2.103156155284383
+"['LowLying=True', 'Urgency=High(4-5)']","['Monsoon=True', 'Zone=Shivajinagar']",0.0675,0.30716723549488056,2.100288789708585
+"['Monsoon=True', 'Zone=Shivajinagar']","['LowLying=True', 'Urgency=High(4-5)']",0.0675,0.4615384615384616,2.100288789708585
+['Zone=Swargate'],"['LowLying=True', 'Type=water leak']",0.043,0.2592313489073097,2.099039262407366
+"['LowLying=True', 'Type=water leak']",['Zone=Swargate'],0.043,0.3481781376518218,2.099039262407366
+"['Monsoon=True', 'LowLying=True', 'Urgency=Low(1-2)']",['Zone=Hadapsar'],0.04075,0.3490364025695931,2.0947421009427947
+"['Monsoon=True', 'Type=pothole', 'LowLying=True']",['Zone=Shivajinagar'],0.04325,0.3516260162601626,2.0945704617135523
+['Zone=Shivajinagar'],"['Monsoon=True', 'Type=pothole', 'LowLying=True']",0.04325,0.25763216679076695,2.0945704617135523
+"['Weather=Rainy', 'Urgency=Low(1-2)']",['Type=garbage'],0.085875,0.5313225058004641,2.085662436900743
+['Type=garbage'],"['Weather=Rainy', 'Urgency=Low(1-2)']",0.085875,0.3370951913640825,2.0856624369007424
+"['Type=pothole', 'Zone=Shivajinagar']","['Monsoon=True', 'LowLying=True']",0.04325,0.9081364829396325,2.0721882097880946
+"['Monsoon=True', 'Weather=Rainy', 'Urgency=Low(1-2)']","['Type=garbage', 'LowLying=True']",0.04,0.25316455696202533,2.0708757215707596
+"['Type=garbage', 'LowLying=True']","['Monsoon=True', 'Weather=Rainy', 'Urgency=Low(1-2)']",0.04,0.32719836400818,2.070875721570759
+"['Type=pothole', 'LowLying=True']",['Zone=Shivajinagar'],0.047625,0.34573502722323046,2.0594789410170096
+['Zone=Shivajinagar'],"['Type=pothole', 'LowLying=True']",0.047625,0.28369322412509307,2.0594789410170096
+"['Type=streetlight', 'LowLying=True']",['Zone=Shivajinagar'],0.040375,0.34545454545454546,2.0578081635415963
+['Zone=Shivajinagar'],"['LowLying=True', 'Urgency=High(4-5)']",0.075875,0.45197319434102756,2.0567608388670195
+"['LowLying=True', 'Urgency=High(4-5)']",['Zone=Shivajinagar'],0.075875,0.3452787258248009,2.0567608388670195
+['Zone=Hadapsar'],"['LowLying=True', 'Weather=Rainy']",0.086125,0.5168792198049512,2.0551857646320126
+"['LowLying=True', 'Weather=Rainy']",['Zone=Hadapsar'],0.086125,0.3424453280318091,2.0551857646320126
+"['Monsoon=True', 'LowLying=True', 'Weather=Rainy']",['Zone=Hadapsar'],0.0845,0.34175935288169873,2.05106888451132
+['Zone=Hadapsar'],"['Monsoon=True', 'LowLying=True', 'Weather=Rainy']",0.0845,0.5071267816954239,2.05106888451132
+['Type=garbage'],['Urgency=Low(1-2)'],0.1535,0.6025515210991168,2.0486239561380937
+['Urgency=Low(1-2)'],['Type=garbage'],0.1535,0.5218869528261793,2.0486239561380932
+"['LowLying=True', 'Weather=Rainy', 'Type=water leak']","['Monsoon=True', 'Urgency=High(4-5)']",0.050125,0.7972166998011929,2.0448007689674714
+"['Type=garbage', 'LowLying=True']",['Zone=Hadapsar'],0.041625,0.3404907975460123,2.043455649188371
+"['Weather=Rainy', 'Urgency=High(4-5)']","['LowLying=True', 'Type=water leak']",0.050625,0.2521793275217933,2.041937874670391
+"['LowLying=True', 'Type=water leak']","['Weather=Rainy', 'Urgency=High(4-5)']",0.050625,0.409919028340081,2.0419378746703907
+"['LowLying=True', 'Type=water leak']","['Monsoon=True', 'Weather=Rainy', 'Urgency=High(4-5)']",0.050125,0.4058704453441296,2.0408319061929836
+"['Monsoon=True', 'Weather=Rainy', 'Urgency=High(4-5)']","['LowLying=True', 'Type=water leak']",0.050125,0.25204274041483343,2.040831906192983
+"['Monsoon=True', 'Type=garbage']",['Urgency=Low(1-2)'],0.13475,0.6002227171492205,2.0407062206518334
+['Urgency=Low(1-2)'],"['Monsoon=True', 'Type=garbage']",0.13475,0.45813854653633657,2.0407062206518334
+"['Monsoon=True', 'Zone=Swargate']","['Urgency=Medium(3)', 'LowLying=True']",0.041625,0.28559176672384223,2.038121439599231
+"['Urgency=Medium(3)', 'LowLying=True']","['Monsoon=True', 'Zone=Swargate']",0.041625,0.2970561998215879,2.0381214395992306
+"['Monsoon=True', 'Zone=Shivajinagar']","['Urgency=Medium(3)', 'LowLying=True']",0.04175,0.2854700854700855,2.0372530631228227
+"['Urgency=Medium(3)', 'LowLying=True']","['Monsoon=True', 'Zone=Shivajinagar']",0.04175,0.2979482604817128,2.0372530631228227
+['Zone=Shivajinagar'],"['Monsoon=True', 'LowLying=True', 'Urgency=High(4-5)']",0.0675,0.4020848845867461,2.037162176500297
+"['Monsoon=True', 'LowLying=True', 'Urgency=High(4-5)']",['Zone=Shivajinagar'],0.0675,0.34198860037998735,2.037162176500297
+"['Urgency=Medium(3)', 'Zone=Swargate']","['Monsoon=True', 'LowLying=True']",0.041625,0.8927613941018767,2.037105291732748
+"['Type=garbage', 'LowLying=True']","['Weather=Rainy', 'Urgency=Low(1-2)']",0.04025,0.3292433537832311,2.0370818486201463
+"['Monsoon=True', 'Zone=Swargate']","['LowLying=True', 'Urgency=High(4-5)']",0.065125,0.4468267581475129,2.0333413340046094
+"['LowLying=True', 'Urgency=High(4-5)']","['Monsoon=True', 'Zone=Swargate']",0.065125,0.2963594994311718,2.0333413340046094
+"['Urgency=Medium(3)', 'Zone=Shivajinagar']","['Monsoon=True', 'LowLying=True']",0.04175,0.8906666666666667,2.032325537174368
+"['Zone=Shivajinagar', 'Urgency=High(4-5)']","['Monsoon=True', 'LowLying=True']",0.0675,0.8896210873146624,2.029939731465288
+"['Monsoon=True', 'LowLying=True', 'Weather=Rainy', 'Urgency=Low(1-2)']",['Type=garbage'],0.04,0.5169628432956381,2.0292947725049584
+"['Type=pothole', 'LowLying=True']",['Zone=Hadapsar'],0.0465,0.33756805807622503,2.0259148271641414
+['Zone=Hadapsar'],"['Type=pothole', 'LowLying=True']",0.0465,0.27906976744186046,2.025914827164141
+['Zone=Swargate'],"['Monsoon=True', 'LowLying=True', 'Urgency=Medium(3)']",0.041625,0.2509419743782969,2.021687608284366
+"['Monsoon=True', 'LowLying=True', 'Urgency=Medium(3)']",['Zone=Swargate'],0.041625,0.3353474320241692,2.021687608284366
+"['LowLying=True', 'Urgency=High(4-5)']",['Zone=Swargate'],0.073625,0.33503981797497157,2.0198331151467768
+['Zone=Swargate'],"['LowLying=True', 'Urgency=High(4-5)']",0.073625,0.44385832705350414,2.0198331151467763
+"['Zone=Swargate', 'Urgency=High(4-5)']","['Monsoon=True', 'LowLying=True']",0.065125,0.8845500848896436,2.0183687048251993
+"['Monsoon=True', 'LowLying=True', 'Weather=Rainy']",['Zone=Swargate'],0.08275,0.3346814964610718,2.0176729251609453
+['Zone=Swargate'],"['Monsoon=True', 'LowLying=True', 'Weather=Rainy']",0.08275,0.49886963074604374,2.0176729251609453
+"['LowLying=True', 'Urgency=High(4-5)']","['Monsoon=True', 'Zone=Hadapsar']",0.06475,0.2946530147895336,2.0147214686463837
+"['Monsoon=True', 'Zone=Hadapsar']","['LowLying=True', 'Urgency=High(4-5)']",0.06475,0.44273504273504277,2.0147214686463837
+['Zone=Swargate'],"['LowLying=True', 'Weather=Rainy']",0.084,0.5064054257724191,2.01354046032771
+"['LowLying=True', 'Weather=Rainy']",['Zone=Swargate'],0.084,0.3339960238568589,2.01354046032771
+"['Weather=Rainy', 'Type=water leak']","['Monsoon=True', 'Urgency=High(4-5)']",0.0945,0.7842323651452282,2.0114969288752245
+"['Monsoon=True', 'Zone=Hadapsar']","['Type=pothole', 'LowLying=True']",0.0405,0.27692307692307694,2.0103308669551865
+"['Type=pothole', 'LowLying=True']","['Monsoon=True', 'Zone=Hadapsar']",0.0405,0.294010889292196,2.0103308669551865
+"['Type=garbage', 'LowLying=True']",['Zone=Swargate'],0.04075,0.33333333333333337,2.0095453403667425
+"['Urgency=Medium(3)', 'LowLying=True']",['Zone=Swargate'],0.046625,0.3327386262265834,2.0059600676809852
+['Zone=Swargate'],"['Urgency=Medium(3)', 'LowLying=True']",0.046625,0.28108515448379806,2.0059600676809852
+"['Monsoon=True', 'LowLying=True']",['Zone=Swargate'],0.14575,0.33257273245864233,2.0049599545358996
+['Zone=Swargate'],"['Monsoon=True', 'LowLying=True']",0.14575,0.8786737000753579,2.0049599545358996
+"['Monsoon=True', 'LowLying=True', 'Urgency=Medium(3)']",['Zone=Shivajinagar'],0.04175,0.3363544813695871,2.003600782544078
+"['Monsoon=True', 'LowLying=True']",['Zone=Hadapsar'],0.14625,0.33371363377067886,2.0027824982486355
+['Zone=Hadapsar'],"['Monsoon=True', 'LowLying=True']",0.14625,0.8777194298574643,2.002782498248635
+"['Monsoon=True', 'LowLying=True', 'Type=garbage']",['Urgency=Low(1-2)'],0.063,0.5880980163360561,1.999483268460879
+['LowLying=True'],['Zone=Shivajinagar'],0.167875,0.3354983762178366,1.9985011241568824
+['LowLying=True'],['Zone=Hadapsar'],0.166625,0.3330002498126405,1.9985011241568822
+['LowLying=True'],['Zone=Swargate'],0.165875,0.33150137396952284,1.9985011241568822
+['Zone=Swargate'],['LowLying=True'],0.165875,1.0,1.9985011241568822
+"['Monsoon=True', 'Zone=Hadapsar', 'Urgency=Low(1-2)']",['LowLying=True'],0.04075,1.0,1.9985011241568822
+['Zone=Hadapsar'],['LowLying=True'],0.166625,1.0,1.9985011241568822
+"['Type=pothole', 'Zone=Swargate']",['LowLying=True'],0.043625,1.0,1.9985011241568822
+"['Monsoon=True', 'Urgency=Medium(3)', 'Zone=Swargate']",['LowLying=True'],0.041625,1.0,1.9985011241568822
+"['Monsoon=True', 'Type=pothole', 'Zone=Hadapsar']",['LowLying=True'],0.0405,1.0,1.9985011241568822
+"['Monsoon=True', 'Zone=Shivajinagar', 'Urgency=Medium(3)']",['LowLying=True'],0.04175,1.0,1.9985011241568822
+"['Monsoon=True', 'Zone=Hadapsar', 'Urgency=High(4-5)']",['LowLying=True'],0.06475,1.0,1.9985011241568822
+"['Monsoon=True', 'Zone=Swargate', 'Urgency=High(4-5)']",['LowLying=True'],0.065125,1.0,1.9985011241568822
+"['Monsoon=True', 'Zone=Shivajinagar', 'Urgency=High(4-5)']",['LowLying=True'],0.0675,1.0,1.9985011241568822
+"['Monsoon=True', 'Zone=Shivajinagar', 'Type=pothole']",['LowLying=True'],0.04325,1.0,1.9985011241568822
+"['Monsoon=True', 'Urgency=Medium(3)', 'Zone=Hadapsar']",['LowLying=True'],0.04075,1.0,1.9985011241568822
+['Zone=Shivajinagar'],['LowLying=True'],0.167875,1.0,1.9985011241568822
+"['Weather=Rainy', 'Zone=Hadapsar']",['LowLying=True'],0.086125,1.0,1.9985011241568822
+"['Monsoon=True', 'Weather=Rainy', 'Zone=Hadapsar']",['LowLying=True'],0.0845,1.0,1.9985011241568822
+"['Monsoon=True', 'Zone=Shivajinagar', 'Weather=Rainy']",['LowLying=True'],0.08,1.0,1.9985011241568822
+"['Monsoon=True', 'Weather=Rainy', 'Zone=Swargate']",['LowLying=True'],0.08275,1.0,1.9985011241568822
+"['Zone=Shivajinagar', 'Weather=Rainy']",['LowLying=True'],0.081375,1.0,1.9985011241568822
+"['Urgency=Medium(3)', 'Zone=Hadapsar']",['LowLying=True'],0.046625,1.0,1.9985011241568822
+"['Type=garbage', 'Zone=Hadapsar']",['LowLying=True'],0.041625,1.0,1.9985011241568822
+"['Monsoon=True', 'Zone=Hadapsar']",['LowLying=True'],0.14625,1.0,1.9985011241568822
+['LowLying=True'],"['Monsoon=True', 'Zone=Hadapsar']",0.14625,0.292280789407944,1.9985011241568822
+"['Monsoon=True', 'Zone=Shivajinagar']",['LowLying=True'],0.14625,1.0,1.9985011241568822
+"['Type=pothole', 'Zone=Hadapsar']",['LowLying=True'],0.0465,1.0,1.9985011241568822
+"['Zone=Shivajinagar', 'Urgency=Low(1-2)']",['LowLying=True'],0.045125,1.0,1.9985011241568822
+"['Zone=Swargate', 'Urgency=Low(1-2)']",['LowLying=True'],0.045625,1.0,1.9985011241568822
+"['Urgency=Medium(3)', 'Zone=Shivajinagar']",['LowLying=True'],0.046875,1.0,1.9985011241568822
+"['Urgency=Medium(3)', 'Zone=Swargate']",['LowLying=True'],0.046625,1.0,1.9985011241568822
+"['Weather=Rainy', 'Zone=Swargate']",['LowLying=True'],0.084,1.0,1.9985011241568822
+"['Zone=Swargate', 'Type=water leak']",['LowLying=True'],0.043,1.0,1.9985011241568822
+"['Zone=Hadapsar', 'Urgency=Low(1-2)']",['LowLying=True'],0.04975,1.0,1.9985011241568822
+"['Zone=Hadapsar', 'Urgency=High(4-5)']",['LowLying=True'],0.07025,1.0,1.9985011241568822
+"['Zone=Shivajinagar', 'Type=water leak']",['LowLying=True'],0.04,1.0,1.9985011241568822
+"['Zone=Shivajinagar', 'Urgency=High(4-5)']",['LowLying=True'],0.075875,1.0,1.9985011241568822
+"['Zone=Swargate', 'Urgency=High(4-5)']",['LowLying=True'],0.073625,1.0,1.9985011241568822
+['LowLying=True'],"['Monsoon=True', 'Zone=Swargate']",0.14575,0.29128153884586555,1.9985011241568822
+['LowLying=True'],"['Monsoon=True', 'Zone=Shivajinagar']",0.14625,0.292280789407944,1.9985011241568822
+"['Type=garbage', 'Zone=Swargate']",['LowLying=True'],0.04075,1.0,1.9985011241568822
+"['Monsoon=True', 'Zone=Swargate']",['LowLying=True'],0.14575,1.0,1.9985011241568822
+"['Type=pothole', 'Zone=Shivajinagar']",['LowLying=True'],0.047625,1.0,1.9985011241568822
+"['Zone=Hadapsar', 'Type=water leak']",['LowLying=True'],0.0405,1.0,1.9985011241568822
+"['Zone=Shivajinagar', 'Type=streetlight']",['LowLying=True'],0.040375,1.0,1.9985011241568822
+"['Monsoon=True', 'Type=garbage']","['LowLying=True', 'Urgency=Low(1-2)']",0.063,0.2806236080178174,1.997321053507597
+"['LowLying=True', 'Urgency=Low(1-2)']","['Monsoon=True', 'Type=garbage']",0.063,0.44839857651245546,1.9973210535075967
+"['Urgency=Medium(3)', 'LowLying=True']",['Zone=Hadapsar'],0.046625,0.3327386262265834,1.9969309901070271
+['Zone=Hadapsar'],"['Urgency=Medium(3)', 'LowLying=True']",0.046625,0.2798199549887472,1.9969309901070271
+"['Urgency=Medium(3)', 'Zone=Hadapsar']","['Monsoon=True', 'LowLying=True']",0.04075,0.8739946380697051,1.9942832585732007
+['Type=garbage'],"['LowLying=True', 'Urgency=Low(1-2)']",0.071375,0.2801766437684004,1.9941398132982233
+"['LowLying=True', 'Urgency=Low(1-2)']",['Type=garbage'],0.071375,0.5080071174377223,1.994139813298223
+"['LowLying=True', 'Weather=Rainy', 'Urgency=Low(1-2)']",['Type=garbage'],0.04025,0.5078864353312303,1.9936660856966846
+"['Monsoon=True', 'LowLying=True', 'Weather=Rainy', 'Urgency=High(4-5)']",['Type=water leak'],0.050125,0.48665048543689327,1.993447969019532
+"['Weather=Stormy', 'Urgency=High(4-5)']","['Monsoon=True', 'Type=water leak']",0.0435,0.4269938650306748,1.9929701985095676
+['Zone=Shivajinagar'],"['Urgency=Medium(3)', 'LowLying=True']",0.046875,0.27922561429635145,1.9926894865038463
+"['Urgency=Medium(3)', 'LowLying=True']",['Zone=Shivajinagar'],0.046875,0.3345227475468332,1.9926894865038463
+"['Monsoon=True', 'LowLying=True', 'Urgency=High(4-5)']",['Zone=Swargate'],0.065125,0.3299556681443952,1.9891826263414933
+['Zone=Swargate'],"['Monsoon=True', 'LowLying=True', 'Urgency=High(4-5)']",0.065125,0.39261492087415223,1.9891826263414933
+"['Urgency=Medium(3)', 'LowLying=True']","['Monsoon=True', 'Zone=Hadapsar']",0.04075,0.29081177520071366,1.9884565825689824
+"['Monsoon=True', 'Zone=Hadapsar']","['Urgency=Medium(3)', 'LowLying=True']",0.04075,0.27863247863247864,1.9884565825689824
+"['Monsoon=True', 'LowLying=True']",['Zone=Shivajinagar'],0.14625,0.33371363377067886,1.9878697469586233
+['Zone=Shivajinagar'],"['Monsoon=True', 'LowLying=True']",0.14625,0.8711839166046165,1.987869746958623
+"['Type=pothole', 'Zone=Hadapsar']","['Monsoon=True', 'LowLying=True']",0.0405,0.8709677419354839,1.9873764790313382
+"['LowLying=True', 'Weather=Rainy', 'Urgency=High(4-5)']",['Type=water leak'],0.050625,0.4850299401197605,1.9868097905571347
+"['Type=garbage', 'LowLying=True']",['Urgency=Low(1-2)'],0.071375,0.5838445807770961,1.9850219490933994
+"['LowLying=True', 'Urgency=Low(1-2)']","['Monsoon=True', 'Zone=Hadapsar']",0.04075,0.2900355871886121,1.9831493141101684
+"['Monsoon=True', 'Zone=Hadapsar']","['LowLying=True', 'Urgency=Low(1-2)']",0.04075,0.27863247863247864,1.9831493141101681
+"['Monsoon=True', 'Type=pothole', 'LowLying=True']",['Zone=Hadapsar'],0.0405,0.32926829268292684,1.9761037820430718
+"['Monsoon=True', 'Type=water leak']",['Urgency=High(4-5)'],0.178375,0.8325554259043174,1.9711285608862206
+['Urgency=High(4-5)'],"['Monsoon=True', 'Type=water leak']",0.178375,0.42231429416987276,1.9711285608862206
+"['Monsoon=True', 'LowLying=True', 'Urgency=Medium(3)']",['Zone=Hadapsar'],0.04075,0.3282980866062437,1.9702810899099399
+"['Monsoon=True', 'LowLying=True', 'Urgency=High(4-5)']",['Zone=Hadapsar'],0.06475,0.3280557314756175,1.9688265955025808
+['Zone=Hadapsar'],"['Monsoon=True', 'LowLying=True', 'Urgency=High(4-5)']",0.06475,0.38859714928732186,1.9688265955025808
+"['LowLying=True', 'Type=water leak']",['Zone=Hadapsar'],0.0405,0.3279352226720648,1.9681033618728572
+"['Monsoon=True', 'LowLying=True', 'Type=water leak']",['Urgency=High(4-5)'],0.088625,0.8302107728337236,1.9655774438205944
+"['LowLying=True', 'Type=water leak']",['Urgency=High(4-5)'],0.1025,0.8299595141700404,1.9649825727612678
+"['LowLying=True', 'Urgency=Low(1-2)']",['Zone=Swargate'],0.045625,0.32473309608540923,1.957697640303899
+['Zone=Swargate'],"['LowLying=True', 'Urgency=Low(1-2)']",0.045625,0.2750565184626978,1.9576976403038988
+['Type=water leak'],"['Monsoon=True', 'Weather=Rainy', 'Urgency=High(4-5)']",0.0945,0.3870967741935484,1.9464325540844671
+"['Monsoon=True', 'Weather=Rainy', 'Urgency=High(4-5)']",['Type=water leak'],0.0945,0.47517284726587056,1.9464325540844671
+"['Weather=Rainy', 'Urgency=High(4-5)']",['Type=water leak'],0.095125,0.47384806973848065,1.9410059180275705
+['Type=water leak'],"['Weather=Rainy', 'Urgency=High(4-5)']",0.095125,0.3896569380440348,1.9410059180275705
+"['LowLying=True', 'Type=water leak']",['Zone=Shivajinagar'],0.04,0.32388663967611336,1.9293321797534675
+['Zone=Shivajinagar'],"['Monsoon=True', 'LowLying=True', 'Weather=Rainy']",0.08,0.4765450483991065,1.9273813888740405
+"['Monsoon=True', 'LowLying=True', 'Weather=Rainy']",['Zone=Shivajinagar'],0.08,0.3235591506572295,1.9273813888740403
+"['LowLying=True', 'Weather=Rainy']",['Zone=Shivajinagar'],0.081375,0.323558648111332,1.9273783953020522
+['Zone=Shivajinagar'],"['LowLying=True', 'Weather=Rainy']",0.081375,0.48473566641846616,1.9273783953020522
+"['LowLying=True', 'Urgency=High(4-5)']",['Zone=Hadapsar'],0.07025,0.3196814562002276,1.9185683792961896
+['Zone=Hadapsar'],"['LowLying=True', 'Urgency=High(4-5)']",0.07025,0.42160540135033764,1.9185683792961894
+"['Monsoon=True', 'Weather=Rainy', 'Type=water leak']","['LowLying=True', 'Urgency=High(4-5)']",0.050125,0.42121848739495804,1.9168076787028807
+['Zone=Shivajinagar'],"['LowLying=True', 'Urgency=Low(1-2)']",0.045125,0.268801191362621,1.9131757392357363
+"['LowLying=True', 'Urgency=Low(1-2)']",['Zone=Shivajinagar'],0.045125,0.3211743772241992,1.9131757392357363
+"['Weather=Rainy', 'Type=water leak']","['LowLying=True', 'Urgency=High(4-5)']",0.050625,0.4201244813278009,1.911829266565647
+"['LowLying=True', 'Urgency=High(4-5)']",['Type=water leak'],0.1025,0.46643913538111487,1.9106569805678029
+['Type=water leak'],"['LowLying=True', 'Urgency=High(4-5)']",0.1025,0.41986687147977464,1.9106569805678026
+['Zone=Swargate'],"['Type=pothole', 'LowLying=True']",0.043625,0.2629992464204974,1.909250427735008
+"['Type=pothole', 'LowLying=True']",['Zone=Swargate'],0.043625,0.3166969147005444,1.9092504277350077
+"['Monsoon=True', 'LowLying=True', 'Weather=Rainy', 'Type=water leak']",['Urgency=High(4-5)'],0.050125,0.8052208835341366,1.9064122723507229
+"['LowLying=True', 'Weather=Rainy', 'Type=water leak']",['Urgency=High(4-5)'],0.050625,0.8051689860834991,1.9062894017957954
+['Type=water leak'],['Urgency=High(4-5)'],0.194375,0.79621095750128,1.8850806925156083
+['Urgency=High(4-5)'],['Type=water leak'],0.194375,0.4601953240603729,1.8850806925156083
+"['Monsoon=True', 'Type=water leak']","['LowLying=True', 'Urgency=High(4-5)']",0.088625,0.4136522753792299,1.8823766797689643
+"['LowLying=True', 'Urgency=High(4-5)']","['Monsoon=True', 'Type=water leak']",0.088625,0.40329920364050054,1.882376679768964
+"['Monsoon=True', 'Weather=Rainy', 'Type=water leak']",['Urgency=High(4-5)'],0.0945,0.7941176470588236,1.880124645300559
+['Type=water leak'],"['Monsoon=True', 'Urgency=High(4-5)']",0.178375,0.7306707629288275,1.8741154547709584
+"['Monsoon=True', 'Urgency=High(4-5)']",['Type=water leak'],0.178375,0.4575184353959602,1.8741154547709582
+"['Zone=Hadapsar', 'Urgency=Low(1-2)']","['Monsoon=True', 'LowLying=True']",0.04075,0.8190954773869347,1.8690142096678488
+"['Weather=Rainy', 'Type=water leak']",['Urgency=High(4-5)'],0.095125,0.7894190871369295,1.8690005022478355
+"['LowLying=True', 'Type=water leak']","['Monsoon=True', 'Urgency=High(4-5)']",0.088625,0.7176113360323886,1.8406190087396948
+['Type=water leak'],"['Monsoon=True', 'LowLying=True', 'Urgency=High(4-5)']",0.088625,0.3630312339989759,1.8392969423633991
+"['Monsoon=True', 'LowLying=True', 'Urgency=High(4-5)']",['Type=water leak'],0.088625,0.4490183660544648,1.8392969423633991
+"['Type=pothole', 'Weather=Rainy']","['Monsoon=True', 'Urgency=Medium(3)']",0.0615,0.4598130841121495,1.8328374055292456
+"['Urgency=Medium(3)', 'Weather=Rainy']","['Monsoon=True', 'Type=pothole']",0.0615,0.4323374340949034,1.8042250770783657
+"['Monsoon=True', 'Type=pothole']","['Urgency=Medium(3)', 'Weather=Rainy']",0.0615,0.2566510172143975,1.8042250770783657
+"['Monsoon=True', 'Weather=Stormy', 'Urgency=High(4-5)']",['Type=water leak'],0.0435,0.4269938650306748,1.7490788122096255
+"['Weather=Stormy', 'Urgency=High(4-5)']",['Type=water leak'],0.0435,0.4269938650306748,1.7490788122096255
+"['Type=streetlight', 'Weather=Rainy']","['Monsoon=True', 'Urgency=Low(1-2)']",0.050875,0.41700819672131145,1.7222847567219883
+"['Repeat=True', 'Urgency=High(4-5)']","['Monsoon=True', 'Type=water leak']",0.041625,0.36156351791530944,1.6875776798847582
+"['Repeat=True', 'Urgency=High(4-5)']",['Type=water leak'],0.046875,0.4071661237785016,1.6678591859846454
+"['Monsoon=True', 'Type=pothole', 'Weather=Rainy']",['Urgency=Medium(3)'],0.0615,0.46679316888045536,1.6465367509010773
+"['Type=pothole', 'Weather=Rainy']",['Urgency=Medium(3)'],0.062,0.46355140186915883,1.6351019466284265
+"['Monsoon=True', 'Weather=Rainy', 'Urgency=Medium(3)']",['Type=pothole'],0.0615,0.4392857142857142,1.6345514950166111
+"['Weather=Rainy', 'Urgency=High(4-5)']","['Monsoon=True', 'Repeat=True']",0.051875,0.25840597758405975,1.629036895722993
+"['Monsoon=True', 'Repeat=True']","['Weather=Rainy', 'Urgency=High(4-5)']",0.051875,0.3270291568163909,1.629036895722993
+"['Monsoon=True', 'Repeat=True', 'Urgency=High(4-5)']",['Type=water leak'],0.041625,0.39690107270560193,1.62581084569627
+"['Urgency=Medium(3)', 'Weather=Rainy']",['Type=pothole'],0.062,0.4358523725834798,1.6217762700780645
+"['Monsoon=True', 'Repeat=True', 'LowLying=True']",['Urgency=High(4-5)'],0.055375,0.6794478527607362,1.6086365262165994
+"['LowLying=True', 'Urgency=High(4-5)']","['Monsoon=True', 'Repeat=True']",0.055375,0.25199089874857794,1.588595106374014
+"['Monsoon=True', 'Repeat=True']","['LowLying=True', 'Urgency=High(4-5)']",0.055375,0.3490937746256895,1.5885951063740138
+"['Monsoon=True', 'LowLying=True', 'Urgency=Medium(3)']",['Type=pothole'],0.052875,0.4259818731117825,1.5850488301833767
+"['Urgency=Medium(3)', 'LowLying=True']","['Monsoon=True', 'Type=pothole']",0.052875,0.3773416592328278,1.5747174094223382
+"['Monsoon=True', 'Repeat=True']",['Urgency=High(4-5)'],0.104875,0.6611505122143421,1.565316394706936
+['Type=pothole'],"['Monsoon=True', 'Urgency=Medium(3)']",0.105,0.39069767441860465,1.5573400076476518
+"['Monsoon=True', 'Urgency=Medium(3)']",['Type=pothole'],0.105,0.4185351270553064,1.5573400076476518
+"['Repeat=True', 'LowLying=True']",['Urgency=High(4-5)'],0.061875,0.6556291390728477,1.552244188393839
+['Repeat=True'],"['LowLying=True', 'Urgency=High(4-5)']",0.061875,0.34090909090909094,1.5513496742165684
+"['LowLying=True', 'Urgency=High(4-5)']",['Repeat=True'],0.061875,0.28156996587030714,1.5513496742165682
+"['Monsoon=True', 'LowLying=True', 'Urgency=High(4-5)']",['Repeat=True'],0.055375,0.2805573147561748,1.5457703292351228
+['Repeat=True'],"['Monsoon=True', 'LowLying=True', 'Urgency=High(4-5)']",0.055375,0.30509641873278237,1.5457703292351228
+"['Monsoon=True', 'Type=pothole']",['Urgency=Medium(3)'],0.105,0.4381846635367762,1.5456249154736375
+['Urgency=Medium(3)'],"['Monsoon=True', 'Type=pothole']",0.105,0.3703703703703704,1.5456249154736375
+"['LowLying=True', 'Weather=Stormy']","['Monsoon=True', 'Urgency=High(4-5)']",0.051375,0.6017569546120057,1.5434612494055933
+"['Weather=Rainy', 'Urgency=Low(1-2)']","['Monsoon=True', 'Type=streetlight']",0.050875,0.3147718484145398,1.5392266426138868
+"['Type=pothole', 'LowLying=True']","['Monsoon=True', 'Urgency=Medium(3)']",0.052875,0.38384754990925585,1.5300350768679853
+"['Urgency=Medium(3)', 'LowLying=True']",['Type=pothole'],0.05725,0.4085637823371989,1.5202373296267868
+"['Monsoon=True', 'Type=pothole', 'LowLying=True']",['Urgency=Medium(3)'],0.052875,0.4298780487804878,1.5163246870563944
+"['Monsoon=True', 'Urgency=High(4-5)']",['Weather=Stormy'],0.101875,0.2613016992625841,1.5147924594932414
+['Weather=Stormy'],"['Monsoon=True', 'Urgency=High(4-5)']",0.101875,0.5905797101449275,1.5147924594932414
+"['Repeat=True', 'Weather=Rainy']","['Monsoon=True', 'Urgency=High(4-5)']",0.051875,0.5894886363636364,1.5119939374508145
+"['Monsoon=True', 'LowLying=True', 'Urgency=High(4-5)']",['Weather=Stormy'],0.051375,0.2602913236225459,1.5089352094060635
+['Weather=Stormy'],"['Monsoon=True', 'LowLying=True', 'Urgency=High(4-5)']",0.051375,0.29782608695652174,1.5089352094060633
+"['Repeat=True', 'LowLying=True']","['Monsoon=True', 'Urgency=High(4-5)']",0.055375,0.5867549668874172,1.5049822812117146
+['Repeat=True'],['Urgency=High(4-5)'],0.115125,0.6342975206611571,1.5017402087272143
+['Urgency=High(4-5)'],['Repeat=True'],0.115125,0.27256584788398935,1.501740208727214
+['Repeat=True'],"['Monsoon=True', 'Urgency=High(4-5)']",0.104875,0.5778236914600551,1.4820742326644567
+"['Monsoon=True', 'Urgency=High(4-5)']",['Repeat=True'],0.104875,0.2689964732285989,1.4820742326644567
+['Type=pothole'],['Urgency=Medium(3)'],0.112875,0.42000000000000004,1.4814814814814818
+['Urgency=Medium(3)'],['Type=pothole'],0.112875,0.3981481481481482,1.4814814814814816
+"['Type=pothole', 'LowLying=True']",['Urgency=Medium(3)'],0.05725,0.41560798548094374,1.4659893667758157
+"['Type=streetlight', 'Weather=Rainy']",['Urgency=Low(1-2)'],0.05225,0.42827868852459017,1.4561111382051513
+"['Monsoon=True', 'Type=streetlight', 'Weather=Rainy']",['Urgency=Low(1-2)'],0.050875,0.424400417101147,1.4429253450102744
+"['Weather=Rainy', 'Urgency=High(4-5)']",['Repeat=True'],0.052375,0.26089663760896636,1.4374470391678589
+['Repeat=True'],"['Weather=Rainy', 'Urgency=High(4-5)']",0.052375,0.28856749311294766,1.4374470391678587
+['Repeat=True'],"['Monsoon=True', 'Weather=Rainy', 'Urgency=High(4-5)']",0.051875,0.2858126721763085,1.4371473145257498
+"['Monsoon=True', 'Weather=Rainy', 'Urgency=High(4-5)']",['Repeat=True'],0.051875,0.2608422375864236,1.4371473145257498
+"['LowLying=True', 'Weather=Stormy']",['Urgency=High(4-5)'],0.051375,0.6017569546120057,1.424698324029608
+"['Monsoon=True', 'LowLying=True', 'Weather=Stormy']",['Urgency=High(4-5)'],0.051375,0.6017569546120057,1.424698324029608
+['Weather=Stormy'],"['Monsoon=True', 'Urgency=High(4-5)', 'Type=water leak']",0.0435,0.25217391304347825,1.413729014959934
+"['Monsoon=True', 'Repeat=True', 'Weather=Rainy']",['Urgency=High(4-5)'],0.051875,0.5971223021582734,1.4137254860213635
+"['Repeat=True', 'Weather=Rainy']",['Urgency=High(4-5)'],0.052375,0.5951704545454546,1.4091043611611829
+['Weather=Stormy'],['Urgency=High(4-5)'],0.101875,0.5905797101449275,1.398235478295182
+"['Monsoon=True', 'Weather=Stormy']",['Urgency=High(4-5)'],0.101875,0.5905797101449275,1.398235478295182
+"['Weather=Rainy', 'Urgency=Low(1-2)']",['Type=streetlight'],0.05225,0.32327919566898683,1.391196108311939
+"['Monsoon=True', 'Weather=Rainy', 'Urgency=Low(1-2)']",['Type=streetlight'],0.050875,0.32199367088607594,1.3856639952063516
+"['LowLying=True', 'Urgency=Low(1-2)']",['Type=streetlight'],0.04475,0.3185053380782918,1.370652342456339
+"['Monsoon=True', 'Weather=Stormy']","['LowLying=True', 'Urgency=High(4-5)']",0.051375,0.29782608695652174,1.355295048721373
+['Weather=Stormy'],"['LowLying=True', 'Urgency=High(4-5)']",0.051375,0.29782608695652174,1.355295048721373
+"['Monsoon=True', 'Repeat=True']","['Urgency=High(4-5)', 'Type=water leak']",0.041625,0.26241134751773054,1.3500262251716042
+"['Monsoon=True', 'Type=streetlight', 'Urgency=Low(1-2)']",['Weather=Rainy'],0.050875,0.676079734219269,1.3397666271375162
+['Type=streetlight'],"['Monsoon=True', 'Urgency=Low(1-2)']",0.07525,0.32383001613770845,1.337449731079849
+"['Monsoon=True', 'Urgency=Low(1-2)']",['Type=streetlight'],0.07525,0.3107898812596799,1.3374497310798488
+['Repeat=True'],"['Urgency=High(4-5)', 'Type=water leak']",0.046875,0.2582644628099174,1.3286917700831764
+"['Monsoon=True', 'LowLying=True', 'Urgency=Low(1-2)']",['Weather=Rainy'],0.077375,0.6627408993576017,1.3133334641716161
+"['Type=streetlight', 'LowLying=True']",['Urgency=Low(1-2)'],0.04475,0.38288770053475935,1.3017856371772523
+['Weather=Stormy'],"['Urgency=High(4-5)', 'Type=water leak']",0.0435,0.25217391304347825,1.297357751992171
+"['Monsoon=True', 'Weather=Stormy']","['Urgency=High(4-5)', 'Type=water leak']",0.0435,0.25217391304347825,1.297357751992171
+['Type=streetlight'],['Urgency=Low(1-2)'],0.088625,0.38138784292630445,1.2966862487932151
+['Urgency=Low(1-2)'],['Type=streetlight'],0.088625,0.30131746706332335,1.2966862487932151
+['Weather=Rainy'],"['Monsoon=True', 'Urgency=Low(1-2)']",0.158,0.313103789943027,1.2931493647621146
+"['Monsoon=True', 'Urgency=Low(1-2)']",['Weather=Rainy'],0.158,0.6525554981930821,1.2931493647621146
+['Weather=Clear'],['Urgency=Low(1-2)'],0.06375,0.379182156133829,1.2891871011774891
+"['LowLying=True', 'Weather=Rainy']","['Monsoon=True', 'Urgency=Low(1-2)']",0.077375,0.3076540755467197,1.2706415097438086
+"['Monsoon=True', 'Urgency=Low(1-2)']","['LowLying=True', 'Weather=Rainy']",0.077375,0.31956633970056786,1.2706415097438086
+"['Monsoon=True', 'LowLying=True', 'Type=garbage', 'Urgency=Low(1-2)']",['Weather=Rainy'],0.04,0.6349206349206349,1.2582028930802773
+['Urgency=Low(1-2)'],"['Monsoon=True', 'Type=streetlight']",0.07525,0.25584360390990224,1.2510689677745832
+"['Monsoon=True', 'Type=streetlight']",['Urgency=Low(1-2)'],0.07525,0.36797066014669927,1.251068967774583
+"['Monsoon=True', 'Type=garbage', 'Urgency=Low(1-2)']",['Weather=Rainy'],0.084875,0.6298701298701299,1.2481944609762297
+"['Weather=Rainy', 'Type=water leak', 'Urgency=High(4-5)']","['Monsoon=True', 'LowLying=True']",0.050125,0.5269382391590013,1.2023690568374246
+['Weather=Stormy'],"['Monsoon=True', 'Type=garbage']",0.046125,0.2673913043478261,1.1910525806139247
+['Weather=Stormy'],"['Monsoon=True', 'Type=water leak']",0.043875,0.25434782608695655,1.1871543808025977
+"['Monsoon=True', 'Type=garbage', 'Urgency=Low(1-2)']","['LowLying=True', 'Weather=Rainy']",0.04,0.29684601113172543,1.1803022311400613
+"['Weather=Rainy', 'Type=water leak']","['Monsoon=True', 'LowLying=True']",0.06225,0.516597510373444,1.1787735547597127
+"['Weather=Rainy', 'Urgency=High(4-5)']","['Monsoon=True', 'LowLying=True']",0.103,0.5130759651307596,1.1707380835841634
+"['Repeat=True', 'Weather=Rainy']","['Monsoon=True', 'LowLying=True']",0.045125,0.5127840909090909,1.1700720842192607
+"['Type=streetlight', 'Urgency=Low(1-2)']",['Weather=Rainy'],0.05225,0.5895627644569816,1.168318582030184
+"['Monsoon=True', 'Type=streetlight', 'LowLying=True']",['Weather=Rainy'],0.0595,0.5869297163995068,1.1631007508536175
+"['Monsoon=True', 'Type=streetlight']",['Weather=Rainy'],0.119875,0.5861858190709046,1.1616265921642897
+['Weather=Stormy'],"['Monsoon=True', 'Urgency=Medium(3)']",0.05025,0.291304347826087,1.161153354563376
+"['Monsoon=True', 'Type=pothole', 'Urgency=Medium(3)']",['Weather=Rainy'],0.0615,0.5857142857142857,1.160692168866556
+"['Monsoon=True', 'Zone=Kothrud']",['Weather=Rainy'],0.08475,0.5854922279792747,1.1602521238132766
+"['Monsoon=True', 'Type=streetlight']","['LowLying=True', 'Weather=Rainy']",0.0595,0.29095354523227385,1.1568729432694784
+"['Monsoon=True', 'LowLying=True', 'Type=water leak']",['Weather=Rainy'],0.06225,0.5831381733021077,1.1555871653249596
+"['Type=streetlight', 'Urgency=Low(1-2)']","['Monsoon=True', 'Weather=Rainy']",0.050875,0.5740479548660085,1.155316638724042
+"['Monsoon=True', 'Type=water leak']","['LowLying=True', 'Weather=Rainy']",0.06225,0.29054842473745623,1.155262126192669
+"['Weather=Stormy', 'Urgency=High(4-5)']","['Monsoon=True', 'LowLying=True']",0.051375,0.5042944785276073,1.1507004644098286
+"['Monsoon=True', 'Zone=Hadapsar']",['Weather=Rainy'],0.0845,0.5777777777777778,1.1449646327030525
+"['Monsoon=True', 'LowLying=True', 'Zone=Hadapsar']",['Weather=Rainy'],0.0845,0.5777777777777778,1.1449646327030525
+['Repeat=True'],['Urgency=Medium(3)'],0.05875,0.3236914600550964,1.1417688185364954
+"['Type=pothole', 'Urgency=High(4-5)']","['Monsoon=True', 'LowLying=True']",0.0535,0.49709639953542395,1.1342758688771797
+"['Weather=Stormy', 'Urgency=High(4-5)']",['Monsoon=True'],0.101875,1.0,1.132663174288546
+"['Urgency=Medium(3)', 'Weather=Stormy']",['Monsoon=True'],0.05025,1.0,1.132663174288546
+"['LowLying=True', 'Weather=Stormy', 'Urgency=High(4-5)']",['Monsoon=True'],0.051375,1.0,1.132663174288546
+['Weather=Stormy'],['Monsoon=True'],0.1725,1.0,1.132663174288546
+"['Weather=Stormy', 'Type=water leak']",['Monsoon=True'],0.043875,1.0,1.132663174288546
+"['Type=pothole', 'Weather=Stormy']",['Monsoon=True'],0.046625,1.0,1.132663174288546
+"['Urgency=High(4-5)', 'Weather=Stormy', 'Type=water leak']",['Monsoon=True'],0.0435,1.0,1.132663174288546
+"['Type=garbage', 'Weather=Stormy']",['Monsoon=True'],0.046125,1.0,1.132663174288546
+"['LowLying=True', 'Weather=Stormy']",['Monsoon=True'],0.085375,1.0,1.132663174288546
+"['Monsoon=True', 'Repeat=True']","['LowLying=True', 'Weather=Rainy']",0.045125,0.2844759653270292,1.1311171583579689
+['Weather=Stormy'],"['Monsoon=True', 'LowLying=True']",0.085375,0.4949275362318841,1.1293269508999069
+['Weather=Stormy'],"['Monsoon=True', 'Type=pothole']",0.046625,0.2702898550724638,1.127970182879348
+"['Type=garbage', 'LowLying=True', 'Urgency=Low(1-2)']","['Monsoon=True', 'Weather=Rainy']",0.04,0.5604203152364273,1.1278899426141933
+"['Type=pothole', 'Weather=Rainy', 'Urgency=High(4-5)']",['Monsoon=True'],0.048125,0.9948320413436692,1.1268096178322744
+"['Type=garbage', 'LowLying=True', 'Weather=Rainy', 'Urgency=Low(1-2)']",['Monsoon=True'],0.04,0.9937888198757764,1.125627999292965
+"['Urgency=High(4-5)', 'Weather=Rainy', 'Type=water leak']",['Monsoon=True'],0.0945,0.9934296977660972,1.1252212349042585
+"['Monsoon=True', 'LowLying=True', 'Zone=Swargate']",['Weather=Rainy'],0.08275,0.5677530017152659,1.1250988391682257
+"['Monsoon=True', 'Zone=Swargate']",['Weather=Rainy'],0.08275,0.5677530017152659,1.1250988391682257
+"['Type=pothole', 'Weather=Rainy', 'Urgency=Medium(3)']",['Monsoon=True'],0.0615,0.9919354838709677,1.1235287938507352
+"['Weather=Rainy', 'Urgency=High(4-5)']",['Monsoon=True'],0.198875,0.9906600249066002,1.1220841284514798
+"['Repeat=True', 'Weather=Rainy', 'Urgency=High(4-5)']",['Monsoon=True'],0.051875,0.9904534606205251,1.1218501606915192
+"['LowLying=True', 'Weather=Rainy', 'Type=water leak', 'Urgency=High(4-5)']",['Monsoon=True'],0.050125,0.9901234567901235,1.1214763775054493
+"['LowLying=True', 'Weather=Rainy', 'Type=water leak']",['Monsoon=True'],0.06225,0.9900596421471173,1.1214040970093357
+"['Monsoon=True', 'LowLying=True', 'Type=water leak', 'Urgency=High(4-5)']",['Weather=Rainy'],0.050125,0.5655853314527504,1.1208032330002484
+"['Zone=Baner', 'Weather=Rainy']",['Monsoon=True'],0.081375,0.9893617021276596,1.1206135660514338
+"['Type=streetlight', 'Weather=Rainy', 'Urgency=High(4-5)']",['Monsoon=True'],0.045,0.989010989010989,1.1202163262194411
+"['Type=garbage', 'Weather=Rainy', 'Urgency=Low(1-2)']",['Monsoon=True'],0.084875,0.9883551673944687,1.1194735012255062
+"['Zone=Viman Nagar', 'Weather=Rainy']",['Monsoon=True'],0.0835,0.9881656804733727,1.1192588763679714
+"['Weather=Rainy', 'Type=water leak']",['Monsoon=True'],0.119,0.987551867219917,1.1185636326998918
+"['Repeat=True', 'Weather=Rainy']",['Monsoon=True'],0.086875,0.9872159090909091,1.1181831052990616
+['Weather=Rainy'],"['Monsoon=True', 'LowLying=True']",0.24725,0.48996779786970523,1.1180098068903714
+"['Monsoon=True', 'LowLying=True']",['Weather=Rainy'],0.24725,0.5641756988020536,1.1180098068903714
+"['LowLying=True', 'Urgency=Low(1-2)']",['Weather=Rainy'],0.07925,0.5640569395017793,1.1177744652004544
+"['LowLying=True', 'Weather=Rainy', 'Urgency=High(4-5)']",['Monsoon=True'],0.103,0.9868263473053892,1.1177418630104932
+"['Type=pothole', 'LowLying=True', 'Weather=Rainy']",['Monsoon=True'],0.0655,0.9868173258003766,1.117731644683989
+"['Type=garbage', 'LowLying=True', 'Urgency=Low(1-2)']",['Weather=Rainy'],0.04025,0.5639229422066551,1.1175089268400398
+"['Type=pothole', 'Weather=Rainy']","['Monsoon=True', 'LowLying=True']",0.0655,0.4897196261682243,1.1174435280507116
+"['Monsoon=True', 'Type=water leak', 'Urgency=High(4-5)']","['LowLying=True', 'Weather=Rainy']",0.050125,0.28100911002102313,1.1173324454116227
+"['Repeat=True', 'LowLying=True', 'Weather=Rainy']",['Monsoon=True'],0.045125,0.9863387978142076,1.1171896336561888
+"['Urgency=Medium(3)', 'LowLying=True', 'Weather=Rainy']",['Monsoon=True'],0.066875,0.9852670349907919,1.1159756873745343
+"['LowLying=True', 'Weather=Rainy', 'Zone=Swargate']",['Monsoon=True'],0.08275,0.9851190476190476,1.1158080675282998
+"['Weather=Rainy', 'Zone=Swargate']",['Monsoon=True'],0.08275,0.9851190476190476,1.1158080675282998
+"['Type=pothole', 'Weather=Rainy']",['Monsoon=True'],0.13175,0.9850467289719627,1.1157261548599322
+['Weather=Rainy'],['Monsoon=True'],0.496875,0.9846420609363389,1.1152678022781695
+['Monsoon=True'],['Weather=Rainy'],0.496875,0.5627920147246213,1.1152678022781695
+"['Urgency=Medium(3)', 'Weather=Rainy']",['Monsoon=True'],0.14,0.9841827768014062,1.1147475880519964
+"['Monsoon=True', 'Type=garbage']",['Weather=Rainy'],0.12625,0.5623608017817372,1.1144132807168436
+['Weather=Rainy'],"['Monsoon=True', 'Type=garbage']",0.12625,0.2501857815209314,1.1144132807168436
+"['Type=garbage', 'Weather=Rainy']",['Monsoon=True'],0.12625,0.9834469328140215,1.113914124665464
+"['Zone=Shivajinagar', 'Weather=Rainy']",['Monsoon=True'],0.08,0.9831029185867896,1.1135244724188471
+"['Zone=Shivajinagar', 'LowLying=True', 'Weather=Rainy']",['Monsoon=True'],0.08,0.9831029185867896,1.1135244724188471
+['Monsoon=True'],"['LowLying=True', 'Weather=Rainy']",0.24725,0.280050969842843,1.1135227429138888
+"['LowLying=True', 'Weather=Rainy']",['Monsoon=True'],0.24725,0.9831013916500994,1.1135227429138885
+"['Type=streetlight', 'Weather=Rainy']",['Monsoon=True'],0.119875,0.9825819672131147,1.1129344099822907
+"['Type=streetlight', 'Weather=Rainy']","['Monsoon=True', 'LowLying=True']",0.0595,0.48770491803278687,1.112846361740529
+"['Type=garbage', 'Urgency=Low(1-2)']","['Monsoon=True', 'Weather=Rainy']",0.084875,0.5529315960912052,1.112818306598652
+"['Weather=Rainy', 'Zone=Kothrud']",['Monsoon=True'],0.08475,0.9811866859623735,1.1113540262918007
+"['Weather=Rainy', 'Zone=Hadapsar']",['Monsoon=True'],0.0845,0.9811320754716982,1.111292171000083
+"['LowLying=True', 'Zone=Hadapsar', 'Weather=Rainy']",['Monsoon=True'],0.0845,0.9811320754716982,1.111292171000083
+"['Monsoon=True', 'LowLying=True', 'Type=garbage']",['Weather=Rainy'],0.06,0.5600933488914819,1.1099199383531968
+"['Type=garbage', 'Urgency=Low(1-2)']",['Weather=Rainy'],0.085875,0.5594462540716613,1.1086376102485238
+"['LowLying=True', 'Urgency=Low(1-2)']","['Monsoon=True', 'Weather=Rainy']",0.077375,0.550711743772242,1.1083506792900466
+"['Type=garbage', 'LowLying=True', 'Weather=Rainy']",['Monsoon=True'],0.06,0.9775967413441955,1.1072878282250551
+"['Weather=Rainy', 'Urgency=Low(1-2)']",['Monsoon=True'],0.158,0.9775715390564579,1.1072592825218268
+"['Type=streetlight', 'LowLying=True', 'Weather=Rainy']",['Monsoon=True'],0.0595,0.9774127310061601,1.107079406491474
+"['LowLying=True', 'Weather=Rainy', 'Urgency=Low(1-2)']",['Monsoon=True'],0.077375,0.9763406940063091,1.105865149660268
+"['Monsoon=True', 'Urgency=Medium(3)']",['Weather=Rainy'],0.14,0.558046836073742,1.105864426205087
+['Weather=Rainy'],"['Monsoon=True', 'Urgency=Medium(3)']",0.14,0.2774337379242012,1.1058644262050867
+"['Type=streetlight', 'Weather=Rainy', 'Urgency=Low(1-2)']",['Monsoon=True'],0.050875,0.9736842105263158,1.1028562486493738
+"['Monsoon=True', 'Type=water leak']",['Weather=Rainy'],0.119,0.5554259043173863,1.1006706055335869
+"['Monsoon=True', 'Zone=Shivajinagar']",['Type=pothole'],0.04325,0.29572649572649573,1.1003776585171934
+"['Monsoon=True', 'Zone=Shivajinagar', 'LowLying=True']",['Type=pothole'],0.04325,0.29572649572649573,1.1003776585171934
+['Repeat=True'],['Type=water leak'],0.04875,0.26859504132231404,1.100235704341276
+"['Repeat=True', 'Urgency=High(4-5)']","['Monsoon=True', 'LowLying=True']",0.055375,0.4809989142236699,1.0975445846518423
+"['Monsoon=True', 'Repeat=True', 'LowLying=True']",['Weather=Rainy'],0.045125,0.5536809815950919,1.0972127452961942
+"['Type=pothole', 'Urgency=Medium(3)']","['Monsoon=True', 'Weather=Rainy']",0.0615,0.5448504983388704,1.096554462065651
+"['Monsoon=True', 'Zone=Viman Nagar']",['Weather=Rainy'],0.0835,0.5525227460711332,1.0949175052189908
+"['Monsoon=True', 'Zone=Shivajinagar', 'LowLying=True']",['Urgency=High(4-5)'],0.0675,0.4615384615384616,1.0927220160721198
+"['Monsoon=True', 'Zone=Shivajinagar']",['Urgency=High(4-5)'],0.0675,0.4615384615384616,1.0927220160721198
+"['Weather=Rainy', 'Urgency=Low(1-2)']","['Monsoon=True', 'LowLying=True']",0.077375,0.47873163186388246,1.092371093813765
+"['Monsoon=True', 'Type=streetlight', 'Urgency=High(4-5)']",['Weather=Rainy'],0.045,0.5504587155963302,1.090827278863176
+['Weather=Rainy'],"['Monsoon=True', 'Type=pothole']",0.13175,0.2610849640822393,1.0895564489608316
+"['Monsoon=True', 'Type=pothole']",['Weather=Rainy'],0.13175,0.5498174230568597,1.0895564489608316
+['Urgency=Low(1-2)'],['Weather=Rainy'],0.161625,0.5495112622184445,1.0889497393479208
+['Weather=Rainy'],['Urgency=Low(1-2)'],0.161625,0.3202873420857072,1.0889497393479206
+"['Urgency=Medium(3)', 'Type=pothole']",['Weather=Rainy'],0.062,0.5492801771871539,1.0884918051764259
+"['Monsoon=True', 'Repeat=True']",['Type=water leak'],0.042125,0.2655634357762018,1.087817453256331
+"['LowLying=True', 'Weather=Rainy']","['Monsoon=True', 'Type=pothole']",0.0655,0.26043737574552683,1.086853941556711
+"['Monsoon=True', 'Type=pothole']","['LowLying=True', 'Weather=Rainy']",0.0655,0.2733437663015128,1.086853941556711
+"['Monsoon=True', 'Repeat=True']",['Weather=Rainy'],0.086875,0.5476753349093775,1.0853115380914093
+"['Monsoon=True', 'Zone=Baner']",['Weather=Rainy'],0.081375,0.5470588235294118,1.0840898162584331
+"['Monsoon=True', 'Repeat=True']",['Urgency=Medium(3)'],0.04875,0.3073286052009457,1.0840515174636534
+"['Monsoon=True', 'Zone=Shivajinagar']",['Weather=Rainy'],0.08,0.5470085470085471,1.0839901848076237
+"['Monsoon=True', 'Zone=Shivajinagar', 'LowLying=True']",['Weather=Rainy'],0.08,0.5470085470085471,1.0839901848076237
+['Zone=Kothrud'],['Type=garbage'],0.045,0.27586206896551724,1.0828736760177322
+"['Zone=Baner', 'Urgency=High(4-5)']",['Monsoon=True'],0.0665,0.9551166965888689,1.0818255093743383
+"['Type=pothole', 'Urgency=High(4-5)']",['Monsoon=True'],0.10275,0.9547038327526132,1.0813578737110159
+['Zone=Kothrud'],['Urgency=Low(1-2)'],0.051875,0.31800766283524906,1.081199023664255
+"['Monsoon=True', 'Weather=Rainy']",['Urgency=Low(1-2)'],0.158,0.3179874213836478,1.0811302044492912
+['Urgency=Low(1-2)'],"['Monsoon=True', 'Weather=Rainy']",0.158,0.5371865703357416,1.0811302044492912
+"['Type=pothole', 'LowLying=True', 'Urgency=High(4-5)']",['Monsoon=True'],0.0535,0.953229398663697,1.0796878365155849
+['Zone=Shivajinagar'],"['Monsoon=True', 'Type=pothole']",0.04325,0.25763216679076695,1.075147279252027
+"['Zone=Shivajinagar', 'LowLying=True']","['Monsoon=True', 'Type=pothole']",0.04325,0.25763216679076695,1.075147279252027
+"['Repeat=True', 'Urgency=High(4-5)']",['LowLying=True'],0.061875,0.5374592833876222,1.0741129820387152
+"['Zone=Kothrud', 'Urgency=High(4-5)']",['Monsoon=True'],0.06175,0.9481765834932822,1.0739646988455696
+"['Urgency=Medium(3)', 'Weather=Rainy']","['Monsoon=True', 'LowLying=True']",0.066875,0.4701230228471002,1.0727279471696527
+['Zone=Baner'],['Type=garbage'],0.0455,0.2732732732732733,1.0727115732022505
+"['Zone=Viman Nagar', 'Urgency=High(4-5)']",['Monsoon=True'],0.06425,0.9465930018416205,1.0721710342252533
+"['LowLying=True', 'Weather=Rainy']",['Urgency=Low(1-2)'],0.07925,0.31510934393638174,1.0713449857590538
+['Urgency=Low(1-2)'],"['LowLying=True', 'Weather=Rainy']",0.07925,0.269443263918402,1.0713449857590538
+['Repeat=True'],"['Monsoon=True', 'Urgency=Medium(3)']",0.04875,0.26859504132231404,1.0706329499643807
+"['Zone=Shivajinagar', 'LowLying=True']",['Urgency=High(4-5)'],0.075875,0.45197319434102756,1.070075630283581
+['Zone=Shivajinagar'],['Urgency=High(4-5)'],0.075875,0.45197319434102756,1.070075630283581
+"['Type=pothole', 'Urgency=Medium(3)']","['Monsoon=True', 'LowLying=True']",0.052875,0.46843853820598,1.0688842856953338
+"['Monsoon=True', 'LowLying=True', 'Urgency=Medium(3)']",['Weather=Rainy'],0.066875,0.5387713997985901,1.0676668809484076
+"['Type=garbage', 'Weather=Rainy']","['Monsoon=True', 'LowLying=True']",0.06,0.4673807205452775,1.066470554581352
+"['Monsoon=True', 'LowLying=True']",['Urgency=High(4-5)'],0.197375,0.45037079292641186,1.0662818417908537
+['Urgency=High(4-5)'],"['Monsoon=True', 'LowLying=True']",0.197375,0.46729801716484165,1.0662818417908537
+['Urgency=Low(1-2)'],"['Monsoon=True', 'LowLying=True', 'Weather=Rainy']",0.077375,0.26306842328941776,1.0639774450532569
+"['Monsoon=True', 'LowLying=True', 'Weather=Rainy']",['Urgency=Low(1-2)'],0.077375,0.31294236602628916,1.0639774450532566
+"['Urgency=High(4-5)', 'Weather=Rainy', 'Type=water leak']",['LowLying=True'],0.050625,0.5321944809461235,1.0635912684409163
+"['Type=garbage', 'Weather=Rainy', 'Urgency=Low(1-2)']","['Monsoon=True', 'LowLying=True']",0.04,0.4657933042212518,1.0628483838476939
+['Weather=Cloudy'],['Urgency=Low(1-2)'],0.048375,0.3126009693053312,1.0628167252199956
+"['Monsoon=True', 'Type=garbage']","['LowLying=True', 'Weather=Rainy']",0.06,0.26726057906458794,1.0626663183482623
+"['Monsoon=True', 'Zone=Baner']",['Type=garbage'],0.04025,0.2705882352941177,1.0621716792703344
+['Zone=Swargate'],['Type=water leak'],0.043,0.2592313489073097,1.0618795654165272
+"['LowLying=True', 'Zone=Swargate']",['Type=water leak'],0.043,0.2592313489073097,1.0618795654165272
+"['Monsoon=True', 'Weather=Rainy', 'Type=water leak', 'Urgency=High(4-5)']",['LowLying=True'],0.050125,0.5304232804232805,1.0600515222049072
+"['LowLying=True', 'Weather=Rainy']","['Monsoon=True', 'Urgency=Medium(3)']",0.066875,0.26590457256461236,1.0599086101230188
+"['Monsoon=True', 'Urgency=Medium(3)']","['LowLying=True', 'Weather=Rainy']",0.066875,0.2665670154459392,1.0599086101230186
+"['Monsoon=True', 'Zone=Baner']",['Urgency=High(4-5)'],0.0665,0.4470588235294118,1.0584405410580924
+"['Monsoon=True', 'LowLying=True', 'Zone=Swargate']",['Urgency=High(4-5)'],0.065125,0.4468267581475129,1.057891111328826
+"['Monsoon=True', 'Zone=Swargate']",['Urgency=High(4-5)'],0.065125,0.4468267581475129,1.057891111328826
+"['Type=streetlight', 'Urgency=High(4-5)']","['Monsoon=True', 'LowLying=True']",0.042,0.463448275862069,1.0574974919841849
+['Zone=Kothrud'],"['Monsoon=True', 'Urgency=Low(1-2)']",0.04175,0.25593869731800767,1.0570519249065882
+['Zone=Shivajinagar'],['Type=pothole'],0.047625,0.28369322412509307,1.055602694418951
+"['Zone=Shivajinagar', 'LowLying=True']",['Type=pothole'],0.047625,0.28369322412509307,1.055602694418951
+"['Monsoon=True', 'Type=pothole', 'LowLying=True']",['Weather=Rainy'],0.0655,0.5325203252032521,1.0552793167267815
+"['Monsoon=True', 'Repeat=True', 'Urgency=High(4-5)']",['LowLying=True'],0.055375,0.5280095351609059,1.0552276495846233
+"['Type=garbage', 'Urgency=Low(1-2)']","['Monsoon=True', 'LowLying=True', 'Weather=Rainy']",0.04,0.26058631921824105,1.053938601489347
+"['Urgency=High(4-5)', 'Type=water leak']",['LowLying=True'],0.1025,0.5273311897106109,1.053871975439642
+"['Type=pothole', 'Urgency=Medium(3)']",['Monsoon=True'],0.105,0.9302325581395349,1.05364016212888
+"['LowLying=True', 'Zone=Swargate']",['Urgency=High(4-5)'],0.073625,0.44385832705350414,1.0508631596413238
+['Zone=Swargate'],['Urgency=High(4-5)'],0.073625,0.44385832705350414,1.0508631596413238
+"['Monsoon=True', 'Urgency=High(4-5)']","['LowLying=True', 'Weather=Rainy']",0.103,0.26418723949983963,1.050446280317454
+"['LowLying=True', 'Weather=Rainy']","['Monsoon=True', 'Urgency=High(4-5)']",0.103,0.40954274353876735,1.050446280317454
+"['Monsoon=True', 'Urgency=High(4-5)', 'Type=water leak']",['Weather=Rainy'],0.0945,0.5297827610371408,1.0498543691595559
+"['Monsoon=True', 'Weather=Stormy']",['Type=garbage'],0.046125,0.2673913043478261,1.0496223919443617
+['Weather=Stormy'],['Type=garbage'],0.046125,0.2673913043478261,1.0496223919443617
+['Zone=Kothrud'],['Weather=Rainy'],0.086375,0.5295019157088122,1.0492978265222932
+['Weather=Cloudy'],['Type=pothole'],0.043625,0.28190630048465265,1.0489536762219633
+"['Monsoon=True', 'Zone=Hadapsar']",['Urgency=High(4-5)'],0.06475,0.44273504273504277,1.048203711713626
+"['Monsoon=True', 'LowLying=True', 'Zone=Hadapsar']",['Urgency=High(4-5)'],0.06475,0.44273504273504277,1.048203711713626
+"['Type=pothole', 'LowLying=True', 'Urgency=Medium(3)']",['Monsoon=True'],0.052875,0.9235807860262009,1.046105944812347
+['Zone=Kothrud'],"['Monsoon=True', 'Weather=Rainy']",0.08475,0.5195402298850575,1.0456155570013737
+['Monsoon=True'],['Urgency=High(4-5)'],0.389875,0.4415970550757469,1.0455094526800757
+['Urgency=High(4-5)'],['Monsoon=True'],0.389875,0.9230541580349216,1.0455094526800754
+"['Monsoon=True', 'Weather=Rainy', 'Type=water leak']",['LowLying=True'],0.06225,0.523109243697479,1.0454344115862684
+['Zone=Viman Nagar'],['Urgency=Medium(3)'],0.050375,0.2963235294117647,1.045232907978006
+"['Monsoon=True', 'LowLying=True']",['Type=pothole'],0.123,0.28066172276098117,1.0443226893431858
+['Type=pothole'],"['Monsoon=True', 'LowLying=True']",0.123,0.4576744186046512,1.0443226893431858
+"['Zone=Hadapsar', 'Urgency=High(4-5)']",['Monsoon=True'],0.06475,0.9217081850533807,1.0439849186502967
+"['LowLying=True', 'Zone=Hadapsar', 'Urgency=High(4-5)']",['Monsoon=True'],0.06475,0.9217081850533807,1.0439849186502967
+"['Type=water leak', 'Urgency=High(4-5)']","['Monsoon=True', 'LowLying=True', 'Weather=Rainy']",0.050125,0.2578778135048232,1.0429840788870504
+"['Weather=Rainy', 'Type=water leak']",['LowLying=True'],0.062875,0.5217842323651453,1.0427863749490787
+"['Type=garbage', 'Urgency=Low(1-2)']","['LowLying=True', 'Weather=Rainy']",0.04025,0.26221498371335505,1.0426043089994237
+"['Type=pothole', 'Urgency=High(4-5)']",['LowLying=True'],0.056125,0.521486643437863,1.0421916431433684
+['Weather=Stormy'],['Type=water leak'],0.043875,0.25434782608695655,1.0418753756762174
+"['Monsoon=True', 'Weather=Stormy']",['Type=water leak'],0.043875,0.25434782608695655,1.0418753756762174
+['Type=streetlight'],"['LowLying=True', 'Weather=Rainy']",0.060875,0.2619688004303389,1.0416254490271923
+"['Monsoon=True', 'Type=pothole', 'Urgency=High(4-5)']",['LowLying=True'],0.0535,0.5206812652068127,1.0405820938432429
+['Type=streetlight'],['Weather=Rainy'],0.122,0.5250134480903712,1.0404031668870373
+"['Urgency=High(4-5)', 'Type=water leak']","['Monsoon=True', 'LowLying=True']",0.088625,0.45594855305466236,1.0403846048024241
+['Urgency=High(4-5)'],['LowLying=True'],0.21975,0.520272269902338,1.0397647162674752
+['LowLying=True'],['Urgency=High(4-5)'],0.21975,0.4391706220334749,1.0397647162674752
+"['Urgency=High(4-5)', 'Type=water leak']",['Monsoon=True'],0.178375,0.9176848874598071,1.0394278776268522
+['Repeat=True'],['LowLying=True'],0.094375,0.5199724517906337,1.0391655294341917
+"['Weather=Rainy', 'Urgency=High(4-5)']",['LowLying=True'],0.104375,0.5199252801992528,1.0390712569557887
+"['Repeat=True', 'Weather=Rainy']",['LowLying=True'],0.04575,0.5198863636363636,1.0389934821611064
+['Zone=Viman Nagar'],"['Monsoon=True', 'Urgency=Low(1-2)']",0.04275,0.2514705882352941,1.0385981961189226
+['Zone=Hadapsar'],['Type=pothole'],0.0465,0.27906976744186046,1.0383991346673878
+"['LowLying=True', 'Zone=Hadapsar']",['Type=pothole'],0.0465,0.27906976744186046,1.0383991346673878
+['Type=streetlight'],"['Monsoon=True', 'Weather=Rainy']",0.119875,0.5158687466379774,1.0382264083280048
+"['Monsoon=True', 'Repeat=True', 'Weather=Rainy']",['LowLying=True'],0.045125,0.5194244604316547,1.0380703680872438
+['Type=streetlight'],"['Monsoon=True', 'LowLying=True', 'Weather=Rainy']",0.0595,0.2560516406670253,1.0355981422326606
+"['Urgency=High(4-5)', 'Type=water leak']","['LowLying=True', 'Weather=Rainy']",0.050625,0.2604501607717042,1.035587120364629
+"['Monsoon=True', 'Weather=Rainy', 'Urgency=High(4-5)']",['LowLying=True'],0.103,0.5179132620993085,1.0350502365212262
+['Zone=Viman Nagar'],['Urgency=Low(1-2)'],0.05175,0.3044117647058823,1.0349741256468588
+['Zone=Viman Nagar'],"['Monsoon=True', 'Urgency=Medium(3)']",0.044125,0.25955882352941173,1.0346141446115067
+"['Monsoon=True', 'LowLying=True', 'Urgency=High(4-5)']",['Weather=Rainy'],0.103,0.5218492716909436,1.034132814844575
+"['Monsoon=True', 'Zone=Viman Nagar']",['Type=pothole'],0.042,0.27791563275434245,1.034104680016158
+"['Type=streetlight', 'LowLying=True']",['Weather=Rainy'],0.060875,0.5208556149732619,1.0321637155774326
+"['Repeat=True', 'Urgency=High(4-5)']",['Monsoon=True'],0.104875,0.9109663409337676,1.031818027392063
+['Zone=Shivajinagar'],"['Monsoon=True', 'Urgency=High(4-5)']",0.0675,0.4020848845867461,1.0313174340153795
+"['Zone=Shivajinagar', 'LowLying=True']","['Monsoon=True', 'Urgency=High(4-5)']",0.0675,0.4020848845867461,1.0313174340153795
+['Type=water leak'],"['Monsoon=True', 'LowLying=True', 'Weather=Rainy']",0.06225,0.25499231950844853,1.0313137290533814
+"['Monsoon=True', 'LowLying=True', 'Weather=Rainy']",['Type=water leak'],0.06225,0.2517694641051567,1.0313137290533814
+"['Monsoon=True', 'LowLying=True', 'Zone=Hadapsar']",['Type=pothole'],0.0405,0.27692307692307694,1.0304114490161003
+"['Monsoon=True', 'Zone=Hadapsar']",['Type=pothole'],0.0405,0.27692307692307694,1.0304114490161003
+"['Monsoon=True', 'Zone=Viman Nagar']",['Urgency=Medium(3)'],0.044125,0.2919768403639371,1.0299006714777323
+"['Monsoon=True', 'Type=pothole', 'LowLying=True']",['Urgency=High(4-5)'],0.0535,0.4349593495934959,1.0297942576939827
+"['Type=pothole', 'Zone=Shivajinagar']",['Monsoon=True'],0.04325,0.9081364829396325,1.02861275145364
+"['Type=pothole', 'Zone=Shivajinagar', 'LowLying=True']",['Monsoon=True'],0.04325,0.9081364829396325,1.02861275145364
+"['Type=streetlight', 'Urgency=High(4-5)']",['LowLying=True'],0.046625,0.5144827586206897,1.0281943714627824
+"['Monsoon=True', 'Weather=Stormy']",['Urgency=Medium(3)'],0.05025,0.291304347826087,1.027528563760448
+['Weather=Stormy'],['Urgency=Medium(3)'],0.05025,0.291304347826087,1.027528563760448
+"['Monsoon=True', 'Repeat=True']",['LowLying=True'],0.0815,0.5137903861308117,1.0268106642634258
+"['Monsoon=True', 'Type=streetlight', 'Urgency=High(4-5)']",['LowLying=True'],0.042,0.5137614678899083,1.0267528711264717
+"['Monsoon=True', 'Type=pothole']",['LowLying=True'],0.123,0.513302034428795,1.0258346928379614
+['Repeat=True'],"['Monsoon=True', 'LowLying=True']",0.0815,0.44903581267217635,1.024611095658132
+"['Type=streetlight', 'LowLying=True']","['Monsoon=True', 'Weather=Rainy']",0.0595,0.509090909090909,1.024585477415666
+['Zone=Baner'],"['Monsoon=True', 'Urgency=High(4-5)']",0.0665,0.3993993993993994,1.0244293668468083
+['Type=pothole'],['LowLying=True'],0.13775,0.5125581395348838,1.0243480180562254
+['LowLying=True'],['Type=pothole'],0.13775,0.2752935298526106,1.0243480180562254
+"['LowLying=True', 'Zone=Hadapsar']",['Weather=Rainy'],0.086125,0.5168792198049512,1.0242838143273743
+['Zone=Hadapsar'],['Weather=Rainy'],0.086125,0.5168792198049512,1.0242838143273743
+['Type=water leak'],"['LowLying=True', 'Weather=Rainy']",0.062875,0.257552483358935,1.0240655401945726
+"['LowLying=True', 'Weather=Rainy']",['Type=water leak'],0.062875,0.25,1.0240655401945724
+"['Type=streetlight', 'Urgency=High(4-5)']",['Monsoon=True'],0.08175,0.9020689655172415,1.0217402979099437
+['Zone=Baner'],['Urgency=Low(1-2)'],0.05,0.3003003003003003,1.0209954961336176
+"['LowLying=True', 'Zone=Hadapsar']","['Monsoon=True', 'Weather=Rainy']",0.0845,0.5071267816954239,1.020632516619721
+['Zone=Hadapsar'],"['Monsoon=True', 'Weather=Rainy']",0.0845,0.5071267816954239,1.020632516619721
+['Zone=Viman Nagar'],['Type=pothole'],0.046625,0.2742647058823529,1.0205198358413132
+"['Type=streetlight', 'LowLying=True', 'Urgency=High(4-5)']",['Monsoon=True'],0.042,0.900804289544236,1.0203078460079127
+"['Type=pothole', 'Zone=Viman Nagar']",['Monsoon=True'],0.042,0.900804289544236,1.0203078460079127
+"['LowLying=True', 'Urgency=High(4-5)']",['Monsoon=True'],0.197375,0.8981797497155859,1.0173351263945474
+"['Monsoon=True', 'Type=pothole']",['Urgency=High(4-5)'],0.10275,0.42879499217527384,1.0151997447180203
+"['LowLying=True', 'Zone=Hadapsar']",['Urgency=Low(1-2)'],0.04975,0.29857464366091524,1.0151284102368558
+['Zone=Hadapsar'],['Urgency=Low(1-2)'],0.04975,0.29857464366091524,1.0151284102368558
+"['Monsoon=True', 'Weather=Cloudy']",['LowLying=True'],0.065625,0.5077369439071567,1.0147128531744327
+"['LowLying=True', 'Type=water leak']","['Monsoon=True', 'Weather=Rainy']",0.06225,0.5040485829959515,1.0144373997402796
+"['Repeat=True', 'LowLying=True', 'Urgency=High(4-5)']",['Monsoon=True'],0.055375,0.8949494949494949,1.0136763357774259
+"['Urgency=Medium(3)', 'Type=pothole']",['LowLying=True'],0.05725,0.5071982281284607,1.0136362290851075
+"['Urgency=Medium(3)', 'Zone=Kothrud']",['Monsoon=True'],0.04125,0.894308943089431,1.0129508062743096
+"['Urgency=Medium(3)', 'Type=streetlight']",['Monsoon=True'],0.0475,0.8941176470588236,1.012734132305053
+['Weather=Cloudy'],['LowLying=True'],0.078375,0.5064620355411955,1.0121649473718621
+['Zone=Baner'],['Monsoon=True'],0.14875,0.8933933933933933,1.0119137968493765
+['Weather=Clear'],['LowLying=True'],0.085125,0.5063197026022306,1.0118804948333362
+['LowLying=True'],"['Monsoon=True', 'Urgency=High(4-5)']",0.197375,0.39445415938046463,1.0117451987956771
+"['Monsoon=True', 'Urgency=High(4-5)']",['LowLying=True'],0.197375,0.5062520038473869,1.011745198795677
+"['Type=pothole', 'LowLying=True']",['Monsoon=True'],0.123,0.8929219600725952,1.011379821687776
+"['Urgency=Medium(3)', 'Zone=Swargate']",['Monsoon=True'],0.041625,0.8927613941018767,1.0111979545256993
+"['Urgency=Medium(3)', 'LowLying=True', 'Zone=Swargate']",['Monsoon=True'],0.041625,0.8927613941018767,1.0111979545256993
+['Type=water leak'],['LowLying=True'],0.1235,0.5058883768561188,1.0110184898448538
+['Weather=Rainy'],"['Monsoon=True', 'Urgency=High(4-5)']",0.198875,0.39410453306911075,1.0108484336495305
+"['Monsoon=True', 'Urgency=High(4-5)']",['Weather=Rainy'],0.198875,0.5100993908303944,1.0108484336495305
+"['Monsoon=True', 'Zone=Kothrud']",['Urgency=High(4-5)'],0.06175,0.4265975820379966,1.0099972347747774
+['Monsoon=True'],['Type=pothole'],0.239625,0.27141441313889286,1.0099140954005317
+['Type=pothole'],['Monsoon=True'],0.239625,0.8916279069767442,1.0099140954005315
+"['Type=streetlight', 'Urgency=Low(1-2)']",['LowLying=True'],0.04475,0.5049365303244006,1.0091162234811901
+"['LowLying=True', 'Type=water leak']",['Weather=Rainy'],0.062875,0.5091093117408907,1.0088864240592335
+"['Urgency=Medium(3)', 'Zone=Shivajinagar', 'LowLying=True']",['Monsoon=True'],0.04175,0.8906666666666667,1.008825333899665
+"['Urgency=Medium(3)', 'Zone=Shivajinagar']",['Monsoon=True'],0.04175,0.8906666666666667,1.008825333899665
+"['Monsoon=True', 'LowLying=True', 'Urgency=High(4-5)']",['Type=pothole'],0.0535,0.2710576314122863,1.008586535487577
+['Zone=Kothrud'],"['Monsoon=True', 'Urgency=Medium(3)']",0.04125,0.25287356321839083,1.0079663705765454
+"['Weather=Stormy', 'Urgency=High(4-5)']",['LowLying=True'],0.051375,0.5042944785276073,1.007833082243532
+"['Monsoon=True', 'Weather=Stormy', 'Urgency=High(4-5)']",['LowLying=True'],0.051375,0.5042944785276073,1.007833082243532
+"['Zone=Shivajinagar', 'Urgency=High(4-5)']",['Monsoon=True'],0.0675,0.8896210873146624,1.0076410446718533
+"['Zone=Shivajinagar', 'LowLying=True', 'Urgency=High(4-5)']",['Monsoon=True'],0.0675,0.8896210873146624,1.0076410446718533
+"['Monsoon=True', 'Weather=Cloudy']",['Urgency=High(4-5)'],0.055,0.425531914893617,1.0074741992154295
+"['Monsoon=True', 'LowLying=True', 'Zone=Swargate']",['Urgency=Medium(3)'],0.041625,0.28559176672384223,1.0073783658689321
+"['Monsoon=True', 'Zone=Swargate']",['Urgency=Medium(3)'],0.041625,0.28559176672384223,1.0073783658689321
+['Zone=Swargate'],"['Monsoon=True', 'Urgency=High(4-5)']",0.065125,0.39261492087415223,1.007027690603789
+"['LowLying=True', 'Zone=Swargate']","['Monsoon=True', 'Urgency=High(4-5)']",0.065125,0.39261492087415223,1.007027690603789
+"['Monsoon=True', 'Zone=Shivajinagar']",['Urgency=Medium(3)'],0.04175,0.2854700854700855,1.0069491550973035
+"['Monsoon=True', 'Zone=Shivajinagar', 'LowLying=True']",['Urgency=Medium(3)'],0.04175,0.2854700854700855,1.0069491550973035
+['Zone=Viman Nagar'],['Monsoon=True'],0.151125,0.8889705882352941,1.0069042483197441
+"['Monsoon=True', 'Zone=Viman Nagar']",['Urgency=High(4-5)'],0.06425,0.42514474772539285,1.006557556023422
+"['Monsoon=True', 'Type=pothole', 'Urgency=Medium(3)']",['LowLying=True'],0.052875,0.5035714285714286,1.0063880660932871
+"['Repeat=True', 'Urgency=High(4-5)', 'Type=water leak']",['Monsoon=True'],0.041625,0.888,1.0058048987682289
+['Weather=Stormy'],['Type=pothole'],0.046625,0.2702898550724638,1.0057296932928885
+"['Monsoon=True', 'Weather=Stormy']",['Type=pothole'],0.046625,0.2702898550724638,1.0057296932928885
+"['Monsoon=True', 'Zone=Kothrud']",['Urgency=Medium(3)'],0.04125,0.2849740932642487,1.0051996235070502
+['Type=streetlight'],['LowLying=True'],0.116875,0.5029585798816568,1.0051632872978402
+['Zone=Kothrud'],['Monsoon=True'],0.14475,0.8873563218390804,1.0050758282192616
+"['LowLying=True', 'Zone=Swargate']","['Monsoon=True', 'Weather=Rainy']",0.08275,0.49886963074604374,1.0040143511870063
+['Zone=Swargate'],"['Monsoon=True', 'Weather=Rainy']",0.08275,0.49886963074604374,1.0040143511870063
+"['LowLying=True', 'Zone=Swargate']",['Weather=Rainy'],0.084,0.5064054257724191,1.0035282155509915
+['Zone=Swargate'],['Weather=Rainy'],0.084,0.5064054257724191,1.0035282155509915
+"['Urgency=Medium(3)', 'LowLying=True']",['Monsoon=True'],0.124125,0.8858162355040142,1.003331429142307
+['Weather=Cloudy'],['Urgency=Medium(3)'],0.044,0.28432956381260094,1.0029261510144656
+['Monsoon=True'],['Urgency=Medium(3)'],0.250875,0.284156873849639,1.0023170153426422
+['Urgency=Medium(3)'],['Monsoon=True'],0.250875,0.8849206349206351,1.0023170153426422
+['Repeat=True'],"['LowLying=True', 'Weather=Rainy']",0.04575,0.25206611570247933,1.0022509570675122
+"['Type=garbage', 'Zone=Baner']",['Monsoon=True'],0.04025,0.8846153846153847,1.0019712695629446
+"['Zone=Swargate', 'Urgency=High(4-5)']",['Monsoon=True'],0.065125,0.8845500848896436,1.0018973069683066
+"['LowLying=True', 'Zone=Swargate', 'Urgency=High(4-5)']",['Monsoon=True'],0.065125,0.8845500848896436,1.0018973069683066
+"['Type=pothole', 'Repeat=True']",['Monsoon=True'],0.040625,0.8831521739130436,1.000313944684178
+"['LowLying=True', 'Zone=Swargate']","['Monsoon=True', 'Urgency=Medium(3)']",0.041625,0.2509419743782969,1.0002669631421899
+['Zone=Swargate'],"['Monsoon=True', 'Urgency=Medium(3)']",0.041625,0.2509419743782969,1.0002669631421899
+['Zone=Baner'],['Type=pothole'],0.04475,0.26876876876876876,1.0000698372791397
+"['Urgency=Medium(3)', 'Zone=Baner']",['Monsoon=True'],0.041375,0.8826666666666667,0.9997640285053566
+"['Type=garbage', 'LowLying=True', 'Urgency=Low(1-2)']",['Monsoon=True'],0.063,0.8826619964973731,0.9997587387765801
+"['Type=streetlight', 'Urgency=High(4-5)']","['Monsoon=True', 'Weather=Rainy']",0.045,0.496551724137931,0.9993493819128172
+"['Monsoon=True', 'LowLying=True']",['Urgency=Medium(3)'],0.124125,0.28322875071306336,0.999043212391758
+['Urgency=Medium(3)'],"['Monsoon=True', 'LowLying=True']",0.124125,0.43783068783068785,0.9990432123917579
+"['Weather=Cloudy', 'Urgency=High(4-5)']",['Monsoon=True'],0.055,0.8817635270541082,0.9987410755249704
+['Weather=Rainy'],['Type=garbage'],0.128375,0.25439682932870944,0.9986136578163276
+['Type=garbage'],['Weather=Rainy'],0.128375,0.5039254170755643,0.9986136578163275
+"['LowLying=True', 'Zone=Hadapsar']",['Urgency=High(4-5)'],0.07025,0.42160540135033764,0.9981779256592782
+['Zone=Hadapsar'],['Urgency=High(4-5)'],0.07025,0.42160540135033764,0.9981779256592782
+['Monsoon=True'],['Type=garbage'],0.2245,0.2542828826277786,0.9981663694907895
+['Type=garbage'],['Monsoon=True'],0.2245,0.8812561334641806,0.9981663694907894
+['Type=water leak'],"['Monsoon=True', 'LowLying=True']",0.10675,0.4372759856630824,0.9977774915301367
+"['Monsoon=True', 'Weather=Rainy']",['Type=garbage'],0.12625,0.2540880503144654,0.9974015714012382
+['Type=garbage'],"['Monsoon=True', 'Weather=Rainy']",0.12625,0.49558390578999023,0.9974015714012382
+['Zone=Kothrud'],['Urgency=Medium(3)'],0.046125,0.2827586206896552,0.9973849054308825
+"['Type=streetlight', 'Weather=Rainy']",['LowLying=True'],0.060875,0.4989754098360656,0.9972029174840181
+['Type=streetlight'],['Monsoon=True'],0.2045,0.8800430338891877,0.9967923362754498
+['Zone=Hadapsar'],"['Monsoon=True', 'Urgency=High(4-5)']",0.06475,0.38859714928732186,0.9967224092012102
+"['LowLying=True', 'Zone=Hadapsar']","['Monsoon=True', 'Urgency=High(4-5)']",0.06475,0.38859714928732186,0.9967224092012102
+"['Type=pothole', 'LowLying=True']","['Monsoon=True', 'Urgency=High(4-5)']",0.0535,0.38838475499092556,0.9961776338337301
+['LowLying=True'],['Weather=Rainy'],0.2515,0.5026230327254559,0.9960327623987237
+['Weather=Rainy'],['LowLying=True'],0.2515,0.49838989348526136,0.9960327623987236
+"['Monsoon=True', 'Type=water leak']",['LowLying=True'],0.10675,0.4982497082847141,0.9957526021178398
+['Type=streetlight'],"['Monsoon=True', 'LowLying=True']",0.101375,0.43625605164066705,0.9954502034014081
+['Zone=Swargate'],['Monsoon=True'],0.14575,0.8786737000753579,0.9952413422912167
+"['LowLying=True', 'Zone=Swargate']",['Monsoon=True'],0.14575,0.8786737000753579,0.9952413422912167
+"['Type=streetlight', 'Urgency=High(4-5)']",['Weather=Rainy'],0.0455,0.5020689655172413,0.9949347842798937
+"['Type=garbage', 'LowLying=True']",['Weather=Rainy'],0.061375,0.5020449897750511,0.9948872722814983
+"['Monsoon=True', 'Weather=Rainy']",['LowLying=True'],0.24725,0.49761006289308174,0.9944742700836008
+['LowLying=True'],"['Monsoon=True', 'Weather=Rainy']",0.24725,0.4941294029477891,0.9944742700836007
+['Urgency=Medium(3)'],['Weather=Rainy'],0.14225,0.5017636684303352,0.9943297863370526
+['Weather=Rainy'],['Urgency=Medium(3)'],0.14225,0.28189249442655434,0.9943297863370525
+"['Type=garbage', 'Urgency=Low(1-2)']",['Monsoon=True'],0.13475,0.8778501628664496,0.9943085520220298
+['Zone=Hadapsar'],['Monsoon=True'],0.14625,0.8777194298574643,0.9941604755570883
+"['LowLying=True', 'Zone=Hadapsar']",['Monsoon=True'],0.14625,0.8777194298574643,0.9941604755570883
+['Type=water leak'],['Monsoon=True'],0.21425,0.8776241679467486,0.9940525758989083
+"['Urgency=Medium(3)', 'Type=garbage']",['Monsoon=True'],0.06275,0.8776223776223777,0.9940505480644233
+['Urgency=Medium(3)'],"['Monsoon=True', 'Weather=Rainy']",0.14,0.49382716049382724,0.9938659833838033
+"['Monsoon=True', 'Weather=Rainy']",['Urgency=Medium(3)'],0.14,0.28176100628930817,0.9938659833838032
+"['Monsoon=True', 'Type=pothole', 'Weather=Rainy']",['LowLying=True'],0.0655,0.4971537001897533,0.9935622287079756
+['Zone=Baner'],['Urgency=Medium(3)'],0.046875,0.28153153153153154,0.9930565486121044
+"['Monsoon=True', 'Urgency=High(4-5)', 'Type=water leak']",['LowLying=True'],0.088625,0.49684653118430266,0.9929483511052764
+"['Type=garbage', 'LowLying=True']",['Monsoon=True'],0.107125,0.876278118609407,0.9925279553837258
+"['Urgency=Medium(3)', 'Zone=Viman Nagar']",['Monsoon=True'],0.044125,0.8759305210918114,0.9921342444760712
+['Monsoon=True'],['LowLying=True'],0.43825,0.49638963613195525,0.9920352458295383
+['LowLying=True'],['Monsoon=True'],0.43825,0.8758431176617536,0.9920352458295383
+"['Monsoon=True', 'Type=streetlight', 'Weather=Rainy']",['LowLying=True'],0.0595,0.49635036496350365,0.9919567623552409
+"['Type=pothole', 'Weather=Rainy']",['LowLying=True'],0.066375,0.49626168224299066,0.9917795298386024
+"['LowLying=True', 'Zone=Swargate']",['Urgency=Medium(3)'],0.046625,0.28108515448379806,0.9914820263978769
+['Zone=Swargate'],['Urgency=Medium(3)'],0.046625,0.28108515448379806,0.9914820263978769
+"['Monsoon=True', 'Type=streetlight']",['LowLying=True'],0.101375,0.4957212713936431,0.9906995181486746
+['Weather=Clear'],['Type=pothole'],0.04475,0.2661710037174721,0.990403734762687
+['Zone=Baner'],['Urgency=High(4-5)'],0.069625,0.4181681681681682,0.9900400548521295
+['Type=garbage'],['Urgency=Medium(3)'],0.0715,0.2806673209028459,0.9900081866061585
+['Urgency=Medium(3)'],['Type=garbage'],0.0715,0.25220458553791886,0.9900081866061585
+"['Urgency=Medium(3)', 'LowLying=True', 'Zone=Hadapsar']",['Monsoon=True'],0.04075,0.8739946380697051,0.9899415410672011
+"['Urgency=Medium(3)', 'Zone=Hadapsar']",['Monsoon=True'],0.04075,0.8739946380697051,0.9899415410672011
+['Repeat=True'],['Monsoon=True'],0.158625,0.8739669421487603,0.9899101709174688
+"['Monsoon=True', 'Weather=Stormy']",['LowLying=True'],0.085375,0.4949275362318841,0.9891132375356165
+['Weather=Stormy'],['LowLying=True'],0.085375,0.4949275362318841,0.9891132375356165
+"['Monsoon=True', 'Urgency=Medium(3)']",['LowLying=True'],0.124125,0.4947683109118086,0.9887950255544514
+['Zone=Viman Nagar'],"['Monsoon=True', 'Weather=Rainy']",0.0835,0.49117647058823527,0.9885312615612282
+['Urgency=Medium(3)'],['LowLying=True'],0.140125,0.494268077601411,0.9877953087212811
+['LowLying=True'],['Urgency=Medium(3)'],0.140125,0.28003997002248315,0.9877953087212811
+"['Type=garbage', 'LowLying=True']","['Monsoon=True', 'Weather=Rainy']",0.06,0.49079754601226994,0.9877686460624301
+['Zone=Hadapsar'],['Urgency=Medium(3)'],0.046625,0.2798199549887472,0.9870192415828826
+"['LowLying=True', 'Zone=Hadapsar']",['Urgency=Medium(3)'],0.046625,0.2798199549887472,0.9870192415828826
+"['Zone=Shivajinagar', 'LowLying=True']",['Monsoon=True'],0.14625,0.8711839166046165,0.9867579403705128
+['Zone=Shivajinagar'],['Monsoon=True'],0.14625,0.8711839166046165,0.9867579403705128
+['Type=pothole'],"['Monsoon=True', 'Weather=Rainy']",0.13175,0.4902325581395349,0.9866315635512652
+"['Monsoon=True', 'Weather=Rainy']",['Type=pothole'],0.13175,0.2651572327044025,0.9866315635512651
+"['Type=pothole', 'LowLying=True', 'Zone=Hadapsar']",['Monsoon=True'],0.0405,0.8709677419354839,0.9865130872835723
+"['Type=pothole', 'Zone=Hadapsar']",['Monsoon=True'],0.0405,0.8709677419354839,0.9865130872835723
+['Weather=Clear'],['Type=garbage'],0.04225,0.25130111524163573,0.9864616888778636
+"['Monsoon=True', 'LowLying=True', 'Weather=Rainy']",['Urgency=High(4-5)'],0.103,0.416582406471183,0.9862856619619603
+['Weather=Rainy'],['Type=pothole'],0.13375,0.2650483031954422,0.9862262444481571
+['Type=pothole'],['Weather=Rainy'],0.13375,0.4976744186046512,0.986226244448157
+['Weather=Clear'],['Urgency=Medium(3)'],0.047,0.2795539033457249,0.9860807878156082
+"['Monsoon=True', 'Type=garbage']",['Urgency=Medium(3)'],0.06275,0.2795100222717149,0.985926004485767
+"['Monsoon=True', 'LowLying=True', 'Weather=Rainy']",['Type=pothole'],0.0655,0.2649140546006067,0.9857267147929551
+['Zone=Viman Nagar'],['Weather=Rainy'],0.0845,0.4970588235294118,0.9850063384283613
+['Zone=Shivajinagar'],['Urgency=Medium(3)'],0.046875,0.27922561429635145,0.9849228017507988
+"['Zone=Shivajinagar', 'LowLying=True']",['Urgency=Medium(3)'],0.046875,0.27922561429635145,0.9849228017507988
+"['LowLying=True', 'Type=water leak', 'Urgency=High(4-5)']","['Monsoon=True', 'Weather=Rainy']",0.050125,0.4890243902439025,0.9842000306795522
+['Zone=Baner'],"['Monsoon=True', 'Weather=Rainy']",0.081375,0.48873873873873874,0.9836251345685307
+"['Monsoon=True', 'Zone=Hadapsar']",['Urgency=Medium(3)'],0.04075,0.27863247863247864,0.9828306124602422
+"['Monsoon=True', 'LowLying=True', 'Zone=Hadapsar']",['Urgency=Medium(3)'],0.04075,0.27863247863247864,0.9828306124602422
+"['LowLying=True', 'Weather=Rainy']",['Urgency=High(4-5)'],0.104375,0.4150099403578529,0.9825627472219068
+"['Type=streetlight', 'LowLying=True']",['Monsoon=True'],0.101375,0.8673796791443851,0.9824490206930597
+"['LowLying=True', 'Weather=Rainy']",['Type=pothole'],0.066375,0.2639165009940358,0.9820148874196681
+"['Monsoon=True', 'Urgency=Medium(3)']",['Type=garbage'],0.06275,0.2501245640259093,0.9818432346453753
+"['Monsoon=True', 'Zone=Baner']",['Urgency=Medium(3)'],0.041375,0.2781512605042017,0.9811331940183482
+['Type=water leak'],"['Monsoon=True', 'Weather=Rainy']",0.119,0.4874551971326164,0.9810419061788507
+"['Monsoon=True', 'Type=streetlight', 'LowLying=True']",['Urgency=High(4-5)'],0.042,0.41430332922318125,0.9808897998773157
+"['Monsoon=True', 'Urgency=High(4-5)']",['Type=pothole'],0.10275,0.2635460083360051,0.9806363100874609
+['Type=pothole'],"['Monsoon=True', 'Urgency=High(4-5)']",0.10275,0.38232558139534883,0.9806363100874609
+"['Monsoon=True', 'Zone=Kothrud']",['Urgency=Low(1-2)'],0.04175,0.2884283246977548,0.9806317881776618
+"['Monsoon=True', 'Repeat=True', 'Urgency=High(4-5)']",['Weather=Rainy'],0.051875,0.49463647199046484,0.9802060381282435
+"['Weather=Rainy', 'Urgency=Low(1-2)']",['LowLying=True'],0.07925,0.4903325599381284,0.9799301722470715
+"['Urgency=High(4-5)', 'LowLying=True', 'Type=water leak']",['Monsoon=True'],0.088625,0.8646341463414634,0.9793392567933892
+"['LowLying=True', 'Type=water leak']",['Monsoon=True'],0.10675,0.8643724696356275,0.9790428652251197
+['Zone=Baner'],['Weather=Rainy'],0.08225,0.49399399399399396,0.9789328590418508
+"['Urgency=High(4-5)', 'LowLying=True', 'Type=water leak']",['Weather=Rainy'],0.050625,0.4939024390243903,0.9787514273458316
+"['Repeat=True', 'Type=water leak']",['Monsoon=True'],0.042125,0.8641025641025641,0.978737153167282
+"['Monsoon=True', 'Weather=Rainy', 'Urgency=Low(1-2)']",['LowLying=True'],0.077375,0.4897151898734177,0.9786963574787264
+['Zone=Swargate'],['Type=pothole'],0.043625,0.2629992464204974,0.9786018471460368
+"['LowLying=True', 'Zone=Swargate']",['Type=pothole'],0.043625,0.2629992464204974,0.9786018471460368
+"['Urgency=High(4-5)', 'Type=water leak']","['Monsoon=True', 'Weather=Rainy']",0.0945,0.4861736334405145,0.9784626584966329
+['Type=water leak'],['Weather=Rainy'],0.1205,0.49359959037378387,0.9781512813946671
+"['Repeat=True', 'LowLying=True']",['Monsoon=True'],0.0815,0.8635761589403974,0.9781409134253405
+['Zone=Kothrud'],"['Monsoon=True', 'Urgency=High(4-5)']",0.06175,0.37854406130268203,0.9709369959671228
+"['Urgency=High(4-5)', 'Type=water leak']",['Weather=Rainy'],0.095125,0.48938906752411576,0.969807416446105
+['Zone=Viman Nagar'],"['Monsoon=True', 'Urgency=High(4-5)']",0.06425,0.3779411764705882,0.969390641796956
+['Weather=Cloudy'],"['Monsoon=True', 'LowLying=True']",0.065625,0.42407108239095315,0.9676465085931618
+"['Type=pothole', 'LowLying=True']",['Urgency=High(4-5)'],0.056125,0.40744101633393826,0.9646428323976046
+"['Monsoon=True', 'Urgency=Low(1-2)']",['LowLying=True'],0.11675,0.4821889519876097,0.9636551626032669
+['Repeat=True'],"['Monsoon=True', 'Weather=Rainy']",0.086875,0.4786501377410468,0.9633210319316665
+"['Repeat=True', 'LowLying=True']","['Monsoon=True', 'Weather=Rainy']",0.045125,0.4781456953642384,0.96230580199092
+"['Monsoon=True', 'Zone=Viman Nagar']",['Urgency=Low(1-2)'],0.04275,0.28287841191067,0.9617625564323671
+"['Type=streetlight', 'Urgency=Low(1-2)']",['Monsoon=True'],0.07525,0.849083215796897,0.96172529043964
+['Repeat=True'],['Weather=Rainy'],0.088,0.48484848484848486,0.9608094819885754
+"['Repeat=True', 'LowLying=True']",['Weather=Rainy'],0.04575,0.48476821192052977,0.9606504075710276
+['Zone=Shivajinagar'],['Weather=Rainy'],0.081375,0.48473566641846616,0.9605859131403838
+"['Zone=Shivajinagar', 'LowLying=True']",['Weather=Rainy'],0.081375,0.48473566641846616,0.9605859131403838
+"['Urgency=Medium(3)', 'LowLying=True']","['Monsoon=True', 'Weather=Rainy']",0.066875,0.47725245316681536,0.960508081845163
+"['Urgency=Medium(3)', 'LowLying=True']",['Weather=Rainy'],0.067875,0.4843889384478145,0.9598988128765212
+['Type=garbage'],"['Monsoon=True', 'LowLying=True']",0.107125,0.4205103042198234,0.959521515618536
+['Zone=Shivajinagar'],"['Monsoon=True', 'Weather=Rainy']",0.08,0.4765450483991065,0.9590843741365666
+"['Zone=Shivajinagar', 'LowLying=True']","['Monsoon=True', 'Weather=Rainy']",0.08,0.4765450483991065,0.9590843741365666
+['Type=garbage'],['LowLying=True'],0.12225,0.4798822374877331,0.9590451910821546
+"['Type=pothole', 'LowLying=True']","['Monsoon=True', 'Weather=Rainy']",0.0655,0.47549909255898365,0.9569793057790865
+"['Type=garbage', 'Weather=Rainy']",['LowLying=True'],0.061375,0.47809152872444016,0.9554664576056761
+"['Type=pothole', 'LowLying=True']",['Weather=Rainy'],0.066375,0.4818511796733212,0.9548698135711097
+['LowLying=True'],['Urgency=Low(1-2)'],0.1405,0.280789407944042,0.9546601205067301
+['Urgency=Low(1-2)'],['LowLying=True'],0.1405,0.47768805779855505,0.95466012050673
+"['Monsoon=True', 'Weather=Rainy', 'Urgency=Medium(3)']",['LowLying=True'],0.066875,0.4776785714285714,0.9546411619856535
+['Weather=Cloudy'],['Urgency=High(4-5)'],0.062375,0.40306946688206785,0.9542929076817233
+"['Monsoon=True', 'LowLying=True', 'Weather=Rainy']",['Urgency=Medium(3)'],0.066875,0.27047522750252784,0.9540572398678231
+"['Monsoon=True', 'Type=garbage']",['LowLying=True'],0.107125,0.47717149220489974,0.9536277635871091
+"['Urgency=Medium(3)', 'Weather=Rainy']",['LowLying=True'],0.067875,0.47715289982425313,0.9535906066934862
+"['Monsoon=True', 'Repeat=True']",['Type=pothole'],0.040625,0.25610717100078806,0.9529569153517695
+"['LowLying=True', 'Weather=Rainy']",['Urgency=Medium(3)'],0.067875,0.26988071570576544,0.9519601964929999
+"['LowLying=True', 'Urgency=High(4-5)']",['Type=pothole'],0.056125,0.2554038680318544,0.9503399740720163
+"['Monsoon=True', 'Weather=Rainy', 'Type=garbage']",['LowLying=True'],0.06,0.4752475247524752,0.9497827124705974
+"['Monsoon=True', 'Weather=Clear']",['LowLying=True'],0.04,0.4747774480712166,0.9488432636946621
+"['Weather=Cloudy', 'LowLying=True']",['Monsoon=True'],0.065625,0.8373205741626795,0.9484021794282084
+['Urgency=High(4-5)'],['Type=pothole'],0.107625,0.2548091151228174,0.9481269399918787
+['Type=pothole'],['Urgency=High(4-5)'],0.107625,0.4004651162790698,0.9481269399918787
+['Urgency=High(4-5)'],"['Monsoon=True', 'Weather=Rainy']",0.198875,0.47084936371707603,0.9476213609400272
+"['Monsoon=True', 'Weather=Rainy']",['Urgency=High(4-5)'],0.198875,0.400251572327044,0.9476213609400272
+"['Monsoon=True', 'LowLying=True', 'Zone=Hadapsar']",['Urgency=Low(1-2)'],0.04075,0.27863247863247864,0.9473267441818227
+"['Monsoon=True', 'Zone=Hadapsar']",['Urgency=Low(1-2)'],0.04075,0.27863247863247864,0.9473267441818227
+"['Monsoon=True', 'Type=streetlight']",['Urgency=High(4-5)'],0.08175,0.3997555012224939,0.9464468806688225
+"['Type=streetlight', 'Weather=Rainy']","['Monsoon=True', 'Urgency=High(4-5)']",0.045,0.36885245901639346,0.9460787663132887
+['Weather=Cloudy'],['Monsoon=True'],0.12925,0.8352180936995154,0.9460207772329213
+['Zone=Viman Nagar'],['Urgency=High(4-5)'],0.067875,0.39926470588235297,0.9452848911094477
+['Zone=Kothrud'],['Urgency=High(4-5)'],0.065125,0.3992337164750958,0.9452115216930354
+"['Type=streetlight', 'LowLying=True']",['Urgency=High(4-5)'],0.046625,0.39893048128342246,0.9444935928580585
+"['LowLying=True', 'Urgency=High(4-5)']","['Monsoon=True', 'Weather=Rainy']",0.103,0.4687144482366325,0.9433246756963672
+['Repeat=True'],['Type=pothole'],0.046,0.2534435261707989,0.9430456787750657
+['Weather=Rainy'],['Urgency=High(4-5)'],0.20075,0.39782016348773847,0.9418648440076672
+['Urgency=High(4-5)'],['Weather=Rainy'],0.20075,0.47528854690736905,0.9418648440076672
+"['Monsoon=True', 'Weather=Rainy', 'Type=garbage', 'Urgency=Low(1-2)']",['LowLying=True'],0.04,0.47128129602356406,0.9418561998972051
+"['LowLying=True', 'Urgency=High(4-5)']",['Weather=Rainy'],0.104375,0.474971558589306,0.9412366779079634
+"['LowLying=True', 'Urgency=Low(1-2)']",['Monsoon=True'],0.11675,0.8309608540925266,0.9411987587059625
+"['Urgency=Medium(3)', 'Repeat=True']",['Monsoon=True'],0.04875,0.8297872340425533,0.939869442494751
+"['Type=garbage', 'Weather=Rainy', 'Urgency=Low(1-2)']",['LowLying=True'],0.04025,0.4687045123726346,0.9367064948741136
+"['Type=garbage', 'Urgency=Low(1-2)']","['Monsoon=True', 'LowLying=True']",0.063,0.41042345276872966,0.9365053115087957
+"['Zone=Viman Nagar', 'Urgency=Low(1-2)']",['Monsoon=True'],0.04275,0.8260869565217392,0.9356782744122772
+"['LowLying=True', 'Zone=Swargate']",['Urgency=Low(1-2)'],0.045625,0.2750565184626978,0.9351687835535836
+['Zone=Swargate'],['Urgency=Low(1-2)'],0.045625,0.2750565184626978,0.9351687835535836
+"['Monsoon=True', 'Type=garbage', 'Urgency=Low(1-2)']",['LowLying=True'],0.063,0.4675324675324675,0.9343641619434774
+"['Monsoon=True', 'Zone=Baner']",['Urgency=Low(1-2)'],0.040875,0.2747899159663866,0.9342623577267711
+['Urgency=Low(1-2)'],['Monsoon=True'],0.242125,0.8232044198895028,0.9324133313204053
+['Monsoon=True'],['Urgency=Low(1-2)'],0.242125,0.2742460710746142,0.9324133313204052
+"['Type=garbage', 'Urgency=Low(1-2)']",['LowLying=True'],0.071375,0.46498371335504884,0.9292704738547066
+"['Monsoon=True', 'Type=pothole', 'Urgency=High(4-5)']",['Weather=Rainy'],0.048125,0.46836982968369834,0.9281542327147849
+"['Zone=Hadapsar', 'Urgency=Low(1-2)']",['Monsoon=True'],0.04075,0.8190954773869347,0.9277592834624774
+"['LowLying=True', 'Zone=Hadapsar', 'Urgency=Low(1-2)']",['Monsoon=True'],0.04075,0.8190954773869347,0.9277592834624774
+"['Zone=Baner', 'Urgency=Low(1-2)']",['Monsoon=True'],0.040875,0.8175,0.9259521449808864
+['Type=streetlight'],['Urgency=High(4-5)'],0.090625,0.38999462076385155,0.9233373678931082
+"['Type=pothole', 'Weather=Rainy']","['Monsoon=True', 'Urgency=High(4-5)']",0.048125,0.3598130841121495,0.9228934507525476
+"['Type=streetlight', 'LowLying=True']","['Monsoon=True', 'Urgency=High(4-5)']",0.042,0.3593582887700535,0.9217269349664725
+"['Zone=Shivajinagar', 'LowLying=True']",['Urgency=Low(1-2)'],0.045125,0.268801191362621,0.9139012031028337
+['Zone=Shivajinagar'],['Urgency=Low(1-2)'],0.045125,0.268801191362621,0.9139012031028337
+['Weather=Cloudy'],"['Monsoon=True', 'Urgency=High(4-5)']",0.055,0.3554119547657512,0.9116048855806379
+"['Zone=Kothrud', 'Urgency=Low(1-2)']",['Monsoon=True'],0.04175,0.8048192771084338,0.9115891571382516
+"['Repeat=True', 'Urgency=High(4-5)']","['Monsoon=True', 'Weather=Rainy']",0.051875,0.4505971769815418,0.9068622429817192
+"['Monsoon=True', 'LowLying=True']",['Urgency=Low(1-2)'],0.11675,0.26640045636052484,0.9057389081530806
+['Urgency=Low(1-2)'],"['Monsoon=True', 'LowLying=True']",0.11675,0.39694007649808755,0.9057389081530806
+['Type=streetlight'],"['Monsoon=True', 'Urgency=High(4-5)']",0.08175,0.3518020441097364,0.9023457367354573
+"['Repeat=True', 'Urgency=High(4-5)']",['Weather=Rainy'],0.052375,0.4549402823018458,0.9015413075092312
+"['Type=pothole', 'Urgency=High(4-5)']","['Monsoon=True', 'Weather=Rainy']",0.048125,0.44715447154471544,0.8999335276371632
+"['Type=pothole', 'Urgency=High(4-5)']",['Weather=Rainy'],0.048375,0.44947735191637633,0.8907155846745134
+"['Monsoon=True', 'Type=streetlight', 'Weather=Rainy']",['Urgency=High(4-5)'],0.045,0.3753910323253389,0.8887624322588669
+"['Type=streetlight', 'Weather=Rainy']",['Urgency=High(4-5)'],0.0455,0.3729508196721312,0.8829850717304082
+"['Monsoon=True', 'Type=pothole', 'Weather=Rainy']",['Urgency=High(4-5)'],0.048125,0.36527514231499053,0.8648124115181782
+"['Type=pothole', 'Weather=Rainy']",['Urgency=High(4-5)'],0.048375,0.3616822429906542,0.8563059910995069
+['Weather=Clear'],['Urgency=High(4-5)'],0.057375,0.3412639405204461,0.8079643457128053
+['Weather=Clear'],['Monsoon=True'],0.08425,0.5011152416356878,0.5675947802754499
+"['Weather=Clear', 'LowLying=True']",['Monsoon=True'],0.04,0.4698972099853157,0.5322352654512992

@@ -142,8 +142,11 @@ with tab_detail:
         names = [f"Depot: {crew_meta['crew_name']}"] + [f"Stop {i+1}: {s.get('complaint_type')} ({s.get('complaint_id')})" for i, s in enumerate(stops)] + ["Return to Depot"]
 
         fig_map = go.Figure()
+        ScatterClass = getattr(go, "Scattermap", getattr(go, "Scattermapbox", None))
+        map_key = "map" if hasattr(go, "Scattermap") else "mapbox"
+
         # Tour path
-        fig_map.add_trace(go.Scattermapbox(
+        fig_map.add_trace(ScatterClass(
             mode="lines+markers",
             lat=lats,
             lon=lons,
@@ -153,7 +156,7 @@ with tab_detail:
             name="Route Tour",
         ))
         # Depot highlight
-        fig_map.add_trace(go.Scattermapbox(
+        fig_map.add_trace(ScatterClass(
             mode="markers",
             lat=[crew_meta["depot_lat"]],
             lon=[crew_meta["depot_lon"]],
@@ -163,11 +166,11 @@ with tab_detail:
         ))
 
         fig_map.update_layout(
-            mapbox=dict(
+            **{map_key: dict(
                 style="carto-positron",
                 center=dict(lat=float(crew_meta["depot_lat"]), lon=float(crew_meta["depot_lon"])),
                 zoom=12,
-            ),
+            )},
             margin=dict(t=10, b=10, l=10, r=10),
             height=480,
         )

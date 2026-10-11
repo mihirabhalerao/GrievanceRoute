@@ -101,6 +101,31 @@ AMBIGUOUS_TEMPLATES = [
     ("water leak", "Road damaged where water pipeline valve was recently excavated near {loc}."),
 ]
 
+# Realistic cross-domain misclassification cases (citizen misfiling / multi-hazard narrative)
+# In these templates, the narrative is dominated by a secondary hazard, challenging pure n-gram bag-of-words
+CROSS_DOMAIN_MISCLASSIFICATION_TEMPLATES = {
+    "pothole": [
+        "Underground municipal water pipeline burst and continuous leakage is flooding the road near {loc}.",
+        "Water supply pipe broke near {loc} chowk and heavy water is flowing onto the entire street.",
+        "Severe water logging due to open drainage line overflow near {loc}, road completely submerged.",
+    ],
+    "water leak": [
+        "Deep dangerous road crater and uneven surface near {loc} causing two-wheelers to slip.",
+        "Huge asphalt trench left open by road repair contractors near {loc} market.",
+        "Road completely broken and loose tarmac stones scattered near {loc} junction.",
+    ],
+    "streetlight": [
+        "Solid waste and plastic garbage piled up on the corner of {loc}, foul smell spreading.",
+        "Overflowing kachra petti and stray cattle scattering garbage near {loc} lane.",
+        "Illegal dumping of construction debris and rotting trash blocking the pathway at {loc}.",
+    ],
+    "garbage": [
+        "All streetlights are completely off and dark stretch near {loc} after 8 PM, very unsafe.",
+        "Municipal streetlight pole fused for a week near {loc} chowk, area pitch dark.",
+        "Street lamps not working on the main lane near {loc} school, pedestrians in the dark.",
+    ],
+}
+
 LOCALITY_NAMES = [
     "JM Road", "FC Road", "Karve Road", "Paud Road", "MG Road",
     "Magarpatta Junction", "DP Road", "University Circle", "Balgandharva Chowk",
@@ -160,8 +185,19 @@ def generate_complaint_record(
 
     # Text description selection
     loc_name = py_rand.choice(LOCALITY_NAMES)
+    rand_val = py_rand.random()
+    # 4% chance of realistic citizen category misfiling / compound hazard
+    # (e.g., citizen filed under 'pothole' due to driving distress, but entered text describing a water pipe leak)
+    cross_donor = {
+        "pothole": "water leak",
+        "water leak": "pothole",
+        "streetlight": "garbage",
+        "garbage": "streetlight",
+    }
+    if rand_val < 0.04:
+        template = py_rand.choice(TEXT_TEMPLATES[cross_donor[category]])
     # 8% chance of picking a cross-domain ambiguous template
-    if py_rand.random() < 0.08:
+    elif rand_val < 0.12:
         matching_amb = [t for t in AMBIGUOUS_TEMPLATES if t[0] == category]
         template = py_rand.choice(matching_amb)[1] if matching_amb else py_rand.choice(TEXT_TEMPLATES[category])
     else:

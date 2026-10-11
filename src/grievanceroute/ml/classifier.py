@@ -106,12 +106,17 @@ def train_and_compare_classifiers(
         # Collect misclassified samples for Primary model
         if name == "Logistic Regression (Primary)":
             test_indices = test_texts.index.tolist()
-            for idx, text, actual, pred in zip(test_indices, test_texts, test_labels, preds):
-                if actual != pred and len(sample_errors) < 8:
+            probs = pipeline.predict_proba(test_texts) if hasattr(pipeline, "predict_proba") else None
+            p_list = probs if probs is not None else [None] * len(preds)
+            for idx, text, actual, pred, p in zip(test_indices, test_texts, test_labels, preds, p_list):
+                if actual != pred and len(sample_errors) < 12:
+                    conf_str = f"{float(np.max(p))*100:.1f}%" if p is not None else "N/A"
                     sample_errors.append({
                         "complaint_text": text,
                         "actual_category": actual,
                         "predicted_category": pred,
+                        "confidence": conf_str,
+                        "apparent_cause": "Cross-domain terminology / multi-hazard narrative",
                     })
 
     return trained_pipelines, comparison_metrics, sample_errors

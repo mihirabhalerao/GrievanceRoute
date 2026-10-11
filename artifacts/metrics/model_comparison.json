@@ -1,35 +1,35 @@
 {
   "classification": {
     "Majority Baseline": {
-      "accuracy": 0.265,
-      "macro_f1": 0.1047,
-      "weighted_f1": 0.111,
-      "macro_precision": 0.0663,
+      "accuracy": 0.2687,
+      "macro_f1": 0.1059,
+      "weighted_f1": 0.1139,
+      "macro_precision": 0.0672,
       "macro_recall": 0.25,
-      "training_time_sec": 0.2587,
-      "inference_time_sec": 0.0578,
+      "training_time_sec": 0.195,
+      "inference_time_sec": 0.055,
       "confusion_matrix": [
         [
-          424,
           0,
-          0,
-          0
-        ],
-        [
-          424,
-          0,
+          408,
           0,
           0
         ],
         [
-          367,
           0,
+          430,
           0,
           0
         ],
         [
-          385,
           0,
+          372,
+          0,
+          0
+        ],
+        [
+          0,
+          390,
           0,
           0
         ]
@@ -42,63 +42,63 @@
       ],
       "per_class": {
         "garbage": {
-          "precision": 0.265,
-          "recall": 1.0,
-          "f1": 0.419,
-          "support": 424
-        },
-        "pothole": {
           "precision": 0.0,
           "recall": 0.0,
           "f1": 0.0,
-          "support": 424
+          "support": 408
+        },
+        "pothole": {
+          "precision": 0.2687,
+          "recall": 1.0,
+          "f1": 0.4236,
+          "support": 430
         },
         "streetlight": {
           "precision": 0.0,
           "recall": 0.0,
           "f1": 0.0,
-          "support": 367
+          "support": 372
         },
         "water leak": {
           "precision": 0.0,
           "recall": 0.0,
           "f1": 0.0,
-          "support": 385
+          "support": 390
         }
       }
     },
     "Logistic Regression (Primary)": {
-      "accuracy": 1.0,
-      "macro_f1": 1.0,
-      "weighted_f1": 1.0,
-      "macro_precision": 1.0,
-      "macro_recall": 1.0,
-      "training_time_sec": 0.2766,
-      "inference_time_sec": 0.0539,
+      "accuracy": 0.9637,
+      "macro_f1": 0.9635,
+      "weighted_f1": 0.9638,
+      "macro_precision": 0.9633,
+      "macro_recall": 0.9638,
+      "training_time_sec": 0.3447,
+      "inference_time_sec": 0.0589,
       "confusion_matrix": [
         [
-          424,
+          387,
           0,
-          0,
+          21,
           0
         ],
         [
           0,
-          424,
+          417,
           0,
+          13
+        ],
+        [
+          14,
+          0,
+          358,
           0
         ],
         [
           0,
+          10,
           0,
-          367,
-          0
-        ],
-        [
-          0,
-          0,
-          0,
-          385
+          380
         ]
       ],
       "classes": [
@@ -109,63 +109,63 @@
       ],
       "per_class": {
         "garbage": {
-          "precision": 1.0,
-          "recall": 1.0,
-          "f1": 1.0,
-          "support": 424
+          "precision": 0.9651,
+          "recall": 0.9485,
+          "f1": 0.9567,
+          "support": 408
         },
         "pothole": {
-          "precision": 1.0,
-          "recall": 1.0,
-          "f1": 1.0,
-          "support": 424
+          "precision": 0.9766,
+          "recall": 0.9698,
+          "f1": 0.9732,
+          "support": 430
         },
         "streetlight": {
-          "precision": 1.0,
-          "recall": 1.0,
-          "f1": 1.0,
-          "support": 367
+          "precision": 0.9446,
+          "recall": 0.9624,
+          "f1": 0.9534,
+          "support": 372
         },
         "water leak": {
-          "precision": 1.0,
-          "recall": 1.0,
-          "f1": 1.0,
-          "support": 385
+          "precision": 0.9669,
+          "recall": 0.9744,
+          "f1": 0.9706,
+          "support": 390
         }
       }
     },
     "Multinomial Naive Bayes": {
-      "accuracy": 1.0,
-      "macro_f1": 1.0,
-      "weighted_f1": 1.0,
-      "macro_precision": 1.0,
-      "macro_recall": 1.0,
-      "training_time_sec": 0.2137,
-      "inference_time_sec": 0.0635,
+      "accuracy": 0.9637,
+      "macro_f1": 0.9635,
+      "weighted_f1": 0.9638,
+      "macro_precision": 0.9633,
+      "macro_recall": 0.9638,
+      "training_time_sec": 0.2157,
+      "inference_time_sec": 0.0556,
       "confusion_matrix": [
         [
-          424,
+          387,
           0,
-          0,
+          21,
           0
         ],
         [
           0,
-          424,
+          417,
           0,
+          13
+        ],
+        [
+          14,
+          0,
+          358,
           0
         ],
         [
           0,
+          10,
           0,
-          367,
-          0
-        ],
-        [
-          0,
-          0,
-          0,
-          385
+          380
         ]
       ],
       "classes": [
@@ -176,63 +176,63 @@
       ],
       "per_class": {
         "garbage": {
-          "precision": 1.0,
-          "recall": 1.0,
-          "f1": 1.0,
-          "support": 424
+          "precision": 0.9651,
+          "recall": 0.9485,
+          "f1": 0.9567,
+          "support": 408
         },
         "pothole": {
-          "precision": 1.0,
-          "recall": 1.0,
-          "f1": 1.0,
-          "support": 424
+          "precision": 0.9766,
+          "recall": 0.9698,
+          "f1": 0.9732,
+          "support": 430
         },
         "streetlight": {
-          "precision": 1.0,
-          "recall": 1.0,
-          "f1": 1.0,
-          "support": 367
+          "precision": 0.9446,
+          "recall": 0.9624,
+          "f1": 0.9534,
+          "support": 372
         },
         "water leak": {
-          "precision": 1.0,
-          "recall": 1.0,
-          "f1": 1.0,
-          "support": 385
+          "precision": 0.9669,
+          "recall": 0.9744,
+          "f1": 0.9706,
+          "support": 390
         }
       }
     },
     "Decision Tree": {
-      "accuracy": 0.9994,
-      "macro_f1": 0.9994,
-      "weighted_f1": 0.9994,
-      "macro_precision": 0.9994,
-      "macro_recall": 0.9994,
-      "training_time_sec": 0.345,
-      "inference_time_sec": 0.0461,
+      "accuracy": 0.9625,
+      "macro_f1": 0.9622,
+      "weighted_f1": 0.9625,
+      "macro_precision": 0.962,
+      "macro_recall": 0.9625,
+      "training_time_sec": 0.438,
+      "inference_time_sec": 0.0579,
       "confusion_matrix": [
         [
-          424,
+          387,
           0,
-          0,
+          21,
           0
         ],
         [
           0,
-          423,
+          416,
           0,
-          1
+          14
         ],
         [
+          15,
           0,
-          0,
-          367,
+          357,
           0
         ],
         [
           0,
+          10,
           0,
-          0,
-          385
+          380
         ]
       ],
       "classes": [
@@ -243,89 +243,180 @@
       ],
       "per_class": {
         "garbage": {
-          "precision": 1.0,
-          "recall": 1.0,
-          "f1": 1.0,
-          "support": 424
+          "precision": 0.9627,
+          "recall": 0.9485,
+          "f1": 0.9556,
+          "support": 408
         },
         "pothole": {
-          "precision": 1.0,
-          "recall": 0.9976,
-          "f1": 0.9988,
-          "support": 424
+          "precision": 0.9765,
+          "recall": 0.9674,
+          "f1": 0.972,
+          "support": 430
         },
         "streetlight": {
-          "precision": 1.0,
-          "recall": 1.0,
-          "f1": 1.0,
-          "support": 367
+          "precision": 0.9444,
+          "recall": 0.9597,
+          "f1": 0.952,
+          "support": 372
         },
         "water leak": {
-          "precision": 0.9974,
-          "recall": 1.0,
-          "f1": 0.9987,
-          "support": 385
+          "precision": 0.9645,
+          "recall": 0.9744,
+          "f1": 0.9694,
+          "support": 390
         }
       }
     }
   },
-  "sample_errors": [],
+  "sample_errors": [
+    {
+      "complaint_text": "Municipal valve chamber leaking water onto baseline near Katraj Chowk society.",
+      "actual_category": "pothole",
+      "predicted_category": "water leak",
+      "confidence": "86.8%",
+      "apparent_cause": "Cross-domain terminology / multi-hazard narrative"
+    },
+    {
+      "complaint_text": "Severe water logging due to underground drinking water pipe rupture near Phoenix Mall Corner garden.",
+      "actual_category": "pothole",
+      "predicted_category": "water leak",
+      "confidence": "96.5%",
+      "apparent_cause": "Cross-domain terminology / multi-hazard narrative"
+    },
+    {
+      "complaint_text": "Main pipeline burst and clean drinking water is gushing onto the road at Kalyani Nagar Bridge.",
+      "actual_category": "pothole",
+      "predicted_category": "water leak",
+      "confidence": "95.8%",
+      "apparent_cause": "Cross-domain terminology / multi-hazard narrative"
+    },
+    {
+      "complaint_text": "Main pipeline burst and clean drinking water is gushing onto the road at Aundh Link Road.",
+      "actual_category": "pothole",
+      "predicted_category": "water leak",
+      "confidence": "96.9%",
+      "apparent_cause": "Cross-domain terminology / multi-hazard narrative"
+    },
+    {
+      "complaint_text": "Exposed underground wires near the streetlite junction box at DP Road.",
+      "actual_category": "garbage",
+      "predicted_category": "streetlight",
+      "confidence": "86.2%",
+      "apparent_cause": "Cross-domain terminology / multi-hazard narrative"
+    },
+    {
+      "complaint_text": "Road contractor left deep excavation unpaved at Paud Road lane.",
+      "actual_category": "water leak",
+      "predicted_category": "pothole",
+      "confidence": "90.8%",
+      "apparent_cause": "Cross-domain terminology / multi-hazard narrative"
+    },
+    {
+      "complaint_text": "Streetlight flickering violently and short-circuit sparks visible at Shaniwar Wada.",
+      "actual_category": "garbage",
+      "predicted_category": "streetlight",
+      "confidence": "91.7%",
+      "apparent_cause": "Cross-domain terminology / multi-hazard narrative"
+    },
+    {
+      "complaint_text": "Dumping yard smell unbearable near residential gate at DP Road.",
+      "actual_category": "streetlight",
+      "predicted_category": "garbage",
+      "confidence": "91.0%",
+      "apparent_cause": "Cross-domain terminology / multi-hazard narrative"
+    },
+    {
+      "complaint_text": "Paani ki pipe line leak ho gayi hai near Magarpatta Junction, thousands of liters wasted.",
+      "actual_category": "pothole",
+      "predicted_category": "water leak",
+      "confidence": "95.0%",
+      "apparent_cause": "Cross-domain terminology / multi-hazard narrative"
+    },
+    {
+      "complaint_text": "Rasteche dive band ahet near Balgandharva Chowk, area pitch dark after 7 pm.",
+      "actual_category": "garbage",
+      "predicted_category": "streetlight",
+      "confidence": "91.9%",
+      "apparent_cause": "Cross-domain terminology / multi-hazard narrative"
+    },
+    {
+      "complaint_text": "Road surface broken with multiple crater-like pot holes near Kalyani Nagar Bridge chowk.",
+      "actual_category": "water leak",
+      "predicted_category": "pothole",
+      "confidence": "96.2%",
+      "apparent_cause": "Cross-domain terminology / multi-hazard narrative"
+    },
+    {
+      "complaint_text": "Debris and waste unattended near public bin at Kalyani Nagar Bridge colony.",
+      "actual_category": "streetlight",
+      "predicted_category": "garbage",
+      "confidence": "88.7%",
+      "apparent_cause": "Cross-domain terminology / multi-hazard narrative"
+    }
+  ],
   "urgency_regression": {
     "Median Baseline": {
       "target": "urgency_score",
-      "mae": 0.8906,
-      "mse": 1.2206,
-      "rmse": 1.1048,
-      "r2": -0.0477,
-      "mean_residual": 0.2356,
-      "training_time_sec": 0.0378
+      "mae": 0.8475,
+      "mse": 1.12,
+      "rmse": 1.0583,
+      "r2": -0.043,
+      "mean_residual": 0.215,
+      "std_residual": 1.0362,
+      "training_time_sec": 0.0349
     },
     "Linear Regression": {
       "target": "urgency_score",
-      "mae": 0.8336,
-      "mse": 0.9503,
-      "rmse": 0.9748,
-      "r2": 0.1843,
-      "mean_residual": 0.0095,
-      "training_time_sec": 0.038
+      "mae": 0.7912,
+      "mse": 0.8784,
+      "rmse": 0.9372,
+      "r2": 0.182,
+      "mean_residual": -0.0007,
+      "std_residual": 0.9372,
+      "training_time_sec": 0.0403
     },
     "Random Forest Regressor": {
       "target": "urgency_score",
-      "mae": 0.8045,
-      "mse": 0.9241,
-      "rmse": 0.9613,
-      "r2": 0.2068,
-      "mean_residual": 0.0104,
-      "training_time_sec": 1.0123
+      "mae": 0.7656,
+      "mse": 0.8462,
+      "rmse": 0.9199,
+      "r2": 0.212,
+      "mean_residual": 0.0079,
+      "std_residual": 0.9198,
+      "training_time_sec": 1.0612
     }
   },
   "resolution_regression": {
     "Median Baseline": {
       "target": "actual_resolution_hours",
-      "mae": 12.2994,
-      "mse": 224.4678,
-      "rmse": 14.9823,
+      "mae": 12.0958,
+      "mse": 221.386,
+      "rmse": 14.879,
       "r2": -0.0001,
-      "mean_residual": -0.1643,
-      "training_time_sec": 0.0313
+      "mean_residual": 0.1116,
+      "std_residual": 14.8786,
+      "training_time_sec": 0.0233
     },
     "Linear Regression": {
       "target": "actual_resolution_hours",
-      "mae": 11.4159,
-      "mse": 189.5064,
-      "rmse": 13.7661,
-      "r2": 0.1557,
-      "mean_residual": -0.2551,
-      "training_time_sec": 0.0423
+      "mae": 11.3032,
+      "mse": 190.13,
+      "rmse": 13.7888,
+      "r2": 0.1411,
+      "mean_residual": -0.1416,
+      "std_residual": 13.788,
+      "training_time_sec": 0.0207
     },
     "Random Forest Regressor": {
       "target": "actual_resolution_hours",
-      "mae": 11.0868,
-      "mse": 184.7721,
-      "rmse": 13.5931,
-      "r2": 0.1767,
-      "mean_residual": -0.1977,
-      "training_time_sec": 1.0887
+      "mae": 11.0085,
+      "mse": 184.4075,
+      "rmse": 13.5797,
+      "r2": 0.167,
+      "mean_residual": -0.1208,
+      "std_residual": 13.5791,
+      "training_time_sec": 0.9712
     }
   }
 }

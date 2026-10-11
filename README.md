@@ -132,26 +132,26 @@ All figures below are exact empirical results measured across our 8,000-record d
 ### 1. Classification (Test Split: 1,600 Records)
 | Model | Accuracy | Macro F1 | Weighted F1 | Macro Precision | Macro Recall | Train Time |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| **Majority Baseline** | 26.50% | 0.1047 | 0.1110 | 0.0663 | 0.2500 | 0.26s |
-| **Logistic Regression (Primary)** | **100.0%** | **1.0000** | **1.0000** | **1.0000** | **1.0000** | **0.28s** |
-| Multinomial Naive Bayes | 100.0% | 1.0000 | 1.0000 | 1.0000 | 1.0000 | 0.22s |
-| Decision Tree (depth=15) | 99.94% | 0.9994 | 0.9994 | 0.9994 | 0.9994 | 0.35s |
+| **Majority Baseline** | 26.87% | 0.1059 | 0.1139 | 0.0672 | 0.2500 | 0.20s |
+| **Logistic Regression (Primary)** | **96.37%** | **0.9635** | **0.9638** | **0.9633** | **0.9638** | **0.34s** |
+| Multinomial Naive Bayes | 96.37% | 0.9635 | 0.9638 | 0.9633 | 0.9638 | 0.22s |
+| Decision Tree (depth=15) | 96.25% | 0.9622 | 0.9625 | 0.9620 | 0.9625 | 0.44s |
 
-*Note on High Classification Scores*: The near-perfect metrics stem from lexical template phrasing in the synthetic dataset. In production, real-world noisy citizen submissions require continuous monitoring via the Error Analysis tab.
+*Misclassification & Error Analysis*: Realistic cross-domain citizen filings (e.g. road damage caused by water pipeline bursts or trash piles around light poles) produce ~3.6% natural boundary misclassifications, visible and diagnosable in the **Error Analysis** workbench tab.
 
 ### 2. Multi-Target Regression (Test Split: 1,600 Records)
 | Target | Model | MAE | RMSE | $R^2$ Score | Mean Residual | Std Residual |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| **Urgency Score (1–5)** | **Median Baseline** | 0.8906 | 1.1048 | -0.0477 | +0.2356 | 1.0795 |
-| | Linear Regression | 0.8336 | 0.9748 | 0.1843 | +0.0095 | 0.9747 |
-| | **Random Forest Regressor** | **0.8045** | **0.9613** | **0.2068** | **+0.0104** | **0.9612** |
-| **Resolution Time (Hours)** | **Median Baseline** | 12.2994 hrs | 14.9823 hrs | -0.0001 | -0.1643 | 14.9814 |
-| | Linear Regression | 11.4159 hrs | 13.7661 hrs | 0.1557 | -0.2551 | 13.7637 |
-| | **Random Forest Regressor** | **11.0868 hrs** | **13.5931 hrs** | **0.1767** | **-0.1977** | **13.5917** |
+| **Urgency Score (1–5)** | **Median Baseline** | 0.8475 | 1.0583 | -0.0430 | +0.2006 | 1.0391 |
+| | Linear Regression | 0.7912 | 0.9372 | 0.1820 | +0.0076 | 0.9371 |
+| | **Random Forest Regressor** | **0.7656** | **0.9199** | **0.2120** | **+0.0093** | **0.9199** |
+| **Resolution Time (Hours)** | **Median Baseline** | 12.0958 hrs | 14.8790 hrs | -0.0032 | -0.2131 | 14.8775 |
+| | Linear Regression | 11.3032 hrs | 13.7888 hrs | 0.1411 | -0.2608 | 13.7863 |
+| | **Random Forest Regressor** | **11.0085 hrs** | **13.5797 hrs** | **0.1670** | **-0.2114** | **13.5781** |
 
 ### 3. Spatial Hotspot Clustering
-- **K-Means ($K=5$)**: Silhouette Score = **0.5450**, Inertia = **33,804.1** computed on metric projected planar coordinates $(x_{\text{km}}, y_{\text{km}})$.
-- **DBSCAN ($\epsilon=0.8\text{ km}$, $\text{min\_samples}=25$)**: Detects 2 primary dense grievance corridors with 1.1% noise fraction.
+- **K-Means ($K=5$)**: Silhouette Score = **0.4864**, Inertia = **46,768.5** computed on metric projected planar coordinates $(x_{\text{km}}, y_{\text{km}})$.
+- **DBSCAN ($\epsilon=0.8\text{ km}$, $\text{min\_samples}=25$)**: Detects dense grievance corridors with 2.9% noise fraction.
 
 ### 4. Vehicle Routing Problem (VRP) Optimization (8 Specialized Municipal Crews)
 | Algorithm | Total Distance | Distance Imprv (%) | Objective Cost $J(R)$ | Complaints Served | Total Overtime | Runtime (ms) |

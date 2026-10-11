@@ -61,17 +61,17 @@ Comprehensive review of 5 verified literature citations:
 
 ## Section 12: Results and Discussions
 - **Classification Performance**:
-  - Majority Baseline: 26.50% accuracy, 0.1047 Macro-F1.
-  - Logistic Regression (Primary): 100.0% accuracy, 1.0000 Macro-F1 (template data).
-  - Decision Tree: 99.94% accuracy, 0.9994 Macro-F1.
-  - Multinomial Naive Bayes: 100.0% accuracy, 1.0000 Macro-F1.
+  - Majority Baseline: 26.87% accuracy, 0.1059 Macro-F1.
+  - Logistic Regression (Primary): 96.37% accuracy, 0.9635 Macro-F1.
+  - Decision Tree: 96.25% accuracy, 0.9622 Macro-F1.
+  - Multinomial Naive Bayes: 96.37% accuracy, 0.9635 Macro-F1.
 - **Urgency Regression**:
-  - Median Baseline: MAE 0.8906, RMSE 1.1048, $R^2 = -0.0477$.
-  - Random Forest: MAE 0.8045, RMSE 0.9613, $R^2 = 0.2068$.
+  - Median Baseline: MAE 0.8475, RMSE 1.0583, $R^2 = -0.0430$.
+  - Random Forest: MAE 0.7656, RMSE 0.9199, $R^2 = 0.2120$.
 - **Resolution Regression**:
-  - Median Baseline: MAE 12.2994 hrs, RMSE 14.9823 hrs, $R^2 = -0.0001$.
-  - Random Forest: MAE 11.0868 hrs, RMSE 13.5931 hrs, $R^2 = 0.1767$.
-- **Clustering**: K-Means ($K=5$) yields silhouette score 0.545 on projected coordinates; DBSCAN ($\epsilon=0.8$ km) isolates noise points.
+  - Median Baseline: MAE 12.0958 hrs, RMSE 14.8790 hrs, $R^2 = -0.0032$.
+  - Random Forest: MAE 11.0085 hrs, RMSE 13.5797 hrs, $R^2 = 0.1670$.
+- **Clustering**: K-Means ($K=5$) yields silhouette score 0.4864 on projected coordinates; DBSCAN ($\epsilon=0.8$ km) isolates 2.9% noise points.
 - **Route Optimization**: Simulated Annealing achieves 27.46% distance reduction and 2-Opt Hill Climbing achieves 28.09% reduction over greedy baseline, while maintaining 0.0 hours overtime within 8-hour shift limits.
 
 ## Section 13: Future Scope

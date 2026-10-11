@@ -131,6 +131,9 @@ with tab_bin:
     )
     bin_counts = df_clean["binned_resolution_hours"].value_counts().sort_index().reset_index()
     bin_counts.columns = ["Resolution Hours Interval (Width 10)", "Complaint Frequency"]
+    # Format intervals as clean strings so Plotly JSON serialization succeeds
+    labels = [f"{int(i.left)}-{int(i.right)}h" for i in bin_counts["Resolution Hours Interval (Width 10)"]]
+    bin_counts["Resolution Hours Interval (Width 10)"] = labels
 
     fig_bin = px.bar(
         bin_counts,

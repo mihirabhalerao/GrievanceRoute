@@ -58,6 +58,14 @@ st.markdown(f"**Analyzing {len(df_view):,} filtered incidents across Pune.**")
 
 tab_kmeans, tab_dbscan, tab_raw_map = st.tabs(["🎯 K-Means Spatial Hotspots", "🔬 DBSCAN Density Clusters", "📍 Interactive Incident Map"])
 
+def _render_scatter_map(df, **kwargs):
+    if hasattr(px, "scatter_map"):
+        if "mapbox_style" in kwargs:
+            kwargs["map_style"] = kwargs.pop("mapbox_style")
+        return px.scatter_map(df, **kwargs)
+    return px.scatter_mapbox(df, **kwargs)
+
+
 with tab_kmeans:
     st.subheader("K-Means Hotspot Partitioning")
     st.caption("Clusters complaints using local planar projected coordinates (km) rather than raw latitude/longitude degrees.")
@@ -79,7 +87,7 @@ with tab_kmeans:
             st.metric("Inertia", f"{summary['inertia']:,.1f}", "Compactness")
 
     # Interactive Map
-    fig_k = px.scatter_mapbox(
+    fig_k = _render_scatter_map(
         df_view.sample(min(1200, len(df_view)), random_state=42),
         lat="latitude",
         lon="longitude",
@@ -121,7 +129,7 @@ with tab_dbscan:
         st.metric("Noise Fraction", f"{db_summary['noise_fraction']*100:.2f}%")
 
     # Map for DBSCAN
-    fig_db = px.scatter_mapbox(
+    fig_db = _render_scatter_map(
         df_view.sample(min(1200, len(df_view)), random_state=42),
         lat="latitude",
         lon="longitude",
@@ -139,7 +147,7 @@ with tab_dbscan:
 
 with tab_raw_map:
     st.subheader("Raw Incident Distribution by Complaint Category")
-    fig_raw = px.scatter_mapbox(
+    fig_raw = _render_scatter_map(
         df_view.sample(min(1200, len(df_view)), random_state=42),
         lat="latitude",
         lon="longitude",
