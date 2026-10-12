@@ -102,17 +102,18 @@ with tab_sample:
     ])
 
     if method == "Simple Random Sampling Without Replacement (SRSWOR)":
-        sampled_df = df_clean.sample(n=sample_size, replace=False, random_state=42)
+        sampled_df = df_clean.sample(n=sample_size, replace=False, random_state=42).reset_index(drop=True)
     elif method == "Simple Random Sampling With Replacement (SRSWR)":
-        sampled_df = df_clean.sample(n=sample_size, replace=True, random_state=42)
+        sampled_df = df_clean.sample(n=sample_size, replace=True, random_state=42).reset_index(drop=True)
     elif method == "Stratified Sampling (Preserving Pune Zone Ratios)":
-        sampled_df = df_clean.groupby("zone", group_keys=False).apply(
-            lambda x: x.sample(frac=sample_size / len(df_clean), random_state=42)
-        )
+        sampled_df = df_clean.groupby("zone", group_keys=False).sample(
+            frac=sample_size / len(df_clean),
+            random_state=42
+        ).reset_index(drop=True)
     else:  # Cluster Sampling
         selected_clusters = ["Kothrud", "Shivajinagar"]
         cluster_universe = df_clean[df_clean["zone"].isin(selected_clusters)]
-        sampled_df = cluster_universe.sample(n=min(sample_size, len(cluster_universe)), random_state=42)
+        sampled_df = cluster_universe.sample(n=min(sample_size, len(cluster_universe)), random_state=42).reset_index(drop=True)
 
     st.write(f"Sampled **{len(sampled_df)}** records:")
     st.dataframe(sampled_df[["complaint_id", "complaint_type", "zone", "urgency_score", "weather"]].head(10), use_container_width=True)
