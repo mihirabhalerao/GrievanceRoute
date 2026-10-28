@@ -121,7 +121,64 @@ Run the full pytest suite with verbose output:
 ```bash
 pytest tests/ -v
 ```
-All 21 tests pass with 0 failures, covering dataset generation reproducibility, defect cleaning, target leakage prevention, coordinate projection, classifier benchmarks against Majority Baseline, regressor benchmarks against Median Baseline, spatial clustering, Apriori rule mining, A* admissibility, 2-opt hill climbing, simulated annealing, shift budget constraints, safety overrides, and end-to-end integration workflows.
+All 34 tests pass with 0 failures, covering dataset generation reproducibility, defect cleaning, target leakage prevention, coordinate projection, classifier benchmarks against Majority Baseline, regressor benchmarks against Median Baseline, spatial clustering, Apriori rule mining, A* admissibility, 2-opt hill climbing, simulated annealing, shift budget constraints, safety overrides, end-to-end integration workflows, **multilingual voice dictation**, and **OpenStreetMap-backed road-network routing**.
+
+To run the feature-specific test suites:
+```bash
+# Voice-to-Text Input Suite (5 tests)
+pytest tests/test_voice_service.py -v
+
+# OpenStreetMap Road Network & A* Routing Suite (8 tests)
+pytest tests/test_osm_routing.py -v
+```
+
+---
+
+## 🎙️ Feature A — Multilingual Voice-to-Text Complaint Submission
+
+### Overview
+Citizens or operators can dictate grievances directly through their browser using the native Web Speech API rather than typing manually. The audio is transcribed locally in the browser and automatically transfers into the editable complaint form.
+
+### Supported Languages
+| Language Code | Language | Script / Dialect Focus |
+| :--- | :--- | :--- |
+| `en-IN` | English (India) | Standard Indian English civic terminology (pothole, waterlogging, transformer) |
+| `hi-IN` | Hindi (हिन्दी) | Devanagari Hindi civic complaints (सड़क, कचरा, पानी गळती) |
+| `mr-IN` | Marathi (मराठी) | Regional Marathi civic vocabulary (खड्डा, दिवाबत्ती, पाणी गळती) |
+
+### Pipeline Architecture
+```text
+Voice input → Web Speech API → transcription → editable form field → validation → classification → urgency estimation → safety overrides → SQLite persistence
+```
+1. **Editable Review**: The transcribed text populates `st.text_area`, giving the citizen full opportunity to inspect, correct dialect errors, or append details before submitting.
+2. **Standard Pipeline Preservation**: Transcribed text enters the exact same AI inference, urgency regression, and electrical hazard safety-override checks as manually typed text.
+3. **Privacy & Storage**: No audio recordings are recorded, uploaded, or persisted to any external speech server. Dictation occurs entirely client-side via the browser's speech recognition engine.
+4. **Browser Compatibility & Fallbacks**:
+   - Best supported on Chromium-based browsers (Google Chrome, Microsoft Edge, Brave) with speech recognition capabilities.
+   - On unsupported browsers (or when microphone permission is denied), a clear advisory message is rendered, and manual text entry serves as the default fallback.
+
+---
+
+## 🛣️ Feature B — OpenStreetMap-Backed A* Road Routing
+
+### Overview
+Supplements the synthetic 16-node junction graph with real-world street network data downloaded from OpenStreetMap covering the central Pune municipal corridor (Shivajinagar, FC Road, Deccan Gymkhana).
+
+### Heuristic & Units
+The routing engine implements $A^*$ pathfinding:
+$$f(n) = g(n) + h(n)$$
+- **$g(n)$**: Accumulated road distance from origin node along street edges, measured in **kilometers**.
+- **$h(n)$**: Straight-line Euclidean distance between current node $(lat_n, lon_n)$ and destination $(lat_{dest}, lon_{dest})$, measured in **kilometers**:
+  $$h(n) = \sqrt{\left((lat_{dest}-lat_n)\times 110.574\right)^2 + \left((lon_{dest}-lon_n)\times 111.320\cos\left(\frac{lat_n+lat_{dest}}{2}\right)\right)^2}$$
+- **Admissibility & Optimality**: Because straight-line distance is mathematically the Euclidean lower bound between two geographic coordinates, $h(n) \le g^*(n)$ everywhere. Hence, $A^*$ is guaranteed to find the optimal shortest path identical to Dijkstra's algorithm while expanding fewer nodes.
+
+### Caching and Offline Fallback
+1. **Local GraphML Cache**: Street network data is cached locally at `data/cache/osm_pune_central.graphml` (773 nodes, 1,038 edges). Application runs and tests load directly from this file without requiring network connectivity.
+2. **Graceful Fallback**: If the OSM cache is missing and downloads are unavailable, the routing engine automatically falls back to `data/raw/road_network.json` and clearly displays a fallback badge.
+3. **Nearest-Node Mapping**: Arbitrary GPS coordinates from citizen complaints or depots are projected onto the nearest road graph node using Euclidean distance minimization.
+4. **Interactive Map**: Renders street-level road-following routes via Folium / `streamlit-folium`, displaying origin, destination, road path polyline, straight-line lower bound, and turn-by-turn node sequence.
+
+---
 
 ---
 
@@ -167,4 +224,5 @@ All figures below are exact empirical results measured across our 8,000-record d
 ## ⚠️ Limitations & Methodological Disclosure
 1. **Synthetic Nature of Dataset**: The 8,000 complaints are generated using probabilistic sentence templates with simulated defects (duplicates, missing weather, anomalous coordinates). The near-perfect classification metrics on synthetic test splits reflect template consistency rather than organic citizen variability.
 2. **Deterministic Rules & Lexicons**: The electrical safety override relies on substring phrase matching; semantic expressions not included in the keyword lexicon require supervisor vigilance.
-3. **Road Graph Approximation**: The current network uses 16 major Pune junction nodes with Euclidean $A^*$ lower bounds rather than a complete OpenStreetMap road network.
+3. **Voice Recognition Boundary**: Speech-to-text relies on browser-native Web Speech API implementations. Marathi (`mr-IN`) and Hindi (`hi-IN`) dictionary and acoustic models vary across browser versions and platforms; manual review and edit controls ensure accuracy prior to intake.
+4. **Bounded Geographic Scope for OSM**: Real road routing uses a compact bounding box covering Central Pune (773 intersections). Queries outside this bounding box are mapped to the nearest boundary node or processed via the fallback road network.

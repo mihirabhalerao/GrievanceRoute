@@ -13,6 +13,8 @@ htmlcov/
 env/
 venv/
 ENV/
+*.egg-info/
+
 
 # Data and large local persistence (recreated via scripts)
 data/grievance_route.db
@@ -25,3 +27,7 @@ mlruns/
 # OS files
 .DS_Store
 Thumbs.db
+
+# Temporary OSM cache
+/cache/
+

@@ -23,6 +23,7 @@ dependencies = [
     "joblib",
     "matplotlib",
     "seaborn",
+    "osmnx",
 ]
 
 [tool.pytest.ini_options]

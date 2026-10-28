@@ -54,3 +54,20 @@ routing:
   gamma_overtime: 5.0
   shift_duration_hours: 8.0
   average_speed_kmh: 25.0
+
+osm:
+  cache_file: "data/cache/osm_pune_central.graphml"
+  network_type: "drive"
+  bbox:
+    left: 73.835
+    bottom: 18.515
+    right: 73.855
+    top: 18.538
+
+voice:
+  default_language: "en-IN"
+  supported_languages:
+    - "en-IN"
+    - "hi-IN"
+    - "mr-IN"
+

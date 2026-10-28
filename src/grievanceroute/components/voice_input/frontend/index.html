@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Voice Input Component</title>
+  <style>
+    :root {
+      --primary: #2563eb;
+      --primary-hover: #1d4ed8;
+      --danger: #dc2626;
+      --danger-hover: #b91c1c;
+      --bg: #f8fafc;
+      --card: #ffffff;
+      --border: #e2e8f0;
+      --text: #0f172a;
+      --muted: #64748b;
+      --success: #16a34a;
+      --warning: #d97706;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    }
+
+    body {
+      background: transparent;
+      color: var(--text);
+      padding: 6px 2px;
+      font-size: 13px;
+    }
+
+    .container {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 12px 14px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    }
+
+    .header-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 8px;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .title {
+      font-weight: 600;
+      font-size: 13px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      color: var(--text);
+    }
+
+    .lang-badge {
+      font-size: 11px;
+      padding: 2px 8px;
+      border-radius: 12px;
+      background: #eff6ff;
+      color: var(--primary);
+      border: 1px solid #bfdbfe;
+      font-weight: 500;
+    }
+
+    .controls-row {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 8px;
+    }
+
+    button.btn-mic {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      background: var(--primary);
+      color: white;
+      border: none;
+      padding: 8px 16px;
+      border-radius: 6px;
+      font-size: 13px;
+      font-weight: 500;
+      cursor: pointer;
+      transition: all 0.15s ease-in-out;
+    }
+
+    button.btn-mic:hover {
+      background: var(--primary-hover);
+    }
+
+    button.btn-mic.recording {
+      background: var(--danger);
+      animation: pulse 1.5s infinite;
+    }
+
+    button.btn-mic.recording:hover {
+      background: var(--danger-hover);
+    }
+
+    @keyframes pulse {
+      0% { box-shadow: 0 0 0 0 rgba(220, 38, 38, 0.4); }
+      70% { box-shadow: 0 0 0 8px rgba(220, 38, 38, 0); }
+      100% { box-shadow: 0 0 0 0 rgba(220, 38, 38, 0); }
+    }
+
+    .status-text {
+      font-size: 12px;
+      color: var(--muted);
+      flex: 1;
+    }
+
+    .status-text.listening {
+      color: var(--danger);
+      font-weight: 600;
+    }
+
+    .status-text.error {
+      color: var(--danger);
+    }
+
+    .status-text.success {
+      color: var(--success);
+      font-weight: 500;
+    }
+
+    .transcript-preview {
+      background: #f1f5f9;
+      border: 1px dashed #cbd5e1;
+      border-radius: 6px;
+      padding: 8px 10px;
+      min-height: 38px;
+      font-size: 12px;
+      color: #334155;
+      font-style: italic;
+      white-space: pre-wrap;
+      word-break: break-word;
+    }
+
+    .banner {
+      padding: 8px 12px;
+      border-radius: 6px;
+      font-size: 12px;
+      margin-top: 4px;
+    }
+
+    .banner.warning {
+      background: #fffbeb;
+      border: 1px solid #fde68a;
+      color: #92400e;
+    }
+
+    .banner.error {
+      background: #fef2f2;
+      border: 1px solid #fecaca;
+      color: #991b1b;
+    }
+
+    .browser-note {
+      font-size: 11px;
+      color: var(--muted);
+      margin-top: 6px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container" id="mainContainer">
+    <div class="header-row">
+      <div class="title">
+        <span>🎙️ Multilingual Voice Intake</span>
+      </div>
+      <div class="lang-badge" id="langBadge">Language: en-IN</div>
+    </div>
+
+    <div id="unsupportedWarning" class="banner warning" style="display: none;">
+      ⚠️ <strong>Browser Notice:</strong> The native Web Speech API is not supported in this browser environment. Please use Google Chrome or Microsoft Edge for dictation, or type your complaint manually in the box below.
+    </div>
+
+    <div id="activeVoiceControls">
+      <div class="controls-row">
+        <button id="micBtn" class="btn-mic" type="button">
+          <span id="micIcon">🎤</span>
+          <span id="micBtnLabel">Click to Speak</span>
+        </button>
+        <div id="statusLabel" class="status-text">Ready. Speak in selected language.</div>
+      </div>
+
+      <div class="transcript-preview" id="livePreview">
+        Speech transcription will appear here and automatically populate the complaint description box...
+      </div>
+
+      <div id="errorBanner" class="banner error" style="display: none;"></div>
+
+      <div class="browser-note">
+        🔒 <em>Privacy: Audio is transcribed locally in your browser. No audio recordings are saved or uploaded to external servers.</em>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    let recognition = null;
+    let isListening = false;
+    let currentLanguage = "en-IN";
+    let finalTranscript = "";
+
+    const micBtn = document.getElementById("micBtn");
+    const micIcon = document.getElementById("micIcon");
+    const micBtnLabel = document.getElementById("micBtnLabel");
+    const statusLabel = document.getElementById("statusLabel");
+    const livePreview = document.getElementById("livePreview");
+    const langBadge = document.getElementById("langBadge");
+    const unsupportedWarning = document.getElementById("unsupportedWarning");
+    const activeVoiceControls = document.getElementById("activeVoiceControls");
+    const errorBanner = document.getElementById("errorBanner");
+
+    function notifyStreamlit(data) {
+      window.parent.postMessage({
+        isStreamlitMessage: true,
+        type: "streamlit:setComponentValue",
+        value: data
+      }, "*");
+    }
+
+    function updateHeight() {
+      const h = document.getElementById("mainContainer").scrollHeight + 16;
+      window.parent.postMessage({
+        isStreamlitMessage: true,
+        type: "streamlit:setFrameHeight",
+        height: Math.max(h, 140)
+      }, "*");
+    }
+
+    // Check speech recognition capability
+    const SpeechRecognitionClass = window.SpeechRecognition || window.webkitSpeechRecognition;
+
+    if (!SpeechRecognitionClass) {
+      unsupportedWarning.style.display = "block";
+      micBtn.disabled = true;
+      statusLabel.textContent = "Web Speech API not available.";
+      notifyStreamlit({
+        status: "unsupported",
+        supported: false,
+        transcript: "",
+        error: "Browser does not support Web Speech API"
+      });
+      updateHeight();
+    } else {
+      recognition = new SpeechRecognitionClass();
+      recognition.continuous = true;
+      recognition.interimResults = true;
+      recognition.maxAlternatives = 1;
+      recognition.lang = currentLanguage;
+
+      recognition.onstart = function() {
+        isListening = true;
+        micBtn.classList.add("recording");
+        micIcon.textContent = "⏹️";
+        micBtnLabel.textContent = "Stop Recording";
+        statusLabel.className = "status-text listening";
+        statusLabel.textContent = "Listening... Speak clearly now.";
+        errorBanner.style.display = "none";
+        updateHeight();
+      };
+
+      recognition.onresult = function(event) {
+        let interimTranscript = "";
+        for (let i = event.resultIndex; i < event.results.length; ++i) {
+          const trans = event.results[i][0].transcript;
+          if (event.results[i].isFinal) {
+            finalTranscript += (finalTranscript ? " " : "") + trans.trim();
+          } else {
+            interimTranscript += trans;
+          }
+        }
+        const displayText = finalTranscript + (interimTranscript ? " (" + interimTranscript + ")" : "");
+        livePreview.textContent = displayText || "Listening...";
+
+        if (finalTranscript.trim()) {
+          notifyStreamlit({
+            status: "active",
+            transcript: finalTranscript.trim(),
+            language: currentLanguage,
+            is_final: false,
+            timestamp: Date.now()
+          });
+        }
+        updateHeight();
+      };
+
+      recognition.onerror = function(event) {
+        let errDesc = "Speech recognition error: " + event.error;
+        if (event.error === "not-allowed") {
+          errDesc = "Microphone access was denied. Please allow microphone permission in your browser URL bar.";
+        } else if (event.error === "no-speech") {
+          errDesc = "No speech was detected. Please try speaking closer to your microphone.";
+        } else if (event.error === "network") {
+          errDesc = "Network issue contacting browser speech service. Please verify your connection.";
+        } else if (event.error === "language-not-supported") {
+          errDesc = "Language " + currentLanguage + " is not supported by your current browser engine.";
+        }
+
+        errorBanner.textContent = "⚠️ " + errDesc;
+        errorBanner.style.display = "block";
+        statusLabel.className = "status-text error";
+        statusLabel.textContent = "Recognition halted.";
+        stopListening();
+        notifyStreamlit({
+          status: "error",
+          error: event.error,
+          message: errDesc,
+          transcript: finalTranscript.trim(),
+          timestamp: Date.now()
+        });
+        updateHeight();
+      };
+
+      recognition.onend = function() {
+        if (isListening) {
+          stopListening();
+        }
+      };
+
+      function startListening() {
+        finalTranscript = "";
+        livePreview.textContent = "Listening... Speak into your microphone.";
+        errorBanner.style.display = "none";
+        recognition.lang = currentLanguage;
+        try {
+          recognition.start();
+        } catch (e) {
+          console.error("Start error:", e);
+        }
+      }
+
+      function stopListening() {
+        isListening = false;
+        micBtn.classList.remove("recording");
+        micIcon.textContent = "🎤";
+        micBtnLabel.textContent = "Click to Speak";
+        statusLabel.className = "status-text " + (finalTranscript ? "success" : "");
+        statusLabel.textContent = finalTranscript ? "Transcription complete! Transferred to form." : "Ready.";
+        try {
+          recognition.stop();
+        } catch (e) {}
+
+        if (finalTranscript.trim()) {
+          notifyStreamlit({
+            status: "complete",
+            transcript: finalTranscript.trim(),
+            language: currentLanguage,
+            is_final: true,
+            timestamp: Date.now()
+          });
+        }
+        updateHeight();
+      }
+
+      micBtn.addEventListener("click", function() {
+        if (isListening) {
+          stopListening();
+        } else {
+          startListening();
+        }
+      });
+    }
+
+    // Handle messages from Streamlit Python caller
+    window.addEventListener("message", function(event) {
+      if (event.data && event.data.type === "streamlit:render") {
+        const args = event.data.args || {};
+        if (args.language && args.language !== currentLanguage) {
+          currentLanguage = args.language;
+          langBadge.textContent = "Language: " + currentLanguage;
+          if (recognition) {
+            recognition.lang = currentLanguage;
+          }
+        }
+        updateHeight();
+      }
+    });
+
+    // Notify ready
+    setTimeout(updateHeight, 50);
+  </script>
+</body>
+</html>
