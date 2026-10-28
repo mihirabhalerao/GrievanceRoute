@@ -36,3 +36,4 @@ def voice_input_widget(
         Dictionary containing transcription, status, error (if any), and timestamp.
     """
     return _voice_input_component(language=language, key=key, default=None)
+

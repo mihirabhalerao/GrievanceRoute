@@ -70,3 +70,4 @@ def format_voice_submission_metadata(
         "raw_length": len(raw_transcript.strip()),
         "final_length": len(edited_transcript.strip()),
     }
+

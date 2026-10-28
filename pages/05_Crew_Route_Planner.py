@@ -319,14 +319,32 @@ with tab_osm:
                 tooltip=f"Straight-Line Euclidean Lower Bound: {route_res['straight_line_km']} km",
             ).add_to(folium_map)
 
-            # Draw road route polyline
+            # Draw access spurs if origin/destination coordinates are offset from nearest graph nodes
+            if coords:
+                folium.PolyLine(
+                    locations=[[orig_lat, orig_lon], coords[0]],
+                    color="#10b981",
+                    weight=3,
+                    dash_array="4, 4",
+                    tooltip="Access spur to nearest road intersection",
+                ).add_to(folium_map)
+
+                folium.PolyLine(
+                    locations=[coords[-1], [dest_lat, dest_lon]],
+                    color="#ef4444",
+                    weight=3,
+                    dash_array="4, 4",
+                    tooltip="Access spur to destination location",
+                ).add_to(folium_map)
+
+            # Draw road route polyline (with intermediate curved street geometries)
             if len(coords) > 1:
                 folium.PolyLine(
                     locations=coords,
                     color="#2563eb",
                     weight=5,
                     opacity=0.85,
-                    tooltip=f"A* Real Road Route: {route_res['road_distance_km']} km ({len(coords)} nodes)",
+                    tooltip=f"A* Real Road Route: {route_res['road_distance_km']} km ({len(route_res['path_nodes'])} intersections, {len(coords)} geometry points)",
                 ).add_to(folium_map)
 
             # Origin Marker
@@ -357,7 +375,7 @@ with tab_osm:
                 if st.button("Run Dijkstra Comparison on Active Route"):
                     comp = osm_svc.verify_optimality_against_dijkstra(route_res["start_node"], route_res["goal_node"])
                     if comp.get("optimal"):
-                        st.success(f"✅ **A\* Optimality Verified:** A\* cost = {comp['astar_cost']} km, Dijkstra cost = {comp['dijkstra_cost']} km (Difference = {comp['cost_difference']} km).")
+                        st.success(f"✅ **A\\* Optimality Verified:** A\\* cost = {comp['astar_cost']} km, Dijkstra cost = {comp['dijkstra_cost']} km (Difference = {comp['cost_difference']} km).")
                         c_a, c_b = st.columns(2)
                         with c_a:
                             st.metric("A* Expanded Nodes", comp["astar_expanded"])

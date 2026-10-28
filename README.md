@@ -121,7 +121,7 @@ Run the full pytest suite with verbose output:
 ```bash
 pytest tests/ -v
 ```
-All 34 tests pass with 0 failures, covering dataset generation reproducibility, defect cleaning, target leakage prevention, coordinate projection, classifier benchmarks against Majority Baseline, regressor benchmarks against Median Baseline, spatial clustering, Apriori rule mining, A* admissibility, 2-opt hill climbing, simulated annealing, shift budget constraints, safety overrides, end-to-end integration workflows, **multilingual voice dictation**, and **OpenStreetMap-backed road-network routing**.
+All 39 tests pass with 0 failures, covering dataset generation reproducibility, defect cleaning, target leakage prevention, coordinate projection, classifier benchmarks against Majority Baseline, regressor benchmarks against Median Baseline, spatial clustering, Apriori rule mining, A* admissibility, 2-opt hill climbing, simulated annealing, shift budget constraints, safety overrides, end-to-end integration workflows, **multilingual voice dictation**, **interactive map complaint pinning**, and **OpenStreetMap-backed curved road routing**.
 
 To run the feature-specific test suites:
 ```bash
@@ -159,10 +159,29 @@ Voice input → Web Speech API → transcription → editable form field → val
 
 ---
 
+## 📍 Interactive Map-Based Complaint Location Selection
+
+### Overview
+Replaces manual latitude/longitude entry with an interactive OpenStreetMap picker in the complaint submission form. Citizens pin the location of the grievance directly on the map.
+
+### Features
+1. **Interactive Pin Placement**: Clicking anywhere on the map places or repositions the grievance marker.
+2. **Automatic Coordinate Sync**: Latitude and longitude fields update immediately from the clicked map coordinates.
+3. **Session State Persistence**: Coordinates persist across reruns and are saved into the SQLite database.
+4. **Service Zone Center Sync**: Selecting a municipal zone automatically centers the map on that zone with a one-click `🔄 Reset Pin` button.
+5. **Manual Fallback**: Numeric latitude/longitude inputs remain editable for operators with explicit GPS logs.
+
+---
+
 ## 🛣️ Feature B — OpenStreetMap-Backed A* Road Routing
 
 ### Overview
 Supplements the synthetic 16-node junction graph with real-world street network data downloaded from OpenStreetMap covering the central Pune municipal corridor (Shivajinagar, FC Road, Deccan Gymkhana).
+
+### Geometry & Directed Graph
+- **Directed One-Way Street Navigation**: Street segments are modeled as a directed graph (`nx.DiGraph`). One-way streets (e.g. FC Road, JM Road) are strictly respected.
+- **Curved Road Geometry**: Rather than drawing straight chord cuts between intersection nodes, intermediate WKT `LINESTRING` geometry points are parsed and concatenated in travel order, producing high-fidelity polyline routes that follow every curve of the road.
+- **Access Spurs**: Green and red dashed spurs connect off-road complaint coordinates to the nearest street network intersection.
 
 ### Heuristic & Units
 The routing engine implements $A^*$ pathfinding:

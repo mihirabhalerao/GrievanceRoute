@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Voice Input Component</title>
+  <title>GrievanceRoute Voice Input</title>
   <style>
     :root {
       --primary: #2563eb;
@@ -16,7 +16,6 @@
       --text: #0f172a;
       --muted: #64748b;
       --success: #16a34a;
-      --warning: #d97706;
     }
 
     * {
@@ -29,7 +28,7 @@
     body {
       background: transparent;
       color: var(--text);
-      padding: 6px 2px;
+      padding: 4px 2px;
       font-size: 13px;
     }
 
@@ -45,7 +44,7 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      margin-bottom: 8px;
+      margin-bottom: 10px;
       flex-wrap: wrap;
       gap: 8px;
     }
@@ -61,7 +60,7 @@
 
     .lang-badge {
       font-size: 11px;
-      padding: 2px 8px;
+      padding: 3px 8px;
       border-radius: 12px;
       background: #eff6ff;
       color: var(--primary);
@@ -72,11 +71,12 @@
     .controls-row {
       display: flex;
       align-items: center;
-      gap: 10px;
-      margin-bottom: 8px;
+      gap: 12px;
+      margin-bottom: 10px;
+      flex-wrap: wrap;
     }
 
-    button.btn-mic {
+    button.btn-action {
       display: inline-flex;
       align-items: center;
       justify-content: center;
@@ -84,25 +84,40 @@
       background: var(--primary);
       color: white;
       border: none;
-      padding: 8px 16px;
+      padding: 9px 18px;
       border-radius: 6px;
       font-size: 13px;
-      font-weight: 500;
+      font-weight: 600;
       cursor: pointer;
       transition: all 0.15s ease-in-out;
     }
 
-    button.btn-mic:hover {
+    button.btn-action:hover {
       background: var(--primary-hover);
     }
 
-    button.btn-mic.recording {
+    button.btn-action.recording {
       background: var(--danger);
       animation: pulse 1.5s infinite;
     }
 
-    button.btn-mic.recording:hover {
+    button.btn-action.recording:hover {
       background: var(--danger-hover);
+    }
+
+    button.btn-retry {
+      background: #f1f5f9;
+      color: #334155;
+      border: 1px solid #cbd5e1;
+      padding: 8px 14px;
+      border-radius: 6px;
+      font-size: 12px;
+      font-weight: 500;
+      cursor: pointer;
+    }
+
+    button.btn-retry:hover {
+      background: #e2e8f0;
     }
 
     @keyframes pulse {
@@ -111,35 +126,62 @@
       100% { box-shadow: 0 0 0 0 rgba(220, 38, 38, 0); }
     }
 
-    .status-text {
+    .status-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
       font-size: 12px;
+      padding: 4px 10px;
+      border-radius: 6px;
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
       color: var(--muted);
-      flex: 1;
+      font-weight: 500;
     }
 
-    .status-text.listening {
+    .status-badge.listening {
+      background: #fef2f2;
+      border-color: #fecaca;
       color: var(--danger);
       font-weight: 600;
     }
 
-    .status-text.error {
+    .status-badge.received {
+      background: #f0fdf4;
+      border-color: #bbf7d0;
+      color: var(--success);
+      font-weight: 600;
+    }
+
+    .status-badge.error {
+      background: #fef2f2;
+      border-color: #fecaca;
       color: var(--danger);
     }
 
-    .status-text.success {
-      color: var(--success);
-      font-weight: 500;
+    .transcript-preview-box {
+      margin-top: 4px;
+      margin-bottom: 8px;
+    }
+
+    .transcript-label {
+      font-size: 11px;
+      font-weight: 600;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 4px;
     }
 
     .transcript-preview {
-      background: #f1f5f9;
+      background: #f8fafc;
       border: 1px dashed #cbd5e1;
       border-radius: 6px;
-      padding: 8px 10px;
-      min-height: 38px;
-      font-size: 12px;
-      color: #334155;
-      font-style: italic;
+      padding: 10px 12px;
+      min-height: 48px;
+      font-size: 13px;
+      line-height: 1.4;
+      color: #1e293b;
       white-space: pre-wrap;
       word-break: break-word;
     }
@@ -148,7 +190,8 @@
       padding: 8px 12px;
       border-radius: 6px;
       font-size: 12px;
-      margin-top: 4px;
+      margin-top: 6px;
+      line-height: 1.4;
     }
 
     .banner.warning {
@@ -163,10 +206,12 @@
       color: #991b1b;
     }
 
-    .browser-note {
+    .privacy-notice {
       font-size: 11px;
       color: var(--muted);
-      margin-top: 6px;
+      margin-top: 8px;
+      border-top: 1px solid #f1f5f9;
+      padding-top: 6px;
     }
   </style>
 </head>
@@ -180,31 +225,70 @@
     </div>
 
     <div id="unsupportedWarning" class="banner warning" style="display: none;">
-      ⚠️ <strong>Browser Notice:</strong> The native Web Speech API is not supported in this browser environment. Please use Google Chrome or Microsoft Edge for dictation, or type your complaint manually in the box below.
+      ⚠️ <strong>Browser Speech Recognition Not Supported:</strong> The Web Speech API is unavailable in this browser. Please use Google Chrome or Microsoft Edge for voice dictation, or enter your complaint manually in the text area below.
     </div>
 
     <div id="activeVoiceControls">
       <div class="controls-row">
-        <button id="micBtn" class="btn-mic" type="button">
+        <button id="micBtn" class="btn-action" type="button">
           <span id="micIcon">🎤</span>
-          <span id="micBtnLabel">Click to Speak</span>
+          <span id="micBtnText">Start speaking</span>
         </button>
-        <div id="statusLabel" class="status-text">Ready. Speak in selected language.</div>
+
+        <button id="retryBtn" class="btn-retry" type="button" style="display: none;">
+          🔄 Retry
+        </button>
+
+        <div id="statusBadge" class="status-badge">
+          <span id="statusIndicator">⚪</span>
+          <span id="statusLabel">Ready</span>
+        </div>
       </div>
 
-      <div class="transcript-preview" id="livePreview">
-        Speech transcription will appear here and automatically populate the complaint description box...
+      <div class="transcript-preview-box">
+        <div class="transcript-label">Live / Final Transcription Preview:</div>
+        <div class="transcript-preview" id="livePreview">No transcription captured yet. Click "Start speaking" to dictate.</div>
       </div>
 
       <div id="errorBanner" class="banner error" style="display: none;"></div>
 
-      <div class="browser-note">
-        🔒 <em>Privacy: Audio is transcribed locally in your browser. No audio recordings are saved or uploaded to external servers.</em>
+      <div class="privacy-notice">
+        🔒 <strong>Privacy:</strong> Dictation uses your browser's local Speech API. No audio recordings are saved, stored, or sent to third-party audio servers.
       </div>
     </div>
   </div>
 
   <script>
+    // Critical: Tell Streamlit component manager immediately that component is loaded
+    function sendReady() {
+      window.parent.postMessage({
+        isStreamlitMessage: true,
+        type: "streamlit:componentReady",
+        apiVersion: 1
+      }, "*");
+    }
+
+    function sendHeight() {
+      const el = document.getElementById("mainContainer");
+      const h = el ? el.scrollHeight + 20 : 160;
+      window.parent.postMessage({
+        isStreamlitMessage: true,
+        type: "streamlit:setFrameHeight",
+        height: Math.max(h, 150)
+      }, "*");
+    }
+
+    function sendValue(val) {
+      window.parent.postMessage({
+        isStreamlitMessage: true,
+        type: "streamlit:setComponentValue",
+        value: val
+      }, "*");
+    }
+
+    // Fire componentReady immediately
+    sendReady();
+
     let recognition = null;
     let isListening = false;
     let currentLanguage = "en-IN";
@@ -212,166 +296,179 @@
 
     const micBtn = document.getElementById("micBtn");
     const micIcon = document.getElementById("micIcon");
-    const micBtnLabel = document.getElementById("micBtnLabel");
+    const micBtnText = document.getElementById("micBtnText");
+    const retryBtn = document.getElementById("retryBtn");
+    const statusBadge = document.getElementById("statusBadge");
+    const statusIndicator = document.getElementById("statusIndicator");
     const statusLabel = document.getElementById("statusLabel");
     const livePreview = document.getElementById("livePreview");
     const langBadge = document.getElementById("langBadge");
     const unsupportedWarning = document.getElementById("unsupportedWarning");
-    const activeVoiceControls = document.getElementById("activeVoiceControls");
     const errorBanner = document.getElementById("errorBanner");
 
-    function notifyStreamlit(data) {
-      window.parent.postMessage({
-        isStreamlitMessage: true,
-        type: "streamlit:setComponentValue",
-        value: data
-      }, "*");
-    }
-
-    function updateHeight() {
-      const h = document.getElementById("mainContainer").scrollHeight + 16;
-      window.parent.postMessage({
-        isStreamlitMessage: true,
-        type: "streamlit:setFrameHeight",
-        height: Math.max(h, 140)
-      }, "*");
-    }
-
-    // Check speech recognition capability
     const SpeechRecognitionClass = window.SpeechRecognition || window.webkitSpeechRecognition;
+
+    function setStatus(state, message) {
+      statusBadge.className = "status-badge " + state;
+      if (state === "listening") {
+        statusIndicator.textContent = "🔴";
+        statusLabel.textContent = message || "Listening…";
+      } else if (state === "received") {
+        statusIndicator.textContent = "🟢";
+        statusLabel.textContent = message || "Transcription received";
+      } else if (state === "error") {
+        statusIndicator.textContent = "⚠️";
+        statusLabel.textContent = message || "Error";
+      } else {
+        statusIndicator.textContent = "⚪";
+        statusLabel.textContent = message || "Ready";
+      }
+      sendHeight();
+    }
 
     if (!SpeechRecognitionClass) {
       unsupportedWarning.style.display = "block";
       micBtn.disabled = true;
-      statusLabel.textContent = "Web Speech API not available.";
-      notifyStreamlit({
+      setStatus("error", "Web Speech API unsupported");
+      sendValue({
         status: "unsupported",
         supported: false,
         transcript: "",
-        error: "Browser does not support Web Speech API"
+        error: "Web Speech API unsupported in this browser"
       });
-      updateHeight();
+      sendHeight();
     } else {
-      recognition = new SpeechRecognitionClass();
-      recognition.continuous = true;
-      recognition.interimResults = true;
-      recognition.maxAlternatives = 1;
-      recognition.lang = currentLanguage;
+      try {
+        recognition = new SpeechRecognitionClass();
+        recognition.continuous = true;
+        recognition.interimResults = true;
+        recognition.maxAlternatives = 1;
+        recognition.lang = currentLanguage;
 
-      recognition.onstart = function() {
-        isListening = true;
-        micBtn.classList.add("recording");
-        micIcon.textContent = "⏹️";
-        micBtnLabel.textContent = "Stop Recording";
-        statusLabel.className = "status-text listening";
-        statusLabel.textContent = "Listening... Speak clearly now.";
-        errorBanner.style.display = "none";
-        updateHeight();
-      };
+        recognition.onstart = function() {
+          isListening = true;
+          micBtn.classList.add("recording");
+          micIcon.textContent = "⏹️";
+          micBtnText.textContent = "Stop recording";
+          retryBtn.style.display = "none";
+          errorBanner.style.display = "none";
+          setStatus("listening", "Listening… Speak now");
+        };
 
-      recognition.onresult = function(event) {
-        let interimTranscript = "";
-        for (let i = event.resultIndex; i < event.results.length; ++i) {
-          const trans = event.results[i][0].transcript;
-          if (event.results[i].isFinal) {
-            finalTranscript += (finalTranscript ? " " : "") + trans.trim();
-          } else {
-            interimTranscript += trans;
+        recognition.onresult = function(event) {
+          let interim = "";
+          for (let i = event.resultIndex; i < event.results.length; ++i) {
+            const part = event.results[i][0].transcript;
+            if (event.results[i].isFinal) {
+              finalTranscript += (finalTranscript ? " " : "") + part.trim();
+            } else {
+              interim += part;
+            }
           }
-        }
-        const displayText = finalTranscript + (interimTranscript ? " (" + interimTranscript + ")" : "");
-        livePreview.textContent = displayText || "Listening...";
+          const textToShow = finalTranscript + (interim ? " " + interim : "");
+          livePreview.textContent = textToShow || "Listening…";
 
-        if (finalTranscript.trim()) {
-          notifyStreamlit({
-            status: "active",
+          if (finalTranscript.trim()) {
+            setStatus("listening", "Listening… (Captured text)");
+          }
+          sendHeight();
+        };
+
+        recognition.onerror = function(event) {
+          let msg = "Recognition error: " + event.error;
+          if (event.error === "not-allowed") {
+            msg = "Microphone permission denied. Please allow microphone access in your browser site permissions.";
+          } else if (event.error === "no-speech") {
+            msg = "No speech detected. Please speak closer to your microphone and try again.";
+          } else if (event.error === "network") {
+            msg = "Network error connecting to speech service. Check internet connectivity.";
+          } else if (event.error === "language-not-supported") {
+            msg = "Language '" + currentLanguage + "' is not supported by your browser's speech recognition engine.";
+          }
+
+          errorBanner.textContent = "⚠️ " + msg;
+          errorBanner.style.display = "block";
+          retryBtn.style.display = "inline-flex";
+          setStatus("error", "Recognition stopped");
+          stopListening(false);
+
+          sendValue({
+            status: "error",
+            error: event.error,
+            message: msg,
             transcript: finalTranscript.trim(),
-            language: currentLanguage,
-            is_final: false,
             timestamp: Date.now()
           });
-        }
-        updateHeight();
-      };
+        };
 
-      recognition.onerror = function(event) {
-        let errDesc = "Speech recognition error: " + event.error;
-        if (event.error === "not-allowed") {
-          errDesc = "Microphone access was denied. Please allow microphone permission in your browser URL bar.";
-        } else if (event.error === "no-speech") {
-          errDesc = "No speech was detected. Please try speaking closer to your microphone.";
-        } else if (event.error === "network") {
-          errDesc = "Network issue contacting browser speech service. Please verify your connection.";
-        } else if (event.error === "language-not-supported") {
-          errDesc = "Language " + currentLanguage + " is not supported by your current browser engine.";
-        }
-
-        errorBanner.textContent = "⚠️ " + errDesc;
-        errorBanner.style.display = "block";
-        statusLabel.className = "status-text error";
-        statusLabel.textContent = "Recognition halted.";
-        stopListening();
-        notifyStreamlit({
-          status: "error",
-          error: event.error,
-          message: errDesc,
-          transcript: finalTranscript.trim(),
-          timestamp: Date.now()
-        });
-        updateHeight();
-      };
-
-      recognition.onend = function() {
-        if (isListening) {
-          stopListening();
-        }
-      };
+        recognition.onend = function() {
+          if (isListening) {
+            stopListening(true);
+          }
+        };
+      } catch (err) {
+        console.error("Speech init failure:", err);
+      }
 
       function startListening() {
         finalTranscript = "";
-        livePreview.textContent = "Listening... Speak into your microphone.";
+        livePreview.textContent = "Listening… Speak your civic complaint clearly.";
         errorBanner.style.display = "none";
-        recognition.lang = currentLanguage;
-        try {
-          recognition.start();
-        } catch (e) {
-          console.error("Start error:", e);
+        retryBtn.style.display = "none";
+        if (recognition) {
+          recognition.lang = currentLanguage;
+          try {
+            recognition.start();
+          } catch (e) {
+            console.warn("Recognition already started or error:", e);
+          }
         }
       }
 
-      function stopListening() {
+      function stopListening(sendSuccess) {
         isListening = false;
         micBtn.classList.remove("recording");
         micIcon.textContent = "🎤";
-        micBtnLabel.textContent = "Click to Speak";
-        statusLabel.className = "status-text " + (finalTranscript ? "success" : "");
-        statusLabel.textContent = finalTranscript ? "Transcription complete! Transferred to form." : "Ready.";
+        micBtnText.textContent = "Start speaking";
         try {
-          recognition.stop();
+          if (recognition) recognition.stop();
         } catch (e) {}
 
-        if (finalTranscript.trim()) {
-          notifyStreamlit({
-            status: "complete",
-            transcript: finalTranscript.trim(),
-            language: currentLanguage,
-            is_final: true,
-            timestamp: Date.now()
-          });
+        const cleanResult = finalTranscript.trim();
+        if (cleanResult) {
+          setStatus("received", "Transcription received");
+          livePreview.textContent = cleanResult;
+          if (sendSuccess) {
+            sendValue({
+              status: "success",
+              transcript: cleanResult,
+              language: currentLanguage,
+              timestamp: Date.now()
+            });
+          }
+        } else {
+          setStatus("ready", "Ready");
         }
-        updateHeight();
+        sendHeight();
       }
 
       micBtn.addEventListener("click", function() {
         if (isListening) {
-          stopListening();
+          stopListening(true);
         } else {
           startListening();
         }
       });
+
+      retryBtn.addEventListener("click", function() {
+        errorBanner.style.display = "none";
+        retryBtn.style.display = "none";
+        setStatus("ready", "Ready");
+        startListening();
+      });
     }
 
-    // Handle messages from Streamlit Python caller
+    // Streamlit render message listener
     window.addEventListener("message", function(event) {
       if (event.data && event.data.type === "streamlit:render") {
         const args = event.data.args || {};
@@ -382,12 +479,19 @@
             recognition.lang = currentLanguage;
           }
         }
-        updateHeight();
+        sendHeight();
       }
     });
 
-    // Notify ready
-    setTimeout(updateHeight, 50);
+    // Re-verify ready and height on load
+    window.addEventListener("load", function() {
+      sendReady();
+      setTimeout(sendHeight, 60);
+    });
+    document.addEventListener("DOMContentLoaded", function() {
+      sendReady();
+      setTimeout(sendHeight, 30);
+    });
   </script>
 </body>
 </html>
